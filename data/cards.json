@@ -1,0 +1,101 @@
+{
+  "_readme": "このファイルにカードを追記するとサイトに反映されます。cards[] に1件足すだけ。番号(number)・画像規則は images/<番号>.avif を想定。",
+  "sets": [
+    { "code": "OGN", "name": "Origins" },
+    { "code": "SFD", "name": "Spiritforged" },
+    { "code": "UNL", "name": "Unleashed" }
+  ],
+  "cards": [
+    {
+      "id": "inferna",
+      "name": "Inferna",
+      "nameJa": "インフェルナ",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "2",
+      "might": "1",
+      "rarity": "コモン",
+      "tag": "Bilgewater",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-002/219",
+      "modified": "2026-07-08 00:07:56",
+      "effects": [
+        { "kw": "AMBUSH", "kwJa": "アンブッシュ", "en": "(You may play me as a Reaction to a battlefield where you have units.)", "ja": "(自分がユニットを配置しているバトルフィールドに対し、リアクションとしてこのカードをプレイできる。)" },
+        { "kw": "ASSAULT 2", "kwJa": "アサルト2", "en": "(+2 might while I'm an attacker.)", "ja": "(自分が攻撃側の間、マイト+2。)" }
+      ],
+      "equip": []
+    },
+    {
+      "id": "doran-shield",
+      "name": "Doran's Shield",
+      "nameJa": "ドランの盾",
+      "type": "Gear",
+      "domain": "Calm",
+      "cost": "1",
+      "rarity": "コモン",
+      "tag": "EQUIPMENT",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-033",
+      "modified": "2026-05-23 19:10:32",
+      "effects": [
+        { "kw": "EQUIP", "kwJa": "装備", "en": "(◎: Attach this to a unit you control.)", "ja": "(◎:自身のコントロールしているユニットに装備する。)" }
+      ],
+      "equip": [
+        { "kw": "TANK", "ja": "(戦闘ダメージをこのカードから割り当てなければならない。)", "stat": "🛡+1" }
+      ]
+    },
+    {
+      "id": "sett-kingpin",
+      "name": "Sett - Kingpin",
+      "nameJa": "セト・キングピン",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "4",
+      "rarity": "エピック",
+      "tag": "CHAMPION UNIT",
+      "set": "Origins",
+      "setCode": "OGN",
+      "number": "OGN-240",
+      "modified": "2026-05-20 14:02:11",
+      "effects": [
+        { "kw": "TANK", "kwJa": "タンク", "en": "(I must be assigned combat damage first.)", "ja": "(自分は最初に戦闘ダメージを割り振られなければならない。)" },
+        { "kw": "STATIC", "kwJa": "常在", "en": "I get +1 might for each buffed friendly unit at my battlefield.", "ja": "自分の場にいる強化された味方ユニット1体につき、マイトを+1する。" }
+      ],
+      "equip": []
+    }
+  ],
+  "legends": [
+    {
+      "id": "jinx-loose-cannon",
+      "name": "Jinx - Loose Cannon",
+      "nameJa": "ジンクス・ルーズキャノン",
+      "domains": ["Fury", "Chaos"],
+      "number": "OGN-012",
+      "abilityKw": "SIGNATURE / シグネチャー",
+      "abilityEn": "Whenever you play your third card in a turn, deal 2 damage to any target.",
+      "abilityJa": "各ターン、3枚目のカードをプレイするたび、任意の対象に2ダメージを与える。"
+    },
+    {
+      "id": "yasuo-unforgiven",
+      "name": "Yasuo - The Unforgiven",
+      "nameJa": "ヤスオ・咎人",
+      "domains": ["Calm", "Fury"],
+      "number": "OGN-088",
+      "abilityKw": "SIGNATURE / シグネチャー",
+      "abilityEn": "When Yasuo blocks, he takes no combat damage this turn.",
+      "abilityJa": "ヤスオがブロックした時、このターン戦闘ダメージを受けない。"
+    },
+    {
+      "id": "lux-lady-luminosity",
+      "name": "Lux - Lady of Luminosity",
+      "nameJa": "ラックス・光の淑女",
+      "domains": ["Mind", "Order"],
+      "number": "SFD-004",
+      "abilityKw": "SIGNATURE / シグネチャー",
+      "abilityEn": "The first spell you play each turn costs 1 less.",
+      "abilityJa": "各ターン最初にプレイするスペルのコストを1少なくする。"
+    }
+  ]
+}
