@@ -1,15 +1,196 @@
 {
-  "_readme": "このファイルにカードを追記するとサイトに反映されます。cards[] に1件足すだけ。番号(number)・画像規則は images/<番号>.avif を想定。",
+  "_readme": "カード追記はここに1件足すだけ。画像は data/images/<setCode>/<番号>.avif を想定。alt art は altImage に。",
   "sets": [
-    { "code": "OGN", "name": "Origins" },
-    { "code": "SFD", "name": "Spiritforged" },
-    { "code": "UNL", "name": "Unleashed" }
+    {
+      "code": "OGN",
+      "name": "Origins"
+    },
+    {
+      "code": "SFD",
+      "name": "Spiritforged"
+    },
+    {
+      "code": "UNL",
+      "name": "Unleashed"
+    }
+  ],
+  "keywordCategories": [
+    {
+      "id": "score",
+      "name": "得点・XP系",
+      "color": "#c4d63f",
+      "text": "#1a1a1a"
+    },
+    {
+      "id": "combat",
+      "name": "戦闘系",
+      "color": "#e0577f",
+      "text": "#ffffff"
+    },
+    {
+      "id": "ability",
+      "name": "能力系",
+      "color": "#8f877a",
+      "text": "#ffffff"
+    },
+    {
+      "id": "timing",
+      "name": "タイミング・アクション系",
+      "color": "#2fa78f",
+      "text": "#ffffff"
+    }
+  ],
+  "keywords": [
+    {
+      "kw": "HUNT",
+      "cat": "score",
+      "desc": "バトルフィールドを征服したとき、またはホールドしたとき、XPを得る。"
+    },
+    {
+      "kw": "DEFLECT",
+      "cat": "score",
+      "desc": "相手がスペルや能力でこのカードを対象に選ぶとき、⟨エネルギー⟩を払わなければならない。"
+    },
+    {
+      "kw": "LEVEL X",
+      "cat": "score",
+      "desc": "XPを規定値以上持っているとき、このカードをプレイした際に記載の効果を発動できる。"
+    },
+    {
+      "kw": "TEMPORARY",
+      "cat": "score",
+      "desc": "得点計算の前、次の自分のBeginningフェイズに破壊される。"
+    },
+    {
+      "kw": "DEATHKNELL",
+      "cat": "score",
+      "desc": "このカードが破壊されたとき、記載の効果を得る。"
+    },
+    {
+      "kw": "GANKING",
+      "cat": "score",
+      "desc": "バトルフィールドからバトルフィールドへ移動できる。"
+    },
+    {
+      "kw": "ASSAULT X",
+      "cat": "combat",
+      "desc": "自分が攻撃側の間、＋Xマイト。"
+    },
+    {
+      "kw": "SHIELD X",
+      "cat": "combat",
+      "desc": "戦闘で防御するとき、＋Xマイト。"
+    },
+    {
+      "kw": "TANK",
+      "cat": "combat",
+      "desc": "戦闘ダメージは、このカードから割り当てなければならない。"
+    },
+    {
+      "kw": "BUFF",
+      "cat": "ability",
+      "desc": "バフが付与されていない場合、＋1マイトのバフを与える。"
+    },
+    {
+      "kw": "STUN",
+      "cat": "ability",
+      "desc": "このターン、戦闘ダメージを与えられない。"
+    },
+    {
+      "kw": "PREDICT X",
+      "cat": "ability",
+      "desc": "山札の上からX枚を見る。任意の枚数を山札にリサイクルし、残りを任意の順番で山札の上に戻す。"
+    },
+    {
+      "kw": "EQUIP",
+      "cat": "ability",
+      "desc": "規定コストを払い、自分がコントロールするユニットに装備する。"
+    },
+    {
+      "kw": "ADD",
+      "cat": "ability",
+      "desc": "リソース(エネルギー等)を加える。リソースを追加する能力にはリアクションできない。"
+    },
+    {
+      "kw": "UNIQUE",
+      "cat": "ability",
+      "desc": "このカード名を持つカードは、デッキに1枚しか入れられない。"
+    },
+    {
+      "kw": "LEGION",
+      "cat": "ability",
+      "desc": "このカードを捨て札から規定コストで使用できる。このターンに他のカードをプレイしていれば効果を得る。"
+    },
+    {
+      "kw": "ACTION",
+      "cat": "timing",
+      "desc": "自分のターン中、またはショーダウン中にプレイできる。"
+    },
+    {
+      "kw": "REACTION",
+      "cat": "timing",
+      "desc": "スペルやアビリティの解決前も含め、いつでもプレイできる。バトルフィールドに対してもプレイできる。"
+    },
+    {
+      "kw": "QUICK-DRAW",
+      "cat": "timing",
+      "desc": "攻撃側の戦闘ダメージを先に与える。"
+    },
+    {
+      "kw": "AMBUSH",
+      "cat": "timing",
+      "desc": "このカードをREACTIONとして、味方ユニットがいるバトルフィールドにプレイできる。"
+    },
+    {
+      "kw": "ACCELERATE",
+      "cat": "timing",
+      "desc": "プレイ時に追加コストを払うと、READY(レディ)状態で登場する。"
+    },
+    {
+      "kw": "REPEAT X",
+      "cat": "timing",
+      "desc": "追加でコストを払うことで、スペルの効果を繰り返す。"
+    },
+    {
+      "kw": "HIDDEN",
+      "cat": "timing",
+      "desc": "⟨エネルギー⟩を払って伏せて配置できる。発動するときはコスト0で発動できる。"
+    }
   ],
   "cards": [
     {
-      "id": "inferna",
+      "id": "unl-001",
+      "name": "Arena Kingpin",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "5",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Noxus・Yordle",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-001/219",
+      "image": "data/images/UNL/UNL001.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "I enter ready.",
+          "ja": "自身はレディ状態で登場する。"
+        },
+        {
+          "kw": "",
+          "en": "(exhaust): Give a unit +3 might this turn.",
+          "ja": "⟨消耗⟩:ユニット1体にこのターン＋3マイトを与える。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-002",
       "name": "Inferna",
-      "nameJa": "インフェルナ",
+      "nameJa": "",
       "type": "Unit",
       "domain": "Fury",
       "cost": "2",
@@ -19,83 +200,936 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-002/219",
-      "modified": "2026-07-08 00:07:56",
+      "image": "data/images/UNL/UNL-002.avif",
+      "modified": "2026-07-08",
       "effects": [
-        { "kw": "AMBUSH", "kwJa": "アンブッシュ", "en": "(You may play me as a Reaction to a battlefield where you have units.)", "ja": "(自分がユニットを配置しているバトルフィールドに対し、リアクションとしてこのカードをプレイできる。)" },
-        { "kw": "ASSAULT 2", "kwJa": "アサルト2", "en": "(+2 might while I'm an attacker.)", "ja": "(自分が攻撃側の間、マイト+2。)" }
+        {
+          "kw": "AMBUSH",
+          "en": "(You may play me as a Reaction to a battlefield where you have units.)",
+          "ja": "(このカードをREACTIONとして、味方ユニットがいるバトルフィールドにプレイできる。)"
+        },
+        {
+          "kw": "ASSAULT 2",
+          "en": "(+2 might while I'm an attacker.)",
+          "ja": "(自分が攻撃側の間、＋2マイト。)"
+        }
       ],
       "equip": []
     },
     {
-      "id": "doran-shield",
-      "name": "Doran's Shield",
-      "nameJa": "ドランの盾",
-      "type": "Gear",
-      "domain": "Calm",
-      "cost": "1",
-      "rarity": "コモン",
-      "tag": "EQUIPMENT",
-      "set": "Spiritforged",
-      "setCode": "SFD",
-      "number": "SFD-033",
-      "modified": "2026-05-23 19:10:32",
+      "id": "unl-003",
+      "name": "Mischievous Marai",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "2",
+      "might": "2",
+      "rarity": "—",
+      "tag": "Bilgewater",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-003/219",
+      "image": "data/images/UNL/UNL-003.avif",
+      "modified": "2026-07-08",
       "effects": [
-        { "kw": "EQUIP", "kwJa": "装備", "en": "(◎: Attach this to a unit you control.)", "ja": "(◎:自身のコントロールしているユニットに装備する。)" }
+        {
+          "kw": "HIDDEN",
+          "en": "(Hide now for (energy) to react with later for (0).)",
+          "ja": "(⟨エネルギー⟩を払って伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play me to a battlefield, deal 2 to an enemy unit here.",
+          "ja": "このカードをバトルフィールドにプレイしたとき、そこにいる敵ユニット1体に2ダメージを与える。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-004",
+      "name": "Prepared Neophyte",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "3",
+      "might": "1",
+      "rarity": "—",
+      "tag": "Shadow Isles",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-004/219",
+      "image": "data/images/UNL/UNL-004.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "If you've spent (4) or more to play a spell this turn, I have +4 might.",
+          "ja": "このターン、スペルをプレイするために④以上を支払っている場合、自身は＋4マイトを持つ。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-005",
+      "name": "Revna the Lorekeeper",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "7",
+      "might": "7",
+      "rarity": "—",
+      "tag": "Freljord",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-005/219",
+      "image": "data/images/UNL/UNL-005.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "GANKING",
+          "en": "(I can move from battlefield to battlefield.)",
+          "ja": "(バトルフィールドからバトルフィールドへ移動できる。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play a spell, if you spent (4) or more, ready me.",
+          "ja": "スペルをプレイしたとき、④以上を支払っていた場合、自身をレディ状態にする。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-006",
+      "name": "Sharkling",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "3",
+      "might": "1",
+      "rarity": "—",
+      "tag": "Bilgewater",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-006/219",
+      "image": "data/images/UNL/UNL-006.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "(You may pay (1)(Fury) as an additional cost to have me enter ready.)",
+          "ja": "(追加コストとして①⟨Fury⟩を払うと、レディ状態で登場できる。)"
+        },
+        {
+          "kw": "ASSAULT 4",
+          "en": "(+4 might while I'm an attacker.)",
+          "ja": "(自分が攻撃側の間、＋4マイト。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-007",
+      "name": "Smite",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-007/219",
+      "image": "data/images/UNL/UNL-007.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Deal 3 to a unit at a battlefield. If it would die this turn, banish it instead.",
+          "ja": "バトルフィールドにいるユニット1体に3ダメージを与える。このターンそれが破壊される場合、代わりに追放する。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-008",
+      "name": "Towering Pairofant",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "6",
+      "might": "6",
+      "rarity": "—",
+      "tag": "Shurima",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-008/219",
+      "image": "data/images/UNL/UNL-008.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ASSAULT",
+          "en": "(+1 might while I'm an attacker.)",
+          "ja": "(自分が攻撃側の間、＋1マイト。)"
+        },
+        {
+          "kw": "",
+          "en": "If a unit died this turn, I enter ready.",
+          "ja": "このターンにユニットが破壊されていた場合、自身はレディ状態で登場する。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-009",
+      "name": "Upstage Comedy",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-009/219",
+      "image": "data/images/UNL/UNL-009.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REPEAT 2",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払うと、このスペルの効果を繰り返せる。)"
+        },
+        {
+          "kw": "",
+          "en": "Ready a unit.",
+          "ja": "ユニット1体をレディ状態にする。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-010",
+      "name": "Vault Breaker",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "cost": "1",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-010/219",
+      "image": "data/images/UNL/UNL-010.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a unit ASSAULT 2 and GANKING this turn. (+2 might while it's an attacker. It can move from battlefield to battlefield.)",
+          "ja": "ユニット1体にこのターン【ASSAULT 2】と【GANKING】を与える。(攻撃側の間＋2マイト。バトルフィールド間を移動できる。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-011",
+      "name": "Fresh Beans",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-011/219",
+      "image": "data/images/UNL/UNL-011.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play a unit during a showdown, you may exhaust this to draw 1.",
+          "ja": "ショーダウン中にユニットをプレイしたとき、このカードを消耗してカードを1枚引いてもよい。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-012",
+      "name": "Lord Broadmane",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "5",
+      "might": "5",
+      "rarity": "—",
+      "tag": "Noxus",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-012/219",
+      "image": "data/images/UNL/UNL-012.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "AMBUSH",
+          "en": "(You may play me as a Reaction to a battlefield where you have units.)",
+          "ja": "(このカードをREACTIONとして、味方ユニットがいるバトルフィールドにプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, give your other units here ASSAULT this turn. (+1 might while they're attackers.)",
+          "ja": "このカードをプレイしたとき、そこにいる自分の他のユニットにこのターン【ASSAULT】を与える。(攻撃側の間＋1マイト。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-013",
+      "name": "Lotus Trap",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-013/219",
+      "image": "data/images/UNL/UNL-013.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "(Hide now for (energy) to react with later for (0).)",
+          "ja": "(⟨エネルギー⟩を払って伏せ、後で⟨0⟩でリアクションとして使える。)"
+        },
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルや能力の解決前も含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a unit. Double all damage that would be dealt to it this turn.",
+          "ja": "ユニット1体を選ぶ。このターン、それに与えられるすべてのダメージを2倍にする。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-014",
+      "name": "Monster Harpoon",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "cost": "1",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-014/219",
+      "image": "data/images/UNL/UNL-014.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Deal 2 to a unit at a battlefield. If you control a facedown card, deal 4 to it instead.",
+          "ja": "バトルフィールドのユニット1体に2ダメージを与える。自分が伏せカードをコントロールしている場合、代わりに4ダメージを与える。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-015",
+      "name": "Right of Conquest",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "cost": "3",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-015/219",
+      "image": "data/images/UNL/UNL-015.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Draw 1, then draw 1 for each battlefield you or allies control.",
+          "ja": "カードを1枚引く。その後、自分または味方がコントロールするバトルフィールド1つにつき1枚引く。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-016",
+      "name": "Scorchclaw",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Noxus・Dog",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-016/219",
+      "image": "data/images/UNL/UNL-016.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HUNT 2",
+          "en": "(When I conquer or hold, gain 2 XP.)",
+          "ja": "(征服またはホールドしたとき、2XPを得る。)"
+        },
+        {
+          "kw": "LEVEL 3",
+          "en": "I have +1 might and enter ready. (While you have 3+ XP, get the effect.)",
+          "ja": "自身は＋1マイトを持ち、レディ状態で登場する。(XPを3以上持っている間、この効果を得る。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-017",
+      "name": "Square Up",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "cost": "4",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-017/219",
+      "image": "data/images/UNL/UNL-017.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REPEAT",
+          "en": "— Discard 1 (You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "―カードを1枚捨てる(追加コストを支払うと、効果を繰り返せる。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a unit ASSAULT 4 this turn. (+4 might while it's an attacker.)",
+          "ja": "ユニット1体にこのターン【ASSAULT 4】を与える。(攻撃側の間＋4マイト。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-018",
+      "name": "Yeti Brawler",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "6",
+      "might": "6",
+      "rarity": "—",
+      "tag": "Noxus",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-018/219",
+      "image": "data/images/UNL/UNL-018.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I conquer, if you assigned 3 or more excess damage, play two Gold gear tokens exhausted. (They have \"REACTION Kill this, (exhaust): ADD (energy).\")",
+          "ja": "征服したとき、超過ダメージを3以上割り当てていた場合、ゴールドのギアトークンを2つ消耗状態でプレイする。(それらは「【REACTION】これを破壊し、⟨消耗⟩:⟨エネルギー⟩を【ADD】。」を持つ。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-019",
+      "name": "Blighted Battleaxe",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "",
+      "cost": "4",
+      "might": "",
+      "rarity": "—",
+      "tag": "Equipment",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-019/219",
+      "image": "data/images/UNL/UNL-019.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "en": "(1)(Fury) ((1)(Fury): Attach this to a unit you control.)",
+          "ja": "①⟨Fury⟩(①⟨Fury⟩:自分がコントロールするユニットに装備する。)"
+        },
+        {
+          "kw": "",
+          "en": "At the end of your turn, if I didn't conquer this turn, unattach this and deal 4 to me.",
+          "ja": "自分のターン終了時、このターン征服していない場合、これを外して装備しているユニットに4ダメージを与える。"
+        }
       ],
       "equip": [
-        { "kw": "TANK", "ja": "(戦闘ダメージをこのカードから割り当てなければならない。)", "stat": "🛡+1" }
+        {
+          "kw": "",
+          "ja": "装備ユニットは＋4マイトを得る。",
+          "stat": "+4"
+        }
       ]
     },
     {
-      "id": "sett-kingpin",
-      "name": "Sett - Kingpin",
-      "nameJa": "セト・キングピン",
-      "type": "Unit",
-      "domain": "Order",
-      "cost": "4",
-      "rarity": "エピック",
-      "tag": "CHAMPION UNIT",
-      "set": "Origins",
-      "setCode": "OGN",
-      "number": "OGN-240",
-      "modified": "2026-05-20 14:02:11",
+      "id": "unl-020",
+      "name": "Dancing Grenade",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-020/219",
+      "image": "data/images/UNL/UNL-020.avif",
+      "modified": "2026-07-08",
       "effects": [
-        { "kw": "TANK", "kwJa": "タンク", "en": "(I must be assigned combat damage first.)", "ja": "(自分は最初に戦闘ダメージを割り振られなければならない。)" },
-        { "kw": "STATIC", "kwJa": "常在", "en": "I get +1 might for each buffed friendly unit at my battlefield.", "ja": "自分の場にいる強化された味方ユニット1体につき、マイトを+1する。" }
+        {
+          "kw": "",
+          "en": "Deal 2 to a unit. Its controller may play this spell again for (energy). If they do, this deals 1 additional Bonus Damage for each time this spell has dealt damage this turn.",
+          "ja": "ユニット1体に2ダメージを与える。そのコントローラーは⟨エネルギー⟩を払ってこのスペルを再度プレイしてもよい。そうした場合、このターンにこのスペルがダメージを与えた回数1回につき、追加で1のボーナスダメージを与える。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-021",
+      "name": "Grim Apothecary",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Noxus",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-021/219",
+      "image": "data/images/UNL/UNL-021.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "AMBUSH",
+          "en": "(You may play me as a Reaction to a battlefield where you have units.)",
+          "ja": "(このカードをREACTIONとして、味方ユニットがいるバトルフィールドにプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, you may return a friendly unit at a battlefield to its owner's hand.",
+          "ja": "このカードをプレイしたとき、バトルフィールドにいる味方ユニット1体を持ち主の手札に戻してもよい。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-022",
+      "name": "Jhin - Murderous Artist",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "4",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Champion・Jhin・Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-022/219",
+      "image": "data/images/UNL/UNL-022.avif",
+      "altImage": "data/images/UNL/UNL-022a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay (energy) to choose me with a spell or ability.)",
+          "ja": "(相手はスペルや能力で自身を対象に選ぶとき、⟨エネルギー⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "GANKING",
+          "en": "(I can move from battlefield to battlefield.)",
+          "ja": "(バトルフィールド間を移動できる。)"
+        },
+        {
+          "kw": "",
+          "en": "When I move, ADD (1)(energy). (Abilities that add resources can't be reacted to.)",
+          "ja": "移動したとき、①⟨エネルギー⟩を【ADD】。(リソースを追加する能力にはリアクションできない。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-023",
+      "name": "Katarina - Reckless",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "5",
+      "might": "5",
+      "rarity": "—",
+      "tag": "Champion・Katarina・Noxus",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-023/219",
+      "image": "data/images/UNL/UNL-023.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you hide a card, ready me.",
+          "ja": "カードを伏せたとき、自身をレディ状態にする。"
+        },
+        {
+          "kw": "",
+          "en": "When you play a card from face down, deal 2 to an enemy unit.",
+          "ja": "伏せた状態からカードをプレイしたとき、敵ユニット1体に2ダメージを与える。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-024",
+      "name": "Rengar - Unseen",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "4",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Champion・Rengar・Ixtal・Cat",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-024/219",
+      "image": "data/images/UNL/UNL-024.avif",
+      "altImage": "data/images/UNL/UNL-024a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "(You may pay (1)(Fury) as an additional cost to have me enter ready.)",
+          "ja": "(追加コストとして①⟨Fury⟩を払うと、レディ状態で登場できる。)"
+        },
+        {
+          "kw": "ASSAULT 2",
+          "en": "(+2 might while I'm an attacker.)",
+          "ja": "(自分が攻撃側の間、＋2マイト。)"
+        },
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay (energy) to choose me with a spell or ability.)",
+          "ja": "(相手はスペルや能力で自身を対象に選ぶとき、⟨エネルギー⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "GANKING",
+          "en": "(I can move from battlefield to battlefield.)",
+          "ja": "(バトルフィールド間を移動できる。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-025",
+      "name": "Undying Legion",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Shadow Isles・Spirit",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-025/219",
+      "image": "data/images/UNL/UNL-025.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "LEGION",
+          "en": "You may play me from your trash for (3)(Fury). (Get the effect if you've played another card this turn.)",
+          "ja": "このカードを捨て札から③⟨Fury⟩で使用できる。(このターンに他のカードをプレイしていた場合、効果を得る。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-026",
+      "name": "Xerath - Freed",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "5",
+      "might": "5",
+      "rarity": "—",
+      "tag": "Champion・Xerath・Shurima",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-026/219",
+      "image": "data/images/UNL/UNL-026.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "(Fury), (exhaust): Deal 3 to a unit. Use this ability only while I'm at a battlefield.",
+          "ja": "⟨Fury⟩,⟨消耗⟩:ユニット1体に3ダメージを与える。この能力は自身がバトルフィールドにいる間のみ使用できる。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-027",
+      "name": "Inviolus Vox",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "8",
+      "might": "8",
+      "rarity": "—",
+      "tag": "Mount Targon・Dragon",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-027/219",
+      "image": "data/images/UNL/UNL-027.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I conquer, give a friendly unit +8 might this turn.",
+          "ja": "征服したとき、味方ユニット1体にこのターン＋8マイトを与える。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-028",
+      "name": "Pyke - Dockside Butcher",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "3",
+      "might": "2",
+      "rarity": "—",
+      "tag": "Champion・Pyke・Bilgewater",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-028/219",
+      "image": "data/images/UNL/UNL-028.avif",
+      "altImage": "data/images/UNL/UNL-028a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "(Hide now for (energy) to react with later for (0).)",
+          "ja": "(⟨エネルギー⟩を払って伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+        },
+        {
+          "kw": "GANKING",
+          "en": "(I can move from battlefield to battlefield.)",
+          "ja": "(バトルフィールド間を移動できる。)"
+        },
+        {
+          "kw": "",
+          "en": "You may pay (Fury) as an additional cost to play me.",
+          "ja": "追加コストとして⟨Fury⟩を支払ってこのカードをプレイしてもよい。"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, if you paid the additional cost, ready me and give me +2 might this turn.",
+          "ja": "このカードをプレイしたとき、追加コストを支払っていた場合、自身をレディ状態にし、このターン＋2マイトを与える。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-029",
+      "name": "Red Brambleback",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "4",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-029/219",
+      "image": "data/images/UNL/UNL-029.avif",
+      "altImage": "data/images/UNL/UNL-029a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "(You may pay (1)(Fury) as an additional cost to have me enter ready.)",
+          "ja": "(追加コストとして①⟨Fury⟩を払うと、レディ状態で登場できる。)"
+        },
+        {
+          "kw": "",
+          "en": "Your conquer effects for conquering here trigger an additional time.",
+          "ja": "自分がここで征服したときの征服効果が、追加で1回誘発する。"
+        },
+        {
+          "kw": "BUFF",
+          "en": "When I conquer, BUFF a friendly unit. (Give it a +1 might buff if it doesn't have one.)",
+          "ja": "征服したとき、味方ユニット1体を【BUFF】する。(バフがなければ＋1マイトのバフを与える。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-030",
+      "name": "Vi - Hotheaded",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Fury",
+      "cost": "4",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Champion・Vi・Zaun",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-030/219",
+      "image": "data/images/UNL/UNL-030.avif",
+      "altImage": "data/images/UNL/UNL-030a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay (energy) to choose me with a spell or ability.)",
+          "ja": "(相手はスペルや能力で自身を対象に選ぶとき、⟨エネルギー⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "(2)(Fury): Double my Might this turn.",
+          "ja": "②⟨Fury⟩:このターン、自身のマイトを2倍にする。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-t01",
+      "name": "Baron Pit",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "トークン",
+      "tag": "Token Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-T01",
+      "image": "data/images/UNL/UNL-T01.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "(You can't start the game with a token battlefield.) Units can move here from anywhere.",
+          "ja": "(トークンのバトルフィールドはゲーム開始時に置けない。) ユニットはどこからでもここに移動できる。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-t03",
+      "name": "Brush",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "トークン",
+      "tag": "Token Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-T03",
+      "image": "data/images/UNL/UNL-T03.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Bird, Cat, Dog, Poro, and Ivern units here have +1 might. When you score here, you may replace this with the battlefield it replaced.",
+          "ja": "ここにいるBird・Cat・Dog・Poro・Ivernユニットは＋1マイトを持つ。ここで得点したとき、これを置き換え元のバトルフィールドと入れ替えてもよい。"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-t06",
+      "name": "Reflection",
+      "nameJa": "",
+      "type": "Token",
+      "domain": "",
+      "cost": "0",
+      "might": "0",
+      "rarity": "トークン",
+      "tag": "Token Unit",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-T06",
+      "image": "data/images/UNL/UNL-T06.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "(I become a copy of something when played. I don't get that card's play effects.)",
+          "ja": "(プレイしたとき、何かのコピーになる。そのカードのプレイ時効果は得ない。)"
+        }
+      ],
+      "equip": []
+    },
+    {
+      "id": "unl-t08",
+      "name": "XP Tracker",
+      "nameJa": "",
+      "type": "Token",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "トークン",
+      "tag": "Token",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-T08",
+      "image": "data/images/UNL/UNL-T08.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Track gained XP here. Some cards get bonuses based on your LEVEL. Some cards can spend XP for powerful effects.",
+          "ja": "得たXPをここで記録する。一部のカードはLEVELに応じてボーナスを得る。一部のカードはXPを消費して強力な効果を発動できる。"
+        }
       ],
       "equip": []
     }
   ],
-  "legends": [
-    {
-      "id": "jinx-loose-cannon",
-      "name": "Jinx - Loose Cannon",
-      "nameJa": "ジンクス・ルーズキャノン",
-      "domains": ["Fury", "Chaos"],
-      "number": "OGN-012",
-      "abilityKw": "SIGNATURE / シグネチャー",
-      "abilityEn": "Whenever you play your third card in a turn, deal 2 damage to any target.",
-      "abilityJa": "各ターン、3枚目のカードをプレイするたび、任意の対象に2ダメージを与える。"
-    },
-    {
-      "id": "yasuo-unforgiven",
-      "name": "Yasuo - The Unforgiven",
-      "nameJa": "ヤスオ・咎人",
-      "domains": ["Calm", "Fury"],
-      "number": "OGN-088",
-      "abilityKw": "SIGNATURE / シグネチャー",
-      "abilityEn": "When Yasuo blocks, he takes no combat damage this turn.",
-      "abilityJa": "ヤスオがブロックした時、このターン戦闘ダメージを受けない。"
-    },
-    {
-      "id": "lux-lady-luminosity",
-      "name": "Lux - Lady of Luminosity",
-      "nameJa": "ラックス・光の淑女",
-      "domains": ["Mind", "Order"],
-      "number": "SFD-004",
-      "abilityKw": "SIGNATURE / シグネチャー",
-      "abilityEn": "The first spell you play each turn costs 1 less.",
-      "abilityJa": "各ターン最初にプレイするスペルのコストを1少なくする。"
-    }
-  ]
+  "legends": []
 }
