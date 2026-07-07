@@ -1,5 +1,5 @@
 {
-  "_readme": "カード追記はここに1件足すだけ。画像は data/images/<setCode>/<番号>.avif を想定。alt art は altImage に。",
+  "_readme": "カード追記はここに1件足すだけ。画像は images/<setCode>/<番号>.avif を想定。alt art は altImage に。",
   "sets": [
     {
       "code": "OGN",
@@ -171,7 +171,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-001/219",
-      "image": "data/images/UNL/UNL-001.avif",
+      "image": "images/UNL/UNL-001.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -201,7 +201,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-002/219",
-      "image": "data/images/UNL/UNL-002.avif",
+      "image": "images/UNL/UNL-002.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -231,7 +231,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-003/219",
-      "image": "data/images/UNL/UNL-003.avif",
+      "image": "images/UNL/UNL-003.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -261,7 +261,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-004/219",
-      "image": "data/images/UNL/UNL-004.avif",
+      "image": "images/UNL/UNL-004.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -286,7 +286,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-005/219",
-      "image": "data/images/UNL/UNL-005.avif",
+      "image": "images/UNL/UNL-005.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -316,7 +316,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-006/219",
-      "image": "data/images/UNL/UNL-006.avif",
+      "image": "images/UNL/UNL-006.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -346,7 +346,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-007/219",
-      "image": "data/images/UNL/UNL-007.avif",
+      "image": "images/UNL/UNL-007.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -376,7 +376,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-008/219",
-      "image": "data/images/UNL/UNL-008.avif",
+      "image": "images/UNL/UNL-008.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -406,7 +406,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-009/219",
-      "image": "data/images/UNL/UNL-009.avif",
+      "image": "images/UNL/UNL-009.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -436,7 +436,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-010/219",
-      "image": "data/images/UNL/UNL-010.avif",
+      "image": "images/UNL/UNL-010.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -466,7 +466,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-011/219",
-      "image": "data/images/UNL/UNL-011.avif",
+      "image": "images/UNL/UNL-011.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -491,7 +491,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-012/219",
-      "image": "data/images/UNL/UNL-012.avif",
+      "image": "images/UNL/UNL-012.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -521,7 +521,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-013/219",
-      "image": "data/images/UNL/UNL-013.avif",
+      "image": "images/UNL/UNL-013.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -556,7 +556,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-014/219",
-      "image": "data/images/UNL/UNL-014.avif",
+      "image": "images/UNL/UNL-014.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -586,7 +586,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-015/219",
-      "image": "data/images/UNL/UNL-015.avif",
+      "image": "images/UNL/UNL-015.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -611,7 +611,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-016/219",
-      "image": "data/images/UNL/UNL-016.avif",
+      "image": "images/UNL/UNL-016.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -641,7 +641,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-017/219",
-      "image": "data/images/UNL/UNL-017.avif",
+      "image": "images/UNL/UNL-017.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -671,7 +671,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-018/219",
-      "image": "data/images/UNL/UNL-018.avif",
+      "image": "images/UNL/UNL-018.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -696,7 +696,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-019/219",
-      "image": "data/images/UNL/UNL-019.avif",
+      "image": "images/UNL/UNL-019.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -732,7 +732,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-020/219",
-      "image": "data/images/UNL/UNL-020.avif",
+      "image": "images/UNL/UNL-020.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -757,7 +757,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-021/219",
-      "image": "data/images/UNL/UNL-021.avif",
+      "image": "images/UNL/UNL-021.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -787,8 +787,8 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-022/219",
-      "image": "data/images/UNL/UNL-022.avif",
-      "altImage": "data/images/UNL/UNL-022a.avif",
+      "image": "images/UNL/UNL-022.avif",
+      "altImage": "images/UNL/UNL-022a.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -823,7 +823,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-023/219",
-      "image": "data/images/UNL/UNL-023.avif",
+      "image": "images/UNL/UNL-023.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -853,8 +853,8 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-024/219",
-      "image": "data/images/UNL/UNL-024.avif",
-      "altImage": "data/images/UNL/UNL-024a.avif",
+      "image": "images/UNL/UNL-024.avif",
+      "altImage": "images/UNL/UNL-024a.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -894,7 +894,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-025/219",
-      "image": "data/images/UNL/UNL-025.avif",
+      "image": "images/UNL/UNL-025.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -919,7 +919,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-026/219",
-      "image": "data/images/UNL/UNL-026.avif",
+      "image": "images/UNL/UNL-026.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -944,7 +944,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-027/219",
-      "image": "data/images/UNL/UNL-027.avif",
+      "image": "images/UNL/UNL-027.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -969,8 +969,8 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-028/219",
-      "image": "data/images/UNL/UNL-028.avif",
-      "altImage": "data/images/UNL/UNL-028a.avif",
+      "image": "images/UNL/UNL-028.avif",
+      "altImage": "images/UNL/UNL-028a.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -1010,8 +1010,8 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-029/219",
-      "image": "data/images/UNL/UNL-029.avif",
-      "altImage": "data/images/UNL/UNL-029a.avif",
+      "image": "images/UNL/UNL-029.avif",
+      "altImage": "images/UNL/UNL-029a.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -1046,8 +1046,8 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-030/219",
-      "image": "data/images/UNL/UNL-030.avif",
-      "altImage": "data/images/UNL/UNL-030a.avif",
+      "image": "images/UNL/UNL-030.avif",
+      "altImage": "images/UNL/UNL-030a.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -1077,7 +1077,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-T01",
-      "image": "data/images/UNL/UNL-T01.avif",
+      "image": "images/UNL/UNL-T01.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -1102,7 +1102,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-T03",
-      "image": "data/images/UNL/UNL-T03.avif",
+      "image": "images/UNL/UNL-T03.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -1127,7 +1127,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-T06",
-      "image": "data/images/UNL/UNL-T06.avif",
+      "image": "images/UNL/UNL-T06.avif",
       "modified": "2026-07-08",
       "effects": [
         {
@@ -1152,7 +1152,7 @@
       "set": "Unleashed",
       "setCode": "UNL",
       "number": "UNL-T08",
-      "image": "data/images/UNL/UNL-T08.avif",
+      "image": "images/UNL/UNL-T08.avif",
       "modified": "2026-07-08",
       "effects": [
         {
