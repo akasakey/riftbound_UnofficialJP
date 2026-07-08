@@ -4588,6 +4588,862 @@
       "altImage": "images/UNL/UNL-150a.avif"
     },
     {
+      "id": "unl-151",
+      "name": "Bandle Soldier",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "4",
+      "might": "5",
+      "rarity": "コモン",
+      "tag": "Bandle City・Yordle",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-151/219",
+      "image": "images/UNL/UNL-151.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "LEVEL 3",
+          "en": "I enter ready. (While you have 3+ XP, get the effect.)",
+          "ja": "自身はレディ状態で登場する。(3以上のXPを持つ間、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-152",
+      "name": "Black Rose Dignitary",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "3",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Noxus",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-152/219",
+      "image": "images/UNL/UNL-152.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ASSAULT",
+          "en": "(+1 ⟨might⟩ while I'm an attacker.)",
+          "ja": "(自身が攻撃側の間、+1マイト。)"
+        },
+        {
+          "kw": "DEATHKNELL",
+          "en": "Channel 1 rune exhausted. (When I die, get the effect.)",
+          "ja": "ルーン1つを消耗状態でチャネルする。(自身が破壊されたとき、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-153",
+      "name": "Carrion Dredger",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "2",
+      "might": "1",
+      "rarity": "コモン",
+      "tag": "Zaun・Mech",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-153/219",
+      "image": "images/UNL/UNL-153.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "DEATHKNELL",
+          "en": "Play a 1 ⟨might⟩ Bird unit token with DEFLECT to your base. (When I die, get the effect. Opponents must pay ⚡ to choose a DEFLECT unit with a spell or ability.)",
+          "ja": "DEFLECTを持つ1マイトのBirdユニットトークン1体を自分のベースにプレイする。(自身が破壊されたとき、この効果を得る。相手はスペルや能力でDEFLECTを持つユニットを対象に選ぶとき、⟨エネルギー⟩を支払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-154",
+      "name": "Crimson Pigeons",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Noxus・Bird",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-154/219",
+      "image": "images/UNL/UNL-154.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "I have +2 ⟨might⟩ while I'm attacking with another unit.",
+          "ja": "自身が他のユニットと共に攻撃している間、+2マイトを得る。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-155",
+      "name": "Heroic Charge",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "cost": "3",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-155/219",
+      "image": "images/UNL/UNL-155.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターン、またはショーダウン中にプレイする。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a friendly unit +1 ⟨might⟩ this turn and STUN an enemy unit at its location. (A stunned unit doesn't deal combat damage this turn.)",
+          "ja": "味方ユニット1体にこのターン+1マイトを与え、その場所にいる敵ユニット1体をSTUNする。(STUNされたユニットはこのターン戦闘ダメージを与えない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-156",
+      "name": "Loyal Poro",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Freljord・Poro",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-156/219",
+      "image": "images/UNL/UNL-156.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "DEATHKNELL",
+          "en": "If I didn't die alone, draw 1. (When I die, get the effect. I wasn't alone if there were other friendly units here.)",
+          "ja": "自身が単独で破壊されたのでなければ、カードを1枚引く。(自身が破壊されたとき、この効果を得る。ここに他の味方ユニットがいれば単独ではない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-157",
+      "name": "Scrutinizing Sergeant",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "6",
+      "might": "6",
+      "rarity": "コモン",
+      "tag": "Demacia・Elite",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-157/219",
+      "image": "images/UNL/UNL-157.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, gain 1 XP for each friendly unit.",
+          "ja": "自身をプレイしたとき、味方ユニット1体につき1XPを得る。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-158",
+      "name": "Shepherd's Heirloom",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Order",
+      "cost": "2",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "Equipment",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-158/219",
+      "image": "images/UNL/UNL-158.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play this, gain 1 XP.",
+          "ja": "これをプレイしたとき、1XPを得る。"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "EQUIP",
+          "en": "Spend 1 XP. (Attach this to a unit you control. The equipped unit has +2 ⟨might⟩.)",
+          "ja": "(1XPを支払う：自分がコントロールするユニットに装備する。装備したユニットは+2マイトを得る。)"
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "unl-159",
+      "name": "Soul Harvest",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "cost": "2",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-159/219",
+      "image": "images/UNL/UNL-159.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Kill a unit at a battlefield with 3 ⟨might⟩ or less.",
+          "ja": "バトルフィールドにいるマイト3以下のユニット1体を破壊する。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-160",
+      "name": "Ultrasoft Poro",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "5",
+      "might": "5",
+      "rarity": "コモン",
+      "tag": "Freljord・Poro",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-160/219",
+      "image": "images/UNL/UNL-160.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "⟨exhaust⟩: Play two 1 ⟨might⟩ Bird unit tokens with DEFLECT. Use this ability only while I'm at a battlefield. (Opponents must pay ⚡ to choose a DEFLECT unit with a spell or ability.)",
+          "ja": "⟨消耗⟩：DEFLECTを持つ1マイトのBirdユニットトークンを2体プレイする。この能力は自身がバトルフィールドにいる間のみ使用できる。(相手はスペルや能力でDEFLECTを持つユニットを対象に選ぶとき、⟨エネルギー⟩を支払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-161",
+      "name": "Divining Shells",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Order",
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-161/219",
+      "image": "images/UNL/UNL-161.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "VISION",
+          "en": "(When you play this, look at the top card of your Main Deck. You may recycle it.)",
+          "ja": "(これをプレイしたとき、メインデッキの一番上のカードを見る。それをリサイクルしてもよい。)"
+        },
+        {
+          "kw": "ACTION",
+          "en": "Kill this, ⟨exhaust⟩: Give a unit +2 ⟨might⟩ this turn.",
+          "ja": "これを破壊、⟨消耗⟩：ユニット1体にこのターン+2マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-162",
+      "name": "Enthralling Protector",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "2",
+      "might": "2",
+      "rarity": "アンコモン",
+      "tag": "Ionia・Fae",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-162/219",
+      "image": "images/UNL/UNL-162.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HUNT",
+          "en": "(When I conquer or hold, gain 1 XP.)",
+          "ja": "(自身が征服またはホールドしたとき、1XPを得る。)"
+        },
+        {
+          "kw": "",
+          "en": "Spend 2 XP: BUFF me. (Give me a +1 ⟨might⟩ buff if I don't have one.)",
+          "ja": "2XPを支払う：自身をBUFFする。(自身がバフを持っていなければ、+1マイトのバフを与える。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-163",
+      "name": "Mageseeker Investigator",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "4",
+      "might": "4",
+      "rarity": "アンコモン",
+      "tag": "Demacia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-163/219",
+      "image": "images/UNL/UNL-163.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Opponents must pay ⚡ for each unit beyond the first to move multiple units to my battlefield at the same time.",
+          "ja": "相手は複数のユニットを同時に自身のいるバトルフィールドへ移動させるとき、最初の1体を超えるユニット1体ごとに⟨エネルギー⟩を支払わなければならない。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-164",
+      "name": "Safety Inspector",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "5",
+      "might": "3",
+      "rarity": "アンコモン",
+      "tag": "Bandle City・Yordle",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-164/219",
+      "image": "images/UNL/UNL-164.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "You may spend 3 XP as an additional cost to play me.",
+          "ja": "追加コストとして3XPを支払って自身をプレイしてもよい。"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, each player must kill one of their units. If you paid my additional cost, you don't kill a unit this way.",
+          "ja": "自身をプレイしたとき、各プレイヤーは自分のユニット1体を破壊しなければならない。追加コストを支払っていた場合、自分はこの方法でユニットを破壊しない。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-165",
+      "name": "Shadow's Call",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-165/219",
+      "image": "images/UNL/UNL-165.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Choose a friendly unit without TEMPORARY. Give it TEMPORARY. Draw 2. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
+          "ja": "TEMPORARYを持たない味方ユニット1体を選ぶ。それにTEMPORARYを与える。カードを2枚引く。(そのコントローラーのBeginningフェーズ開始時、得点計算前にそれを破壊する。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-166",
+      "name": "Stalking Wolf",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "4",
+      "might": "6",
+      "rarity": "アンコモン",
+      "tag": "Freljord・Dog",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-166/219",
+      "image": "images/UNL/UNL-166.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "AMBUSH",
+          "en": "(You may play me as a REACTION to a battlefield where you have units.)",
+          "ja": "(自分がユニットを持つバトルフィールドに、REACTIONとしてプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "As an additional cost to play me, kill a Bird, Cat, Dog, or Poro you control. You may play me to its battlefield (even if you don't have other units there).",
+          "ja": "自身をプレイする追加コストとして、自分がコントロールするBird、Cat、Dog、Poroのいずれか1体を破壊する。自身をそのユニットのいたバトルフィールドにプレイしてもよい(そこに他の味方ユニットがいなくてもよい)。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-167",
+      "name": "Starhound",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "5",
+      "might": "6",
+      "rarity": "アンコモン",
+      "tag": "Mount Targon・Dog",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-167/219",
+      "image": "images/UNL/UNL-167.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, return a Bird, Cat, Dog, or Poro from your trash to your hand.",
+          "ja": "自身をプレイしたとき、自分のトラッシュからBird、Cat、Dog、Poroのいずれか1枚を手札に戻す。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-168",
+      "name": "Undying Loyalty",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-168/219",
+      "image": "images/UNL/UNL-168.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "This costs ⟨2⟩ less if you choose a Bird, Cat, Dog, or Poro.",
+          "ja": "Bird、Cat、Dog、Poroのいずれかを選ぶ場合、これのエネルギーは②少なくなる。"
+        },
+        {
+          "kw": "",
+          "en": "Play a unit with cost no more than ⟨2⟩ and no more than ⚡ from your trash, ignoring its cost.",
+          "ja": "自分のトラッシュから、エネルギー②以下かつパワー要件以下のユニット1体を、そのコストを無視してプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-169",
+      "name": "Ashe - Focused",
+      "nameJa": "",
+      "type": "Champion Unit",
+      "domain": "Order",
+      "cost": "5",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Ashe・Freljord",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-169/219",
+      "image": "images/UNL/UNL-169.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, choose an opponent. They reveal their hand. Choose a card revealed this way and banish it. When they hold, return it to their hand (even if I'm no longer on the board).",
+          "ja": "自身をプレイしたとき、相手1人を選ぶ。その相手は手札を公開する。この方法で公開されたカード1枚を選び、それを追放する。その相手がホールドしたとき、それを手札に戻す(自身が場を離れていてもよい)。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-170",
+      "name": "Atakhan",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "10",
+      "might": "7",
+      "rarity": "レア",
+      "tag": "Noxus・Demon",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-170/219",
+      "image": "images/UNL/UNL-170.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "You may kill a friendly unit as an additional cost to play me. If you do, I cost ⟨1⟩ less for each Energy it costs and ⟨might⟩ less for each Power it costs.",
+          "ja": "自身をプレイする追加コストとして味方ユニット1体を破壊してもよい。そうした場合、そのユニットのエネルギーコスト1つにつき自身のエネルギーは①減り、そのユニットのパワーコスト1つにつき自身のパワーコストが1つ減る。"
+        },
+        {
+          "kw": "GANKING",
+          "en": "(I can move from battlefield to battlefield.)",
+          "ja": "(自身はバトルフィールドからバトルフィールドへ移動できる。)"
+        },
+        {
+          "kw": "",
+          "en": "When I attack, the defender must kill one of their units here.",
+          "ja": "自身が攻撃したとき、防御側は自分のユニット1体をここで破壊しなければならない。"
+        }
+      ],
+      "equip": [],
+      "power": "3"
+    },
+    {
+      "id": "unl-171",
+      "name": "Galio - Indefatigable",
+      "nameJa": "",
+      "type": "Champion Unit",
+      "domain": "Order",
+      "cost": "3",
+      "might": "6",
+      "rarity": "レア",
+      "tag": "Galio・Demacia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-171/219",
+      "image": "images/UNL/UNL-171.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay ⚡ to choose me with a spell or ability.)",
+          "ja": "(相手はスペルや能力で自身を対象に選ぶとき、⟨エネルギー⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "TANK",
+          "en": "(I must be assigned combat damage first.)",
+          "ja": "(自身は最初に戦闘ダメージを割り当てられなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "I don't deal combat damage.",
+          "ja": "自身は戦闘ダメージを与えない。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-172",
+      "name": "LeBlanc - Fragmented",
+      "nameJa": "",
+      "type": "Champion Unit",
+      "domain": "Order",
+      "cost": "3",
+      "might": "3",
+      "rarity": "レア",
+      "tag": "LeBlanc・Noxus",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-172/219",
+      "image": "images/UNL/UNL-172.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ASSAULT",
+          "en": "(+1 ⟨might⟩ while I'm an attacker.)",
+          "ja": "(自身が攻撃側の間、+1マイト。)"
+        },
+        {
+          "kw": "DEATHKNELL",
+          "en": "Draw 1. If it's your Beginning Phase, draw 2 instead. (When I die, get the effect.)",
+          "ja": "カードを1枚引く。自分のBeginningフェーズであれば、代わりに2枚引く。(自身が破壊されたとき、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": "1",
+      "altImage": "images/UNL/UNL-172a.avif"
+    },
+    {
+      "id": "unl-173",
+      "name": "Sacrifice",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "cost": "1",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-173/219",
+      "image": "images/UNL/UNL-173.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(いつでもプレイできる。スペルや能力が解決する前でもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "As an additional cost to play this, kill a friendly MIGHTY unit. (A unit is Mighty while it has 5+ ⟨might⟩.) Draw 2 and channel 1 rune exhausted.",
+          "ja": "これをプレイする追加コストとして、味方のMIGHTYユニット1体を破壊する。(ユニットはマイト5以上の間MIGHTYである。)カードを2枚引き、ルーン1つを消耗状態でチャネルする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-174",
+      "name": "Shard of Undoing",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Order",
+      "cost": "6",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-174/219",
+      "image": "images/UNL/UNL-174.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "The first time a friendly unit dies during your Beginning Phase each turn, each opponent must kill one of their units.",
+          "ja": "各ターン、自分のBeginningフェーズ中に最初に味方ユニットが破壊されたとき、各相手は自分のユニット1体を破壊しなければならない。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-175",
+      "name": "Tactical Retreat",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "cost": "2",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-175/219",
+      "image": "images/UNL/UNL-175.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(いつでもプレイできる。スペルや能力が解決する前でもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a friendly unit. The next time it would die this turn, heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)",
+          "ja": "味方ユニット1体を選ぶ。このターン、それが次に破壊されるとき、代わりにそれを回復し、消耗させ、リコールする。(それをベースに送る。これは移動ではない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-176",
+      "name": "Vi - Peacekeeper",
+      "nameJa": "",
+      "type": "Champion Unit",
+      "domain": "Order",
+      "cost": "5",
+      "might": "5",
+      "rarity": "レア",
+      "tag": "Vi・Piltover",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-176/219",
+      "image": "images/UNL/UNL-176.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "AMBUSH",
+          "en": "(You may play me as a REACTION to a battlefield where you have units.)",
+          "ja": "(自分がユニットを持つバトルフィールドに、REACTIONとしてプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "When I attack, STUN an enemy unit here. (It doesn't deal combat damage this turn.)",
+          "ja": "自身が攻撃したとき、ここにいる敵ユニット1体をSTUNする。(そのユニットはこのターン戦闘ダメージを与えない。)"
+        }
+      ],
+      "equip": [],
+      "power": "1",
+      "altImage": "images/UNL/UNL-176a.avif"
+    },
+    {
+      "id": "unl-177",
+      "name": "Ivern - Friend to All",
+      "nameJa": "",
+      "type": "Champion Unit",
+      "domain": "Order",
+      "cost": "6",
+      "might": "6",
+      "rarity": "エピック",
+      "tag": "Ivern・Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-177/219",
+      "image": "images/UNL/UNL-177.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "As you play me, choose Bird, Cat, Dog, or Poro. I gain that tag.",
+          "ja": "自身をプレイする際、Bird、Cat、Dog、Poroのいずれかを選ぶ。自身はそのタグを得る。"
+        },
+        {
+          "kw": "",
+          "en": "When I conquer or hold, score 1 point if your units have all of the following tags among them — Bird, Cat, Dog, and Poro.",
+          "ja": "自身が征服またはホールドしたとき、自分のユニット全体でBird、Cat、Dog、Poroのすべてのタグを持っていれば、1点をスコアする。"
+        }
+      ],
+      "equip": [],
+      "power": "1",
+      "altImage": "images/UNL/UNL-177a.avif"
+    },
+    {
+      "id": "unl-178",
+      "name": "Poppy - Defender of the Meek",
+      "nameJa": "",
+      "type": "Champion Unit",
+      "domain": "Order",
+      "cost": "6",
+      "might": "5",
+      "rarity": "エピック",
+      "tag": "Poppy・Demacia・Yordle",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-178/219",
+      "image": "images/UNL/UNL-178.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "You may spend 3 XP as an additional cost to play me. If you do, I cost ⟨3⟩ less.",
+          "ja": "追加コストとして3XPを支払って自身をプレイしてもよい。そうした場合、自身のエネルギーは③少なくなる。"
+        },
+        {
+          "kw": "AMBUSH",
+          "en": "(You may play me as a REACTION to a battlefield where you have units.)",
+          "ja": "(自分がユニットを持つバトルフィールドに、REACTIONとしてプレイできる。)"
+        },
+        {
+          "kw": "TANK",
+          "en": "(I must be assigned combat damage first.)",
+          "ja": "(自身は最初に戦闘ダメージを割り当てられなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": "1",
+      "altImage": "images/UNL/UNL-178a.avif"
+    },
+    {
+      "id": "unl-179",
+      "name": "Rift Herald",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "cost": "8",
+      "might": "7",
+      "rarity": "エピック",
+      "tag": "The Void",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-179/219",
+      "image": "images/UNL/UNL-179.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I move to a battlefield, look at the top 3 cards of your Main Deck. You may reveal a unit from among them and draw it. Recycle the rest.",
+          "ja": "自身がバトルフィールドへ移動したとき、メインデッキの上から3枚を見る。その中からユニット1枚を公開して引いてもよい。残りをリサイクルする。"
+        },
+        {
+          "kw": "DEATHKNELL",
+          "en": "Play a unit from your hand to your base, ignoring its Energy cost. (When I die, get the effect. You must still pay its Power cost.)",
+          "ja": "手札からユニット1体を、そのエネルギーコストを無視して自分のベースにプレイする。(自身が破壊されたとき、この効果を得る。パワーコストは支払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": "1",
+      "altImage": "images/UNL/UNL-179a.avif"
+    },
+    {
+      "id": "unl-180",
+      "name": "The Ruination",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "cost": "9",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-180/219",
+      "image": "images/UNL/UNL-180.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Kill all units.",
+          "ja": "すべてのユニットを破壊する。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
       "id": "unl-181",
       "name": "Jhin - Virtuoso",
       "nameJa": "",
