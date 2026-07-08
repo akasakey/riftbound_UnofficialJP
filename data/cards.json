@@ -458,7 +458,7 @@
       "name": "Fresh Beans",
       "nameJa": "",
       "type": "Gear",
-      "domain": "",
+      "domain": "Fury",
       "cost": "2",
       "might": "",
       "rarity": "—",
@@ -688,7 +688,7 @@
       "name": "Blighted Battleaxe",
       "nameJa": "",
       "type": "Gear",
-      "domain": "",
+      "domain": "Fury",
       "cost": "4",
       "might": "",
       "rarity": "—",
@@ -701,8 +701,9 @@
       "effects": [
         {
           "kw": "EQUIP",
+          "cost": "①⟨Fury⟩",
           "en": "(1)(Fury) ((1)(Fury): Attach this to a unit you control.)",
-          "ja": "①⟨Fury⟩(①⟨Fury⟩:自分がコントロールするユニットに装備する。)"
+          "ja": "(①⟨Fury⟩:自分がコントロールするユニットに装備する。)"
         },
         {
           "kw": "",
@@ -929,7 +930,7 @@
         }
       ],
       "equip": [],
-      "power": "1"
+      "power": "0"
     },
     {
       "id": "unl-027",
@@ -1063,6 +1064,1787 @@
       ],
       "equip": [],
       "power": ""
+    },
+    {
+      "id": "unl-031",
+      "name": "Combat Experience",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "cost": "1",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-031/219",
+      "image": "images/UNL/UNL-031.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルや能力の解決前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a unit +1 might this turn.",
+          "ja": "ユニット1体にこのターン、＋1マイトを与える。"
+        },
+        {
+          "kw": "LEVEL 6",
+          "en": "Give it +3 might this turn instead. (While you have 6+ XP, get the effect.)",
+          "ja": "代わりにこのターン、＋3マイトを与える。(XPを6以上持っている間、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-032",
+      "name": "Double Trouble",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-032/219",
+      "image": "images/UNL/UNL-032.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REPEAT 2",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加でコストを払うことで、このスペルの効果を繰り返す。)"
+        },
+        {
+          "kw": "",
+          "en": "Look at the top 3 cards of your Main Deck. You may reveal a unit from among them and draw it. Recycle the rest.",
+          "ja": "自分のメインデッキの上から3枚を見る。その中からユニット1枚を公開して引いてもよい。残りをリサイクルする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-033",
+      "name": "Frisky Hunter",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "4",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Zaun・Cat",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-033/219",
+      "image": "images/UNL/UNL-033.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, play a 1 might Bird unit token with DEFLECT here. (Opponents must pay rune to choose it with a spell or ability.)",
+          "ja": "自身をプレイしたとき、DEFLECTを持つマイト1のBirdユニットトークン1体をここにプレイする。(相手はスペルや能力でそれを対象に選ぶとき、⟨rune⟩を払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-034",
+      "name": "Herald of Spring",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "4",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-034/219",
+      "image": "images/UNL/UNL-034.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HUNT",
+          "en": "(When I conquer or hold, gain 1 XP.)",
+          "ja": "(自身が征服またはホールドしたとき、1XP得る。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, gain 2 XP.",
+          "ja": "自身をプレイしたとき、2XP得る。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-035",
+      "name": "Monch",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "6",
+      "might": "6",
+      "rarity": "—",
+      "tag": "Bandle City",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-035/219",
+      "image": "images/UNL/UNL-035.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "If an opponent controls a stunned unit, I cost 2 less and enter ready.",
+          "ja": "相手がスタン状態のユニットをコントロールしている場合、自身のエネルギーは②少なくなり、レディ状態で登場する。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-036",
+      "name": "Mutated Mouser",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "2",
+      "might": "1",
+      "rarity": "—",
+      "tag": "Bilgewater・Cat",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-036/219",
+      "image": "images/UNL/UNL-036.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "SHIELD 2",
+          "en": "(+2 might while I'm a defender.)",
+          "ja": "(自身が防御側の間、＋2マイト。)"
+        },
+        {
+          "kw": "TANK",
+          "en": "(I must be assigned combat damage first.)",
+          "ja": "(戦闘ダメージはこのユニットから割り当てなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-037",
+      "name": "Shadow Watcher",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "4",
+      "might": "5",
+      "rarity": "—",
+      "tag": "Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-037/219",
+      "image": "images/UNL/UNL-037.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "If a friendly unit died during your Beginning Phase this turn, I enter ready.",
+          "ja": "このターンの自分の開始フェイズ中に味方ユニットが破壊されていた場合、自身はレディ状態で登場する。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-038",
+      "name": "Skyward Strike",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-038/219",
+      "image": "images/UNL/UNL-038.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Move an enemy unit.",
+          "ja": "敵ユニット1体を移動させる。"
+        },
+        {
+          "kw": "LEVEL 6",
+          "en": "STUN an enemy unit. (While you have 6+ XP, get the effect. A stunned unit doesn't deal combat damage this turn.)",
+          "ja": "敵ユニット1体をSTUNする。(XPを6以上持っている間、この効果を得る。スタン状態のユニットはこのターン戦闘ダメージを与えない。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-039",
+      "name": "Soul Sword",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "cost": "1",
+      "might": "",
+      "rarity": "—",
+      "tag": "Equipment",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-039/219",
+      "image": "images/UNL/UNL-039.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Calm⟩",
+          "en": "((Calm): Attach this to a unit you control.)",
+          "ja": "(⟨Calm⟩:自分がコントロールするユニットに装備する。)"
+        },
+        {
+          "kw": "LEVEL 3",
+          "en": "I have an additional +1 might. (While you have 3+ XP, get the effect.)",
+          "ja": "追加で＋1マイトを得る。(XPを3以上持っている間、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-040",
+      "name": "Wuju Apprentice",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "2",
+      "might": "2",
+      "rarity": "—",
+      "tag": "Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-040/219",
+      "image": "images/UNL/UNL-040.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HUNT",
+          "en": "(When I conquer or hold, gain 1 XP.)",
+          "ja": "(自身が征服またはホールドしたとき、1XP得る。)"
+        },
+        {
+          "kw": "LEVEL 6",
+          "en": "When you play me, draw 1. (While you have 6+ XP, get the effect.)",
+          "ja": "自身をプレイしたとき、カードを1枚引く。(XPを6以上持っている間、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-041",
+      "name": "Allay, Eager Admirer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Bandle City・Yordle",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-041/219",
+      "image": "images/UNL/UNL-041.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay rune to choose me with a spell or ability.)",
+          "ja": "(相手はスペルや能力で自身を対象に選ぶとき、⟨rune⟩を払わなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "While I'm at a battlefield, your other units here have DEFLECT.",
+          "ja": "自身がバトルフィールドにいる間、ここにいる自分の他のユニットはDEFLECTを得る。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-042",
+      "name": "Back Off",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "cost": "3",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-042/219",
+      "image": "images/UNL/UNL-042.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "(Hide now for rune to react with later for 0 energy.)",
+          "ja": "(⟨rune⟩を払って今伏せ、後で⓪でリアクションとしてプレイできる。)"
+        },
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "STUN",
+          "en": "a unit. (It doesn't deal combat damage this turn.)",
+          "ja": "ユニット1体をSTUNする。(そのユニットはこのターン戦闘ダメージを与えない。)"
+        },
+        {
+          "kw": "",
+          "en": "If you played this from your hand, draw 1.",
+          "ja": "これを手札からプレイした場合、カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-043",
+      "name": "Enthusiastic Promoter",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "3",
+      "might": "2",
+      "rarity": "—",
+      "tag": "Bandle City・Yordle",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-043/219",
+      "image": "images/UNL/UNL-043.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "BACKLINE",
+          "en": "(I must be assigned combat damage last.)",
+          "ja": "(戦闘ダメージはこのユニットに最後に割り当てなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "When I hold, BUFF all units here. (Give each a +1 might buff if it doesn't have one.)",
+          "ja": "自身がホールドしたとき、ここにいるすべてのユニットをBUFFする。(バフを持っていない各ユニットに＋1マイトのバフを与える。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-044",
+      "name": "Flurry of Feathers",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "cost": "4",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-044/219",
+      "image": "images/UNL/UNL-044.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルや能力の解決前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose one — Counter a spell. / Play four 1 might Bird unit tokens with DEFLECT. (Opponents must pay rune to choose them with a spell or ability.)",
+          "ja": "1つ選ぶ — スペル1つを打ち消す。／DEFLECTを持つマイト1のBirdユニットトークン4体をプレイする。(相手はスペルや能力でそれらを対象に選ぶとき、⟨rune⟩を払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "unl-045",
+      "name": "Forgotten Signpost",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-045/219",
+      "image": "images/UNL/UNL-045.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "Exhaust a unit you control, (exhaust): Move a different unit you control to the location of the unit you exhausted to pay for this ability.",
+          "ja": "自分がコントロールするユニット1体を消耗、⟨消耗⟩:この能力のコストとして消耗させたユニットの場所へ、自分がコントロールする別のユニット1体を移動させる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-046",
+      "name": "Friendship",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "cost": "1",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-046/219",
+      "image": "images/UNL/UNL-046.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルや能力の解決前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a unit. Give it +1 might this turn for each of the following tags among your units — Bird, Cat, Dog, and Poro.",
+          "ja": "ユニット1体を選ぶ。自分のユニットが持つ以下のタグ（Bird・Cat・Dog・Poro）1種類につき、このターン＋1マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-047",
+      "name": "Mosstomper",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Ixtal・Dog",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-047/219",
+      "image": "images/UNL/UNL-047.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HUNT 2",
+          "en": "(When I conquer or hold, gain 2 XP.)",
+          "ja": "(自身が征服またはホールドしたとき、2XP得る。)"
+        },
+        {
+          "kw": "LEVEL 3",
+          "en": "I have +1 might and DEFLECT. (While you have 3+ XP, get the effect. Opponents must pay rune to choose a DEFLECT unit with a spell or ability.)",
+          "ja": "＋1マイトとDEFLECTを得る。(XPを3以上持っている間、この効果を得る。相手はスペルや能力でDEFLECTを持つユニットを対象に選ぶとき、⟨rune⟩を払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-048",
+      "name": "Trevor Snoozebottom",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Ionia・Yordle",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-048/219",
+      "image": "images/UNL/UNL-048.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "SHIELD",
+          "en": "(+1 might while I'm a defender.)",
+          "ja": "(自身が防御側の間、＋1マイト。)"
+        },
+        {
+          "kw": "",
+          "en": "When I hold, play a ready 3 might Sprite unit token with TEMPORARY here. (Kill it at the start of its controller's next Beginning Phase, before scoring.)",
+          "ja": "自身がホールドしたとき、TEMPORARYを持つマイト3のSpriteユニットトークン1体をレディ状態でここにプレイする。(得点計算前、そのコントローラーの次の開始フェイズの最初に破壊される。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-049",
+      "name": "Honeyfruit",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-049/219",
+      "image": "images/UNL/UNL-049.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "This enters exhausted.",
+          "ja": "これは消耗状態で登場する。"
+        },
+        {
+          "kw": "REACTION",
+          "en": "(exhaust), ADD rune. (Abilities that add resources can't be reacted to.)",
+          "ja": "⟨消耗⟩、ADD ⟨rune⟩。(リソースを追加する能力にはリアクションできない。)"
+        },
+        {
+          "kw": "LEVEL 6",
+          "en": "REACTION (exhaust), ADD 1 rune instead. (Use this ability only while you have 6+ XP.)",
+          "ja": "REACTION ⟨消耗⟩、代わりに ADD ①⟨rune⟩。(この能力はXPを6以上持っている間のみ使用できる。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-050",
+      "name": "Iascylla",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "7",
+      "might": "6",
+      "rarity": "—",
+      "tag": "Bilgewater",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-050/219",
+      "image": "images/UNL/UNL-050.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I hold, at the start of your next Main Phase, you may move an enemy unit to this battlefield.",
+          "ja": "自身がホールドしたとき、自分の次のメインフェイズの最初に、敵ユニット1体をこのバトルフィールドへ移動させてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-051",
+      "name": "Ivern - Nurturer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "5",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Champion・Ivern・Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-051/219",
+      "image": "images/UNL/UNL-051.avif",
+      "altImage": "images/UNL/UNL-051a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me or when I hold, look at the top 3 cards of your Main Deck. You may reveal a unit from among them and draw it. Recycle the rest. Then if you revealed a Bird, Cat, Dog, or Poro, do this: BUFF a friendly unit. (Give it a +1 might buff if it doesn't have one.)",
+          "ja": "自身をプレイしたとき、または自身がホールドしたとき、自分のメインデッキの上から3枚を見る。その中からユニット1枚を公開して引いてもよい。残りをリサイクルする。その後、Bird・Cat・Dog・Poroのいずれかを公開していた場合、次を行う：味方ユニット1体をBUFFする。(バフを持っていなければ＋1マイトのバフを与える。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-052",
+      "name": "Nami - Headstrong",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Champion・Nami・Mount Targon",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-052/219",
+      "image": "images/UNL/UNL-052.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "You may pay rune as an additional cost to play me.",
+          "ja": "自身をプレイするための追加コストとして⟨rune⟩を払ってもよい。"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, if you paid the additional cost, STUN an enemy unit. (It doesn't deal combat damage this turn.)",
+          "ja": "自身をプレイしたとき、追加コストを払っていた場合、敵ユニット1体をSTUNする。(そのユニットはこのターン戦闘ダメージを与えない。)"
+        },
+        {
+          "kw": "",
+          "en": "When I hold, the next time you play a unit this turn, ready it and BUFF it.",
+          "ja": "自身がホールドしたとき、このターン次にユニットをプレイしたとき、それをレディ状態にしてBUFFする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-053",
+      "name": "Scuttle Crab",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "2",
+      "might": "0",
+      "rarity": "—",
+      "tag": "Bilgewater",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-053/219",
+      "image": "images/UNL/UNL-053.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "(Units with 0 might can conquer and hold.)",
+          "ja": "(マイト0のユニットも征服・ホールドできる。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, draw 1.",
+          "ja": "自身をプレイしたとき、カードを1枚引く。"
+        },
+        {
+          "kw": "DEATHKNELL",
+          "en": "Choose an opponent. They reveal their hand. You can look at their facedown cards this turn. Gain 1 XP. (When I die, get the effects.)",
+          "ja": "相手1人を選ぶ。その相手は手札を公開する。このターン、その相手の伏せカードを見ることができる。1XP得る。(自身が破壊されたとき、効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-054",
+      "name": "Tricksy Tentacles",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "cost": "4",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-054/219",
+      "image": "images/UNL/UNL-054.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Move any number of enemy units with the same controller and a total Might of 8 or less to a single location.",
+          "ja": "同じコントローラーが持ち、マイトの合計が8以下となる任意の数の敵ユニットを、1つの場所へ移動させる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-055",
+      "name": "Vex - Mocking",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "5",
+      "might": "5",
+      "rarity": "—",
+      "tag": "Champion・Vex・Shadow Isles・Yordle",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-055/219",
+      "image": "images/UNL/UNL-055.avif",
+      "altImage": "images/UNL/UNL-055a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "SHIELD",
+          "en": "(+1 might while I'm a defender.)",
+          "ja": "(自身が防御側の間、＋1マイト。)"
+        },
+        {
+          "kw": "TANK",
+          "en": "(I must be assigned combat damage first.)",
+          "ja": "(戦闘ダメージはこのユニットから割り当てなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "When you STUN an enemy unit at a battlefield, you may move me to that battlefield.",
+          "ja": "バトルフィールドにいる敵ユニットをSTUNしたとき、自身をそのバトルフィールドへ移動させてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-056",
+      "name": "Yuumi - Magical Cat",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "3",
+      "might": "1",
+      "rarity": "—",
+      "tag": "Champion・Yuumi・Bandle City・Fae・Cat",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-056/219",
+      "image": "images/UNL/UNL-056.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I attack or defend, give one of your other units here +3 might and TANK this turn. (It must be assigned combat damage first.)",
+          "ja": "自身が攻撃または防御したとき、ここにいる自分の他のユニット1体にこのターン、＋3マイトとTANKを与える。(そのユニットは戦闘ダメージを最初に割り当てられなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-057",
+      "name": "Alpha Wildclaw",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "6",
+      "might": "7",
+      "rarity": "—",
+      "tag": "Freljord・Cat",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-057/219",
+      "image": "images/UNL/UNL-057.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "TANK",
+          "en": "(I must be assigned combat damage first.)",
+          "ja": "(戦闘ダメージはこのユニットから割り当てなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "Your units here with less Might than me can't be chosen by enemy spells and abilities.",
+          "ja": "ここにいる自分のユニットのうち、自身よりマイトが低いものは、敵のスペルや能力の対象に選べない。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "unl-058",
+      "name": "Lillia - Protector of Dreams",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "5",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Champion・Lillia・Ionia・Fae",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-058/219",
+      "image": "images/UNL/UNL-058.avif",
+      "altImage": "images/UNL/UNL-058a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play a token unit, give me +1 might this turn.",
+          "ja": "トークンユニットをプレイしたとき、このターン自身に＋1マイトを与える。"
+        },
+        {
+          "kw": "",
+          "en": "Your token units have TANK. (They must be assigned combat damage first.)",
+          "ja": "自分のトークンユニットはTANKを持つ。(それらは戦闘ダメージを最初に割り当てられなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-059",
+      "name": "Master Yi - Unstoppable",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "12",
+      "might": "12",
+      "rarity": "—",
+      "tag": "Champion・Master Yi・Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-059/219",
+      "image": "images/UNL/UNL-059.avif",
+      "altImage": "images/UNL/UNL-059a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "LEVEL 3",
+          "en": "I cost 2 ⟨Calm⟩ less. (While you have 3+ XP, get the effect.)",
+          "ja": "自身のコストが②⟨Calm⟩少なくなる。(XPを3以上持っている間、この効果を得る。)"
+        },
+        {
+          "kw": "LEVEL 6",
+          "en": "I cost 4 ⟨Calm⟩⟨Calm⟩ less instead.",
+          "ja": "代わりに自身のコストが④⟨Calm⟩⟨Calm⟩少なくなる。"
+        },
+        {
+          "kw": "LEVEL 11",
+          "en": "I cost 6 ⟨Calm⟩⟨Calm⟩⟨Calm⟩ less instead.",
+          "ja": "代わりに自身のコストが⑥⟨Calm⟩⟨Calm⟩⟨Calm⟩少なくなる。"
+        },
+        {
+          "kw": "LEVEL 16",
+          "en": "I can't be chosen by enemy spells and abilities.",
+          "ja": "自身は敵のスペルや能力の対象に選べない。"
+        }
+      ],
+      "equip": [],
+      "power": "3"
+    },
+    {
+      "id": "unl-060",
+      "name": "Vilemaw",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "cost": "8",
+      "might": "8",
+      "rarity": "—",
+      "tag": "Shadow Isles・Spider",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-060/219",
+      "image": "images/UNL/UNL-060.avif",
+      "altImage": "images/UNL/UNL-060a.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "AMBUSH",
+          "en": "(You may play me as a REACTION to a battlefield where you have units.)",
+          "ja": "(自身をREACTIONとして、自分のユニットがいるバトルフィールドにプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Enemy units here with less Might than me don't deal combat damage.",
+          "ja": "ここにいる敵ユニットのうち、自身よりマイトが低いものは戦闘ダメージを与えない。"
+        },
+        {
+          "kw": "",
+          "en": "When I hold, draw 1.",
+          "ja": "自身がホールドしたとき、カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "unl-061",
+      "name": "Downstage Dramatics",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-061/219",
+      "image": "images/UNL/UNL-061.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルやアビリティが解決する前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "REPEAT 2",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払うことで、このスペルの効果を繰り返せる。)"
+        },
+        {
+          "kw": "",
+          "en": "Draw 1.",
+          "ja": "カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-062",
+      "name": "Dramatic Visionary",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "4",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-062/219",
+      "image": "images/UNL/UNL-062.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "DEATHKNELL",
+          "en": "PREDICT 2. (When I die, look at the top two cards of your Main Deck. Recycle any of them and put the rest back in any order.)",
+          "ja": "PREDICT 2。(自身が死亡したとき、メインデッキの上から2枚を見る。任意の枚数をリサイクルし、残りを任意の順で戻す。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-063",
+      "name": "Eclipse",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "cost": "3",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-063/219",
+      "image": "images/UNL/UNL-063.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルやアビリティが解決する前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a unit -4 ⟨might⟩ this turn.",
+          "ja": "ユニット1体をこのターン-4マイトする。"
+        },
+        {
+          "kw": "PREDICT",
+          "en": "(Look at the top card of your Main Deck. You may recycle it.)",
+          "ja": "(メインデッキの一番上のカードを見る。それをリサイクルしてもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-064",
+      "name": "Fate Weaver",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "5",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-064/219",
+      "image": "images/UNL/UNL-064.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, look at the top 4 cards of your Main Deck. You may reveal a spell with Energy cost ⟨4⟩ or more from among them and draw it. Recycle the rest.",
+          "ja": "自身をプレイしたとき、メインデッキの上から4枚を見る。その中からエネルギー④以上のスペル1枚を公開して引いてもよい。残りをリサイクルする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-065",
+      "name": "Icevale Archer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "2",
+      "might": "2",
+      "rarity": "—",
+      "tag": "Freljord",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-065/219",
+      "image": "images/UNL/UNL-065.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I attack, you may pay ⟨1⟩ to give a unit here -1 ⟨might⟩ this turn.",
+          "ja": "自身が攻撃したとき、①を支払うことで、ここにいるユニット1体をこのターン-1マイトできる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-066",
+      "name": "Moonlight Affliction",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "cost": "7",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-066/219",
+      "image": "images/UNL/UNL-066.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルやアビリティが解決する前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a unit -10 ⟨might⟩ this turn.",
+          "ja": "ユニット1体をこのターン-10マイトする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-067",
+      "name": "Ruined Rex",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "6",
+      "might": "6",
+      "rarity": "—",
+      "tag": "Bilgewater",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-067/219",
+      "image": "images/UNL/UNL-067.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "DEATHKNELL",
+          "en": "Deal 4 to an enemy unit. (When I die, get the effect.)",
+          "ja": "敵ユニット1体に4ダメージを与える。(自身が死亡したとき、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-068",
+      "name": "Spectral Centaur",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "6",
+      "might": "5",
+      "rarity": "—",
+      "tag": "Shadow Isles・Spirit",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-068/219",
+      "image": "images/UNL/UNL-068.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When another friendly unit dies, give me +2 ⟨might⟩ this turn.",
+          "ja": "他の味方ユニットが死亡したとき、自身をこのターン+2マイトする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-069",
+      "name": "Sprite Burst",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "cost": "5",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-069/219",
+      "image": "images/UNL/UNL-069.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Play two ready 3 ⟨might⟩ Sprite unit tokens with TEMPORARY. (Kill each at the start of its controller's Beginning Phase, before scoring.)",
+          "ja": "READY状態で3マイトのSpriteユニットトークンを2体、TEMPORARY付きでプレイする。(コントローラーのBeginningフェーズ開始時、得点計算前にそれぞれ破壊される。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-070",
+      "name": "Turn to Dust",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-070/219",
+      "image": "images/UNL/UNL-070.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Give a gear TEMPORARY. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
+          "ja": "ギア1つにTEMPORARYを与える。(コントローラーのBeginningフェーズ開始時、得点計算前に破壊される。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-071",
+      "name": "Chakram Dancer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Bilgewater",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-071/219",
+      "image": "images/UNL/UNL-071.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "AMBUSH",
+          "en": "(You may play me as a REACTION to a battlefield where you have units.)",
+          "ja": "(自身をREACTIONとして、自分のユニットがいるバトルフィールドにプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, give your other units here SHIELD this turn. (+1 ⟨might⟩ while they're defenders.)",
+          "ja": "自身をプレイしたとき、ここにいる自分の他のユニットにこのターンSHIELDを与える。(防御している間+1マイト。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-072",
+      "name": "Crescent Strike",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "cost": "3",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-072/219",
+      "image": "images/UNL/UNL-072.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンかショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a battlefield and an enemy unit there. Deal 4 to that unit and 1 to each other enemy unit there.",
+          "ja": "バトルフィールド1つと、そこにいる敵ユニット1体を選ぶ。そのユニットに4ダメージ、そこにいる他の各敵ユニットに1ダメージを与える。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-073",
+      "name": "Deadly Flourish",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "cost": "4",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-073/219",
+      "image": "images/UNL/UNL-073.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Deal 3 to an enemy unit. When it dies this turn, play a Gold gear token exhausted. (It has \"REACTION Kill this, exhaust: ADD 1 rune.\")",
+          "ja": "敵ユニット1体に3ダメージを与える。このターンそれが死亡したとき、Goldギアトークンを消耗状態でプレイする。(そのトークンは「REACTION これを破壊し消耗する:ルーンを1つADDする。」を持つ。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-074",
+      "name": "Frigid Jewel",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-074/219",
+      "image": "images/UNL/UNL-074.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you draw your second card each turn, give a friendly unit +2 ⟨might⟩ this turn.",
+          "ja": "各ターン、2枚目のカードを引いたとき、味方ユニット1体をこのターン+2マイトする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-075",
+      "name": "Gustwalker",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Ionia・Dog",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-075/219",
+      "image": "images/UNL/UNL-075.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HUNT 2",
+          "en": "(When I conquer or hold, gain 2 XP.)",
+          "ja": "(自身が征服またはホールドしたとき、2XPを得る。)"
+        },
+        {
+          "kw": "LEVEL 3",
+          "en": "I have +1 ⟨might⟩ and GANKING. (While you have 3+ XP, get the effect. A GANKING unit can move from battlefield to battlefield.)",
+          "ja": "自身は+1マイトとGANKINGを得る。(XPを3以上持っている間、この効果を得る。GANKINGユニットはバトルフィールドからバトルフィールドへ移動できる。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-076",
+      "name": "Petal Pixie",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "2",
+      "might": "2",
+      "rarity": "—",
+      "tag": "Ionia・Fae",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-076/219",
+      "image": "images/UNL/UNL-076.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "I have +1 ⟨might⟩ for each of your units with TEMPORARY at my battlefield.",
+          "ja": "自身のバトルフィールドにいるTEMPORARYを持つ自分のユニット1体につき、自身は+1マイト。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-077",
+      "name": "Soul Shepherd",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "5",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Shadow Isles",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-077/219",
+      "image": "images/UNL/UNL-077.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Your token units have +1 ⟨might⟩.",
+          "ja": "自分のトークンユニットは+1マイト。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-078",
+      "name": "Sprite Fountain",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-078/219",
+      "image": "images/UNL/UNL-078.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "TEMPORARY",
+          "en": "(Kill this at the start of its controller's Beginning Phase, before scoring.)",
+          "ja": "(コントローラーのBeginningフェーズ開始時、得点計算前にこれを破壊する。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play this, play a ready 3 ⟨might⟩ Sprite unit token with TEMPORARY to your base.",
+          "ja": "これをプレイしたとき、READY状態で3マイトのSpriteユニットトークンをTEMPORARY付きで自分のベースにプレイする。"
+        },
+        {
+          "kw": "DEATHKNELL",
+          "en": "Repeat this gear's play effect. (When this dies, get the effect.)",
+          "ja": "このギアのプレイ効果を繰り返す。(これが死亡したとき、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-079",
+      "name": "Diana - Lunari",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Champion・Diana・Mount Targon",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-079/219",
+      "image": "images/UNL/UNL-079.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When a showdown begins here, you may pay ⟨1⟩. If you do, PREDICT, then reveal the top card of your Main Deck. If it's a spell, draw it. (To Predict, look at the top card of your Main Deck. You may recycle it.)",
+          "ja": "ここでショーダウンが始まったとき、①を支払ってもよい。そうした場合、PREDICTし、メインデッキの一番上のカードを公開する。それがスペルなら引く。(PREDICT:メインデッキの一番上のカードを見て、リサイクルしてもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": "",
+      "altImage": "images/UNL/UNL-079a.avif"
+    },
+    {
+      "id": "unl-080",
+      "name": "Hwei - Brooding Painter",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "5",
+      "might": "5",
+      "rarity": "—",
+      "tag": "Champion・Hwei・Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-080/219",
+      "image": "images/UNL/UNL-080.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I move, draw 1, then discard 1. Then, do the following based on the discarded card's type: Spell — Draw 1. Gear — Ready up to 2 runes. Unit — Give me +3 ⟨might⟩ this turn.",
+          "ja": "自身が移動したとき、カードを1枚引き、その後1枚捨てる。その後、捨てたカードのタイプに応じて次を行う:\n・スペル — カードを1枚引く。\n・ギア — ルーンを2つまでREADYにする。\n・ユニット — 自身をこのターン+3マイトする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-081",
+      "name": "Keeper of Masks",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "2",
+      "might": "1",
+      "rarity": "—",
+      "tag": "Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-081/219",
+      "image": "images/UNL/UNL-081.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+          "ja": "(⟨rune⟩を払って伏せて配置し、後で0コストで発動できる。)"
+        },
+        {
+          "kw": "TEMPORARY",
+          "en": "(Kill me at the start of my controller's Beginning Phase, before scoring.)",
+          "ja": "(コントローラーのBeginningフェーズ開始時、得点計算前に破壊される。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, play two Reflection unit tokens here. They become copies of me.",
+          "ja": "自身をプレイしたとき、ここにReflectionユニットトークンを2体プレイする。それらは自身のコピーになる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-082",
+      "name": "Lillia - Fae Fawn",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "3",
+      "might": "3",
+      "rarity": "—",
+      "tag": "Champion・Lillia・Ionia・Fae",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-082/219",
+      "image": "images/UNL/UNL-082.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "(You may pay ⟨1⟩⟨Mind⟩ as an additional cost to have me enter ready.)",
+          "ja": "(追加コストとして①⟨Mind⟩を支払うと、READY状態で登場できる。)"
+        },
+        {
+          "kw": "",
+          "en": "When I move from a location, play a 3 ⟨might⟩ Sprite unit token with TEMPORARY there. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
+          "ja": "自身がある場所から移動したとき、そこに3マイトのSpriteユニットトークンをTEMPORARY付きでプレイする。(コントローラーのBeginningフェーズ開始時、得点計算前に破壊される。)"
+        }
+      ],
+      "equip": [],
+      "power": "",
+      "altImage": "images/UNL/UNL-082a.avif"
+    },
+    {
+      "id": "unl-083",
+      "name": "Smoke and Mirrors",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-083/219",
+      "image": "images/UNL/UNL-083.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+          "ja": "(⟨rune⟩を払って伏せて配置し、後で0コストで発動できる。)"
+        },
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンかショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a unit you control and another unit you control at a different location. If at least one of them has TEMPORARY, move each to the other's location. Draw 1.",
+          "ja": "自分がコントロールするユニット1体と、別の場所にいる自分がコントロールする別のユニット1体を選ぶ。少なくとも一方がTEMPORARYを持つ場合、それぞれを互いの場所へ移動させる。カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-084",
+      "name": "Sprite Queen",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "7",
+      "might": "6",
+      "rarity": "—",
+      "tag": "Ionia・Fae",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-084/219",
+      "image": "images/UNL/UNL-084.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me or at the start of your Beginning Phase, play a ready 3 ⟨might⟩ Sprite unit token with TEMPORARY to your base. (Kill them at the start of their controller's next Beginning Phase, before scoring.)",
+          "ja": "自身をプレイしたとき、または自分のBeginningフェーズ開始時、READY状態で3マイトのSpriteユニットトークンをTEMPORARY付きで自分のベースにプレイする。(コントローラーの次のBeginningフェーズ開始時、得点計算前に破壊される。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-085",
+      "name": "Sumpworks Map",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "cost": "2",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-085/219",
+      "image": "images/UNL/UNL-085.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルやアビリティが解決する前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "TEMPORARY",
+          "en": "(Kill this at the start of its controller's Beginning Phase, before scoring.)",
+          "ja": "(コントローラーのBeginningフェーズ開始時、得点計算前に破壊される。)"
+        },
+        {
+          "kw": "",
+          "en": "When an opponent scores, draw 1.",
+          "ja": "対戦相手が得点したとき、カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-086",
+      "name": "Zilean - Time Mage",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "5",
+      "might": "5",
+      "rarity": "—",
+      "tag": "Champion・Zilean・Icathia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-086/219",
+      "image": "images/UNL/UNL-086.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Once each turn, if you would play a token unit while I'm at a battlefield, you may play that token and an additional copy of it instead.",
+          "ja": "各ターンに1回、自身がバトルフィールドにいる間にトークンユニットをプレイする場合、代わりにそのトークンと、その追加コピー1体をプレイできる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "unl-087",
+      "name": "Blue Sentinel",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "4",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Mount Targon",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-087/219",
+      "image": "images/UNL/UNL-087.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "SHIELD 2",
+          "en": "(+2 ⟨might⟩ while I'm a defender.)",
+          "ja": "(防御している間、+2マイト。)"
+        },
+        {
+          "kw": "",
+          "en": "Your hold effects for holding here trigger an additional time.",
+          "ja": "ここでホールドすることによる自分のホールド効果が、追加で1回発動する。"
+        },
+        {
+          "kw": "",
+          "en": "When I hold, ADD ⟨rune⟩ at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
+          "ja": "自身がホールドしたとき、次の自分のメインフェーズ開始時に⟨rune⟩をADDする。(リソースをADDするアビリティにはリアクションできない。)"
+        }
+      ],
+      "equip": [],
+      "power": "1",
+      "altImage": "images/UNL/UNL-087a.avif"
+    },
+    {
+      "id": "unl-088",
+      "name": "Gutter Palace",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "cost": "4",
+      "might": "",
+      "rarity": "—",
+      "tag": "",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-088/219",
+      "image": "images/UNL/UNL-088.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "",
+          "en": "At the start of your Beginning Phase, if you have exactly 4 cards in hand and exactly 4 units at battlefields, you win the game.",
+          "ja": "自分のBeginningフェーズ開始時、手札がちょうど4枚、かつバトルフィールドにいるユニットがちょうど4体の場合、ゲームに勝利する。"
+        },
+        {
+          "kw": "",
+          "en": "Discard 1, exhaust: Play a 1 ⟨might⟩ Bird unit token with DEFLECT. (Opponents must pay ⟨rune⟩ to choose it with a spell or ability.)",
+          "ja": "カードを1枚捨て、消耗する:1マイトのBirdユニットトークンをDEFLECT付きでプレイする。(対戦相手はスペルやアビリティでそれを選ぶために⟨rune⟩を支払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-089",
+      "name": "Jhin - Meticulous Killer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "4",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Champion・Jhin・Ionia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-089/219",
+      "image": "images/UNL/UNL-089.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "VISION",
+          "en": "(When you play me, look at the top card of your Main Deck. You may recycle it.)",
+          "ja": "(自身をプレイしたとき、メインデッキの一番上のカードを見る。それをリサイクルしてもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "If you've spent ⟨4⟩ or more to play a spell this turn, you may play me for ⟨Mind⟩.",
+          "ja": "このターン、スペルをプレイするために④以上を支払っていた場合、⟨Mind⟩を支払って自身をプレイできる。"
+        }
+      ],
+      "equip": [],
+      "power": "",
+      "altImage": "images/UNL/UNL-089a.avif"
+    },
+    {
+      "id": "unl-090",
+      "name": "LeBlanc - Everywhere at Once",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "cost": "4",
+      "might": "4",
+      "rarity": "—",
+      "tag": "Champion・LeBlanc・Noxus",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "number": "UNL-090/219",
+      "image": "images/UNL/UNL-090.avif",
+      "modified": "2026-07-08",
+      "effects": [
+        {
+          "kw": "BACKLINE",
+          "en": "(I must be assigned combat damage last.)",
+          "ja": "(自身は戦闘ダメージを最後に割り当てられなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "Your TEMPORARY effects at my battlefield don't trigger.",
+          "ja": "自身のバトルフィールドにおける自分のTEMPORARY効果は発動しない。"
+        }
+      ],
+      "equip": [],
+      "power": "",
+      "altImage": "images/UNL/UNL-090a.avif"
     },
     {
       "id": "unl-t01",
