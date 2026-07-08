@@ -5449,7 +5449,10 @@
       "nameJa": "",
       "type": "Legend",
       "domain": "Fury",
-      "domains": ["Fury", "Mind"],
+      "domains": [
+        "Fury",
+        "Mind"
+      ],
       "cost": "",
       "might": "",
       "rarity": "レア",
@@ -5475,7 +5478,10 @@
       "nameJa": "",
       "type": "Legend",
       "domain": "Fury",
-      "domains": ["Fury", "Body"],
+      "domains": [
+        "Fury",
+        "Body"
+      ],
       "cost": "",
       "might": "",
       "rarity": "レア",
@@ -5501,7 +5507,10 @@
       "nameJa": "",
       "type": "Spell",
       "domain": "Fury",
-      "domains": ["Fury", "Mind"],
+      "domains": [
+        "Fury",
+        "Mind"
+      ],
       "cost": "4",
       "might": "",
       "rarity": "エピック",
@@ -5522,6 +5531,1037 @@
           "kw": "",
           "en": "Choose one you haven't already chosen —\n• Draw 1.\n• Deal 2 to a unit at a battlefield.\n• Deal 3 to a unit at a base.\n• Give a unit at a battlefield -4 ⟨might⟩ this turn.",
           "ja": "まだ選んでいないものを1つ選ぶ —\n・カードを1枚引く。\n・バトルフィールドにいるユニット1体に2ダメージを与える。\n・ベースにいるユニット1体に3ダメージを与える。\n・バトルフィールドにいるユニット1体に、このターン-4⟨マイト⟩を与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-184",
+      "name": "Thrill of the Hunt",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Body"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Rengar・Signature Spell",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-184/219",
+      "image": "images/UNL/UNL-184.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(いつでもプレイできる。スペルや能力が解決する前でもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Banish a friendly unit, then its owner plays it to any battlefield, ignoring its cost.",
+          "ja": "味方ユニット1体を追放し、その持ち主はそれをコストを無視して任意のバトルフィールドにプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-185",
+      "name": "Pyke - Bloodharbor Ripper",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Chaos"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Pyke",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-185/219",
+      "image": "images/UNL/UNL-185.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "①, ⟨exhaust⟩: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted. (It has \"REACTION Kill this, ⟨exhaust⟩: ADD ⟨エネルギー⟩.\")",
+          "ja": "①、⟨消耗⟩：バトルフィールドにいる味方ユニット1体を持ち主の手札に戻す。ゴールドのギアトークンを1つ消耗状態でプレイする。(そのトークンは「REACTION これを破壊、⟨消耗⟩：⟨エネルギー⟩を加える。」を持つ。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-186",
+      "name": "Death from Below",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Chaos"
+      ],
+      "cost": "4",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Pyke・Signature Spell",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-186/219",
+      "image": "images/UNL/UNL-186.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Kill a unit at a battlefield. Then, if it had 3 ⟨might⟩ or less, you may play this from your trash for ⟨エネルギー⟩.",
+          "ja": "バトルフィールドにいるユニット1体を破壊する。その後、そのユニットがマイト3以下だった場合、これを⟨エネルギー⟩を支払って自分のトラッシュからプレイしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-187",
+      "name": "Vi - Piltover Enforcer",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Order"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Vi",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-187/219",
+      "image": "images/UNL/UNL-187.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer, if you assigned 3 or more excess damage, you may exhaust me to ready a unit.",
+          "ja": "自身が征服したとき、超過ダメージを3以上割り当てていた場合、自身を消耗させてユニット1体をレディ状態にしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-188",
+      "name": "Hextech Gauntlets",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Order"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Vi・Signature Gear・Equipment",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-188/219",
+      "image": "images/UNL/UNL-188.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I conquer, if you assigned 3 or more excess damage, draw 1.",
+          "ja": "自身が征服したとき、超過ダメージを3以上割り当てていた場合、カードを1枚引く。"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "EQUIP",
+          "cost": "③",
+          "en": "This ability's Energy cost is reduced by the Might of the unit you choose. (Attach this to a unit you control. The equipped unit has +3 ⟨might⟩.)",
+          "ja": "(この能力のエネルギーコストは、選んだユニットのマイトの分だけ減る。自分がコントロールするユニットに装備する。装備したユニットは+3マイトを得る。)"
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "unl-189",
+      "name": "Lillia - Bashful Bloom",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Mind"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Lillia",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-189/219",
+      "image": "images/UNL/UNL-189.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "④, ⟨exhaust⟩: Play a ready 3 ⟨might⟩ Sprite unit token with TEMPORARY. This ability costs ① less for each friendly unit with TEMPORARY.",
+          "ja": "④、⟨消耗⟩：TEMPORARYを持つ、レディ状態で3マイトのSpriteユニットトークン1体をプレイする。この能力は、TEMPORARYを持つ味方ユニット1体につき①少なくなる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-190",
+      "name": "Lilting Lullaby",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Mind"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Lillia・Signature Spell",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-190/219",
+      "image": "images/UNL/UNL-190.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(いつでもプレイできる。スペルや能力が解決する前でもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Counter a spell. Its controller can't play spells this turn.",
+          "ja": "スペル1つを打ち消す。そのコントローラーはこのターン、スペルをプレイできない。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-191",
+      "name": "Master Yi - Wuju Master",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Body"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Master Yi",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-191/219",
+      "image": "images/UNL/UNL-191.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "LEVEL 6: Your units have +1 ⟨might⟩. (While you have 6+ XP, get the effect.) LEVEL 11: Your units enter ready.",
+          "ja": "LEVEL 6：自分のユニットは+1マイトを得る。(6以上のXPを持つ間、この効果を得る。) LEVEL 11：自分のユニットはレディ状態で登場する。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-192",
+      "name": "Alpha Strike",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Body"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Master Yi・Signature Spell",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-192/219",
+      "image": "images/UNL/UNL-192.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターン、またはショーダウン中にプレイする。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a friendly unit. It deals damage equal to its Might split among enemy units at battlefields. Then for each unit this kills, do this: Gain 1 XP.",
+          "ja": "味方ユニット1体を選ぶ。そのユニットは自身のマイトに等しいダメージを、バトルフィールドにいる敵ユニットに分割して与える。その後、この方法で破壊したユニット1体につき、1XPを得る。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-193",
+      "name": "Vex - Gloomist",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Chaos"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Vex",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-193/219",
+      "image": "images/UNL/UNL-193.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you or an ally hold, you may exhaust me to draw 1.",
+          "ja": "自分または味方がホールドしたとき、自身を消耗させてカードを1枚引いてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-194",
+      "name": "Shadow",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "エピック",
+      "tag": "Vex・Shadow Isles・Signature Unit",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-194/219",
+      "image": "images/UNL/UNL-194.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "If you play me to a battlefield, I enter ready.",
+          "ja": "自身をバトルフィールドにプレイした場合、レディ状態で登場する。"
+        },
+        {
+          "kw": "ACTION",
+          "en": "①, ⟨exhaust⟩: STUN an enemy unit attacking here. (It doesn't deal combat damage this turn.)",
+          "ja": "①、⟨消耗⟩：ここで攻撃している敵ユニット1体をSTUNする。(そのユニットはこのターン戦闘ダメージを与えない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-195",
+      "name": "Ivern - Green Father",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Order"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Ivern",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-195/219",
+      "image": "images/UNL/UNL-195.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer or hold, you may exhaust me to replace that battlefield with a Brush battlefield token. (Bird, Cat, Dog, Poro, and Ivern units have +1 ⟨might⟩ in Brush. It can be swapped back when scored.)",
+          "ja": "自身が征服またはホールドしたとき、自身を消耗させて、そのバトルフィールドをBrushバトルフィールドトークンに置き換えてもよい。(Bird、Cat、Dog、Poro、Ivernのユニットは、Brushにいる間+1マイトを得る。得点計算時に元に戻せる。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-196",
+      "name": "Daisy!",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Order"
+      ],
+      "cost": "9",
+      "might": "8",
+      "rarity": "エピック",
+      "tag": "Ivern・Ionia・Signature Unit",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-196/219",
+      "image": "images/UNL/UNL-196.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "I enter ready.",
+          "ja": "自身はレディ状態で登場する。"
+        },
+        {
+          "kw": "",
+          "en": "Reduce my cost by ① for each of the following tags among your units — Bird, Cat, Dog, and Poro.",
+          "ja": "自分のユニット全体が持つBird、Cat、Dog、Poroのタグ1種につき、自身のエネルギーを①減らす。"
+        },
+        {
+          "kw": "",
+          "en": "When I attack while your units have all 4 tags, STUN an enemy unit here. (It doesn't deal combat damage this turn.)",
+          "ja": "自分のユニットが4種すべてのタグを持つ状態で自身が攻撃したとき、ここにいる敵ユニット1体をSTUNする。(そのユニットはこのターン戦闘ダメージを与えない。)"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "unl-197",
+      "name": "Diana - Scorn of the Moon",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Mind",
+      "domains": [
+        "Mind",
+        "Chaos"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Diana",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-197/219",
+      "image": "images/UNL/UNL-197.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "REACTION ⟨exhaust⟩: ADD ①. Spend this Energy only during showdowns. (Abilities that add resources can't be reacted to.)",
+          "ja": "REACTION ⟨消耗⟩：①を加える。このエネルギーはショーダウン中にのみ支払える。(リソースを加える能力にはリアクションできない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-198",
+      "name": "Moonfall",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind",
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Diana・Signature Spell",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-198/219",
+      "image": "images/UNL/UNL-198.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターン、またはショーダウン中にプレイする。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a battlefield where you have units. You may move up to one enemy unit to that battlefield. Then give enemy units there -2 ⟨might⟩ this turn.",
+          "ja": "自分がユニットを持つバトルフィールド1つを選ぶ。敵ユニット1体までをそのバトルフィールドに移動させてもよい。その後、そこにいる敵ユニットにこのターン-2マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-199",
+      "name": "LeBlanc - Deceiver",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Mind",
+      "domains": [
+        "Mind",
+        "Order"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "LeBlanc",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-199/219",
+      "image": "images/UNL/UNL-199.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer or hold, you may discard 1 and exhaust me to play a ready Reflection unit token there. It becomes a copy of another unit there. Give it TEMPORARY.",
+          "ja": "自身が征服またはホールドしたとき、カードを1枚捨てて自身を消耗させ、そこにレディ状態のReflectionユニットトークン1体をプレイしてもよい。それはそこにいる別のユニットのコピーになる。それにTEMPORARYを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-200",
+      "name": "Mirror Image",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind",
+        "Order"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "LeBlanc・Signature Spell",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-200/219",
+      "image": "images/UNL/UNL-200.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Choose a unit. Play a ready Reflection unit token to your base. It becomes a copy of that unit. Give it TEMPORARY. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
+          "ja": "ユニット1体を選ぶ。レディ状態のReflectionユニットトークン1体を自分のベースにプレイする。それはそのユニットのコピーになる。それにTEMPORARYを与える。(そのコントローラーのBeginningフェーズ開始時、得点計算前にそれを破壊する。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-201",
+      "name": "Kha'Zix - Voidreaver",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Body",
+      "domains": [
+        "Body",
+        "Chaos"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Kha'Zix",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-201/219",
+      "image": "images/UNL/UNL-201.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you win a combat, gain 1 XP. Spend 1 XP, ⟨exhaust⟩: BUFF a unit. Spend 2 XP, ⟨exhaust⟩: Move an exhausted friendly unit from a battlefield to its base.",
+          "ja": "戦闘に勝利したとき、1XPを得る。1XPを支払い、⟨消耗⟩：ユニット1体をBUFFする。2XPを支払い、⟨消耗⟩：消耗状態の味方ユニット1体をバトルフィールドからそのベースに移動させる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-202",
+      "name": "Void Assault",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Body",
+      "domains": [
+        "Body",
+        "Chaos"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Kha'Zix・Signature Spell",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-202/219",
+      "image": "images/UNL/UNL-202.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Move a friendly unit, then move an enemy unit. (If they both move to a battlefield you don't control, you're the attacker.)",
+          "ja": "味方ユニット1体を移動させ、その後敵ユニット1体を移動させる。(両方が自分のコントロールしていないバトルフィールドへ移動した場合、自分が攻撃側になる。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-203",
+      "name": "Poppy - Keeper of the Hammer",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Body",
+      "domains": [
+        "Body",
+        "Order"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Poppy",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-203/219",
+      "image": "images/UNL/UNL-203.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you hold, gain 1 XP. Spend 3 XP, ⟨exhaust⟩: Draw 1.",
+          "ja": "自身がホールドしたとき、1XPを得る。3XPを支払い、⟨消耗⟩：カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-204",
+      "name": "Keeper's Verdict",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Body",
+      "domains": [
+        "Body",
+        "Order"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Poppy・Signature Spell",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-204/219",
+      "image": "images/UNL/UNL-204.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターン、またはショーダウン中にプレイする。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose an enemy unit at a battlefield. Its owner places it on the top or bottom of their Main Deck.",
+          "ja": "バトルフィールドにいる敵ユニット1体を選ぶ。その持ち主はそれを自分のメインデッキの一番上か一番下に置く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-205",
+      "name": "Abandoned Hall",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-205/219",
+      "image": "images/UNL/UNL-205.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When a player plays a spell, they may give a unit they control here +1 ⟨might⟩ this turn.",
+          "ja": "プレイヤーがスペルをプレイしたとき、そのプレイヤーはここでコントロールするユニット1体にこのターン+1マイトを与えてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-206",
+      "name": "Altar of Blood",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-206/219",
+      "image": "images/UNL/UNL-206.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "If a unit here would die during combat, its controller may pay ⟨エネルギー⟩⟨エネルギー⟩⟨エネルギー⟩ to heal it, exhaust it, and recall it instead.",
+          "ja": "ここにいるユニットが戦闘中に破壊される場合、そのコントローラーは⟨エネルギー⟩⟨エネルギー⟩⟨エネルギー⟩を支払って、代わりにそれを回復し、消耗させ、リコールしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-207",
+      "name": "Amateur Recital",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-207/219",
+      "image": "images/UNL/UNL-207.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you hold here, you may move a unit at a battlefield to its base.",
+          "ja": "ここでホールドしたとき、バトルフィールドにいるユニット1体をそのベースに移動させてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-208",
+      "name": "Black Flame Altar",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-208/219",
+      "image": "images/UNL/UNL-208.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Units here with TEMPORARY have SHIELD. (+1 ⟨might⟩ while they're defenders.)",
+          "ja": "ここにいるTEMPORARYを持つユニットはSHIELDを持つ。(防御側の間+1マイト。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-209",
+      "name": "Dusk Rose Lab",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-209/219",
+      "image": "images/UNL/UNL-209.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "At the start of your Beginning Phase, you may kill a unit you control here to draw 1. (This happens before scoring.)",
+          "ja": "自分のBeginningフェーズ開始時、ここでコントロールするユニット1体を破壊してカードを1枚引いてもよい。(これは得点計算前に起こる。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-210",
+      "name": "Forbidding Waste",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-210/219",
+      "image": "images/UNL/UNL-210.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "While a unit here is defending alone, it has -2 ⟨might⟩. (It's alone if there are no other friendly units here.)",
+          "ja": "ここにいるユニットが単独で防御している間、それは-2マイトを得る。(ここに他の味方ユニットがいなければ単独である。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-211",
+      "name": "Forgotten Library",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-211/219",
+      "image": "images/UNL/UNL-211.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "While you control this battlefield, when you play a spell, if you spent ④ or more, PREDICT. (Look at the top card of your Main Deck. You may recycle it.)",
+          "ja": "このバトルフィールドをコントロールしている間、スペルをプレイしたとき、④以上を支払っていたなら、PREDICTする。(メインデッキの一番上のカードを見る。それをリサイクルしてもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-212",
+      "name": "Frozen Fortress",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-212/219",
+      "image": "images/UNL/UNL-212.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "At the start of each player's Beginning Phase, deal 1 to each unit here. (This happens before scoring.)",
+          "ja": "各プレイヤーのBeginningフェーズ開始時、ここにいる各ユニットに1ダメージを与える。(これは得点計算前に起こる。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-213",
+      "name": "Gardens of Becoming",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-213/219",
+      "image": "images/UNL/UNL-213.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Units here have \"⟨exhaust⟩: Gain 1 XP.\"",
+          "ja": "ここにいるユニットは「⟨消耗⟩：1XPを得る。」を持つ。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-214",
+      "name": "Ripper's Bay",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-214/219",
+      "image": "images/UNL/UNL-214.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When a unit here is returned to a player's hand, that player may pay ① to channel 1 rune exhausted.",
+          "ja": "ここにいるユニットがプレイヤーの手札に戻ったとき、そのプレイヤーは①を支払って、ルーン1つを消耗状態でチャネルしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-215",
+      "name": "Star Spring",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-215/219",
+      "image": "images/UNL/UNL-215.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "The first time a player plays a non-token unit here each turn, they may move another unit they control here to its base.",
+          "ja": "各ターン、プレイヤーがここに最初にトークンでないユニットをプレイしたとき、そのプレイヤーはここでコントロールする別のユニット1体をそのベースに移動させてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-216",
+      "name": "The Academy",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-216/219",
+      "image": "images/UNL/UNL-216.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you hold here, give your next spell this turn REPEAT equal to its base cost. (You may pay the additional cost to repeat the spell's effect.)",
+          "ja": "ここでホールドしたとき、このターンの自分の次のスペルに、その基本コストに等しいREPEATを与える。(追加コストを支払ってそのスペルの効果を繰り返してもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-217",
+      "name": "Trapping Grounds",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-217/219",
+      "image": "images/UNL/UNL-217.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer here, if you assigned 3 or more excess damage, play a 1 ⟨might⟩ Bird unit token with DEFLECT.",
+          "ja": "ここで征服したとき、超過ダメージを3以上割り当てていた場合、DEFLECTを持つ1マイトのBirdユニットトークン1体をプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-218",
+      "name": "Valley of Idols",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-218/219",
+      "image": "images/UNL/UNL-218.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When a player plays a unit here, they may pay ① to BUFF it. (Give it a +1 ⟨might⟩ buff if it doesn't have one.)",
+          "ja": "プレイヤーがここにユニットをプレイしたとき、そのプレイヤーは①を支払ってそれをBUFFしてもよい。(バフを持っていなければ+1マイトのバフを与える。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "unl-219",
+      "name": "Vaults of Helia",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Unleashed",
+      "setCode": "UNL",
+      "modified": "2026-07-08",
+      "number": "UNL-219/219",
+      "image": "images/UNL/UNL-219.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you hold here, your non-token units cost ① more to play this turn.",
+          "ja": "ここでホールドしたとき、このターン、自分のトークンでないユニットのプレイコストは①増える。"
         }
       ],
       "equip": [],
@@ -5634,11 +6674,16 @@
       "name": "Jhin - Virtuoso",
       "nameJa": "",
       "number": "UNL-181/219",
-      "domains": ["Fury", "Mind"],
+      "domains": [
+        "Fury",
+        "Mind"
+      ],
       "abilityKw": "",
       "abilityEn": "When you play a spell, if you spent ④ or more, you may banish it. Then, if there are four spells banished with me, put each in its trash, channel 4 runes, and draw 1.",
       "abilityJa": "あなたがスペルをプレイしたとき、④以上を支払っていたなら、それを追放してもよい。その後、自身とともに追放されているスペルが4枚あるなら、それぞれを持ち主の捨て札に置き、ルーンを4つチャネルし、カードを1枚引く。",
-      "signatures": ["unl-182"],
+      "signatures": [
+        "unl-182"
+      ],
       "strategy": ""
     },
     {
@@ -5646,11 +6691,186 @@
       "name": "Rengar - Pridestalker",
       "nameJa": "",
       "number": "UNL-183/219",
-      "domains": ["Fury", "Body"],
+      "domains": [
+        "Fury",
+        "Body"
+      ],
       "abilityKw": "",
       "abilityEn": "When you play a unit, give a unit +1 ⟨might⟩ this turn.",
       "abilityJa": "あなたがユニットをプレイしたとき、ユニット1体に、1ターンの間+1⟨マイト⟩を与える。",
-      "signatures": [],
+      "signatures": [
+        "unl-184"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-185",
+      "name": "Pyke - Bloodharbor Ripper",
+      "nameJa": "",
+      "number": "UNL-185/219",
+      "domains": [
+        "Fury",
+        "Chaos"
+      ],
+      "abilityKw": "",
+      "abilityEn": "①, ⟨exhaust⟩: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted. (It has \"REACTION Kill this, ⟨exhaust⟩: ADD ⟨エネルギー⟩.\")",
+      "abilityJa": "①、⟨消耗⟩：バトルフィールドにいる味方ユニット1体を持ち主の手札に戻す。ゴールドのギアトークンを1つ消耗状態でプレイする。(そのトークンは「REACTION これを破壊、⟨消耗⟩：⟨エネルギー⟩を加える。」を持つ。)",
+      "signatures": [
+        "unl-186"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-187",
+      "name": "Vi - Piltover Enforcer",
+      "nameJa": "",
+      "number": "UNL-187/219",
+      "domains": [
+        "Fury",
+        "Order"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you conquer, if you assigned 3 or more excess damage, you may exhaust me to ready a unit.",
+      "abilityJa": "自身が征服したとき、超過ダメージを3以上割り当てていた場合、自身を消耗させてユニット1体をレディ状態にしてもよい。",
+      "signatures": [
+        "unl-188"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-189",
+      "name": "Lillia - Bashful Bloom",
+      "nameJa": "",
+      "number": "UNL-189/219",
+      "domains": [
+        "Calm",
+        "Mind"
+      ],
+      "abilityKw": "",
+      "abilityEn": "④, ⟨exhaust⟩: Play a ready 3 ⟨might⟩ Sprite unit token with TEMPORARY. This ability costs ① less for each friendly unit with TEMPORARY.",
+      "abilityJa": "④、⟨消耗⟩：TEMPORARYを持つ、レディ状態で3マイトのSpriteユニットトークン1体をプレイする。この能力は、TEMPORARYを持つ味方ユニット1体につき①少なくなる。",
+      "signatures": [
+        "unl-190"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-191",
+      "name": "Master Yi - Wuju Master",
+      "nameJa": "",
+      "number": "UNL-191/219",
+      "domains": [
+        "Calm",
+        "Body"
+      ],
+      "abilityKw": "",
+      "abilityEn": "LEVEL 6: Your units have +1 ⟨might⟩. (While you have 6+ XP, get the effect.) LEVEL 11: Your units enter ready.",
+      "abilityJa": "LEVEL 6：自分のユニットは+1マイトを得る。(6以上のXPを持つ間、この効果を得る。) LEVEL 11：自分のユニットはレディ状態で登場する。",
+      "signatures": [
+        "unl-192"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-193",
+      "name": "Vex - Gloomist",
+      "nameJa": "",
+      "number": "UNL-193/219",
+      "domains": [
+        "Calm",
+        "Chaos"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you or an ally hold, you may exhaust me to draw 1.",
+      "abilityJa": "自分または味方がホールドしたとき、自身を消耗させてカードを1枚引いてもよい。",
+      "signatures": [
+        "unl-194"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-195",
+      "name": "Ivern - Green Father",
+      "nameJa": "",
+      "number": "UNL-195/219",
+      "domains": [
+        "Calm",
+        "Order"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you conquer or hold, you may exhaust me to replace that battlefield with a Brush battlefield token. (Bird, Cat, Dog, Poro, and Ivern units have +1 ⟨might⟩ in Brush. It can be swapped back when scored.)",
+      "abilityJa": "自身が征服またはホールドしたとき、自身を消耗させて、そのバトルフィールドをBrushバトルフィールドトークンに置き換えてもよい。(Bird、Cat、Dog、Poro、Ivernのユニットは、Brushにいる間+1マイトを得る。得点計算時に元に戻せる。)",
+      "signatures": [
+        "unl-196"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-197",
+      "name": "Diana - Scorn of the Moon",
+      "nameJa": "",
+      "number": "UNL-197/219",
+      "domains": [
+        "Mind",
+        "Chaos"
+      ],
+      "abilityKw": "",
+      "abilityEn": "REACTION ⟨exhaust⟩: ADD ①. Spend this Energy only during showdowns. (Abilities that add resources can't be reacted to.)",
+      "abilityJa": "REACTION ⟨消耗⟩：①を加える。このエネルギーはショーダウン中にのみ支払える。(リソースを加える能力にはリアクションできない。)",
+      "signatures": [
+        "unl-198"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-199",
+      "name": "LeBlanc - Deceiver",
+      "nameJa": "",
+      "number": "UNL-199/219",
+      "domains": [
+        "Mind",
+        "Order"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you conquer or hold, you may discard 1 and exhaust me to play a ready Reflection unit token there. It becomes a copy of another unit there. Give it TEMPORARY.",
+      "abilityJa": "自身が征服またはホールドしたとき、カードを1枚捨てて自身を消耗させ、そこにレディ状態のReflectionユニットトークン1体をプレイしてもよい。それはそこにいる別のユニットのコピーになる。それにTEMPORARYを与える。",
+      "signatures": [
+        "unl-200"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-201",
+      "name": "Kha'Zix - Voidreaver",
+      "nameJa": "",
+      "number": "UNL-201/219",
+      "domains": [
+        "Body",
+        "Chaos"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you win a combat, gain 1 XP. Spend 1 XP, ⟨exhaust⟩: BUFF a unit. Spend 2 XP, ⟨exhaust⟩: Move an exhausted friendly unit from a battlefield to its base.",
+      "abilityJa": "戦闘に勝利したとき、1XPを得る。1XPを支払い、⟨消耗⟩：ユニット1体をBUFFする。2XPを支払い、⟨消耗⟩：消耗状態の味方ユニット1体をバトルフィールドからそのベースに移動させる。",
+      "signatures": [
+        "unl-202"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "unl-203",
+      "name": "Poppy - Keeper of the Hammer",
+      "nameJa": "",
+      "number": "UNL-203/219",
+      "domains": [
+        "Body",
+        "Order"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you hold, gain 1 XP. Spend 3 XP, ⟨exhaust⟩: Draw 1.",
+      "abilityJa": "自身がホールドしたとき、1XPを得る。3XPを支払い、⟨消耗⟩：カードを1枚引く。",
+      "signatures": [
+        "unl-204"
+      ],
       "strategy": ""
     }
   ]
