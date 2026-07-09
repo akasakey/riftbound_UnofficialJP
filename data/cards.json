@@ -7652,6 +7652,6071 @@
       "power": ""
     },
     {
+      "id": "sfd-031",
+      "name": "Desert's Call",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-031/221",
+      "image": "images/SFD/SFD-031.avif",
+      "effects": [
+        {
+          "kw": "REPEAT",
+          "cost": "②",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払って、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Play a 2 ⟨might⟩ Sand Soldier unit token.",
+          "ja": "2マイトのSand Soldierユニットトークンを1体プレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-032",
+      "name": "Disarming Rake",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "3",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Demacia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-032/221",
+      "image": "images/SFD/SFD-032.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, you may kill a gear.",
+          "ja": "自身をプレイしたとき、ギアを1つ破壊してもよい。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-033",
+      "name": "Doran's Shield",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-033/221",
+      "image": "images/SFD/SFD-033.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Calm⟩",
+          "ja": "(⟨Calm⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "TANK",
+          "ja": "(自身は戦闘ダメージを最初に割り当てられなければならない。)"
+        },
+        {
+          "kw": "",
+          "stat": "+1",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-034",
+      "name": "Feral Strength",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-034/221",
+      "image": "images/SFD/SFD-034.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルや能力が解決する前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "REPEAT",
+          "cost": "②",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払って、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a unit +2 ⟨might⟩ this turn.",
+          "ja": "ユニット1体にこのターン+2マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-035",
+      "name": "Guardian of the Passage",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "6",
+      "might": "6",
+      "rarity": "コモン",
+      "tag": "Shadow Isles・Spirit",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-035/221",
+      "image": "images/SFD/SFD-035.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I hold, you may return a unit or gear from your trash to your hand.",
+          "ja": "自身がホールドしたとき、自分の捨て札にあるユニットまたはギア1枚を手札に戻してもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-036",
+      "name": "Lonely Poro",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Freljord・Poro",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-036/221",
+      "image": "images/SFD/SFD-036.avif",
+      "effects": [
+        {
+          "kw": "DEATHKNELL",
+          "en": "— If I died alone, draw 1. (When I die, get the effect. I'm alone if there are no other friendly units here.)",
+          "ja": "— 自身が単独で破壊されたなら、カードを1枚引く。(自身が破壊されたとき、この効果を得る。ここに他の自分のユニットがいなければ「単独」である。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-037",
+      "name": "Navori Scout",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "コモン",
+      "tag": "Ionia・Yordle",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-037/221",
+      "image": "images/SFD/SFD-037.avif",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay ⟨rune⟩ to choose me with a spell or ability.)",
+          "ja": "(相手は自身をスペルや能力の対象に選ぶために⟨rune⟩を支払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-038",
+      "name": "Ribbon Dancer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Ionia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-038/221",
+      "image": "images/SFD/SFD-038.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I move to a battlefield, give another friendly unit +1 ⟨might⟩ this turn.",
+          "ja": "自身がバトルフィールドに移動したとき、他の自分のユニット1体にこのターン+1マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-039",
+      "name": "Royal Entourage",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "3",
+      "might": "4",
+      "rarity": "コモン",
+      "tag": "Shurima",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-039/221",
+      "image": "images/SFD/SFD-039.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, ready or exhaust a legend.",
+          "ja": "自身をプレイしたとき、レジェンド1体をレディまたは消耗状態にする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-040",
+      "name": "Thwonk!",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-040/221",
+      "image": "images/SFD/SFD-040.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンまたはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "REPEAT",
+          "cost": "②",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払って、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Stun an attacking unit. (It doesn't deal combat damage this turn.)",
+          "ja": "攻撃しているユニット1体をスタンさせる。(そのユニットはこのターン戦闘ダメージを与えない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-041",
+      "name": "Apprentice Smith",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "アンコモン",
+      "tag": "Freljord",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-041/221",
+      "image": "images/SFD/SFD-041.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I move, reveal the top card of your Main Deck. If it's a gear, draw it. Otherwise, recycle it.",
+          "ja": "自身が移動したとき、自分のメインデッキの一番上のカードを公開する。それがギアなら引く。そうでなければリサイクルする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-042",
+      "name": "Brutalizer",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-042/221",
+      "image": "images/SFD/SFD-042.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Calm⟩",
+          "ja": "(⟨Calm⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "ja": "このターンにこれを装備したなら、追加で+2マイトを得る。"
+        },
+        {
+          "kw": "",
+          "stat": "+1",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-043",
+      "name": "Emperor's Divide",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-043/221",
+      "image": "images/SFD/SFD-043.avif",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "cost": "⟨rune⟩",
+          "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+          "ja": "(今⟨rune⟩を支払って伏せ、後で⟨0⟩でリアクションできる。)"
+        },
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンまたはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Move any number of friendly units at a battlefield to their base.",
+          "ja": "バトルフィールドにいる自分のユニットを好きな数、それぞれのベースに移動させる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-044",
+      "name": "Legion Quartermaster",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "3",
+      "might": "4",
+      "rarity": "アンコモン",
+      "tag": "Noxus・Trifarian",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-044/221",
+      "image": "images/SFD/SFD-044.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "As an additional cost to play me, return a friendly gear to its owner's hand.",
+          "ja": "自身をプレイするための追加コストとして、自分のギア1つを持ち主の手札に戻す。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-045",
+      "name": "Not So Fast",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-045/221",
+      "image": "images/SFD/SFD-045.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルや能力が解決する前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Counter an enemy spell or ability that chooses a friendly unit or gear.",
+          "ja": "自分のユニットまたはギアを対象に選ぶ相手のスペルまたは能力1つを打ち消す。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-046",
+      "name": "Poro Snax",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-046/221",
+      "image": "images/SFD/SFD-046.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play this, draw 1.",
+          "ja": "これをプレイしたとき、カードを1枚引く。"
+        },
+        {
+          "kw": "",
+          "en": "①⟨Calm⟩, ⟨exhaust⟩, Kill this: Draw 1.",
+          "ja": "①⟨Calm⟩、⟨消耗⟩、これを破壊：カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-047",
+      "name": "Simian Ancestor",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "5",
+      "might": "5",
+      "rarity": "アンコモン",
+      "tag": "Ionia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-047/221",
+      "image": "images/SFD/SFD-047.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you buff me, ready me.",
+          "ja": "自身がバフを受けたとき、自身をレディにする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-048",
+      "name": "Stellacorn Herder",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "4",
+      "might": "3",
+      "rarity": "アンコモン",
+      "tag": "Mount Targon",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-048/221",
+      "image": "images/SFD/SFD-048.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I move, draw 1.",
+          "ja": "自身が移動したとき、カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-049",
+      "name": "Aphelios - Exalted",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Aphelios・Mount Targon",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-049/221",
+      "image": "images/SFD/SFD-049.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you attach an Equipment to me, choose one that hasn't been chosen this turn — Ready 2 runes. / Channel 1 rune exhausted. / Buff a friendly unit.",
+          "ja": "自身に装備をアタッチしたとき、このターンにまだ選ばれていないものを1つ選ぶ―\n・ルーンを2つレディにする。\n・ルーンを1つ消耗状態でチャネルする。\n・自分のユニット1体をバフする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-050",
+      "name": "Azir - Ascendant",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "6",
+      "might": "6",
+      "rarity": "レア",
+      "tag": "Champion・Azir・Shurima・Bird",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-050/221",
+      "image": "images/SFD/SFD-050.avif",
+      "altImage": "images/SFD/SFD-050a.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "cost": "⟨消耗⟩",
+          "en": "— Choose a unit you control. Move me to its location and it to my original location. If it's equipped, you may attach one of its Equipment to me. Use only once per turn.",
+          "ja": "― 自分がコントロールするユニット1体を選ぶ。自身をそのユニットのいる場所に、そのユニットを自身の元の場所に移動させる。そのユニットが装備を持つなら、その装備1つを自身にアタッチしてもよい。1ターンに1回のみ使用できる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-051",
+      "name": "Guardian Angel",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-051/221",
+      "image": "images/SFD/SFD-051.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Calm⟩",
+          "ja": "(⟨Calm⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "ja": "自身が破壊されるなら、代わりにGuardian Angelを破壊する。自身を回復し、消耗させ、リコールする。"
+        },
+        {
+          "kw": "",
+          "stat": "+1",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-052",
+      "name": "Heart of Dark Ice",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-052/221",
+      "image": "images/SFD/SFD-052.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "⟨exhaust⟩: Give a unit +3 ⟨might⟩ this turn.",
+          "ja": "⟨消耗⟩：ユニット1体にこのターン+3マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-053",
+      "name": "Janna - Savior",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "レア",
+      "tag": "Champion・Janna・Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-053/221",
+      "image": "images/SFD/SFD-053.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve, including to a battlefield you control.)",
+          "ja": "(スペルや能力が解決する前を含め、いつでもプレイできる。自分がコントロールするバトルフィールドにもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, heal your units here, then move an enemy unit from here to its base.",
+          "ja": "自身をプレイしたとき、ここにいる自分のユニットを回復し、その後、ここにいる相手のユニット1体をそのベースに移動させる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-054",
+      "name": "Jax - Unmatched",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "5",
+      "might": "5",
+      "rarity": "レア",
+      "tag": "Champion・Jax・Icathia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-054/221",
+      "image": "images/SFD/SFD-054.avif",
+      "altImage": "images/SFD/SFD-054a.avif",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay ⟨rune⟩ to choose me with a spell or ability.)",
+          "ja": "(相手は自身をスペルや能力の対象に選ぶために⟨rune⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "Each Equipment in your hand has QUICK-DRAW. (It gains REACTION. When you play it, attach it to a unit you control.)",
+          "ja": "自分の手札にある装備はすべてQUICK-DRAWを持つ。(REACTIONを得て、それをプレイしたとき、自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-055",
+      "name": "Needlessly Large Yordle",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "10",
+      "might": "5",
+      "rarity": "レア",
+      "tag": "Bandle City・Yordle",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-055/221",
+      "image": "images/SFD/SFD-055.avif",
+      "effects": [
+        {
+          "kw": "SHIELD 5",
+          "en": "(+5 ⟨might⟩ while I'm a defender.)",
+          "ja": "(自身が防御側の間、+5マイト。)"
+        },
+        {
+          "kw": "TANK",
+          "en": "(I must be assigned combat damage first.)",
+          "ja": "(自身は戦闘ダメージを最初に割り当てられなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "I cost ②⟨Calm⟩ less for each point you scored from holding this turn.",
+          "ja": "このターンにホールドで獲得した得点1点につき、自身のコストが②⟨Calm⟩少なくなる。"
+        }
+      ],
+      "equip": [],
+      "power": "3"
+    },
+    {
+      "id": "sfd-056",
+      "name": "Sterak's Gage",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-056/221",
+      "image": "images/SFD/SFD-056.avif",
+      "effects": [
+        {
+          "kw": "QUICK-DRAW",
+          "en": "(This has REACTION. When you play it, attach it to a unit you control.)",
+          "ja": "(これはREACTIONを持つ。これをプレイしたとき、自分がコントロールするユニットに装備する。)"
+        },
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Calm⟩",
+          "ja": "(⟨Calm⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+3",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-057",
+      "name": "Irelia - Fervent",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "5",
+      "might": "4",
+      "rarity": "エピック",
+      "tag": "Champion・Irelia・Ionia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-057/221",
+      "image": "images/SFD/SFD-057.avif",
+      "altImage": "images/SFD/SFD-057a.avif",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay ⟨rune⟩ to choose me with a spell or ability.)",
+          "ja": "(相手は自身をスペルや能力の対象に選ぶために⟨rune⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "When you choose or ready me, give me +1 ⟨might⟩ this turn.",
+          "ja": "自身が選ばれたとき、またはレディになったとき、自身にこのターン+1マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-058",
+      "name": "Ornn - Blacksmith",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "5",
+      "might": "5",
+      "rarity": "エピック",
+      "tag": "Champion・Ornn・Freljord",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-058/221",
+      "image": "images/SFD/SFD-058.avif",
+      "altImage": "images/SFD/SFD-058a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me or when I hold, look at the top 4 cards of your Main Deck. You may reveal a gear from among them and draw it. Then recycle the rest.",
+          "ja": "自身をプレイしたとき、またはホールドしたとき、自分のメインデッキの一番上から4枚を見る。その中からギア1枚を公開して引いてもよい。その後、残りをリサイクルする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-059",
+      "name": "Svellsongur",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-059/221",
+      "image": "images/SFD/SFD-059.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "①⟨Calm⟩",
+          "ja": "(①⟨Calm⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "ja": "これがユニットに装備されている間、そのユニットの効果文をこの装備の効果文にコピーする。"
+        },
+        {
+          "kw": "",
+          "stat": "+0",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-060",
+      "name": "Tianna Crownguard",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Calm",
+      "domains": [
+        "Calm"
+      ],
+      "cost": "7",
+      "might": "4",
+      "rarity": "エピック",
+      "tag": "Demacia・Elite",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-060/221",
+      "image": "images/SFD/SFD-060.avif",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay ⟨rune⟩ to choose me with a spell or ability.)",
+          "ja": "(相手は自身をスペルや能力の対象に選ぶために⟨rune⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "While I'm at a battlefield, opponents can't score points.",
+          "ja": "自身がバトルフィールドにいる間、相手は得点できない。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-061",
+      "name": "Aspiring Engineer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Piltover",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-061/221",
+      "image": "images/SFD/SFD-061.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, return a gear from your trash to your hand.",
+          "ja": "自身をプレイしたとき、自分の捨て札にあるギア1枚を手札に戻す。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-062",
+      "name": "Bubble Bot",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Bandle City・Yordle・Mech",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-062/221",
+      "image": "images/SFD/SFD-062.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, ready another friendly Mech.",
+          "ja": "自身をプレイしたとき、他の自分のMech1体をレディにする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-063",
+      "name": "Chemtech Cask",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-063/221",
+      "image": "images/SFD/SFD-063.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play a spell on an opponent's turn, you may exhaust me to play a Gold gear token exhausted.",
+          "ja": "相手のターンにスペルをプレイしたとき、自身を消耗させて、ゴールドのギアトークンを1つ消耗状態でプレイしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-064",
+      "name": "Cloth Armor",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-064/221",
+      "image": "images/SFD/SFD-064.avif",
+      "effects": [
+        {
+          "kw": "QUICK-DRAW",
+          "en": "(This has REACTION. When you play it, attach it to a unit you control.)",
+          "ja": "(これはREACTIONを持つ。これをプレイしたとき、自分がコントロールするユニットに装備する。)"
+        },
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Mind⟩",
+          "ja": "(⟨Mind⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "SHIELD 2",
+          "ja": "(自身が防御側の間、+2マイト。)"
+        },
+        {
+          "kw": "",
+          "stat": "+0",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-065",
+      "name": "Forecaster",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Bandle City・Yordle・Mech",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-065/221",
+      "image": "images/SFD/SFD-065.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Your Mechs have VISION. (When you play us, look at the top card of your Main Deck. You may recycle it.)",
+          "ja": "自分のMechはすべてVISIONを持つ。(それらをプレイしたとき、自分のメインデッキの一番上のカードを見る。それをリサイクルしてもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-066",
+      "name": "Frigid Touch",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-066/221",
+      "image": "images/SFD/SFD-066.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルや能力が解決する前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "REPEAT",
+          "cost": "②",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払って、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a unit -2 ⟨might⟩ this turn.",
+          "ja": "ユニット1体にこのターン-2マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-067",
+      "name": "Frostcoat Cub",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Freljord・Dog",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-067/221",
+      "image": "images/SFD/SFD-067.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "You may pay ⟨Mind⟩ as an additional cost to play me. When you play me, if you paid the additional cost, give a unit -2 ⟨might⟩ this turn.",
+          "ja": "自身をプレイするための追加コストとして⟨Mind⟩を支払ってもよい。自身をプレイしたとき、追加コストを支払っていたなら、ユニット1体にこのターン-2マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-068",
+      "name": "Gearhead",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "5",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-068/221",
+      "image": "images/SFD/SFD-068.avif",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "(You may pay ①⟨Mind⟩ as an additional cost to have me enter ready.)",
+          "ja": "(自身をレディの状態で登場させるための追加コストとして①⟨Mind⟩を支払ってもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Each Equipment attached to me gives double its base Might bonus.",
+          "ja": "自身に装備されている装備は、それぞれの基本マイトボーナスを2倍にして与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-069",
+      "name": "Plundering Poro",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Bilgewater・Poro・Pirate",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-069/221",
+      "image": "images/SFD/SFD-069.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I conquer, play a Gold gear token exhausted.",
+          "ja": "自身が征服したとき、ゴールドのギアトークンを1つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-070",
+      "name": "Wages of Pain",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-070/221",
+      "image": "images/SFD/SFD-070.avif",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "cost": "⟨rune⟩",
+          "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+          "ja": "(今⟨rune⟩を支払って伏せ、後で⟨0⟩でリアクションできる。)"
+        },
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンまたはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Deal 3 to a unit at a battlefield. Play a Gold gear token exhausted.",
+          "ja": "バトルフィールドにいるユニット1体に3ダメージを与える。ゴールドのギアトークンを1つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-071",
+      "name": "Breakneck Mech",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "8",
+      "might": "7",
+      "rarity": "アンコモン",
+      "tag": "Bandle City・Yordle・Mech",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-071/221",
+      "image": "images/SFD/SFD-071.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Your Mechs have DEFLECT and GANKING. (Opponents must pay ⟨rune⟩ to choose us with a spell or ability. We can move from battlefield to battlefield.)",
+          "ja": "自分のMechはすべてDEFLECTとGANKINGを持つ。(相手はそれらをスペルや能力の対象に選ぶために⟨rune⟩を支払わなければならない。それらはバトルフィールドからバトルフィールドへ移動できる。)"
+        },
+        {
+          "kw": "",
+          "en": "I enter ready if you control another Mech.",
+          "ja": "他のMechをコントロールしているなら、自身はレディの状態で登場する。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-072",
+      "name": "Dropboarder",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "アンコモン",
+      "tag": "Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-072/221",
+      "image": "images/SFD/SFD-072.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, if you control two or more gear, ready me.",
+          "ja": "自身をプレイしたとき、ギアを2つ以上コントロールしているなら、自身をレディにする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-073",
+      "name": "Experimental Hexplate",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-073/221",
+      "image": "images/SFD/SFD-073.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Mind⟩",
+          "ja": "(⟨Mind⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "ja": "自身はMechである。"
+        },
+        {
+          "kw": "",
+          "stat": "+1",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-074",
+      "name": "Pickpocket",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "アンコモン",
+      "tag": "Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-074/221",
+      "image": "images/SFD/SFD-074.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, you may kill a gear with Energy cost no more than ①. If you do, play a Gold gear token exhausted.",
+          "ja": "自身をプレイしたとき、エネルギーコストが①以下のギア1つを破壊してもよい。そうした場合、ゴールドのギアトークンを1つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-075",
+      "name": "Prize of Progress",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "3",
+      "rarity": "アンコモン",
+      "tag": "Piltover・Mech",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-075/221",
+      "image": "images/SFD/SFD-075.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you use an activated ability of a gear, give me +1 ⟨might⟩ this turn.",
+          "ja": "ギアの起動型能力を使用したとき、自身にこのターン+1マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-076",
+      "name": "Production Surge",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-076/221",
+      "image": "images/SFD/SFD-076.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "This costs ② less if you control a Mech. Play a 3 ⟨might⟩ Mech unit token to your base. Draw 1.",
+          "ja": "Mechをコントロールしているなら、このスペルのコストが②少なくなる。3マイトのMechユニットトークンを1体、自分のベースにプレイする。カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-077",
+      "name": "Rocket Barrage",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-077/221",
+      "image": "images/SFD/SFD-077.avif",
+      "effects": [
+        {
+          "kw": "REPEAT",
+          "cost": "④⟨Mind⟩",
+          "en": "(You may pay the additional cost to repeat this spell's effect, and may make different choices.)",
+          "ja": "(追加コストを支払って、このスペルの効果を繰り返してもよい。異なる選択をしてもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose one — Deal 4 to a unit in a base. / Kill a gear.",
+          "ja": "1つを選ぶ―\n・ベースにいるユニット1体に4ダメージを与える。\n・ギアを1つ破壊する。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-078",
+      "name": "Temporal Portal",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-078/221",
+      "image": "images/SFD/SFD-078.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "⟨rune⟩, ⟨exhaust⟩: Give the next spell you play this turn REPEAT equal to its cost. (You may pay the additional cost to repeat the spell's effect.)",
+          "ja": "⟨rune⟩、⟨消耗⟩：このターンに次にプレイするスペルに、そのコストに等しいREPEATを与える。(追加コストを支払って、そのスペルの効果を繰り返してもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-079",
+      "name": "Bard - Mercurial",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Bard",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-079/221",
+      "image": "images/SFD/SFD-079.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "You may exhaust your legend as an additional cost to play me. When you play me, if you paid the additional cost, move any number of your units to an open battlefield.",
+          "ja": "自身をプレイするための追加コストとして、自分のレジェンドを消耗させてもよい。自身をプレイしたとき、追加コストを支払っていたなら、自分のユニットを好きな数、空いているバトルフィールド1つに移動させる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-080",
+      "name": "Bellows Breath",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-080/221",
+      "image": "images/SFD/SFD-080.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンまたはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "REPEAT",
+          "cost": "①⟨Mind⟩",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払って、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Deal 1 to up to three units at the same location.",
+          "ja": "同じ場所にいるユニット3体までに1ダメージを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-081",
+      "name": "Card Sharp",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "レア",
+      "tag": "Bilgewater",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-081/221",
+      "image": "images/SFD/SFD-081.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, you and each opponent may play a Gold gear token exhausted. For each opponent who did, you play a Gold gear token exhausted.",
+          "ja": "自身をプレイしたとき、あなたと各対戦相手はゴールドのギアトークンを1つ消耗状態でプレイしてもよい。そうした対戦相手1人につき、あなたはゴールドのギアトークンを1つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-082",
+      "name": "Ezreal - Dashing",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "3",
+      "rarity": "レア",
+      "tag": "Champion・Ezreal・Piltover",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-082/221",
+      "image": "images/SFD/SFD-082.avif",
+      "altImage": "images/SFD/SFD-082a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I attack or defend, deal damage equal to my Might to an enemy unit here. I don't deal combat damage.",
+          "ja": "自身が攻撃または防御したとき、ここにいる相手のユニット1体に自身のマイトに等しいダメージを与える。自身は戦闘ダメージを与えない。"
+        },
+        {
+          "kw": "ACTION",
+          "cost": "⟨Mind⟩",
+          "en": "— Move me to your base.",
+          "ja": "― 自身を自分のベースに移動させる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-083",
+      "name": "Hextech Anomaly",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-083/221",
+      "image": "images/SFD/SFD-083.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "cost": "⟨消耗⟩",
+          "en": "— Pay any amount of ⟨rune⟩ to ADD that much Energy. (Abilities that add resources can't be reacted to.)",
+          "ja": "― 好きな量の⟨rune⟩を支払い、その分だけエネルギーをADDする。(リソースを加える能力にはリアクションできない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-084",
+      "name": "Jayce - Man of Progress",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Jayce・Piltover",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-084/221",
+      "image": "images/SFD/SFD-084.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than ⑦ from hand this turn, ignoring its Energy cost. (You must still pay its Power cost.)",
+          "ja": "自身をプレイしたとき、自分のギア1つを破壊してもよい。そうした場合、このターン、エネルギーコストが⑦以下のギア1枚を、エネルギーコストを無視して手札からプレイしてもよい。(パワーコストは支払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-085",
+      "name": "Ornn - Forge God",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "6",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Ornn・Freljord",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-085/221",
+      "image": "images/SFD/SFD-085.avif",
+      "altImage": "images/SFD/SFD-085a.avif",
+      "effects": [
+        {
+          "kw": "DEFLECT 2",
+          "en": "(Opponents must pay ⟨rune⟩⟨rune⟩ to choose me with a spell or ability.)",
+          "ja": "(相手は自身をスペルや能力の対象に選ぶために⟨rune⟩⟨rune⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "WEAPONMASTER",
+          "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
+          "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "I have +1 ⟨might⟩ for each friendly gear.",
+          "ja": "自分のギア1つにつき、自身は+1マイトを得る。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-086",
+      "name": "World Atlas",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-086/221",
+      "image": "images/SFD/SFD-086.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Mind⟩",
+          "ja": "(⟨Mind⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "ja": "自身がホールドしたとき、ゴールドのギアトークンを2つ消耗状態でプレイする。"
+        },
+        {
+          "kw": "",
+          "stat": "+2",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-087",
+      "name": "Premonition",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-087/221",
+      "image": "images/SFD/SFD-087.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルや能力が解決する前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Draw 3.",
+          "ja": "カードを3枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-088",
+      "name": "Renata Glasc - Mastermind",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "5",
+      "might": "4",
+      "rarity": "エピック",
+      "tag": "Champion・Renata Glasc・Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-088/221",
+      "image": "images/SFD/SFD-088.avif",
+      "altImage": "images/SFD/SFD-088a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "①⟨Mind⟩: Draw 1.",
+          "ja": "①⟨Mind⟩：カードを1枚引く。"
+        },
+        {
+          "kw": "",
+          "en": "④⟨Mind⟩⟨Mind⟩⟨Mind⟩⟨Mind⟩, ⟨exhaust⟩: Score 1 point.",
+          "ja": "④⟨Mind⟩⟨Mind⟩⟨Mind⟩⟨Mind⟩、⟨消耗⟩：1点を獲得する。"
+        },
+        {
+          "kw": "",
+          "en": "Use my abilities only while I'm at a battlefield.",
+          "ja": "自身の能力は、自身がバトルフィールドにいる間のみ使用できる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-089",
+      "name": "Rumble - Scrapper",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "5",
+      "might": "4",
+      "rarity": "エピック",
+      "tag": "Champion・Rumble・Bandle City・Yordle・Mech",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-089/221",
+      "image": "images/SFD/SFD-089.avif",
+      "altImage": "images/SFD/SFD-089a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Your Mechs have +1 ⟨might⟩ (including me).",
+          "ja": "自分のMechはすべて+1マイトを得る(自身も含む)。"
+        },
+        {
+          "kw": "",
+          "en": "When I hold, play a 3 ⟨might⟩ Mech unit token to your base.",
+          "ja": "自身がホールドしたとき、3マイトのMechユニットトークンを1体、自分のベースにプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-090",
+      "name": "The Zero Drive",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Mind",
+      "domains": [
+        "Mind"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-090/221",
+      "image": "images/SFD/SFD-090.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "①⟨Mind⟩",
+          "ja": "(①⟨Mind⟩:自分がコントロールするユニットに装備する。)"
+        },
+        {
+          "kw": "",
+          "en": "③⟨Mind⟩, Banish this: Play all units banished with this, ignoring their costs. (Use only if unattached.)",
+          "ja": "③⟨Mind⟩、これを追放：これとともに追放されているユニットをすべて、コストを無視してプレイする。(装備されていない場合のみ使用できる。)"
+        },
+        {
+          "kw": "DEATHKNELL",
+          "en": "— Banish me. (When I die, get the effect.)",
+          "ja": "― 自身を追放する。(自身が破壊されたとき、この効果を得る。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+2",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-091",
+      "name": "Buhru Captain",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Bilgewater",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-091/221",
+      "image": "images/SFD/SFD-091.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, you may draw 1 or buff me. (To buff a unit, give it a +1 ⟨might⟩ buff if it doesn't already have one.)",
+          "ja": "自身をプレイしたとき、カードを1枚引くか、自身をバフしてもよい。(ユニットをバフするとは、まだバフを持っていない場合に+1マイトのバフを与えることである。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-092",
+      "name": "Combat Chef",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "5",
+      "might": "5",
+      "rarity": "コモン",
+      "tag": "Demacia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-092/221",
+      "image": "images/SFD/SFD-092.avif",
+      "effects": [
+        {
+          "kw": "WEAPONMASTER",
+          "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
+          "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-093",
+      "name": "Dauntless Vanguard",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "コモン",
+      "tag": "Demacia・Elite",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-093/221",
+      "image": "images/SFD/SFD-093.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "You may play me to an occupied enemy battlefield.",
+          "ja": "自身を、相手がいるバトルフィールドにプレイしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-094",
+      "name": "Direwing",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "7",
+      "might": "7",
+      "rarity": "コモン",
+      "tag": "Demacia・Dragon",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-094/221",
+      "image": "images/SFD/SFD-094.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "I enter ready if you control another Dragon.",
+          "ja": "他のDragonをコントロールしているなら、自身はレディの状態で登場する。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-095",
+      "name": "Doran's Blade",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-095/221",
+      "image": "images/SFD/SFD-095.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Body⟩",
+          "ja": "(⟨Body⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+2",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-096",
+      "name": "Laurent Bladekeeper",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Demacia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-096/221",
+      "image": "images/SFD/SFD-096.avif",
+      "effects": [
+        {
+          "kw": "GANKING",
+          "en": "(I can move from battlefield to battlefield.)",
+          "ja": "(自身はバトルフィールドからバトルフィールドへ移動できる。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-097",
+      "name": "Punch First",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-097/221",
+      "image": "images/SFD/SFD-097.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンまたはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a unit +5 ⟨might⟩ this turn.",
+          "ja": "ユニット1体にこのターン+5マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-098",
+      "name": "Sea Monkey",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Bilgewater・Pirate",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-098/221",
+      "image": "images/SFD/SFD-098.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "You may pay ① as an additional cost to play me. When you play me, if you paid the additional cost, buff me. (Give me a +1 ⟨might⟩ buff if I don't already have one.)",
+          "ja": "自身をプレイするための追加コストとして①を支払ってもよい。自身をプレイしたとき、追加コストを支払っていたなら、自身をバフする。(まだバフを持っていない場合、+1マイトのバフを与える。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-099",
+      "name": "Veteran Poro",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Freljord・Poro",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-099/221",
+      "image": "images/SFD/SFD-099.avif",
+      "effects": [
+        {
+          "kw": "WEAPONMASTER",
+          "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
+          "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-100",
+      "name": "Yordle Explorer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "コモン",
+      "tag": "Bandle City・Yordle",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-100/221",
+      "image": "images/SFD/SFD-100.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play a card with Power cost ⟨Body⟩⟨Body⟩ or more, draw 1.",
+          "ja": "パワーコストが⟨Body⟩⟨Body⟩以上のカードをプレイしたとき、カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-101",
+      "name": "Fae Dragon",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "7",
+      "might": "7",
+      "rarity": "アンコモン",
+      "tag": "Bandle City・Fae・Dragon",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-101/221",
+      "image": "images/SFD/SFD-101.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, buff up to four friendly units. (Give each one a +1 ⟨might⟩ buff if it doesn't have one.) When you spend a buff, play a Gold gear token exhausted.",
+          "ja": "自身をプレイしたとき、自分のユニット4体までをバフする。(それぞれまだバフを持っていない場合、+1マイトのバフを与える。)バフを消費したとき、ゴールドのギアトークンを1つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-102",
+      "name": "Hexdrinker",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-102/221",
+      "image": "images/SFD/SFD-102.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Body⟩",
+          "ja": "(⟨Body⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "DEFLECT",
+          "ja": "(相手は自身をスペルや能力の対象に選ぶために⟨rune⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "",
+          "stat": "+1",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-103",
+      "name": "Jaull-Fish",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "7",
+      "might": "6",
+      "rarity": "アンコモン",
+      "tag": "Bilgewater",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-103/221",
+      "image": "images/SFD/SFD-103.avif",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "(You may pay ①⟨Body⟩ as an additional cost to have me enter ready.)",
+          "ja": "(自身をレディの状態で登場させるための追加コストとして①⟨Body⟩を支払ってもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "I cost ② less for each of your MIGHTY units. (A unit is Mighty while it has 5+ ⟨might⟩.)",
+          "ja": "自分のMIGHTYユニット1体につき、自身のコストが②少なくなる。(ユニットは5以上のマイトを持つ間MIGHTYである。)"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-104",
+      "name": "Petricite Monument",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-104/221",
+      "image": "images/SFD/SFD-104.avif",
+      "effects": [
+        {
+          "kw": "TEMPORARY",
+          "en": "(Kill this at the start of its controller's Beginning Phase, before scoring.)",
+          "ja": "(これは、コントローラーの開始フェイズの初め、得点する前に破壊される。)"
+        },
+        {
+          "kw": "",
+          "en": "Friendly units have DEFLECT. (Opponents must pay ⟨rune⟩ to choose them with a spell or ability.)",
+          "ja": "自分のユニットはすべてDEFLECTを持つ。(相手はそれらをスペルや能力の対象に選ぶために⟨rune⟩を支払わなければならない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-105",
+      "name": "Ruin Runner",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "6",
+      "might": "5",
+      "rarity": "アンコモン",
+      "tag": "Shurima",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-105/221",
+      "image": "images/SFD/SFD-105.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "I can't be chosen by enemy spells and abilities.",
+          "ja": "自身は相手のスペルや能力の対象に選ばれない。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-106",
+      "name": "Show of Strength",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-106/221",
+      "image": "images/SFD/SFD-106.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "(Play any time, even before spells and abilities resolve.)",
+          "ja": "(スペルや能力が解決する前を含め、いつでもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Draw 1 for each of your MIGHTY units. (A unit is Mighty while it has 5+ ⟨might⟩.)",
+          "ja": "自分のMIGHTYユニット1体につき、カードを1枚引く。(ユニットは5以上のマイトを持つ間MIGHTYである。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-107",
+      "name": "Strike Down",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-107/221",
+      "image": "images/SFD/SFD-107.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Choose an equipped friendly unit. It deals damage equal to its Might to an enemy unit. Then detach an Equipment from it.",
+          "ja": "装備を持つ自分のユニット1体を選ぶ。そのユニットは相手のユニット1体に自身のマイトに等しいダメージを与える。その後、そのユニットから装備1つを取り外す。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-108",
+      "name": "Warmog's Armor",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-108/221",
+      "image": "images/SFD/SFD-108.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Body⟩",
+          "ja": "(⟨Body⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "ja": "自身が征服したとき、自身をバフする。(バフを持っていない場合、+1マイトのバフを得る。)"
+        },
+        {
+          "kw": "",
+          "stat": "+1",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-109",
+      "name": "Akshan - Mischievous",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Akshan・Shurima・Sentinel",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-109/221",
+      "image": "images/SFD/SFD-109.avif",
+      "effects": [
+        {
+          "kw": "WEAPONMASTER",
+          "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
+          "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "You may pay ⟨Body⟩⟨Body⟩ as an additional cost to play me. When you play me, if you paid the additional cost, move an enemy gear to your base. You control it until I leave the board. If it's an Equipment, attach it to me.",
+          "ja": "自身をプレイするための追加コストとして⟨Body⟩⟨Body⟩を支払ってもよい。自身をプレイしたとき、追加コストを支払っていたなら、相手のギア1つを自分のベースに移動させる。自身が場を離れるまで、あなたはそれをコントロールする。それが装備なら、自身に装備する。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-110",
+      "name": "Fiora - Peerless",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "レア",
+      "tag": "Champion・Fiora・Demacia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-110/221",
+      "image": "images/SFD/SFD-110.avif",
+      "altImage": "images/SFD/SFD-110a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I attack or defend one on one, double my Might this combat.",
+          "ja": "自身が一対一で攻撃または防御したとき、この戦闘の間、自身のマイトを2倍にする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-111",
+      "name": "Here to Help",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-111/221",
+      "image": "images/SFD/SFD-111.avif",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "cost": "⟨rune⟩",
+          "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+          "ja": "(今⟨rune⟩を支払って伏せ、後で⟨0⟩でリアクションできる。)"
+        },
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンまたはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "You may play a unit from hand to a battlefield you control, reducing its cost by ③.",
+          "ja": "ユニット1枚を手札から自分がコントロールするバトルフィールドにプレイしてもよい。そのコストを③少なくする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-112",
+      "name": "Kato the Arm",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "4",
+      "might": "3",
+      "rarity": "レア",
+      "tag": "Noxus",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-112/221",
+      "image": "images/SFD/SFD-112.avif",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "(Opponents must pay ⟨rune⟩ to choose me with a spell or ability.)",
+          "ja": "(相手は自身をスペルや能力の対象に選ぶために⟨rune⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "When I move to a battlefield, give a friendly unit my keywords and +⟨might⟩ equal to my Might this turn.",
+          "ja": "自身がバトルフィールドに移動したとき、自分のユニット1体に、このターン自身のキーワードと自身のマイトに等しい+マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-113",
+      "name": "Lucian - Merciless",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "レア",
+      "tag": "Champion・Lucian・Demacia・Sentinel",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-113/221",
+      "image": "images/SFD/SFD-113.avif",
+      "altImage": "images/SFD/SFD-113a.avif",
+      "effects": [
+        {
+          "kw": "WEAPONMASTER",
+          "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
+          "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "The first time I conquer each turn, ready me.",
+          "ja": "各ターン、自身が最初に征服したとき、自身をレディにする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-114",
+      "name": "Marching Orders",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-114/221",
+      "image": "images/SFD/SFD-114.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンまたはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "REPEAT",
+          "cost": "③",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払って、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a friendly unit anywhere and an enemy unit at a battlefield. They deal damage equal to their Mights to each other.",
+          "ja": "どこかにいる自分のユニット1体と、バトルフィールドにいる相手のユニット1体を選ぶ。それらは互いに自身のマイトに等しいダメージを与え合う。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-115",
+      "name": "Trinity Force",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "4",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-115/221",
+      "image": "images/SFD/SFD-115.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Body⟩",
+          "ja": "(⟨Body⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "ja": "自身がホールドしたとき、1点を獲得する。"
+        },
+        {
+          "kw": "",
+          "stat": "+2",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-116",
+      "name": "Yone - Blademaster",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "5",
+      "might": "5",
+      "rarity": "レア",
+      "tag": "Champion・Yone・Ionia・Demon",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-116/221",
+      "image": "images/SFD/SFD-116.avif",
+      "effects": [
+        {
+          "kw": "WEAPONMASTER",
+          "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
+          "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "When I conquer an open battlefield, deal damage equal to my Might to an enemy unit in a base.",
+          "ja": "自身が空いているバトルフィールドを征服したとき、ベースにいる相手のユニット1体に自身のマイトに等しいダメージを与える。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-117",
+      "name": "Ancient Henge",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-117/221",
+      "image": "images/SFD/SFD-117.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "cost": "⟨消耗⟩",
+          "en": "— Pay any amount of Energy to ADD that much ⟨Body⟩. (Abilities that add resources can't be reacted to.)",
+          "ja": "― 好きな量のエネルギーを支払い、その分だけ⟨Body⟩をADDする。(リソースを加える能力にはリアクションできない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-118",
+      "name": "Boneshiver",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-118/221",
+      "image": "images/SFD/SFD-118.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "①⟨Body⟩",
+          "ja": "(①⟨Body⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "ja": "自身が征服したとき、ルーンを1つ消耗状態でチャネルする。"
+        },
+        {
+          "kw": "",
+          "stat": "+2",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-119",
+      "name": "Jax - Unrelenting",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "4",
+      "might": "3",
+      "rarity": "エピック",
+      "tag": "Champion・Jax・Icathia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-119/221",
+      "image": "images/SFD/SFD-119.avif",
+      "altImage": "images/SFD/SFD-119a.avif",
+      "effects": [
+        {
+          "kw": "WEAPONMASTER",
+          "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
+          "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "When you attach an Equipment to me, you may pay ① to draw 1.",
+          "ja": "自身に装備をアタッチしたとき、①を支払ってカードを1枚引いてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-120",
+      "name": "Sivir - Ambitious",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Body",
+      "domains": [
+        "Body"
+      ],
+      "cost": "6",
+      "might": "7",
+      "rarity": "エピック",
+      "tag": "Champion・Sivir・Shurima",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-120/221",
+      "image": "images/SFD/SFD-120.avif",
+      "altImage": "images/SFD/SFD-120a.avif",
+      "effects": [
+        {
+          "kw": "DEFLECT 2",
+          "en": "(Opponents must pay ⟨rune⟩⟨rune⟩ to choose me with a spell or ability.)",
+          "ja": "(相手は自身をスペルや能力の対象に選ぶために⟨rune⟩⟨rune⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "When I conquer after an attack, if you assigned 5 or more excess damage to enemy units, you may deal that much to an enemy unit.",
+          "ja": "攻撃後に自身が征服したとき、相手のユニットに5以上の超過ダメージを割り当てていたなら、その分を相手のユニット1体に与えてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": "3"
+    },
+    {
+      "id": "sfd-121",
+      "name": "Black Market Broker",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-121/221",
+      "image": "images/SFD/SFD-121.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play a card from face down, play a Gold gear token exhausted.",
+          "ja": "伏せた状態からカードをプレイしたとき、ゴールドのギアトークンを1つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-122",
+      "name": "Called Shot",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "0",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-122/221",
+      "image": "images/SFD/SFD-122.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "(Play on your turn or in showdowns.)",
+          "ja": "(自分のターンまたはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "REPEAT",
+          "cost": "⟨Chaos⟩",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払って、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Look at the top 2 cards of your Main Deck. Draw one and recycle the other.",
+          "ja": "自分のメインデッキの一番上から2枚を見る。1枚を引き、もう1枚をリサイクルする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-123",
+      "name": "Corrupt Enforcer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "4",
+      "rarity": "コモン",
+      "tag": "Piltover",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-123/221",
+      "image": "images/SFD/SFD-123.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I move to a battlefield, discard 1. When I win a combat, draw 1.",
+          "ja": "自身がバトルフィールドに移動したとき、カードを1枚捨てる。自身が戦闘に勝利したとき、カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-124",
+      "name": "Doran's Ring",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-124/221",
+      "image": "images/SFD/SFD-124.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Chaos⟩",
+          "ja": "(⟨Chaos⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "ja": "自身が征服したとき、カードを1枚捨て、その後1枚引く。"
+        },
+        {
+          "kw": "",
+          "stat": "+1",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-125",
+      "name": "Fae Porter",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "コモン",
+      "tag": "Ionia・Fae",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-125/221",
+      "image": "images/SFD/SFD-125.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I move to a battlefield, you may pay ⟨Chaos⟩ to move a unit you control to the same battlefield.",
+          "ja": "自身がバトルフィールドに移動したとき、⟨Chaos⟩を支払って、自分がコントロールするユニット1体を同じバトルフィールドに移動させてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-126",
+      "name": "Loyal Pup",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Bandle City・Dog",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-126/221",
+      "image": "images/SFD/SFD-126.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you defend at a battlefield, you may move me there.",
+          "ja": "自分がバトルフィールドで防御したとき、自身をそこに移動させてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-127",
+      "name": "Master Bingwen",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "6",
+      "might": "6",
+      "rarity": "コモン",
+      "tag": "Ionia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-127/221",
+      "image": "images/SFD/SFD-127.avif",
+      "effects": [
+        {
+          "kw": "WEAPONMASTER",
+          "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
+          "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-128",
+      "name": "Overzealous Fan",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Noxus",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-128/221",
+      "image": "images/SFD/SFD-128.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I defend, you may kill me to move an attacking unit to its base.",
+          "ja": "自身が防御したとき、自身を破壊して、攻撃しているユニット1体をそのベースに移動させてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-129",
+      "name": "Temptation",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-129/221",
+      "image": "images/SFD/SFD-129.avif",
+      "effects": [
+        {
+          "kw": "REPEAT",
+          "cost": "②",
+          "en": "(You may pay the additional cost to repeat this spell's effect.)",
+          "ja": "(追加コストを支払って、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Move an enemy unit to a location where there's a unit with the same controller.",
+          "ja": "相手のユニット1体を、同じコントローラーのユニットがいる場所に移動させる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-130",
+      "name": "Treasure Hunter",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "2",
+      "might": "1",
+      "rarity": "コモン",
+      "tag": "Shurima",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-130/221",
+      "image": "images/SFD/SFD-130.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I move, play a Gold gear token exhausted.",
+          "ja": "自身が移動したとき、ゴールドのギアトークンを1つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-131",
+      "name": "Ancient Warmonger",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "5",
+      "might": "4",
+      "rarity": "アンコモン",
+      "tag": "Noxus・Spirit",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-131/221",
+      "image": "images/SFD/SFD-131.avif",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "You may pay ①⟨Chaos⟩ as an additional cost to have me enter ready.",
+          "ja": "(①⟨Chaos⟩を追加コストとして支払ってもよい。そうしたなら、自身はレディ状態でエントリーする。)"
+        },
+        {
+          "kw": "",
+          "en": "I have ASSAULT equal to the number of enemy units here. (+1 might while I'm an attacker for each instance of Assault.)",
+          "ja": "自身は、ここにいる敵ユニットの数に等しい数のアサルトを持つ。(アサルト1つにつき、自身が攻撃側である間+1マイト。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-132",
+      "name": "Beast Below",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "7",
+      "might": "8",
+      "rarity": "アンコモン",
+      "tag": "Bilgewater",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-132/221",
+      "image": "images/SFD/SFD-132.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, return another friendly unit and an enemy unit to their owners' hands.",
+          "ja": "自身をプレイしたとき、他の自分のユニット1体と敵ユニット1体をそれぞれの持ち主の手札に戻す。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-133",
+      "name": "Boots of Swiftness",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-133/221",
+      "image": "images/SFD/SFD-133.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Chaos⟩",
+          "ja": "(⟨Chaos⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+2",
+          "ja": ""
+        },
+        {
+          "kw": "GANKING",
+          "ja": "(自身はバトルフィールドから別のバトルフィールドへ移動できる。)"
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-134",
+      "name": "Cull",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-134/221",
+      "image": "images/SFD/SFD-134.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Chaos⟩",
+          "ja": "(⟨Chaos⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+1",
+          "ja": ""
+        },
+        {
+          "kw": "",
+          "ja": "自身が征服したとき、ゴールドのギアトークンを1つ消耗状態でプレイする。"
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-135",
+      "name": "Factory Recall",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-135/221",
+      "image": "images/SFD/SFD-135.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "Play on your turn or in showdowns.",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Return a gear to its owner's hand.",
+          "ja": "ギア1つを持ち主の手札に戻す。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-136",
+      "name": "Hard Bargain",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-136/221",
+      "image": "images/SFD/SFD-136.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "Play any time, even before spells and abilities resolve.",
+          "ja": "(いつでも、スペルや能力が解決する前でもプレイできる。)"
+        },
+        {
+          "kw": "REPEAT",
+          "cost": "②",
+          "en": "You may pay the additional cost to repeat this spell's effect.",
+          "ja": "(②の追加コストを支払い、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Counter a spell unless its controller pays ②.",
+          "ja": "スペル1つを打ち消す。ただしそのコントローラーが②を支払った場合を除く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-137",
+      "name": "Harpoon Squad",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "アンコモン",
+      "tag": "Bilgewater・Pirate",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-137/221",
+      "image": "images/SFD/SFD-137.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I move from a battlefield, give me +2 might this turn.",
+          "ja": "自身がバトルフィールドから移動したとき、このターン、自身に+2マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-138",
+      "name": "Windsinger",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "2",
+      "might": "1",
+      "rarity": "アンコモン",
+      "tag": "Ionia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-138/221",
+      "image": "images/SFD/SFD-138.avif",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "Hide now for ⟨Chaos⟩ to react with later for ⓪.",
+          "ja": "(⟨Chaos⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, you may return another unit at a battlefield with 3 might or less to its owner's hand.",
+          "ja": "自身をプレイしたとき、バトルフィールドにいるマイト3以下の他のユニット1体を持ち主の手札に戻してもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-139",
+      "name": "Edge of Night",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-139/221",
+      "image": "images/SFD/SFD-139.avif",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "Hide now for ⟨Chaos⟩ to react with later for ⓪.",
+          "ja": "(⟨Chaos⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play this from face down, attach it to a unit you control here.",
+          "ja": "これを裏向きの状態からプレイしたとき、ここにいる自分がコントロールするユニットに装備する。"
+        },
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Chaos⟩",
+          "ja": "(⟨Chaos⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+2",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-140",
+      "name": "Fizz - Trickster",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "レア",
+      "tag": "Champion・Fizz・Bilgewater・Yordle",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-140/221",
+      "image": "images/SFD/SFD-140.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, you may play a spell from your trash with Energy cost no more than ③, ignoring its Energy cost. Recycle that spell after you play it. (You must still pay its Power cost.)",
+          "ja": "自身をプレイしたとき、自分のトラッシュにあるエネルギーコスト③以下のスペル1枚を、そのエネルギーコストを無視してプレイしてもよい。プレイ後、そのスペルをリサイクルする。(そのパワーコストは支払う必要がある。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-141",
+      "name": "Irelia - Graceful",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Irelia・Ionia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-141/221",
+      "image": "images/SFD/SFD-141.avif",
+      "altImage": "images/SFD/SFD-141a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Your spells that choose me cost ① or ⟨rune⟩ less.",
+          "ja": "自身を選ぶ自分のスペルは、エネルギーが①、またはパワーが⟨rune⟩少なくなる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-142",
+      "name": "Jae Medarda",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "5",
+      "might": "5",
+      "rarity": "レア",
+      "tag": "Noxus",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-142/221",
+      "image": "images/SFD/SFD-142.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you choose me with a spell, draw 1.",
+          "ja": "自身をスペルで選んだとき、カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-143",
+      "name": "Sivir - Mercenary",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Sivir・Shurima",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-143/221",
+      "image": "images/SFD/SFD-143.avif",
+      "altImage": "images/SFD/SFD-143a.avif",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "You may pay ①⟨Chaos⟩ as an additional cost to have me enter ready.",
+          "ja": "(①⟨Chaos⟩を追加コストとして支払ってもよい。そうしたなら、自身はレディ状態でエントリーする。)"
+        },
+        {
+          "kw": "",
+          "en": "If you've spent at least ⟨rune⟩⟨rune⟩ this turn, I have +2 might and GANKING. (I can move from battlefield to battlefield.)",
+          "ja": "このターンにパワーを⟨rune⟩⟨rune⟩以上支払っているなら、自身は+2マイトとギャンキングを持つ。(自身はバトルフィールドから別のバトルフィールドへ移動できる。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-144",
+      "name": "Spirit Wheel",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-144/221",
+      "image": "images/SFD/SFD-144.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you choose a friendly unit, you may pay ① and exhaust this to draw 1.",
+          "ja": "自分のユニットを選んだとき、①を支払いこれを消耗させて、カードを1枚引いてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-145",
+      "name": "Switcheroo",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-145/221",
+      "image": "images/SFD/SFD-145.avif",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "Hide now for ⟨Chaos⟩ to react with later for ⓪.",
+          "ja": "(⟨Chaos⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
+        },
+        {
+          "kw": "ACTION",
+          "en": "Play on your turn or in showdowns.",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Swap the Mights of two units at the same battlefield this turn.",
+          "ja": "同じバトルフィールドにいるユニット2体のマイトを、このターンの間入れ替える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-146",
+      "name": "Vex - Cheerless",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "5",
+      "might": "5",
+      "rarity": "レア",
+      "tag": "Champion・Vex・Shadow Isles・Yordle",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-146/221",
+      "image": "images/SFD/SFD-146.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "While I'm in combat, friendly spells cost ① less to a minimum of ①, and enemy spells cost ① more.",
+          "ja": "自身が戦闘している間、自分のスペルはエネルギーが①少なくなり(最低①)、敵のスペルはエネルギーが①多くなる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-147",
+      "name": "Downwell",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "8",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-147/221",
+      "image": "images/SFD/SFD-147.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Return all units and gear to their owners' hands.",
+          "ja": "すべてのユニットとギアをそれぞれの持ち主の手札に戻す。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-148",
+      "name": "Draven - Audacious",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "6",
+      "might": "6",
+      "rarity": "エピック",
+      "tag": "Champion・Draven・Noxus",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-148/221",
+      "image": "images/SFD/SFD-148.avif",
+      "altImage": "images/SFD/SFD-148a.avif",
+      "effects": [
+        {
+          "kw": "DEFLECT",
+          "en": "Opponents must pay ⟨rune⟩ to choose me with a spell or ability.",
+          "ja": "(対戦相手は、自身をスペルや能力で選ぶために⟨rune⟩を支払わなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "The first time I win a combat each turn, you score 1 point.",
+          "ja": "各ターン、自身が最初に戦闘に勝ったとき、1点を獲得する。"
+        },
+        {
+          "kw": "",
+          "en": "When I die in combat, choose an opponent. They score 1 point.",
+          "ja": "自身が戦闘で死亡したとき、対戦相手を1人選ぶ。そのプレイヤーは1点を獲得する。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-149",
+      "name": "Ezreal - Prodigy",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "エピック",
+      "tag": "Champion・Ezreal・Piltover",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-149/221",
+      "image": "images/SFD/SFD-149.avif",
+      "altImage": "images/SFD/SFD-149a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, discard 1, then draw 2. Optional additional costs you pay cost ① or ⟨rune⟩ less.",
+          "ja": "自身をプレイしたとき、カードを1枚捨て、その後カードを2枚引く。自分が支払う任意の追加コストは、エネルギーが①、またはパワーが⟨rune⟩少なくなる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-150",
+      "name": "Last Rites",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Chaos",
+      "domains": [
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-150/221",
+      "image": "images/SFD/SFD-150.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Chaos⟩",
+          "ja": "(⟨Chaos⟩、自分のトラッシュからカードを2枚リサイクルする:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+2",
+          "ja": ""
+        },
+        {
+          "kw": "",
+          "ja": "装備したユニットが征服またはホールドしたとき、自分のトラッシュからユニット1体をプレイしてもよい。(そのコストは支払う。)"
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-151",
+      "name": "Bonds of Strength",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-151/221",
+      "image": "images/SFD/SFD-151.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "Play any time, even before spells and abilities resolve.",
+          "ja": "(いつでも、スペルや能力が解決する前でもプレイできる。)"
+        },
+        {
+          "kw": "REPEAT",
+          "cost": "②",
+          "en": "You may pay the additional cost to repeat this spell's effect.",
+          "ja": "(②の追加コストを支払い、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Give two friendly units each +1 might this turn.",
+          "ja": "自分のユニット2体に、このターン、それぞれ+1マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-152",
+      "name": "Eminent Benefactor",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "6",
+      "might": "5",
+      "rarity": "コモン",
+      "tag": "Piltover",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-152/221",
+      "image": "images/SFD/SFD-152.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I hold, play two Gold gear tokens exhausted.",
+          "ja": "自身がホールドしたとき、ゴールドのギアトークンを2つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-153",
+      "name": "Eye of the Herald",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-153/221",
+      "image": "images/SFD/SFD-153.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Order⟩",
+          "ja": "(⟨Order⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+0",
+          "ja": ""
+        },
+        {
+          "kw": "",
+          "ja": "自身が移動したとき、1マイトのRecruitユニットトークンを1体ここにプレイする。"
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-154",
+      "name": "Guards!",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "コモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-154/221",
+      "image": "images/SFD/SFD-154.avif",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "Hide now for ⟨Order⟩ to react with later for ⓪.",
+          "ja": "(⟨Order⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Play a 2 might Sand Soldier unit token. You may pay ⟨Order⟩ to ready it.",
+          "ja": "2マイトのSand Soldierユニットトークンを1体プレイする。⟨Order⟩を支払い、それをレディ状態にしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-155",
+      "name": "Honest Broker",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Ionia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-155/221",
+      "image": "images/SFD/SFD-155.avif",
+      "effects": [
+        {
+          "kw": "DEATHKNELL",
+          "en": "Play a Gold gear token exhausted. (When I die, get the effect.)",
+          "ja": "ゴールドのギアトークンを1つ消耗状態でプレイする。(自身が死亡したとき、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-156",
+      "name": "Laurent Duelist",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "4",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Demacia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-156/221",
+      "image": "images/SFD/SFD-156.avif",
+      "effects": [
+        {
+          "kw": "ASSAULT 2",
+          "en": "+2 might while I'm an attacker.",
+          "ja": "(自身が攻撃側である間、+2マイト。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-157",
+      "name": "Royal Guard",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "4",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Shurima",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-157/221",
+      "image": "images/SFD/SFD-157.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, play a 2 might Sand Soldier unit token here.",
+          "ja": "自身をプレイしたとき、2マイトのSand Soldierユニットトークンを1体ここにプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-158",
+      "name": "Sandshifter",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "5",
+      "might": "6",
+      "rarity": "コモン",
+      "tag": "Shurima",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-158/221",
+      "image": "images/SFD/SFD-158.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, kill an enemy unit with 3 might or less.",
+          "ja": "自身をプレイしたとき、マイト3以下の敵ユニット1体を死亡させる。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-159",
+      "name": "Trusty Ramhound",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "コモン",
+      "tag": "Demacia・Elite・Dog",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-159/221",
+      "image": "images/SFD/SFD-159.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "While you have another unit here, I have +1 might.",
+          "ja": "ここに自分の他のユニットがいる間、自身は+1マイトを持つ。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-160",
+      "name": "Zaun Punk",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "コモン",
+      "tag": "Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-160/221",
+      "image": "images/SFD/SFD-160.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "You may kill a friendly gear as an additional cost to play me.",
+          "ja": "追加コストとして、自分のギア1つを死亡させて自身をプレイしてもよい。"
+        },
+        {
+          "kw": "",
+          "en": "When you play me, if you paid the additional cost, kill a gear.",
+          "ja": "自身をプレイしたとき、追加コストを支払っていたなら、ギア1つを死亡させる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-161",
+      "name": "B.F. Sword",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "4",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-161/221",
+      "image": "images/SFD/SFD-161.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Order⟩",
+          "ja": "(⟨Order⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+3",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-162",
+      "name": "Blood Money",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-162/221",
+      "image": "images/SFD/SFD-162.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "Play on your turn or in showdowns.",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Kill a unit at a battlefield with 2 might or less. If it was an enemy unit, play a Gold gear token exhausted. If it was a friendly unit, play two Gold gear tokens exhausted.",
+          "ja": "バトルフィールドにいるマイト2以下のユニット1体を死亡させる。それが敵ユニットだったなら、ゴールドのギアトークンを1つ消耗状態でプレイする。自分のユニットだったなら、ゴールドのギアトークンを2つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-163",
+      "name": "Deathgrip",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-163/221",
+      "image": "images/SFD/SFD-163.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "Play any time, even before spells and abilities resolve.",
+          "ja": "(いつでも、スペルや能力が解決する前でもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Kill a friendly unit to give +might equal to its Might to another friendly unit this turn. Draw 1.",
+          "ja": "自分のユニット1体を死亡させ、そのマイトに等しい+マイトを、このターン、自分の他のユニット1体に与える。カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-164",
+      "name": "Drag Under",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "5",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-164/221",
+      "image": "images/SFD/SFD-164.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "Play on your turn or in showdowns.",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "I cost ② less to play from anywhere other than your hand. Kill a unit at a battlefield.",
+          "ja": "自身は手札以外の場所からプレイする際、エネルギーが②少なくなる。バトルフィールドにいるユニット1体を死亡させる。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-165",
+      "name": "Glasc Mixologist",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "5",
+      "might": "5",
+      "rarity": "アンコモン",
+      "tag": "Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-165/221",
+      "image": "images/SFD/SFD-165.avif",
+      "effects": [
+        {
+          "kw": "DEATHKNELL",
+          "en": "You may play a unit with cost no more than ③ and no more than ⟨rune⟩ from your trash, ignoring its cost. (When I die, get the effect.)",
+          "ja": "エネルギーコスト③以下、かつパワーコスト⟨rune⟩以下のユニット1体を、自分のトラッシュからそのコストを無視してプレイしてもよい。(自身が死亡したとき、この効果を得る。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-166",
+      "name": "Rally the Troops",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-166/221",
+      "image": "images/SFD/SFD-166.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "Play on your turn or in showdowns.",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "When a friendly unit is played this turn, buff it. (If it doesn't have a buff, it gets a +1 might buff.) Draw 1.",
+          "ja": "このターン、自分のユニットがプレイされたとき、それをバフする。(バフを持っていないなら、+1マイトのバフを得る。)カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-167",
+      "name": "Unsung Hero",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "2",
+      "might": "2",
+      "rarity": "アンコモン",
+      "tag": "Demacia・Elite",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-167/221",
+      "image": "images/SFD/SFD-167.avif",
+      "effects": [
+        {
+          "kw": "DEATHKNELL",
+          "en": "If I was MIGHTY, draw 2. (When I die, get the effect. I'm Mighty while I have 5+ might.)",
+          "ja": "自身がMIGHTYだったなら、カードを2枚引く。(自身が死亡したとき、この効果を得る。自身は5以上のマイトを持つ間MIGHTYである。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-168",
+      "name": "Vanguard Armory",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "7",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-168/221",
+      "image": "images/SFD/SFD-168.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "⟨exhaust⟩: Play three 1 might Recruit unit tokens. (You may play them to different locations.)",
+          "ja": "⟨消耗⟩：1マイトのRecruitユニットトークンを3体プレイする。(それぞれ異なる場所にプレイしてもよい。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-169",
+      "name": "Altar of Memories",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "レア",
+      "tag": "",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-169/221",
+      "image": "images/SFD/SFD-169.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When a friendly unit dies, you may exhaust me to draw 1, then put a card from your hand on the top or bottom of your Main Deck.",
+          "ja": "自分のユニットが死亡したとき、自身を消耗させてカードを1枚引き、その後手札からカードを1枚メインデッキの一番上か一番下に置いてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-170",
+      "name": "Rek'Sai - Swarm Queen",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "5",
+      "might": "5",
+      "rarity": "レア",
+      "tag": "Champion・Rek'Sai・The Void",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-170/221",
+      "image": "images/SFD/SFD-170.avif",
+      "altImage": "images/SFD/SFD-170a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When I attack, you may reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest. If the played card is a unit, you may play it here.",
+          "ja": "自身が攻撃したとき、自分のメインデッキの一番上のカード2枚を公開してもよい。そのうち1枚をプレイしてもよい。その後残りをリサイクルする。プレイしたカードがユニットなら、それをここにプレイしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-171",
+      "name": "Renata Glasc - Industrialist",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Renata Glasc・Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-171/221",
+      "image": "images/SFD/SFD-171.avif",
+      "altImage": "images/SFD/SFD-171a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Your tokens enter ready.",
+          "ja": "自分のトークンはレディ状態でエントリーする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-172",
+      "name": "Sacred Shears",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-172/221",
+      "image": "images/SFD/SFD-172.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Order⟩",
+          "ja": "(⟨Order⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+1",
+          "ja": ""
+        },
+        {
+          "kw": "DEATHKNELL",
+          "ja": "カードを1枚引く。(自身が死亡したとき、この効果を得る。)"
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-173",
+      "name": "Soraka - Wanderer",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Soraka・Mount Targon",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-173/221",
+      "image": "images/SFD/SFD-173.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "I must be assigned combat damage last.",
+          "ja": "自身は最後に戦闘ダメージを割り当てられなければならない。"
+        },
+        {
+          "kw": "",
+          "en": "If another unit you control here would die, if it has less Might than me, instead heal it, exhaust it, and recall it. (Send it to base. This isn't a move.)",
+          "ja": "ここにいる自分の他のユニットが死亡する場合、それが自身よりマイトが低いなら、代わりにそれを回復し、消耗させ、リコールする。(ベースに送る。これは移動ではない。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-174",
+      "name": "Trove Golem",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "8",
+      "might": "9",
+      "rarity": "レア",
+      "tag": "Freljord",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-174/221",
+      "image": "images/SFD/SFD-174.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, play four Gold gear tokens exhausted.",
+          "ja": "自身をプレイしたとき、ゴールドのギアトークンを4つ消耗状態でプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-175",
+      "name": "Undertitan",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "6",
+      "might": "5",
+      "rarity": "レア",
+      "tag": "The Void",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-175/221",
+      "image": "images/SFD/SFD-175.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you play me, give your other units +2 might this turn.",
+          "ja": "自身をプレイしたとき、このターン、自分の他のユニットに+2マイトを与える。"
+        },
+        {
+          "kw": "",
+          "en": "As I'm revealed from your deck, ADD ②.",
+          "ja": "自身が自分のデッキから公開されたとき、②をADDする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-176",
+      "name": "Xin Zhao - Vigilant",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "3",
+      "might": "4",
+      "rarity": "レア",
+      "tag": "Champion・Xin Zhao・Demacia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-176/221",
+      "image": "images/SFD/SFD-176.avif",
+      "effects": [
+        {
+          "kw": "TANK",
+          "en": "I must be assigned combat damage first.",
+          "ja": "(自身は最初に戦闘ダメージを割り当てられなければならない。)"
+        },
+        {
+          "kw": "",
+          "en": "I enter ready if you have two or more other units in your base.",
+          "ja": "自分のベースに他のユニットが2体以上いるなら、自身はレディ状態でエントリーする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-177",
+      "name": "Azir - Sovereign",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "4",
+      "might": "4",
+      "rarity": "エピック",
+      "tag": "Champion・Azir・Shurima・Bird",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-177/221",
+      "image": "images/SFD/SFD-177.avif",
+      "altImage": "images/SFD/SFD-177a.avif",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "You may pay ①⟨Order⟩ as an additional cost to have me enter ready.",
+          "ja": "(①⟨Order⟩を追加コストとして支払ってもよい。そうしたなら、自身はレディ状態でエントリーする。)"
+        },
+        {
+          "kw": "",
+          "en": "When I attack, you may move any number of your token units to this battlefield.",
+          "ja": "自身が攻撃したとき、自分のトークンユニットを好きな数このバトルフィールドへ移動してもよい。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-178",
+      "name": "Blade of the Ruined King",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-178/221",
+      "image": "images/SFD/SFD-178.avif",
+      "effects": [
+        {
+          "kw": "EQUIP",
+          "cost": "⟨Order⟩",
+          "ja": "(⟨Order⟩、自分のユニット1体を死亡させる:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+4",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-179",
+      "name": "Corina Veraza",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "7",
+      "might": "6",
+      "rarity": "エピック",
+      "tag": "Zaun",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-179/221",
+      "image": "images/SFD/SFD-179.avif",
+      "effects": [
+        {
+          "kw": "ACCELERATE",
+          "en": "You may pay ①⟨Order⟩ as an additional cost to have me enter ready.",
+          "ja": "(①⟨Order⟩を追加コストとして支払ってもよい。そうしたなら、自身はレディ状態でエントリーする。)"
+        },
+        {
+          "kw": "",
+          "en": "When I move to a battlefield, play three 1 might Recruit unit tokens here.",
+          "ja": "自身がバトルフィールドへ移動したとき、1マイトのRecruitユニットトークンを3体ここにプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-180",
+      "name": "Fiora - Worthy",
+      "nameJa": "",
+      "type": "Unit",
+      "domain": "Order",
+      "domains": [
+        "Order"
+      ],
+      "cost": "3",
+      "might": "3",
+      "rarity": "エピック",
+      "tag": "Champion・Fiora・Demacia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-08",
+      "number": "SFD-180/221",
+      "image": "images/SFD/SFD-180.avif",
+      "altImage": "images/SFD/SFD-180a.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When a unit you control becomes MIGHTY, you may pay ⟨Order⟩ to ready it. (A unit is Mighty while it has 5+ might.)",
+          "ja": "自分のユニットがMIGHTYになったとき、⟨Order⟩を支払い、それをレディ状態にしてもよい。(ユニットは5以上のマイトを持つ間MIGHTYである。)"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-182",
+      "name": "Danger Zone",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Mind"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Rumble・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-182/221",
+      "image": "images/SFD/SFD-182.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "Play any time, even before spells and abilities resolve.",
+          "ja": "(いつでも、スペルや能力が解決する前でもプレイできる。)"
+        },
+        {
+          "kw": "REPEAT",
+          "cost": "①⟨rune⟩",
+          "en": "You may pay the additional cost to repeat this spell's effect.",
+          "ja": "(①⟨rune⟩の追加コストを支払い、このスペルの効果を繰り返してもよい。)"
+        },
+        {
+          "kw": "",
+          "en": "Give your Mechs +1 might this turn.",
+          "ja": "このターン、自分のMechに+1マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-184",
+      "name": "Relentless Pursuit",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Body"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Lucian・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-184/221",
+      "image": "images/SFD/SFD-184.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "Play on your turn or in showdowns.",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Move a friendly unit. You may attach an Equipment with the same controller to it. This turn, that unit has \"When I conquer, you may move me to my base.\"",
+          "ja": "自分のユニット1体を移動する。同じコントローラーの装備品1つをそれに装備してもよい。このターン、そのユニットは「自身が征服したとき、自身をベースへ移動してもよい。」を持つ。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-186",
+      "name": "Spinning Axe",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Chaos"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Draven・Signature Gear・Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-186/221",
+      "image": "images/SFD/SFD-186.avif",
+      "effects": [
+        {
+          "kw": "QUICK-DRAW",
+          "en": "This has REACTION. When you play it, attach it to a unit you control.",
+          "ja": "(これはREACTIONを持つ。これをプレイしたとき、自分がコントロールするユニットに装備する。)"
+        },
+        {
+          "kw": "EQUIP",
+          "cost": "⟨rune⟩",
+          "ja": "(⟨rune⟩:自分がコントロールするユニットに装備する。)"
+        },
+        {
+          "kw": "TEMPORARY",
+          "en": "If this is unattached, kill it at the start of its controller's Beginning Phase, before scoring.",
+          "ja": "(これが装備されていない場合、コントローラーのビギニングフェイズの開始時、得点計算の前に破壊する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+3",
+          "ja": ""
+        }
+      ],
+      "power": ""
+    },
+    {
+      "id": "sfd-188",
+      "name": "Void Rush",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Order"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Rek'Sai・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-188/221",
+      "image": "images/SFD/SFD-188.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Reveal the top 2 cards of your Main Deck. You may play one of them, reducing its cost by ②. Draw any you did not play this way.",
+          "ja": "自分のメインデッキの一番上のカード2枚を公開する。そのうち1枚を、コストを②減らしてプレイしてもよい。この方法でプレイしなかったカードを引く。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-190",
+      "name": "Forgefire Cape",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Ornn・Signature Gear・Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-190/221",
+      "image": "images/SFD/SFD-190.avif",
+      "effects": [
+        {
+          "kw": "UNIQUE",
+          "en": "Your deck can have only 1 card with this name.",
+          "ja": "(自分のデッキにこの名前のカードは1枚しか入れられない。)"
+        },
+        {
+          "kw": "EQUIP",
+          "cost": "⟨rune⟩",
+          "ja": "(⟨rune⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+3",
+          "ja": ""
+        },
+        {
+          "kw": "",
+          "ja": "自身が攻撃または防御したとき、ここにいるすべての敵ユニットに2ダメージを与える。"
+        }
+      ],
+      "power": "2"
+    },
+    {
+      "id": "sfd-191",
+      "name": "Rabadon's Deathcrown",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Ornn・Signature Gear・Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-191/221",
+      "image": "images/SFD/SFD-191.avif",
+      "effects": [
+        {
+          "kw": "UNIQUE",
+          "en": "Your deck can have only 1 card with this name.",
+          "ja": "(自分のデッキにこの名前のカードは1枚しか入れられない。)"
+        },
+        {
+          "kw": "EQUIP",
+          "cost": "⟨rune⟩",
+          "ja": "(⟨rune⟩:自分がコントロールするユニットに装備する。)"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+3",
+          "ja": ""
+        },
+        {
+          "kw": "",
+          "ja": "自分のスペルと能力は3の追加ダメージを与える。(これが装備されている間。)"
+        }
+      ],
+      "power": "2"
+    },
+    {
+      "id": "sfd-192",
+      "name": "Shurelya's Requiem",
+      "nameJa": "",
+      "type": "Gear",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Mind"
+      ],
+      "cost": "4",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Ornn・Signature Gear・Equipment",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-192/221",
+      "image": "images/SFD/SFD-192.avif",
+      "effects": [
+        {
+          "kw": "UNIQUE",
+          "en": "Your deck can have only 1 card with this name.",
+          "ja": "(自分のデッキにこの名前のカードは1枚しか入れられない。)"
+        },
+        {
+          "kw": "EQUIP",
+          "cost": "⟨rune⟩",
+          "ja": "(⟨rune⟩:自分がコントロールするユニットに装備する。)"
+        },
+        {
+          "kw": "",
+          "en": "When you play this, ready your units.",
+          "ja": "これをプレイしたとき、自分のユニットをレディ状態にする。"
+        }
+      ],
+      "equip": [
+        {
+          "kw": "",
+          "stat": "+2",
+          "ja": ""
+        },
+        {
+          "kw": "GANKING",
+          "ja": "ここにいる自分のユニットはGANKINGを持つ。(バトルフィールドから別のバトルフィールドへ移動できる。)"
+        }
+      ],
+      "power": "2"
+    },
+    {
+      "id": "sfd-194",
+      "name": "Counter Strike",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Body"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Jax・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-194/221",
+      "image": "images/SFD/SFD-194.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "Play any time, even before spells and abilities resolve.",
+          "ja": "(いつでも、スペルや能力が解決する前でもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a unit. The next time that unit would be dealt damage this turn, prevent it. Draw 1.",
+          "ja": "ユニット1体を選ぶ。このターン、そのユニットが次にダメージを受ける際、それを軽減する。カードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-196",
+      "name": "Defiant Dance",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Chaos"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Irelia・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-196/221",
+      "image": "images/SFD/SFD-196.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "Play any time, even before spells and abilities resolve.",
+          "ja": "(いつでも、スペルや能力が解決する前でもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Give a unit +2 might this turn and another unit -2 might this turn.",
+          "ja": "このターン、ユニット1体に+2マイトを、別のユニット1体に-2マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-198",
+      "name": "Arise!",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Order"
+      ],
+      "cost": "6",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Azir・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-198/221",
+      "image": "images/SFD/SFD-198.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Play a 2 might Sand Soldier unit token for each Equipment you control. Then ready two of them.",
+          "ja": "自分がコントロールする装備品1つにつき、2マイトのSand Soldierユニットトークンを1体プレイする。その後、そのうち2体をレディ状態にする。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-200",
+      "name": "Arcane Shift",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind",
+        "Chaos"
+      ],
+      "cost": "3",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Ezreal・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-200/221",
+      "image": "images/SFD/SFD-200.avif",
+      "effects": [
+        {
+          "kw": "ACTION",
+          "en": "Play on your turn or in showdowns.",
+          "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Banish a friendly unit, then its owner plays it, ignoring its cost. Deal 3 to an enemy unit at a battlefield. Banish this.",
+          "ja": "自分のユニット1体を追放し、その後持ち主がそれをコストを無視してプレイする。バトルフィールドにいる敵ユニット1体に3ダメージを与える。これを追放する。"
+        }
+      ],
+      "equip": [],
+      "power": "1"
+    },
+    {
+      "id": "sfd-202",
+      "name": "Hostile Takeover",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Mind",
+      "domains": [
+        "Mind",
+        "Order"
+      ],
+      "cost": "5",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Renata Glasc・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-202/221",
+      "image": "images/SFD/SFD-202.avif",
+      "effects": [
+        {
+          "kw": "HIDDEN",
+          "en": "Hide now for ⟨rune⟩ to react with later for ⓪.",
+          "ja": "(⟨rune⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Take control of an enemy unit at a battlefield. Ready it. (Start a combat if other enemies are there. Otherwise, conquer.) Lose control of that unit and recall it at end of turn. (Send it to base. This isn't a move.)",
+          "ja": "バトルフィールドにいる敵ユニット1体のコントロールを得る。それをレディ状態にする。(他に敵がいるなら戦闘を開始する。そうでなければ征服する。)ターン終了時、そのユニットのコントロールを失い、リコールする。(ベースに送る。これは移動ではない。)"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-204",
+      "name": "On the Hunt",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Body",
+      "domains": [
+        "Body",
+        "Chaos"
+      ],
+      "cost": "1",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Sivir・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-204/221",
+      "image": "images/SFD/SFD-204.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Ready your units.",
+          "ja": "自分のユニットをレディ状態にする。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-206",
+      "name": "Riposte",
+      "nameJa": "",
+      "type": "Spell",
+      "domain": "Body",
+      "domains": [
+        "Body",
+        "Order"
+      ],
+      "cost": "2",
+      "might": "",
+      "rarity": "エピック",
+      "tag": "Fiora・Signature Spell",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-206/221",
+      "image": "images/SFD/SFD-206.avif",
+      "effects": [
+        {
+          "kw": "REACTION",
+          "en": "Play any time, even before spells and abilities resolve.",
+          "ja": "(いつでも、スペルや能力が解決する前でもプレイできる。)"
+        },
+        {
+          "kw": "",
+          "en": "Choose a friendly unit and a spell. Counter that spell and give that unit +might equal to that spell's Energy cost this turn.",
+          "ja": "自分のユニット1体とスペル1つを選ぶ。そのスペルを打ち消し、このターン、そのユニットにそのスペルのエネルギーコストに等しい+マイトを与える。"
+        }
+      ],
+      "equip": [],
+      "power": "2"
+    },
+    {
+      "id": "sfd-207",
+      "name": "Emperor's Dais",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-207/221",
+      "image": "images/SFD/SFD-207.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer here, you may pay ① and return a unit you control here to its owner's hand. If you do, play a 2 might Sand Soldier unit token here.",
+          "ja": "ここで征服したとき、①を支払い、ここでコントロールするユニット1体を持ち主の手札に戻してもよい。そうしたなら、2マイトのSand Soldierユニットトークンを1体ここにプレイする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-208",
+      "name": "Forge of the Fluft",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-208/221",
+      "image": "images/SFD/SFD-208.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "While you control this battlefield, friendly legends have \"⟨exhaust⟩: Attach an Equipment you control to a unit you control.\"",
+          "ja": "このバトルフィールドをコントロールしている間、自分のレジェンドは「⟨消耗⟩：自分がコントロールする装備品1つを、自分がコントロールするユニットに装備する。」を持つ。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-209",
+      "name": "Forgotten Monument",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-209/221",
+      "image": "images/SFD/SFD-209.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Players can't score here until their third turn.",
+          "ja": "プレイヤーは自分の3ターン目まで、ここで得点できない。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-210",
+      "name": "Hall of Legends",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-210/221",
+      "image": "images/SFD/SFD-210.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer here, you may pay ① to ready your legend.",
+          "ja": "ここで征服したとき、①を支払って自分のレジェンドをレディ状態にしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-211",
+      "name": "Marai Spire",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-211/221",
+      "image": "images/SFD/SFD-211.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "While you control this battlefield, friendly REPEAT costs cost ① less.",
+          "ja": "このバトルフィールドをコントロールしている間、自分のREPEATコストは①少なくなる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-212",
+      "name": "Minefield",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-212/221",
+      "image": "images/SFD/SFD-212.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer here, put the top 2 cards of your Main Deck into your trash.",
+          "ja": "ここで征服したとき、自分のメインデッキの一番上のカード2枚を自分のトラッシュに置く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-213",
+      "name": "Ornn's Forge",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-213/221",
+      "image": "images/SFD/SFD-213.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "While you control this battlefield, the first friendly non-token gear played each turn costs ① less.",
+          "ja": "このバトルフィールドをコントロールしている間、各ターン最初にプレイされる自分のトークンでないギアは①少なくなる。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-214",
+      "name": "Power Nexus",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-214/221",
+      "image": "images/SFD/SFD-214.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you hold here, you may pay ⟨rune⟩⟨rune⟩⟨rune⟩ to score 1 point.",
+          "ja": "ここでホールドしたとき、⟨rune⟩⟨rune⟩⟨rune⟩を支払って1点を得てもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-215",
+      "name": "Ravenbloom Conservatory",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-215/221",
+      "image": "images/SFD/SFD-215.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you defend here, reveal the top card of your Main Deck. If it's a spell, put it in your hand. Otherwise, recycle it.",
+          "ja": "ここで防御したとき、自分のメインデッキの一番上のカードを公開する。それがスペルなら手札に加える。そうでなければリサイクルする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-216",
+      "name": "Rockfall Path",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-216/221",
+      "image": "images/SFD/SFD-216.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Units can't be played here.",
+          "ja": "ここにユニットをプレイできない。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-217",
+      "name": "Seat of Power",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-217/221",
+      "image": "images/SFD/SFD-217.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer here, draw 1 for each other battlefield you or allies control.",
+          "ja": "ここで征服したとき、自分または味方がコントロールする他のバトルフィールド1つにつきカードを1枚引く。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-218",
+      "name": "Sunken Temple",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-218/221",
+      "image": "images/SFD/SFD-218.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer here with one or more MIGHTY units, you may pay ① to draw 1. (A unit is Mighty while it has 5+ ⟨might⟩.)",
+          "ja": "1体以上のMIGHTYユニットでここを征服したとき、①を支払ってカードを1枚引いてもよい。(ユニットは5以上のマイトを持つ間MIGHTYである。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-219",
+      "name": "The Papertree",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-219/221",
+      "image": "images/SFD/SFD-219.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you hold here, each player channels 1 rune exhausted.",
+          "ja": "ここでホールドしたとき、各プレイヤーはルーンを1つ消耗状態でチャネルする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-220",
+      "name": "Treasure Hoard",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-220/221",
+      "image": "images/SFD/SFD-220.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer here, you may pay ① to play a Gold gear token exhausted.",
+          "ja": "ここで征服したとき、①を支払ってゴールドのギアトークンを1つ消耗状態でプレイしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-221",
+      "name": "Veiled Temple",
+      "nameJa": "",
+      "type": "Battlefield",
+      "domain": "",
+      "cost": "",
+      "might": "",
+      "rarity": "アンコモン",
+      "tag": "Battlefield",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "modified": "2026-07-09",
+      "number": "SFD-221/221",
+      "image": "images/SFD/SFD-221.avif",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer here, you may ready a friendly gear. If it's an Equipment, you may detach it.",
+          "ja": "ここで征服したとき、自分のギア1つをレディ状態にしてもよい。それが装備品なら、装備を外してもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-181",
+      "name": "Rumble - Mechanized Menace",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Mind"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Rumble",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-181/221",
+      "image": "images/SFD/SFD-181.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Your Mechs have SHIELD. (+1 ⟨might⟩ while they're defenders.)",
+          "ja": "自分のMechはSHIELDを持つ。(防御側である間、+1⟨マイト⟩。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-183",
+      "name": "Lucian - Purifier",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Body"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Lucian",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-183/221",
+      "image": "images/SFD/SFD-183.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Your Equipment each give ASSAULT. (+1 ⟨might⟩ while equipped unit is an attacker.)",
+          "ja": "自分の装備品はそれぞれASSAULTを与える。(装備したユニットが攻撃側である間、+1⟨マイト⟩。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-185",
+      "name": "Draven - Glorious Executioner",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Chaos"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Draven",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-185/221",
+      "image": "images/SFD/SFD-185.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you win a combat, draw 1. (You win if only your units remain after combat.)",
+          "ja": "あなたが戦闘に勝利したとき、カードを1枚引く。(戦闘後に自分のユニットのみが残っているなら勝利。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-187",
+      "name": "Rek'Sai - Void Burrower",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Fury",
+      "domains": [
+        "Fury",
+        "Order"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Rek'Sai",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-187/221",
+      "image": "images/SFD/SFD-187.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest.",
+          "ja": "あなたが征服したとき、自身を消耗させて自分のメインデッキの一番上のカード2枚を公開してもよい。そのうち1枚をプレイしてもよい。その後残りをリサイクルする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-189",
+      "name": "Ornn - Fire Below the Mountain",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Mind"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Ornn",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-189/221",
+      "image": "images/SFD/SFD-189.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "⟨exhaust⟩: REACTION — ADD ⟨rune⟩. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)",
+          "ja": "⟨消耗⟩：REACTION — ⟨rune⟩をADDする。ギアのプレイ、またはギアの能力の使用にのみ使える。(リソースを加える能力にはリアクションできない。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-193",
+      "name": "Jax - Grandmaster at Arms",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Body"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Jax",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-193/221",
+      "image": "images/SFD/SFD-193.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "①, ⟨exhaust⟩: Attach a detached Equipment you control to a unit you control. ⟨exhaust⟩: Attach an attached Equipment you control to a unit you control.",
+          "ja": "①、⟨消耗⟩：自分がコントロールする未装備の装備品1つを、自分がコントロールするユニットに装備する。⟨消耗⟩：自分がコントロールする装備済みの装備品1つを、自分がコントロールするユニットに装備し直す。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-195",
+      "name": "Irelia - Blade Dancer",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Chaos"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Irelia",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-195/221",
+      "image": "images/SFD/SFD-195.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you choose a friendly unit, you may exhaust me and pay ⟨rune⟩ to ready it. When you conquer, you may pay ① to ready me.",
+          "ja": "あなたが自分のユニットを選んだとき、自身を消耗させて⟨rune⟩を支払い、それをレディ状態にしてもよい。あなたが征服したとき、①を支払って自身をレディ状態にしてもよい。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-197",
+      "name": "Azir - Emperor of the Sands",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Calm",
+      "domains": [
+        "Calm",
+        "Order"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Azir",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-197/221",
+      "image": "images/SFD/SFD-197.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "Your Sand Soldiers have WEAPONMASTER. ①, ⟨exhaust⟩: Play a 2 ⟨might⟩ Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",
+          "ja": "自分のSand SoldierはWEAPONMASTERを持つ。①、⟨消耗⟩：2マイトのSand Soldierユニットトークンを1体自分のベースにプレイする。このターンに装備品をプレイしている場合にのみ使える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-199",
+      "name": "Ezreal - Prodigal Explorer",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Mind",
+      "domains": [
+        "Mind",
+        "Chaos"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Ezreal",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-199/221",
+      "image": "images/SFD/SFD-199.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "⟨exhaust⟩: REACTION — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.",
+          "ja": "⟨消耗⟩：REACTION — カードを1枚引く。このターン、スペルまたはユニットの能力で敵ユニットおよび／またはギアを2回選んでいる場合にのみ使える。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-201",
+      "name": "Renata Glasc - Chem-Baroness",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Mind",
+      "domains": [
+        "Mind",
+        "Order"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Renata Glasc",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-201/221",
+      "image": "images/SFD/SFD-201.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you or an ally hold, you may exhaust me to play a Gold gear token exhausted. While your score is within 3 points of the Victory Score, your Gold ADD an additional ①.",
+          "ja": "自分または味方がホールドしたとき、自身を消耗させてゴールドのギアトークンを1つ消耗状態でプレイしてもよい。自分のスコアがビクトリースコアの3点差以内である間、自分のゴールドは①を追加でADDする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-203",
+      "name": "Sivir - Battle Mistress",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Body",
+      "domains": [
+        "Body",
+        "Chaos"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Sivir",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-203/221",
+      "image": "images/SFD/SFD-203.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When you recycle a rune, you may exhaust me to play a Gold gear token exhausted. When one or more enemy units die, ready me.",
+          "ja": "あなたがルーンをリサイクルしたとき、自身を消耗させてゴールドのギアトークンを1つ消耗状態でプレイしてもよい。1体以上の敵ユニットが死亡したとき、自身をレディ状態にする。"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
+      "id": "sfd-205",
+      "name": "Fiora - Grand Duelist",
+      "nameJa": "",
+      "type": "Legend",
+      "domain": "Body",
+      "domains": [
+        "Body",
+        "Order"
+      ],
+      "cost": "",
+      "might": "",
+      "rarity": "レア",
+      "tag": "Fiora",
+      "set": "Spiritforged",
+      "setCode": "SFD",
+      "number": "SFD-205/221",
+      "image": "images/SFD/SFD-205.avif",
+      "modified": "2026-07-09",
+      "effects": [
+        {
+          "kw": "",
+          "en": "When one of your units becomes MIGHTY, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ ⟨might⟩.)",
+          "ja": "自分のユニットの1体がMIGHTYになったとき、自身を消耗させてルーンを1つ消耗状態でチャネルしてもよい。(ユニットは5以上のマイトを持つ間MIGHTYである。)"
+        }
+      ],
+      "equip": [],
+      "power": ""
+    },
+    {
       "id": "sfd-t03",
       "name": "Gold",
       "nameJa": "",
@@ -7880,6 +13945,212 @@
       "abilityJa": "自身がホールドしたとき、1XPを得る。3XPを支払い、⟨消耗⟩：カードを1枚引く。",
       "signatures": [
         "unl-204"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-181",
+      "name": "Rumble - Mechanized Menace",
+      "nameJa": "",
+      "number": "SFD-181/221",
+      "domains": [
+        "Fury",
+        "Mind"
+      ],
+      "abilityKw": "",
+      "abilityEn": "Your Mechs have SHIELD. (+1 ⟨might⟩ while they're defenders.)",
+      "abilityJa": "自分のMechはSHIELDを持つ。(防御側である間、+1⟨マイト⟩。)",
+      "signatures": [
+        "sfd-182"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-183",
+      "name": "Lucian - Purifier",
+      "nameJa": "",
+      "number": "SFD-183/221",
+      "domains": [
+        "Fury",
+        "Body"
+      ],
+      "abilityKw": "",
+      "abilityEn": "Your Equipment each give ASSAULT. (+1 ⟨might⟩ while equipped unit is an attacker.)",
+      "abilityJa": "自分の装備品はそれぞれASSAULTを与える。(装備したユニットが攻撃側である間、+1⟨マイト⟩。)",
+      "signatures": [
+        "sfd-184"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-185",
+      "name": "Draven - Glorious Executioner",
+      "nameJa": "",
+      "number": "SFD-185/221",
+      "domains": [
+        "Fury",
+        "Chaos"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you win a combat, draw 1. (You win if only your units remain after combat.)",
+      "abilityJa": "あなたが戦闘に勝利したとき、カードを1枚引く。(戦闘後に自分のユニットのみが残っているなら勝利。)",
+      "signatures": [
+        "sfd-186"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-187",
+      "name": "Rek'Sai - Void Burrower",
+      "nameJa": "",
+      "number": "SFD-187/221",
+      "domains": [
+        "Fury",
+        "Order"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest.",
+      "abilityJa": "あなたが征服したとき、自身を消耗させて自分のメインデッキの一番上のカード2枚を公開してもよい。そのうち1枚をプレイしてもよい。その後残りをリサイクルする。",
+      "signatures": [
+        "sfd-188"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-189",
+      "name": "Ornn - Fire Below the Mountain",
+      "nameJa": "",
+      "number": "SFD-189/221",
+      "domains": [
+        "Calm",
+        "Mind"
+      ],
+      "abilityKw": "",
+      "abilityEn": "⟨exhaust⟩: REACTION — ADD ⟨rune⟩. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)",
+      "abilityJa": "⟨消耗⟩：REACTION — ⟨rune⟩をADDする。ギアのプレイ、またはギアの能力の使用にのみ使える。(リソースを加える能力にはリアクションできない。)",
+      "signatures": [
+        "sfd-190",
+        "sfd-191",
+        "sfd-192"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-193",
+      "name": "Jax - Grandmaster at Arms",
+      "nameJa": "",
+      "number": "SFD-193/221",
+      "domains": [
+        "Calm",
+        "Body"
+      ],
+      "abilityKw": "",
+      "abilityEn": "①, ⟨exhaust⟩: Attach a detached Equipment you control to a unit you control. ⟨exhaust⟩: Attach an attached Equipment you control to a unit you control.",
+      "abilityJa": "①、⟨消耗⟩：自分がコントロールする未装備の装備品1つを、自分がコントロールするユニットに装備する。⟨消耗⟩：自分がコントロールする装備済みの装備品1つを、自分がコントロールするユニットに装備し直す。",
+      "signatures": [
+        "sfd-194"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-195",
+      "name": "Irelia - Blade Dancer",
+      "nameJa": "",
+      "number": "SFD-195/221",
+      "domains": [
+        "Calm",
+        "Chaos"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you choose a friendly unit, you may exhaust me and pay ⟨rune⟩ to ready it. When you conquer, you may pay ① to ready me.",
+      "abilityJa": "あなたが自分のユニットを選んだとき、自身を消耗させて⟨rune⟩を支払い、それをレディ状態にしてもよい。あなたが征服したとき、①を支払って自身をレディ状態にしてもよい。",
+      "signatures": [
+        "sfd-196"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-197",
+      "name": "Azir - Emperor of the Sands",
+      "nameJa": "",
+      "number": "SFD-197/221",
+      "domains": [
+        "Calm",
+        "Order"
+      ],
+      "abilityKw": "",
+      "abilityEn": "Your Sand Soldiers have WEAPONMASTER. ①, ⟨exhaust⟩: Play a 2 ⟨might⟩ Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",
+      "abilityJa": "自分のSand SoldierはWEAPONMASTERを持つ。①、⟨消耗⟩：2マイトのSand Soldierユニットトークンを1体自分のベースにプレイする。このターンに装備品をプレイしている場合にのみ使える。",
+      "signatures": [
+        "sfd-198"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-199",
+      "name": "Ezreal - Prodigal Explorer",
+      "nameJa": "",
+      "number": "SFD-199/221",
+      "domains": [
+        "Mind",
+        "Chaos"
+      ],
+      "abilityKw": "",
+      "abilityEn": "⟨exhaust⟩: REACTION — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.",
+      "abilityJa": "⟨消耗⟩：REACTION — カードを1枚引く。このターン、スペルまたはユニットの能力で敵ユニットおよび／またはギアを2回選んでいる場合にのみ使える。",
+      "signatures": [
+        "sfd-200"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-201",
+      "name": "Renata Glasc - Chem-Baroness",
+      "nameJa": "",
+      "number": "SFD-201/221",
+      "domains": [
+        "Mind",
+        "Order"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you or an ally hold, you may exhaust me to play a Gold gear token exhausted. While your score is within 3 points of the Victory Score, your Gold ADD an additional ①.",
+      "abilityJa": "自分または味方がホールドしたとき、自身を消耗させてゴールドのギアトークンを1つ消耗状態でプレイしてもよい。自分のスコアがビクトリースコアの3点差以内である間、自分のゴールドは①を追加でADDする。",
+      "signatures": [
+        "sfd-202"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-203",
+      "name": "Sivir - Battle Mistress",
+      "nameJa": "",
+      "number": "SFD-203/221",
+      "domains": [
+        "Body",
+        "Chaos"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When you recycle a rune, you may exhaust me to play a Gold gear token exhausted. When one or more enemy units die, ready me.",
+      "abilityJa": "あなたがルーンをリサイクルしたとき、自身を消耗させてゴールドのギアトークンを1つ消耗状態でプレイしてもよい。1体以上の敵ユニットが死亡したとき、自身をレディ状態にする。",
+      "signatures": [
+        "sfd-204"
+      ],
+      "strategy": ""
+    },
+    {
+      "id": "sfd-205",
+      "name": "Fiora - Grand Duelist",
+      "nameJa": "",
+      "number": "SFD-205/221",
+      "domains": [
+        "Body",
+        "Order"
+      ],
+      "abilityKw": "",
+      "abilityEn": "When one of your units becomes MIGHTY, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ ⟨might⟩.)",
+      "abilityJa": "自分のユニットの1体がMIGHTYになったとき、自身を消耗させてルーンを1つ消耗状態でチャネルしてもよい。(ユニットは5以上のマイトを持つ間MIGHTYである。)",
+      "signatures": [
+        "sfd-206"
       ],
       "strategy": ""
     }
