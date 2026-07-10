@@ -1,0 +1,924 @@
+{
+ "_readme": "メタデータ（sets/keywords/legends/counts）。カード本体は data/cards/<CODE>.json に分割。編集は data/cards.json を直し scripts/split-cards.js を流す。",
+ "sets": [
+  {
+   "code": "OGN",
+   "name": "Origins"
+  },
+  {
+   "code": "SFD",
+   "name": "Spiritforged"
+  },
+  {
+   "code": "UNL",
+   "name": "Unleashed"
+  },
+  {
+   "code": "OGS",
+   "name": "Origins: Proving Grounds"
+  }
+ ],
+ "keywordCategories": [
+  {
+   "id": "score",
+   "name": "得点・XP系",
+   "color": "#c4d63f",
+   "text": "#1a1a1a"
+  },
+  {
+   "id": "combat",
+   "name": "戦闘系",
+   "color": "#e0577f",
+   "text": "#ffffff"
+  },
+  {
+   "id": "ability",
+   "name": "能力系",
+   "color": "#8f877a",
+   "text": "#ffffff"
+  },
+  {
+   "id": "timing",
+   "name": "タイミング・アクション系",
+   "color": "#2fa78f",
+   "text": "#ffffff"
+  }
+ ],
+ "keywords": [
+  {
+   "kw": "HUNT",
+   "cat": "score",
+   "desc": "バトルフィールドを征服(Conquer)したとき、またはホールドしたとき、XPを得る。"
+  },
+  {
+   "kw": "DEFLECT",
+   "cat": "score",
+   "desc": "相手がスペルや能力でこのカードを対象に選ぶとき、⟨rune⟩を払わなければならない。"
+  },
+  {
+   "kw": "LEVEL X",
+   "cat": "score",
+   "desc": "XPを規定値以上持っているとき、このカードをプレイした際に記載の効果を発動できる。"
+  },
+  {
+   "kw": "TEMPORARY",
+   "cat": "score",
+   "desc": "得点計算の前、次の自分のBeginningフェイズに破壊される。"
+  },
+  {
+   "kw": "DEATHKNELL",
+   "cat": "score",
+   "desc": "このカードが破壊されたとき、記載の効果を得る。"
+  },
+  {
+   "kw": "GANKING",
+   "cat": "score",
+   "desc": "バトルフィールドからバトルフィールドへ移動できる。"
+  },
+  {
+   "kw": "ASSAULT X",
+   "cat": "combat",
+   "desc": "自分が攻撃側の間、＋Xマイト。"
+  },
+  {
+   "kw": "SHIELD X",
+   "cat": "combat",
+   "desc": "戦闘で防御するとき、＋Xマイト。"
+  },
+  {
+   "kw": "TANK",
+   "cat": "combat",
+   "desc": "戦闘ダメージは、このカードから割り当てなければならない。"
+  },
+  {
+   "kw": "BUFF",
+   "cat": "ability",
+   "desc": "バフが付与されていない場合、＋1マイトのバフを与える。"
+  },
+  {
+   "kw": "STUN",
+   "cat": "ability",
+   "desc": "このターン、戦闘ダメージを与えられない。"
+  },
+  {
+   "kw": "PREDICT X",
+   "cat": "ability",
+   "desc": "山札の上からX枚を見る。任意の枚数を山札にリサイクルし、残りを任意の順番で山札の上に戻す。"
+  },
+  {
+   "kw": "EQUIP",
+   "cat": "ability",
+   "desc": "規定コストを払い、自分がコントロールするユニットに装備する。"
+  },
+  {
+   "kw": "ADD",
+   "cat": "ability",
+   "desc": "リソース(エネルギー等)を加える。リソースを追加する能力にはリアクションできない。"
+  },
+  {
+   "kw": "UNIQUE",
+   "cat": "ability",
+   "desc": "このカード名を持つカードは、デッキに1枚しか入れられない。"
+  },
+  {
+   "kw": "LEGION",
+   "cat": "ability",
+   "desc": "このカードを捨て札から規定コストで使用できる。このターンに他のカードをプレイしていれば効果を得る。"
+  },
+  {
+   "kw": "ACTION",
+   "cat": "timing",
+   "desc": "自分のターン中、またはショーダウン中にプレイできる。"
+  },
+  {
+   "kw": "REACTION",
+   "cat": "timing",
+   "desc": "スペルやアビリティの解決前も含め、いつでもプレイできる。バトルフィールドに対してもプレイできる。"
+  },
+  {
+   "kw": "QUICK-DRAW",
+   "cat": "timing",
+   "desc": "攻撃側の戦闘ダメージを先に与える。"
+  },
+  {
+   "kw": "AMBUSH",
+   "cat": "timing",
+   "desc": "このカードをREACTIONとして、味方ユニットがいるバトルフィールドにプレイできる。"
+  },
+  {
+   "kw": "ACCELERATE",
+   "cat": "timing",
+   "desc": "プレイ時に追加コストを払うと、READY(レディ)状態で登場する。"
+  },
+  {
+   "kw": "REPEAT X",
+   "cat": "timing",
+   "desc": "追加でコストを払うことで、スペルの効果を繰り返す。"
+  },
+  {
+   "kw": "HIDDEN",
+   "cat": "timing",
+   "desc": "⟨rune⟩を払って伏せて配置できる。発動するときはコスト0で発動できる。"
+  }
+ ],
+ "counts": {
+  "total": 767,
+  "byDomain": {
+   "Fury": 130,
+   "Body": 131,
+   "Calm": 131,
+   "Order": 132,
+   "Mind": 132,
+   "Chaos": 127
+  },
+  "bySet": {
+   "UNL": 223,
+   "SFD": 222,
+   "OGN": 298,
+   "OGS": 24
+  }
+ },
+ "legends": [
+  {
+   "id": "unl-181",
+   "name": "Jhin - Virtuoso",
+   "nameJa": "",
+   "number": "UNL-181/219",
+   "domains": [
+    "Fury",
+    "Mind"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you play a spell, if you spent ④ or more, you may banish it. Then, if there are four spells banished with me, put each in its trash, channel 4 runes, and draw 1.",
+   "abilityJa": "あなたがスペルをプレイしたとき、④以上を支払っていたなら、それを追放(Banish)してもよい。その後、自身とともに追放されているスペルが4枚あるなら、それぞれを持ち主の捨て札に置き、ルーンを4つチャネルし、カードを1枚引く。",
+   "signatures": [
+    "unl-182"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-181.avif"
+  },
+  {
+   "id": "unl-183",
+   "name": "Rengar - Pridestalker",
+   "nameJa": "",
+   "number": "UNL-183/219",
+   "domains": [
+    "Fury",
+    "Body"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you play a unit, give a unit +1 ⟨might⟩ this turn.",
+   "abilityJa": "あなたがユニットをプレイしたとき、ユニット1体に、1ターンの間+1⟨マイト⟩を与える。",
+   "signatures": [
+    "unl-184"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-183.avif"
+  },
+  {
+   "id": "unl-185",
+   "name": "Pyke - Bloodharbor Ripper",
+   "nameJa": "",
+   "number": "UNL-185/219",
+   "domains": [
+    "Fury",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "①, ⟨exhaust⟩: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted. (It has \"REACTION Kill this, ⟨exhaust⟩: ADD ⟨エネルギー⟩.\")",
+   "abilityJa": "①、⟨イグゾースト⟩：バトルフィールドにいる味方ユニット1体を持ち主の手札に戻す。ゴールドのギアトークンを1つイグゾースト状態でプレイする。(そのトークンは「REACTION これを破壊、⟨イグゾースト⟩：⟨エネルギー⟩を加える。」を持つ。)",
+   "signatures": [
+    "unl-186"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-185.avif"
+  },
+  {
+   "id": "unl-187",
+   "name": "Vi - Piltover Enforcer",
+   "nameJa": "",
+   "number": "UNL-187/219",
+   "domains": [
+    "Fury",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you conquer, if you assigned 3 or more excess damage, you may exhaust me to ready a unit.",
+   "abilityJa": "自身が征服(Conquer)したとき、超過ダメージを3以上割り当てていた場合、自身をイグゾーストさせてユニット1体をレディ状態にしてもよい。",
+   "signatures": [
+    "unl-188"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-187.avif"
+  },
+  {
+   "id": "unl-189",
+   "name": "Lillia - Bashful Bloom",
+   "nameJa": "",
+   "number": "UNL-189/219",
+   "domains": [
+    "Calm",
+    "Mind"
+   ],
+   "abilityKw": "",
+   "abilityEn": "④, ⟨exhaust⟩: Play a ready 3 ⟨might⟩ Sprite unit token with TEMPORARY. This ability costs ① less for each friendly unit with TEMPORARY.",
+   "abilityJa": "④、⟨イグゾースト⟩：TEMPORARYを持つ、レディ状態で3マイトのSpriteユニットトークン1体をプレイする。この能力は、TEMPORARYを持つ味方ユニット1体につき①少なくなる。",
+   "signatures": [
+    "unl-190"
+   ],
+   "strategy": "",
+   "tokens": [
+    "ogn-274"
+   ],
+   "image": "images/UNL/UNL-189.avif"
+  },
+  {
+   "id": "unl-191",
+   "name": "Master Yi - Wuju Master",
+   "nameJa": "",
+   "number": "UNL-191/219",
+   "domains": [
+    "Calm",
+    "Body"
+   ],
+   "abilityKw": "",
+   "abilityEn": "LEVEL 6: Your units have +1 ⟨might⟩. (While you have 6+ XP, get the effect.) LEVEL 11: Your units enter ready.",
+   "abilityJa": "LEVEL 6：自分のユニットは+1マイトを得る。(6以上のXPを持つ間、この効果を得る。) LEVEL 11：自分のユニットはレディ状態で登場する。",
+   "signatures": [
+    "unl-192"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-191.avif"
+  },
+  {
+   "id": "unl-193",
+   "name": "Vex - Gloomist",
+   "nameJa": "",
+   "number": "UNL-193/219",
+   "domains": [
+    "Calm",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you or an ally hold, you may exhaust me to draw 1.",
+   "abilityJa": "自分または味方がホールドしたとき、自身をイグゾーストさせてカードを1枚引いてもよい。",
+   "signatures": [
+    "unl-194"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-193.avif"
+  },
+  {
+   "id": "unl-195",
+   "name": "Ivern - Green Father",
+   "nameJa": "",
+   "number": "UNL-195/219",
+   "domains": [
+    "Calm",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you conquer or hold, you may exhaust me to replace that battlefield with a Brush battlefield token. (Bird, Cat, Dog, Poro, and Ivern units have +1 ⟨might⟩ in Brush. It can be swapped back when scored.)",
+   "abilityJa": "自身が征服(Conquer)またはホールドしたとき、自身をイグゾーストさせて、そのバトルフィールドをBrushバトルフィールドトークンに置き換えてもよい。(Bird、Cat、Dog、Poro、Ivernのユニットは、Brushにいる間+1マイトを得る。得点計算時に元に戻せる。)",
+   "signatures": [
+    "unl-196"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-195.avif"
+  },
+  {
+   "id": "unl-197",
+   "name": "Diana - Scorn of the Moon",
+   "nameJa": "",
+   "number": "UNL-197/219",
+   "domains": [
+    "Mind",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "REACTION ⟨exhaust⟩: ADD ①. Spend this Energy only during showdowns. (Abilities that add resources can't be reacted to.)",
+   "abilityJa": "REACTION ⟨イグゾースト⟩：①を加える。このエネルギーはショーダウン中にのみ支払える。(リソースを加える能力にはリアクションできない。)",
+   "signatures": [
+    "unl-198"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-197.avif"
+  },
+  {
+   "id": "unl-199",
+   "name": "LeBlanc - Deceiver",
+   "nameJa": "",
+   "number": "UNL-199/219",
+   "domains": [
+    "Mind",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you conquer or hold, you may discard 1 and exhaust me to play a ready Reflection unit token there. Then do this: It becomes a copy of another unit there. Give it [Temporary].",
+   "abilityJa": "征服(Conquer)またはHoldしたとき、カードを1枚捨てて自身をイグゾーストし、そこにレディ状態のReflectionユニットトークンをプレイしてもよい。その後、次を行う：それはそこにいる別のユニット1体のコピーになる。それに【Temporary】を与える。",
+   "signatures": [
+    "unl-200"
+   ],
+   "strategy": "",
+   "errata": {
+    "date": "2026-04-03",
+    "oldJa": "自身が征服(Conquer)またはホールドしたとき、カードを1枚捨てて自身をイグゾーストさせ、そこにレディ状態のReflectionユニットトークン1体をプレイしてもよい。それはそこにいる別のユニットのコピーになる。それにTEMPORARYを与える。",
+    "oldEn": "When you conquer or hold, you may discard 1 and exhaust me to play a ready Reflection unit token there. It becomes a copy of another unit there. Give it TEMPORARY."
+   },
+   "tokens": [
+    "unl-t06"
+   ],
+   "image": "images/UNL/UNL-199.avif"
+  },
+  {
+   "id": "unl-201",
+   "name": "Kha'Zix - Voidreaver",
+   "nameJa": "",
+   "number": "UNL-201/219",
+   "domains": [
+    "Body",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you win a combat, gain 1 XP. Spend 1 XP, ⟨exhaust⟩: BUFF a unit. Spend 2 XP, ⟨exhaust⟩: Move an exhausted friendly unit from a battlefield to its base.",
+   "abilityJa": "戦闘に勝利したとき、1XPを得る。1XPを支払い、⟨イグゾースト⟩：ユニット1体をBUFFする。2XPを支払い、⟨イグゾースト⟩：イグゾースト状態の味方ユニット1体をバトルフィールドからそのベースに移動させる。",
+   "signatures": [
+    "unl-202"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-201.avif"
+  },
+  {
+   "id": "unl-203",
+   "name": "Poppy - Keeper of the Hammer",
+   "nameJa": "",
+   "number": "UNL-203/219",
+   "domains": [
+    "Body",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you hold, gain 1 XP. Spend 3 XP, ⟨exhaust⟩: Draw 1.",
+   "abilityJa": "自身がホールドしたとき、1XPを得る。3XPを支払い、⟨イグゾースト⟩：カードを1枚引く。",
+   "signatures": [
+    "unl-204"
+   ],
+   "strategy": "",
+   "image": "images/UNL/UNL-203.avif"
+  },
+  {
+   "id": "sfd-181",
+   "name": "Rumble - Mechanized Menace",
+   "nameJa": "",
+   "number": "SFD-181/221",
+   "domains": [
+    "Fury",
+    "Mind"
+   ],
+   "abilityKw": "",
+   "abilityEn": "Your Mechs have SHIELD. (+1 ⟨might⟩ while they're defenders.)",
+   "abilityJa": "自分のMechはSHIELDを持つ。(防御側である間、+1⟨マイト⟩。)",
+   "signatures": [
+    "sfd-182"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-181.avif"
+  },
+  {
+   "id": "sfd-183",
+   "name": "Lucian - Purifier",
+   "nameJa": "",
+   "number": "SFD-183/221",
+   "domains": [
+    "Fury",
+    "Body"
+   ],
+   "abilityKw": "",
+   "abilityEn": "Your Equipment each give ASSAULT. (+1 ⟨might⟩ while equipped unit is an attacker.)",
+   "abilityJa": "自分の装備品はそれぞれASSAULTを与える。(装備したユニットが攻撃側である間、+1⟨マイト⟩。)",
+   "signatures": [
+    "sfd-184"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-183.avif"
+  },
+  {
+   "id": "sfd-185",
+   "name": "Draven - Glorious Executioner",
+   "nameJa": "",
+   "number": "SFD-185/221",
+   "domains": [
+    "Fury",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you win a combat, draw 1. (You win if only your units remain after combat.)",
+   "abilityJa": "あなたが戦闘に勝利したとき、カードを1枚引く。(戦闘後に自分のユニットのみが残っているなら勝利。)",
+   "signatures": [
+    "sfd-186"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-185.avif"
+  },
+  {
+   "id": "sfd-187",
+   "name": "Rek'Sai - Void Burrower",
+   "nameJa": "",
+   "number": "SFD-187/221",
+   "domains": [
+    "Fury",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest.",
+   "abilityJa": "あなたが征服(Conquer)したとき、自身をイグゾーストさせて自分のメインデッキの一番上のカード2枚を公開してもよい。そのうち1枚をプレイしてもよい。その後残りをリサイクルする。",
+   "signatures": [
+    "sfd-188"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-187.avif"
+  },
+  {
+   "id": "sfd-189",
+   "name": "Ornn - Fire Below the Mountain",
+   "nameJa": "",
+   "number": "SFD-189/221",
+   "domains": [
+    "Calm",
+    "Mind"
+   ],
+   "abilityKw": "",
+   "abilityEn": "⟨exhaust⟩: REACTION — ADD ⟨rune⟩. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)",
+   "abilityJa": "⟨イグゾースト⟩：REACTION — ⟨rune⟩をADDする。ギアのプレイ、またはギアの能力の使用にのみ使える。(リソースを加える能力にはリアクションできない。)",
+   "signatures": [
+    "sfd-190",
+    "sfd-191",
+    "sfd-192"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-189.avif"
+  },
+  {
+   "id": "sfd-193",
+   "name": "Jax - Grandmaster at Arms",
+   "nameJa": "",
+   "number": "SFD-193/221",
+   "domains": [
+    "Calm",
+    "Body"
+   ],
+   "abilityKw": "",
+   "abilityEn": "①, ⟨exhaust⟩: Attach a detached Equipment you control to a unit you control. ⟨exhaust⟩: Attach an attached Equipment you control to a unit you control.",
+   "abilityJa": "①、⟨イグゾースト⟩：自分がコントロールする未装備の装備品1つを、自分がコントロールするユニットに装備する。⟨イグゾースト⟩：自分がコントロールする装備済みの装備品1つを、自分がコントロールするユニットに装備し直す。",
+   "signatures": [
+    "sfd-194"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-193.avif"
+  },
+  {
+   "id": "sfd-195",
+   "name": "Irelia - Blade Dancer",
+   "nameJa": "",
+   "number": "SFD-195/221",
+   "domains": [
+    "Calm",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you choose a friendly unit, you may exhaust me and pay ⟨rune⟩ to ready it. When you conquer, you may pay ① to ready me.",
+   "abilityJa": "あなたが自分のユニットを選んだとき、自身をイグゾーストさせて⟨rune⟩を支払い、それをレディ状態にしてもよい。あなたが征服(Conquer)したとき、①を支払って自身をレディ状態にしてもよい。",
+   "signatures": [
+    "sfd-196"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-195.avif"
+  },
+  {
+   "id": "sfd-197",
+   "name": "Azir - Emperor of the Sands",
+   "nameJa": "",
+   "number": "SFD-197/221",
+   "domains": [
+    "Calm",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "Your Sand Soldiers have WEAPONMASTER. ①, ⟨exhaust⟩: Play a 2 ⟨might⟩ Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",
+   "abilityJa": "自分のSand SoldierはWEAPONMASTERを持つ。①、⟨イグゾースト⟩：2マイトのSand Soldierユニットトークンを1体自分のベースにプレイする。このターンに装備品をプレイしている場合にのみ使える。",
+   "signatures": [
+    "sfd-198"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-197.avif"
+  },
+  {
+   "id": "sfd-199",
+   "name": "Ezreal - Prodigal Explorer",
+   "nameJa": "",
+   "number": "SFD-199/221",
+   "domains": [
+    "Mind",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "⟨exhaust⟩: REACTION — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.",
+   "abilityJa": "⟨イグゾースト⟩：REACTION — カードを1枚引く。このターン、スペルまたはユニットの能力で敵ユニットおよび／またはギアを2回選んでいる場合にのみ使える。",
+   "signatures": [
+    "sfd-200"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-199.avif"
+  },
+  {
+   "id": "sfd-201",
+   "name": "Renata Glasc - Chem-Baroness",
+   "nameJa": "",
+   "number": "SFD-201/221",
+   "domains": [
+    "Mind",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you or an ally hold, you may exhaust me to play a Gold gear token exhausted. While your score is within 3 points of the Victory Score, your Gold ADD an additional ①.",
+   "abilityJa": "自分または味方がホールドしたとき、自身をイグゾーストさせてゴールドのギアトークンを1つイグゾースト状態でプレイしてもよい。自分のスコアがビクトリースコアの3点差以内である間、自分のゴールドは①を追加でADDする。",
+   "signatures": [
+    "sfd-202"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-201.avif"
+  },
+  {
+   "id": "sfd-203",
+   "name": "Sivir - Battle Mistress",
+   "nameJa": "",
+   "number": "SFD-203/221",
+   "domains": [
+    "Body",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you recycle a rune, you may exhaust me to play a Gold gear token exhausted. When one or more enemy units die, ready me.",
+   "abilityJa": "あなたがルーンをリサイクルしたとき、自身をイグゾーストさせてゴールドのギアトークンを1つイグゾースト状態でプレイしてもよい。1体以上の敵ユニットが死亡したとき、自身をレディ状態にする。",
+   "signatures": [
+    "sfd-204"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-203.avif"
+  },
+  {
+   "id": "sfd-205",
+   "name": "Fiora - Grand Duelist",
+   "nameJa": "",
+   "number": "SFD-205/221",
+   "domains": [
+    "Body",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When one of your units becomes MIGHTY, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ ⟨might⟩.)",
+   "abilityJa": "自分のユニットの1体がMIGHTYになったとき、自身をイグゾーストさせてルーンを1つイグゾースト状態でチャネルしてもよい。(ユニットは5以上のマイトを持つ間MIGHTYである。)",
+   "signatures": [
+    "sfd-206"
+   ],
+   "strategy": "",
+   "image": "images/SFD/SFD-205.avif"
+  },
+  {
+   "id": "ogn-247",
+   "name": "Kai'Sa - Daughter of the Void",
+   "nameJa": "",
+   "number": "OGN-247/298",
+   "domains": [
+    "Fury",
+    "Mind"
+   ],
+   "abilityKw": "",
+   "abilityEn": "⟨消耗⟩: REACTION — ADD ⟨energy⟩. Use only to play spells. (Abilities that add resources can't be reacted to.)",
+   "abilityJa": "⟨イグゾースト⟩：REACTION — ⟨エネルギー⟩をADDする。スペルのプレイにのみ使える。(リソースを追加する能力にはリアクションできない。)",
+   "signatures": [
+    "ogn-248"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-247.avif"
+  },
+  {
+   "id": "ogn-249",
+   "name": "Volibear - Relentless Storm",
+   "nameJa": "",
+   "number": "OGN-249/298",
+   "domains": [
+    "Fury",
+    "Body"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you play a MIGHTY unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ ⟨might⟩.)",
+   "abilityJa": "あなたがMIGHTYユニットをプレイしたとき、自身をイグゾーストさせてルーンを1つイグゾースト状態でチャネルしてもよい。(ユニットは⟨might⟩5以上の間MIGHTY。)",
+   "signatures": [
+    "ogn-250"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-249.avif"
+  },
+  {
+   "id": "ogn-251",
+   "name": "Jinx - Loose Cannon",
+   "nameJa": "",
+   "number": "OGN-251/298",
+   "domains": [
+    "Fury",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "At start of your Beginning Phase, draw 1 if you have one or fewer cards in your hand.",
+   "abilityJa": "自分のビギニングフェイズ開始時、手札が1枚以下ならカードを1枚引く。",
+   "signatures": [
+    "ogn-252"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-251.avif"
+  },
+  {
+   "id": "ogn-253",
+   "name": "Darius - Hand of Noxus",
+   "nameJa": "",
+   "number": "OGN-253/298",
+   "domains": [
+    "Fury",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "⟨消耗⟩: REACTION, LEGION — ADD ①. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
+   "abilityJa": "⟨イグゾースト⟩：REACTION・LEGION — ①をADDする。(リソースを追加する能力にはリアクションできない。このターンにカードをプレイしていれば効果を得る。)",
+   "signatures": [
+    "ogn-254"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-253.avif"
+  },
+  {
+   "id": "ogn-255",
+   "name": "Ahri - Nine-Tailed Fox",
+   "nameJa": "",
+   "number": "OGN-255/298",
+   "domains": [
+    "Calm",
+    "Mind"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When an enemy unit attacks a battlefield you control, give it -1 ⟨might⟩ this turn, to a minimum of 1 ⟨might⟩.",
+   "abilityJa": "敵ユニットがあなたのコントロールするバトルフィールドを攻撃したとき、それにこのターン-1⟨might⟩を与える(最低1⟨might⟩)。",
+   "signatures": [
+    "ogn-256"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-255.avif"
+  },
+  {
+   "id": "ogn-257",
+   "name": "Lee Sin - Blind Monk",
+   "nameJa": "",
+   "number": "OGN-257/298",
+   "domains": [
+    "Calm",
+    "Body"
+   ],
+   "abilityKw": "",
+   "abilityEn": "①, ⟨消耗⟩: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 ⟨might⟩ buff.)",
+   "abilityJa": "①、⟨イグゾースト⟩：自分のユニット1体をバフする。(バフを持っていなければ+1⟨might⟩バフを得る。)",
+   "signatures": [
+    "ogn-258"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-257.avif"
+  },
+  {
+   "id": "ogn-259",
+   "name": "Yasuo - Unforgiven",
+   "nameJa": "",
+   "number": "OGN-259/298",
+   "domains": [
+    "Calm",
+    "Mind"
+   ],
+   "abilityKw": "",
+   "abilityEn": "②, ⟨消耗⟩: Move a friendly unit to or from your base.",
+   "abilityJa": "②、⟨イグゾースト⟩：自分のユニット1体を、自分のベースへ、またはベースから移動させる。",
+   "signatures": [
+    "ogn-260"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-259.avif"
+  },
+  {
+   "id": "ogn-261",
+   "name": "Leona - Radiant Dawn",
+   "nameJa": "",
+   "number": "OGN-261/298",
+   "domains": [
+    "Calm",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 ⟨might⟩ buff.)",
+   "abilityJa": "あなたが敵ユニットを1体以上スタンさせたとき、自分のユニット1体をバフする。(バフを持っていなければ+1⟨might⟩バフを得る。)",
+   "signatures": [
+    "ogn-262"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-261.avif"
+  },
+  {
+   "id": "ogn-263",
+   "name": "Teemo - Swift Scout",
+   "nameJa": "",
+   "number": "OGN-263/298",
+   "domains": [
+    "Mind",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "You may pay ① to hide a card with HIDDEN instead of ⟨energy⟩. ①, ⟨消耗⟩: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
+   "abilityJa": "①を払うことで、⟨エネルギー⟩の代わりにHIDDENでカードを伏せてもよい。①、⟨イグゾースト⟩：自分が所有するTeemoユニット1体を、チャンピオンゾーンまたは場から手札に加える。",
+   "signatures": [
+    "ogn-264"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-263.avif"
+  },
+  {
+   "id": "ogn-265",
+   "name": "Viktor - Herald of the Arcane",
+   "nameJa": "",
+   "number": "OGN-265/298",
+   "domains": [
+    "Mind",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "①, ⟨消耗⟩: Play a 1 ⟨might⟩ Recruit unit token.",
+   "abilityJa": "①、⟨イグゾースト⟩：⟨might⟩1のRecruitユニットトークン1体をプレイする。",
+   "signatures": [
+    "ogn-266"
+   ],
+   "strategy": "",
+   "tokens": [
+    "ogn-271"
+   ],
+   "image": "images/OGN/OGN-265.avif"
+  },
+  {
+   "id": "ogn-267",
+   "name": "Miss Fortune - Bounty Hunter",
+   "nameJa": "",
+   "number": "OGN-267/298",
+   "domains": [
+    "Body",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "⟨消耗⟩: Give a unit GANKING this turn. (It can move from battlefield to battlefield.)",
+   "abilityJa": "⟨イグゾースト⟩：ユニット1体にこのターンGANKINGを与える。(それはバトルフィールドからバトルフィールドへ移動できる。)",
+   "signatures": [
+    "ogn-268"
+   ],
+   "strategy": "",
+   "image": "images/OGN/OGN-267.avif"
+  },
+  {
+   "id": "ogn-269",
+   "name": "Sett - The Boss",
+   "nameJa": "",
+   "number": "OGN-269/298",
+   "domains": [
+    "Body",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "If a buffed unit you control would die, you may pay [C], exhaust me, and spend its buff to heal it, exhaust it, and recall it instead. (Send it to base. This isn’t a move.)\nWhen you conquer, ready me.",
+   "abilityJa": "自分がコントロールするバフを持つユニットが破壊されるとき、⟨rune⟩を払い、自身をイグゾーストし、そのバフを消費して、代わりにそれを回復し、イグゾーストし、リコールしてもよい。(ベースへ送る。これは移動ではない。)\n征服(Conquer)したとき、自身をレディにする。",
+   "signatures": [
+    "ogn-270"
+   ],
+   "strategy": "",
+   "errata": {
+    "date": "2025-10-28",
+    "oldJa": "あなたのコントロールするバフを持つユニットが破壊されそうになったとき、⟨rune⟩を払い自身をイグゾーストさせて、そのバフを消費し代わりにそれをイグゾースト状態でリコールしてもよい。(ベースへ送る。これは移動ではない。)\n征服(Conquer)したとき、自身をレディにする。",
+    "oldEn": "When a buffed unit you control would die, you may pay [C] and exhaust me to spend its buff and recall it exhausted instead. (Send it to base. This isn’t a move.)\nWhen you conquer, ready me."
+   },
+   "image": "images/OGN/OGN-269.avif"
+  },
+  {
+   "id": "ogs-017",
+   "name": "Annie - Dark Child",
+   "nameJa": "",
+   "number": "OGS-017/024",
+   "domains": [
+    "Fury",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "At the end of your turn, ready 2 runes.",
+   "abilityJa": "自分のターン終了時、ルーンを2つレディにする。",
+   "signatures": [
+    "ogs-018"
+   ],
+   "strategy": "",
+   "image": "images/OGS/OGS-017.avif"
+  },
+  {
+   "id": "ogs-019",
+   "name": "Master Yi - Wuju Bladesman",
+   "nameJa": "",
+   "number": "OGS-019/024",
+   "domains": [
+    "Calm",
+    "Body"
+   ],
+   "abilityKw": "",
+   "abilityEn": "While a friendly unit defends alone, it gets +2 ⟨might⟩.",
+   "abilityJa": "味方ユニットが単独で防御している間、それは+2マイトを得る。",
+   "signatures": [
+    "ogs-020"
+   ],
+   "strategy": "",
+   "image": "images/OGS/OGS-019.avif"
+  },
+  {
+   "id": "ogs-021",
+   "name": "Lux - Lady of Luminosity",
+   "nameJa": "",
+   "number": "OGS-021/024",
+   "domains": [
+    "Mind",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you play a spell that costs ⑤ or more, draw 1.",
+   "abilityJa": "あなたが⑤以上のスペルをプレイしたとき、カードを1枚引く。",
+   "signatures": [
+    "ogs-022"
+   ],
+   "strategy": "",
+   "image": "images/OGS/OGS-021.avif"
+  },
+  {
+   "id": "ogs-023",
+   "name": "Garen - Might of Demacia",
+   "nameJa": "",
+   "number": "OGS-023/024",
+   "domains": [
+    "Body",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you conquer, if you have 4+ units at that battlefield, draw 2.",
+   "abilityJa": "あなたが制圧したとき、そのバトルフィールドに味方ユニットが4体以上いるなら、カードを2枚引く。",
+   "signatures": [
+    "ogs-024"
+   ],
+   "strategy": "",
+   "image": "images/OGS/OGS-023.avif"
+  }
+ ]
+}
