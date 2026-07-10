@@ -122,7 +122,7 @@
   },
   {
    "kw": "LEGION",
-   "cat": "ability",
+   "cat": "timing",
    "desc": "このカードを捨て札から規定コストで使用できる。このターンに他のカードをプレイしていれば効果を得る。"
   },
   {
@@ -159,6 +159,21 @@
    "kw": "HIDDEN",
    "cat": "timing",
    "desc": "⟨rune⟩を払って伏せて配置できる。発動するときはコスト0で発動できる。"
+  },
+  {
+   "kw": "BACKLINE",
+   "cat": "combat",
+   "desc": "戦闘ダメージはこのユニットに最後に割り当てなければならない。"
+  },
+  {
+   "kw": "VISION",
+   "cat": "ability",
+   "desc": "自身をプレイしたとき、メインデッキの一番上のカードを見る。それをリサイクルしてもよい。"
+  },
+  {
+   "kw": "WEAPONMASTER",
+   "cat": "ability",
+   "desc": "自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストでEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。"
   }
  ],
  "counts": {
@@ -226,7 +241,7 @@
    ],
    "abilityKw": "",
    "abilityEn": "①, ⟨exhaust⟩: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted. (It has \"REACTION Kill this, ⟨exhaust⟩: ADD ⟨エネルギー⟩.\")",
-   "abilityJa": "①、⟨イグゾースト⟩：バトルフィールドにいる味方ユニット1体を持ち主の手札に戻す。ゴールドのギアトークンを1つイグゾースト状態でプレイする。(そのトークンは「REACTION これを破壊、⟨イグゾースト⟩：⟨エネルギー⟩を加える。」を持つ。)",
+   "abilityJa": "①、⟨イグゾースト⟩：バトルフィールドにいる味方ユニット1体を持ち主の手札に戻す。ゴールドのギアトークンを1つイグゾースト状態でプレイする。(そのトークンは「REACTION これを破壊、⟨イグゾースト⟩：⟨rune⟩を加える。」を持つ。)",
    "signatures": [
     "unl-186"
    ],
@@ -635,7 +650,7 @@
    ],
    "abilityKw": "",
    "abilityEn": "⟨消耗⟩: REACTION — ADD ⟨energy⟩. Use only to play spells. (Abilities that add resources can't be reacted to.)",
-   "abilityJa": "⟨イグゾースト⟩：REACTION — ⟨エネルギー⟩をADDする。スペルのプレイにのみ使える。(リソースを追加する能力にはリアクションできない。)",
+   "abilityJa": "⟨イグゾースト⟩：REACTION — ⟨rune⟩をADDする。スペルのプレイにのみ使える。(リソースを追加する能力にはリアクションできない。)",
    "signatures": [
     "ogn-248"
    ],
@@ -779,7 +794,7 @@
    ],
    "abilityKw": "",
    "abilityEn": "You may pay ① to hide a card with HIDDEN instead of ⟨energy⟩. ①, ⟨消耗⟩: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
-   "abilityJa": "①を払うことで、⟨エネルギー⟩の代わりにHIDDENでカードを伏せてもよい。①、⟨イグゾースト⟩：自分が所有するTeemoユニット1体を、チャンピオンゾーンまたは場から手札に加える。",
+   "abilityJa": "①を払うことで、⟨rune⟩の代わりにHIDDENでカードを伏せてもよい。①、⟨イグゾースト⟩：自分が所有するTeemoユニット1体を、チャンピオンゾーンまたは場から手札に加える。",
    "signatures": [
     "ogn-264"
    ],

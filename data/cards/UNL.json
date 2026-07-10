@@ -519,7 +519,7 @@
     {
      "kw": "",
      "en": "When I conquer, if you assigned 3 or more excess damage, play two Gold gear tokens exhausted. (They have \"REACTION Kill this, (exhaust): ADD (energy).\")",
-     "ja": "征服(Conquer)したとき、超過ダメージを3以上割り当てていた場合、ゴールドのギアトークンを2つイグゾースト状態でプレイする。(それらは「【REACTION】これを破壊し、⟨イグゾースト⟩:⟨エネルギー⟩を【ADD】。」を持つ。)"
+     "ja": "征服(Conquer)したとき、超過ダメージを3以上割り当てていた場合、ゴールドのギアトークンを2つイグゾースト状態でプレイする。(それらは「【REACTION】これを破壊し、⟨イグゾースト⟩:⟨rune⟩を【ADD】。」を持つ。)"
     }
    ],
    "equip": [],
@@ -579,7 +579,7 @@
     {
      "kw": "",
      "en": "Deal 2 to a unit. Its controller may play this spell again for (energy). If they do, this deals 1 additional Bonus Damage for each time this spell has dealt damage this turn.",
-     "ja": "ユニット1体に2ダメージを与える。そのコントローラーは⟨エネルギー⟩を払ってこのスペルを再度プレイしてもよい。そうした場合、このターンにこのスペルがダメージを与えた回数1回につき、追加で1のボーナスダメージを与える。"
+     "ja": "ユニット1体に2ダメージを与える。そのコントローラーは⟨rune⟩を払ってこのスペルを再度プレイしてもよい。そうした場合、このターンにこのスペルがダメージを与えた回数1回につき、追加で1のボーナスダメージを与える。"
     }
    ],
    "equip": [],
@@ -645,7 +645,7 @@
     {
      "kw": "",
      "en": "When I move, ADD (1)(energy). (Abilities that add resources can't be reacted to.)",
-     "ja": "移動したとき、①⟨エネルギー⟩を【ADD】。(リソースを追加する能力にはリアクションできない。)"
+     "ja": "移動したとき、①⟨rune⟩を【ADD】。(リソースを追加する能力にはリアクションできない。)"
     }
    ],
    "equip": [],
@@ -1259,7 +1259,7 @@
     {
      "kw": "STUN",
      "en": "a unit. (It doesn't deal combat damage this turn.)",
-     "ja": "ユニット1体をSTUNする。(そのユニットはこのターン戦闘ダメージを与えない。)"
+     "ja": "ユニット1体をスタンする。(そのユニットはこのターン戦闘ダメージを与えない。)"
     },
     {
      "kw": "",
@@ -4107,7 +4107,7 @@
     {
      "kw": "",
      "en": "Choose a battlefield. An opponent reveals their hand. You may choose a unit from it. They play that unit to that battlefield, ignoring any and all costs. If they do, then do this: [Stun] it.",
-     "ja": "バトルフィールド1つを選ぶ。対戦相手1人が手札を公開する。その中からユニット1体を選んでもよい。そのプレイヤーは、すべてのコストを無視してそのユニットをそのバトルフィールドにプレイする。そうしたなら、次を行う：それを【STUN】する。(このターン、戦闘ダメージを与えない。)"
+     "ja": "バトルフィールド1つを選ぶ。対戦相手1人が手札を公開する。その中からユニット1体を選んでもよい。そのプレイヤーは、すべてのコストを無視してそのユニットをそのバトルフィールドにプレイする。そうしたなら、次を行う：それをSTUNする。(このターン、戦闘ダメージを与えない。)"
     }
    ],
    "equip": [],
@@ -4369,7 +4369,10 @@
    ],
    "equip": [],
    "power": "3",
-   "altImage": "images/UNL/UNL-147a.avif"
+   "altImage": "images/UNL/UNL-147a.avif",
+   "tokens": [
+    "unl-t01"
+   ]
   },
   {
    "id": "unl-148",
@@ -4592,7 +4595,7 @@
     {
      "kw": "",
      "en": "Give a friendly unit +1 ⟨might⟩ this turn and STUN an enemy unit at its location. (A stunned unit doesn't deal combat damage this turn.)",
-     "ja": "味方ユニット1体にこのターン+1マイトを与え、その場所にいる敵ユニット1体をSTUNする。(STUNされたユニットはこのターン戦闘ダメージを与えない。)"
+     "ja": "味方ユニット1体にこのターン+1マイトを与え、その場所にいる敵ユニット1体をSTUNする。(スタンされたユニットはこのターン戦闘ダメージを与えない。)"
     }
    ],
    "equip": [],
@@ -4812,7 +4815,7 @@
     {
      "kw": "",
      "en": "Opponents must pay ⚡ for each unit beyond the first to move multiple units to my battlefield at the same time.",
-     "ja": "相手は複数のユニットを同時に自身のいるバトルフィールドへ移動させるとき、最初の1体を超えるユニット1体ごとに⟨エネルギー⟩を支払わなければならない。"
+     "ja": "相手は複数のユニットを同時に自身のいるバトルフィールドへ移動させるとき、最初の1体を超えるユニット1体ごとに⟨rune⟩を支払わなければならない。"
     }
    ],
    "equip": [],
@@ -5473,7 +5476,7 @@
     {
      "kw": "",
      "en": "①, ⟨exhaust⟩: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted. (It has \"REACTION Kill this, ⟨exhaust⟩: ADD ⟨エネルギー⟩.\")",
-     "ja": "①、⟨イグゾースト⟩：バトルフィールドにいる味方ユニット1体を持ち主の手札に戻す。ゴールドのギアトークンを1つイグゾースト状態でプレイする。(そのトークンは「REACTION これを破壊、⟨イグゾースト⟩：⟨エネルギー⟩を加える。」を持つ。)"
+     "ja": "①、⟨イグゾースト⟩：バトルフィールドにいる味方ユニット1体を持ち主の手札に戻す。ゴールドのギアトークンを1つイグゾースト状態でプレイする。(そのトークンは「REACTION これを破壊、⟨イグゾースト⟩：⟨rune⟩を加える。」を持つ。)"
     }
    ],
    "equip": [],
@@ -5509,7 +5512,7 @@
    "power": "1",
    "errata": {
     "date": "2026-04-03",
-    "oldJa": "バトルフィールドにいるユニット1体を破壊する。その後、そのユニットがマイト3以下だった場合、これを⟨エネルギー⟩を支払って自分のトラッシュからプレイしてもよい。",
+    "oldJa": "バトルフィールドにいるユニット1体を破壊する。その後、そのユニットがマイト3以下だった場合、これを⟨rune⟩を支払って自分のトラッシュからプレイしてもよい。",
     "oldEn": "Kill a unit at a battlefield. Then, if it had 3 ⟨might⟩ or less, you may play this from your trash for ⟨エネルギー⟩."
    }
   },
@@ -6137,7 +6140,7 @@
     {
      "kw": "",
      "en": "If a unit here would die during combat, its controller may pay ⟨エネルギー⟩⟨エネルギー⟩⟨エネルギー⟩ to heal it, exhaust it, and recall it instead.",
-     "ja": "ここにいるユニットが戦闘中に破壊される場合、そのコントローラーは⟨エネルギー⟩⟨エネルギー⟩⟨エネルギー⟩を支払って、代わりにそれを回復し、イグゾーストさせ、リコールしてもよい。"
+     "ja": "ここにいるユニットが戦闘中に破壊される場合、そのコントローラーは⟨rune⟩⟨rune⟩⟨rune⟩を支払って、代わりにそれを回復し、イグゾーストさせ、リコールしてもよい。"
     }
    ],
    "equip": [],

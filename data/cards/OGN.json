@@ -2389,9 +2389,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Calm⟩",
-     "en": "(Hide now for ⟨Calm⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Calm⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "",
@@ -2532,7 +2532,7 @@
      "kw": "REACTION",
      "cost": "⟨イグゾースト⟩",
      "en": "— ADD ⟨エネルギー⟩. (Abilities that add resources can't be reacted to.)",
-     "ja": "— ⟨エネルギー⟩をADDする。(リソースを追加する能力にはリアクションできない。)"
+     "ja": "— ⟨Calm⟩をADDする。(リソースを追加する能力にはリアクションできない。)"
     }
    ],
    "equip": [],
@@ -2587,9 +2587,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Mind⟩",
-     "en": "(Hide now for ⟨Mind⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Mind⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "REACTION",
@@ -2916,9 +2916,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Mind⟩",
-     "en": "(Hide now for ⟨Mind⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Mind⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "ACTION",
@@ -3019,9 +3019,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Mind⟩",
-     "en": "(Hide now for ⟨Mind⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Mind⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "",
@@ -3770,9 +3770,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Mind⟩",
-     "en": "(Hide now for ⟨Mind⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Mind⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "",
@@ -4195,9 +4195,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Body⟩",
-     "en": "(Hide now for ⟨Body⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Body⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     }
    ],
    "equip": [],
@@ -5211,9 +5211,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Chaos⟩",
-     "en": "(Hide now for ⟨Chaos⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Chaos⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "ACTION",
@@ -6102,9 +6102,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Chaos⟩",
-     "en": "(Hide now for ⟨Chaos⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Chaos⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "",
@@ -6165,9 +6165,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Chaos⟩",
-     "en": "(Hide now for ⟨Chaos⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Chaos⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "",
@@ -6603,9 +6603,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Order⟩",
-     "en": "(Hide now for ⟨Order⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Order⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "ACTION",
@@ -6802,9 +6802,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Order⟩",
-     "en": "(Hide now for ⟨Order⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Order⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "ACTION",
@@ -7656,7 +7656,7 @@
     {
      "kw": "",
      "en": "⟨消耗⟩: REACTION — ADD ⟨energy⟩. Use only to play spells. (Abilities that add resources can't be reacted to.)",
-     "ja": "⟨イグゾースト⟩：REACTION — ⟨エネルギー⟩をADDする。スペルのプレイにのみ使える。(リソースを追加する能力にはリアクションできない。)"
+     "ja": "⟨イグゾースト⟩：REACTION — ⟨rune⟩をADDする。スペルのプレイにのみ使える。(リソースを追加する能力にはリアクションできない。)"
     }
    ],
    "equip": [],
@@ -7893,7 +7893,7 @@
     {
      "kw": "",
      "en": "You may pay ① to hide a card with HIDDEN instead of ⟨energy⟩. ①, ⟨消耗⟩: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
-     "ja": "①を払うことで、⟨エネルギー⟩の代わりにHIDDENでカードを伏せてもよい。①、⟨イグゾースト⟩：自分が所有するTeemoユニット1体を、チャンピオンゾーンまたは場から手札に加える。"
+     "ja": "①を払うことで、⟨rune⟩の代わりにHIDDENでカードを伏せてもよい。①、⟨イグゾースト⟩：自分が所有するTeemoユニット1体を、チャンピオンゾーンまたは場から手札に加える。"
     }
    ],
    "equip": [],
@@ -8144,9 +8144,9 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "cost": "⟨Calm⟩",
-     "en": "(Hide now for ⟨Calm⟩ to react with later for ⟨0⟩.)",
-     "ja": "(⟨Calm⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
+     "cost": "⟨rune⟩",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せ、後で⟨0⟩でリアクションとして使用できる。)"
     },
     {
      "kw": "ACTION",

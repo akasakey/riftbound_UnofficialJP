@@ -60,7 +60,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨エネルギー⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを⟨エネルギー⟩少ないコストで自身にEQUIPしてもよい。すでに装備されていてもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     }
    ],
    "equip": [],
@@ -249,7 +249,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨エネルギー⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを⟨エネルギー⟩少ないコストで自身にEQUIPしてもよい。すでに装備されていてもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     }
    ],
    "equip": [],
@@ -2758,7 +2758,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     },
     {
      "kw": "",
@@ -3007,7 +3007,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     }
    ],
    "equip": [],
@@ -3214,7 +3214,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     }
    ],
    "equip": [],
@@ -3529,7 +3529,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     },
     {
      "kw": "",
@@ -3669,7 +3669,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     },
     {
      "kw": "",
@@ -3779,7 +3779,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     },
     {
      "kw": "",
@@ -3885,7 +3885,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     },
     {
      "kw": "",
@@ -4141,7 +4141,7 @@
     {
      "kw": "WEAPONMASTER",
      "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
-     "ja": "(自身をプレイしたとき、自分の装備1つを、たとえ既に装備されていても⟨rune⟩少ないコストで自身に装備してもよい。)"
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
     }
    ],
    "equip": [],
@@ -4495,8 +4495,8 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "en": "Hide now for ⟨Chaos⟩ to react with later for ⓪.",
-     "ja": "(⟨Chaos⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
+     "en": "Hide now for ⟨rune⟩ to react with later for ⓪.",
+     "ja": "(⟨rune⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
     },
     {
      "kw": "",
@@ -4528,8 +4528,8 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "en": "Hide now for ⟨Chaos⟩ to react with later for ⓪.",
-     "ja": "(⟨Chaos⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
+     "en": "Hide now for ⟨rune⟩ to react with later for ⓪.",
+     "ja": "(⟨rune⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
     },
     {
      "kw": "",
@@ -4724,8 +4724,8 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "en": "Hide now for ⟨Chaos⟩ to react with later for ⓪.",
-     "ja": "(⟨Chaos⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
+     "en": "Hide now for ⟨rune⟩ to react with later for ⓪.",
+     "ja": "(⟨rune⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
     },
     {
      "kw": "ACTION",
@@ -5029,8 +5029,8 @@
    "effects": [
     {
      "kw": "HIDDEN",
-     "en": "Hide now for ⟨Order⟩ to react with later for ⓪.",
-     "ja": "(⟨Order⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
+     "en": "Hide now for ⟨rune⟩ to react with later for ⓪.",
+     "ja": "(⟨rune⟩を支払って今伏せ、後で⓪を支払ってリアクションとしてプレイできる。)"
     },
     {
      "kw": "",
@@ -7142,7 +7142,7 @@
     {
      "kw": "REACTION",
      "en": "Kill this, ⟨exhaust⟩: ADD ⟨エネルギー⟩. (Abilities that add resources can't be reacted to.)",
-     "ja": "これを破壊、⟨イグゾースト⟩：⟨エネルギー⟩を加える。(リソースを加える能力にはリアクションできない。)"
+     "ja": "これを破壊、⟨イグゾースト⟩：⟨rune⟩を加える。(リソースを加える能力にはリアクションできない。)"
     }
    ],
    "equip": [],
