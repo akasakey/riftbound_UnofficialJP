@@ -29,7 +29,6 @@
   function symSrc(name) {
     const dom = ['Fury', 'Body', 'Calm', 'Order', 'Mind', 'Chaos'];
     if (dom.includes(name)) return 'images/icon/' + name + '.avif';
-    if (name === 'energy') return 'images/icon/energy.svg';
     if (name === 'might') return 'images/icon/might.svg';
     if (name === 'exhaust') return 'images/icon/exhaust.svg';
     if (name === 'rune') return 'images/icon/rune_rainbow.svg';
@@ -46,17 +45,41 @@
   }
 
   /* ---- カード効果文のリッチテキスト ---- */
+  // キーワード配色マップ（Component から setKeywords で受け取る）。base(大文字) -> {bg, ink}
+  let KWMAP = {};
+  function setKeywords(map) { KWMAP = map || {}; }
+  function kwChip(label, base, key) {
+    const c = KWMAP[base] || { bg: 'var(--surface3)', ink: 'var(--gold)' };
+    return R().createElement('span', { key: key, style: { display: 'inline-block', font: "700 0.8em 'JetBrains Mono',monospace", letterSpacing: '.03em', padding: '0 6px', borderRadius: '4px', background: c.bg, color: c.ink, margin: '0 2px', verticalAlign: '1px', whiteSpace: 'nowrap' } }, label);
+  }
+  // 本文中に現れる登録済みキーワード（英大文字）をチップ化する。
+  function scanKw(text, kp) {
+    const bases = Object.keys(KWMAP);
+    if (!bases.length || !text) return [text];
+    const alt = bases.map(function (b) { return b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).sort(function (a, b) { return b.length - a.length; }).join('|');
+    const re = new RegExp('(?<![A-Za-z])(' + alt + ')(\\s?(?:X|\\d+))?(?![A-Za-z])', 'g');
+    const out = []; let last = 0, m, k = 0;
+    while ((m = re.exec(text)) !== null) {
+      if (m.index > last) out.push(text.slice(last, m.index));
+      const base = m[1].toUpperCase();
+      const num = m[2] ? (' ' + m[2].trim()) : '';
+      out.push(kwChip(m[1] + num, base, kp + 'k' + (k++)));
+      last = re.lastIndex;
+    }
+    if (last < text.length) out.push(text.slice(last));
+    return out;
+  }
   function richLine(str, sz) {
     const es = sz ? Math.round(sz) : null;
     const is = sz ? Math.round(sz * 0.92) : null;
     const circled = { '①': 1, '②': 2, '③': 3, '④': 4, '⑤': 5, '⑥': 6, '⑦': 7, '⑧': 8, '⑨': 9, '⑩': 10 };
-    const re = /⟨イグゾースト⟩|⟨エネルギー⟩|⟨rune⟩|⟨(Fury|Body|Calm|Order|Mind|Chaos)⟩|⟨(\d+)⟩|([①②③④⑤⑥⑦⑧⑨⑩])|マイト|エネルギー/g;
+    const re = /⟨イグゾースト⟩|⟨rune⟩|⟨(Fury|Body|Calm|Order|Mind|Chaos)⟩|⟨(\d+)⟩|([①②③④⑤⑥⑦⑧⑨⑩])|マイト/g;
     const out = []; let last = 0, m, k = 0;
+    const pushText = function (t) { scanKw(t, 'w' + (k++) + '_').forEach(function (n) { out.push(n); }); };
     while ((m = re.exec(str)) !== null) {
-      if (m.index > last) out.push(str.slice(last, m.index));
+      if (m.index > last) pushText(str.slice(last, m.index));
       const tok = m[0]; let node = null;
       if (tok === '⟨イグゾースト⟩') node = symImg('exhaust', is);
-      else if (tok === '⟨エネルギー⟩' || tok === 'エネルギー') node = symImg('energy', is);
       else if (tok === '⟨rune⟩') node = symImg('rune', is);
       else if (m[1]) node = symImg(m[1], is);
       else if (m[2] != null) node = energyPip(m[2], es);
@@ -65,7 +88,7 @@
       out.push(R().createElement('span', { key: 's' + (k++) }, node));
       last = re.lastIndex;
     }
-    if (last < str.length) out.push(str.slice(last));
+    if (last < str.length) pushText(str.slice(last));
     return out;
   }
   function richText(str, sz) {
@@ -133,5 +156,5 @@
     }));
   }
 
-  window.RB = { parseHash, symSrc, symImg, energyPip, richLine, richText, ruleTokenNodes, ruleInline, ruleNodes };
+  window.RB = { parseHash, symSrc, symImg, energyPip, richLine, richText, ruleTokenNodes, ruleInline, ruleNodes, setKeywords };
 })();

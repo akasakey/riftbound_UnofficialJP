@@ -43,8 +43,8 @@
 <meta name="twitter:title" content="Riftbound 日本語カードデータベース">
 <meta name="twitter:description" content="Riftboundのカード効果を日本語で。全カードの効果日本語訳・レジェンド・キーワード解説を収録した非公式ファンサイト。">
 <meta name="twitter:image" content="https://riftbound-unofficialjp.pages.dev/images/ogp.png?v=2">
-<link rel="icon" type="image/png" href="images/icon/favicon.png">
-<link rel="apple-touch-icon" href="images/icon/favicon.png">
+<link rel="icon" type="image/png" sizes="256x256" href="images/icon/favicon.png?v=2">
+<link rel="apple-touch-icon" href="images/icon/favicon.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -54,13 +54,35 @@
   --line:#332d26; --line-soft:#28231d;
   --ink:#f4efe6; --ink-dim:#b3a998; --ink-faint:#7c7364;
   --gold:#d9b978; --gold-dim:#8a744a;
+  --header-a:#1c1813; --header-b:#161310;
+  --panel-a:#1d1811; --panel-b:#141110;
+  --tile:#0f0d0a;
+  --tile-edge:rgba(217,185,120,.3);
+  --lift-shadow:rgba(0,0,0,.55);
+  --sel-ink:#12100e;
+  --nav-active:#241f18;
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#e8dbbf; --surface:#fbf6ec; --surface2:#f1e8d6; --surface3:#e7dcc4;
+  --line:#cdb890; --line-soft:#dccbaa;
+  --ink:#2c2216; --ink-dim:#524328; --ink-faint:#6a5836;
+  --gold:#9a7526; --gold-dim:#a5813c;
+  --header-a:#fbf6ec; --header-b:#efe4cf;
+  --panel-a:#fbf6ec; --panel-b:#eee2cc;
+  --tile:#ffffff;
+  --tile-edge:#b09551;
+  --lift-shadow:rgba(92,70,24,.16);
+  --sel-ink:#fbf6ec;
+  --nav-active:#e9dcbf;
+  color-scheme:light;
 }
 *{box-sizing:border-box}
 html,body{overflow-x:clip}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'Zen Kaku Gothic New',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--gold);text-decoration:none}
 a:hover{color:var(--ink)}
-::selection{background:var(--gold);color:#12100e}
+::selection{background:var(--gold);color:var(--sel-ink)}
 .rb-hamburger{display:none}
 .rb-scrim{display:none}
 .rb-side-close{display:none}
@@ -124,9 +146,14 @@ a:hover{color:var(--ink)}
   @keyframes rbImgFade{from{opacity:0}to{opacity:1}}
   @keyframes rbSpin{to{transform:rotate(360deg)}}
   .rb-spin{width:26px;height:26px;border-radius:50%;border:2.5px solid var(--line);border-top-color:var(--gold);animation:rbSpin .8s linear infinite}
-  .rb-detimg{animation:rbImgFade .3s ease}
+  .rb-detimg{animation:rbImgFade .3s ease;cursor:pointer;transition:box-shadow .25s ease,transform .25s ease}
+  .rb-detimg:hover{box-shadow:0 12px 34px -10px var(--lift-shadow),0 0 0 1px var(--gold-dim);transform:translateY(-2px)}
+  @keyframes rbLbBg{from{opacity:0}to{opacity:1}}
+  @keyframes rbLbPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+  .rb-lb{animation:rbLbBg .12s ease both}
+  .rb-lb-fig{animation:rbLbPop .17s cubic-bezier(.2,.9,.35,1) both}
   .rb-lift{transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s ease,border-color .28s ease;will-change:transform}
-  .rb-lift:hover{border-color:var(--gold);transform:translateY(-7px);box-shadow:0 14px 30px -10px rgba(0,0,0,.55),0 0 0 1px var(--gold-dim)}
+  .rb-lift:hover{border-color:var(--gold);transform:translateY(-7px);box-shadow:0 14px 30px -10px var(--lift-shadow),0 0 0 1px var(--gold-dim)}
   .rb-lift img{transition:transform .5s cubic-bezier(.2,.7,.3,1)}
   .rb-lift:hover img{transform:scale(1.06)}
   @media (prefers-reduced-motion: reduce){
@@ -141,13 +168,25 @@ a:hover{color:var(--ink)}
 </style>
 <script>
 window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return; el.style.display='none'; var p=el.parentElement; if(p){ var f=p.getAttribute('data-fallback'); if(f) p.style.background=f; } };
+(function(){
+  try{
+    var saved = localStorage.getItem('rb-theme');
+    var theme = (saved === 'light' || saved === 'dark') ? saved
+      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  }catch(e){ document.documentElement.setAttribute('data-theme','dark'); }
+  window.rbSetTheme = function(t){
+    document.documentElement.setAttribute('data-theme', t);
+    try{ localStorage.setItem('rb-theme', t); }catch(e){}
+  };
+})();
 </script>
 <script src="riftbound-render.js"></script>
 </helmet>
 
 <div style="min-height:100vh;display:flex;flex-direction:column">
 
-  <header class="rb-header" style="display:flex;align-items:center;gap:18px;padding:0 26px;height:60px;background:linear-gradient(180deg,#1c1813,#161310);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20">
+  <header class="rb-header" style="display:flex;align-items:center;gap:18px;padding:0 26px;height:60px;background:linear-gradient(180deg,var(--header-a),var(--header-b));border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20">
     <div onClick="{{ toggleMenu }}" role="button" tabindex="0" data-kbd aria-label="メニュー" class="rb-hamburger" style="width:34px;height:34px;flex:none;align-items:center;justify-content:center;flex-direction:column;gap:4px;border:1px solid var(--line);border-radius:7px;background:var(--surface2);cursor:pointer">
       <span style="width:16px;height:2px;background:var(--ink-dim);border-radius:2px"></span>
       <span style="width:16px;height:2px;background:var(--ink-dim);border-radius:2px"></span>
@@ -158,9 +197,9 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
       <div class="rb-brand-title" style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:17px;letter-spacing:.04em">RIFTBOUND <span style="color:var(--gold)">日本語翻訳</span></div>
       <span class="rb-badge" style="font:600 9px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--ink-faint);border:1px solid var(--line);border-radius:4px;padding:2px 6px;align-self:center;white-space:nowrap">非公式ファンサイト</span>
     </div>
-    <div class="rb-search" style="margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--surface2);border:1px solid var(--line);border-radius:7px;padding:7px 12px;width:250px">
-      <div style="width:13px;height:13px;border:1.5px solid var(--ink-faint);border-radius:50%;position:relative"><div style="position:absolute;width:6px;height:1.5px;background:var(--ink-faint);transform:rotate(45deg);bottom:-2px;right:-3px"></div></div>
-      <input value="{{ queryRaw }}" onInput="{{ onSearch }}" aria-label="カードを検索" placeholder="カード名で検索…" style="flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:12.5px"/>
+    <div class="rb-search" style="margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--gold-dim);border-radius:9px;padding:8px 14px;width:300px;box-shadow:0 1px 8px -2px var(--lift-shadow)">
+      <div style="width:14px;height:14px;border:1.7px solid var(--gold);border-radius:50%;position:relative;flex:none"><div style="position:absolute;width:6px;height:1.7px;background:var(--gold);transform:rotate(45deg);bottom:-2px;right:-3px;border-radius:2px"></div></div>
+      <input value="{{ queryRaw }}" onInput="{{ onSearch }}" aria-label="カードを検索" placeholder="カードを検索…" style="flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:13px"/>
     </div>
   </header>
 
@@ -198,6 +237,18 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
         <div onClick="{{ goRules }}" role="button" tabindex="0" data-kbd style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;background:{{ rulesBg }};color:{{ rulesInk }}"><span aria-hidden="true" style="font-size:13px">§</span>ルール翻訳</div>
       </nav>
 
+      <div style="padding:18px 20px 8px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint)">表示</div>
+      <div style="padding:0 14px 4px">
+        <div role="group" aria-label="テーマ切替" style="display:flex;gap:4px;background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:3px">
+          <div onClick="{{ setLight }}" role="button" tabindex="0" data-kbd aria-pressed="{{ isLight }}" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;border-radius:6px;font:700 10.5px 'JetBrains Mono',monospace;letter-spacing:.08em;cursor:pointer;background:{{ lightBg }};color:{{ lightInk }};transition:background .15s ease,color .15s ease">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex:none"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>LIGHT
+          </div>
+          <div onClick="{{ setDark }}" role="button" tabindex="0" data-kbd aria-pressed="{{ isDark }}" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;border-radius:6px;font:700 10.5px 'JetBrains Mono',monospace;letter-spacing:.08em;cursor:pointer;background:{{ darkBg }};color:{{ darkInk }};transition:background .15s ease,color .15s ease">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 14.5A8 8 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5Z"/></svg>DARK
+          </div>
+        </div>
+      </div>
+
     </aside>
 
     <!-- MAIN -->
@@ -219,7 +270,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             <div>
               <h1 style="margin:0;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:34px;letter-spacing:.01em;line-height:1.1">{{ sel.name }}</h1>
               <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
-                <span style="display:inline-flex;align-items:center;gap:5px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:{{ sel.color }};color:#12100e">{{ sel.typeLabelEn }}</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:{{ sel.color }};color:{{ sel.typeInk }}">{{ sel.typeLabelEn }}</span>
                 <sc-for list="{{ sel.tags }}" as="t" hint-placeholder-count="2">
                   <span style="display:inline-flex;align-items:center;font:600 10px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:var(--surface3);border:1px solid var(--line);color:var(--ink-dim)">{{ t }}</span>
                 </sc-for>
@@ -232,7 +283,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             <!-- 画像 -->
             <div class="rb-detail-img">
               <sc-if value="{{ sel.hasImage }}" hint-placeholder-val="{{ true }}">
-                <img key="{{ sel.curImage }}" class="rb-detimg" src="{{ sel.curImage }}" alt="{{ sel.name }}" style="width:100%;border-radius:12px;border:1px solid var(--line);display:block"/>
+                <img key="{{ sel.curImage }}" onClick="{{ sel.zoomImage }}" class="rb-detimg" src="{{ sel.curImage }}" alt="{{ sel.name }}" title="クリックで拡大" style="width:100%;border-radius:12px;border:1px solid var(--line);display:block"/>
                 <sc-if value="{{ sel.hasAlt }}" hint-placeholder-val="{{ false }}">
                   <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
                     <div onClick="{{ setAltMain }}" role="button" tabindex="0" data-kbd style="padding:8px 6px;border-radius:7px;text-align:center;font:600 11px 'JetBrains Mono',monospace;letter-spacing:.06em;cursor:pointer;border:1px solid {{ sel.mainBtnLine }};background:{{ sel.mainBtnBg }};color:{{ sel.mainBtnInk }}">STANDARD</div>
@@ -251,7 +302,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             </div>
             <!-- 情報 -->
             <div>
-              <div style="border:1px solid var(--line);border-radius:10px;overflow:hidden">
+              <div style="border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)">
                 <sc-for list="{{ sel.info }}" as="row" hint-placeholder-count="7">
                   <div style="display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid var(--line-soft)">
                     <div style="padding:11px 14px;background:var(--surface2);font-size:12.5px;font-weight:700;color:var(--ink-dim)">{{ row.k }}</div>
@@ -265,7 +316,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <!-- 効果 -->
           <div style="margin-top:34px">
             <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:0">効果</div>
-            <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-top:12px">
+            <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-top:12px;background:var(--surface)">
               <div style="display:flex;flex-direction:column;gap:15px">
                 <sc-for list="{{ sel.effects }}" as="e" hint-placeholder-count="1">
                   <div style="font-size:14px;line-height:1.95;color:var(--ink)"><sc-if value="{{ e.showKw }}" hint-placeholder-val="{{ true }}"><span style="display:inline-flex;align-items:center;gap:5px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.05em;padding:2px 8px;border-radius:4px;background:{{ e.chipBg }};color:{{ e.chipText }};margin-right:8px;transform:translateY(-1px)">{{ e.kw }}<sc-if value="{{ e.hasCost }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center">{{ e.costNode }}</span></sc-if></span></sc-if>{{ e.jaNode }}</div>
@@ -282,7 +333,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <sc-if value="{{ sel.hasEquip }}" hint-placeholder-val="{{ false }}">
             <div style="margin-top:30px">
               <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block">装備効果</div>
-              <div style="border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:12px">
+              <div style="border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:12px;background:var(--surface)">
                 <sc-for list="{{ sel.equipRows }}" as="q" hint-placeholder-count="1">
                   <div style="display:flex;align-items:center;gap:16px;padding:16px 18px;border-bottom:1px solid var(--line-soft)">
                     <sc-if value="{{ q.showKw }}" hint-placeholder-val="{{ false }}">
@@ -349,13 +400,13 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                   <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:15px">{{ cat.name }}</span>
                   <span style="font:500 11px 'JetBrains Mono',monospace;color:var(--ink-faint)">{{ cat.count }}</span>
                 </div>
-                <div style="border:1px solid var(--line);border-radius:10px;overflow:hidden">
+                <div style="border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)">
                   <sc-for list="{{ cat.items }}" as="k" hint-placeholder-count="3">
                     <div style="display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line-soft);align-items:start">
                       <div style="padding:14px 16px">
                         <span style="display:inline-block;font:700 11px 'JetBrains Mono',monospace;letter-spacing:.03em;padding:4px 10px;border-radius:5px;background:{{ k.color }};color:{{ k.text }}">{{ k.kw }}</span>
                       </div>
-                      <div style="padding:14px 18px;font-size:13px;line-height:1.8;color:var(--ink);border-left:1px solid var(--line-soft)">{{ k.desc }}</div>
+                      <div style="padding:14px 18px;font-size:13px;line-height:1.8;color:var(--ink);border-left:1px solid var(--line-soft)">{{ k.descNode }}</div>
                     </div>
                   </sc-for>
                 </div>
@@ -399,7 +450,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                         <div class="rb-legend-name" style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:15.5px;line-height:1.25;color:var(--ink)">{{ l.name }}</div>
                         <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:7px">
                           <sc-for list="{{ l.domainChips }}" as="dc" hint-placeholder-count="2">
-                            <span style="display:inline-flex;align-items:center;gap:4px;font:600 9.5px 'JetBrains Mono',monospace;color:#12100e;background:{{ dc.color }};padding:2px 7px;border-radius:20px">{{ dc.name }}</span>
+                            <span style="display:inline-flex;align-items:center;gap:4px;font:600 9.5px 'JetBrains Mono',monospace;color:{{ dc.text }};background:{{ dc.color }};padding:2px 7px;border-radius:20px">{{ dc.name }}</span>
                           </sc-for>
                           <span style="font-size:12px;color:var(--ink-dim)">{{ l.nameJa }}</span>
                         </div>
@@ -445,16 +496,16 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                 <img src="{{ legend.image }}" alt="{{ legend.name }}" style="width:180px;display:block;border-radius:12px;border:1px solid var(--line)"/>
                 <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:10px">
                   <sc-for list="{{ legend.domainChips }}" as="dc" hint-placeholder-count="2">
-                    <span style="display:inline-flex;align-items:center;font:600 10px 'JetBrains Mono',monospace;color:#12100e;background:{{ dc.color }};padding:2px 8px;border-radius:20px">{{ dc.name }}</span>
+                    <span style="display:inline-flex;align-items:center;font:600 10px 'JetBrains Mono',monospace;color:{{ dc.text }};background:{{ dc.color }};padding:2px 8px;border-radius:20px">{{ dc.name }}</span>
                   </sc-for>
                 </div>
                 <div style="font:500 11px 'JetBrains Mono',monospace;color:var(--ink-faint);margin-top:9px">収録セット</div>
                 <div style="font-size:12.5px;color:var(--ink-dim);margin-top:2px">{{ legend.set }}</div>
               </div>
               <div style="flex:1;min-width:260px">
-                <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px">
+                <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px;background:var(--surface)">
               <sc-if value="{{ legend.hasAbilityKw }}" hint-placeholder-val="{{ false }}">
-                <span style="display:inline-block;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.05em;padding:2px 8px;border-radius:4px;background:var(--surface3);color:var(--gold);margin-bottom:10px">{{ legend.abilityKw }}</span>
+                <span style="display:inline-block;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.05em;padding:2px 8px;border-radius:4px;background:{{ legend.abilityChipBg }};color:{{ legend.abilityChipInk }};margin-bottom:10px">{{ legend.abilityKw }}</span>
               </sc-if>
               <div style="font-size:15px;line-height:1.95;color:var(--ink)">{{ legend.abilityNode }}</div>
             </div>
@@ -483,9 +534,9 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                       <sc-if value="{{ c.hasRows }}" hint-placeholder-val="{{ true }}">
                         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid var(--line-soft);padding-top:9px">
                           <sc-for list="{{ c.rows }}" as="fx" hint-placeholder-count="1">
-                            <div style="font-size:12.5px;line-height:1.75;color:var(--ink-dim)">
+                            <div style="font-size:12.5px;line-height:1.75;color:var(--ink-dim);text-align:{{ fx.align }}">
                               <sc-if value="{{ fx.hasKw }}" hint-placeholder-val="{{ false }}">
-                                <span style="display:inline-block;font:700 9.5px 'JetBrains Mono',monospace;letter-spacing:.05em;padding:1px 7px;border-radius:4px;background:var(--surface3);color:var(--gold);margin-right:7px;vertical-align:1px">{{ fx.kw }}</span>
+                                <span style="display:inline-block;font:700 9.5px 'JetBrains Mono',monospace;letter-spacing:.05em;padding:1px 7px;border-radius:4px;background:{{ fx.chipBg }};color:{{ fx.chipInk }};margin-right:7px;vertical-align:1px">{{ fx.kw }}</span>
                               </sc-if>
                               <span>{{ fx.node }}</span>
                             </div>
@@ -535,7 +586,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <div style="margin-bottom:24px">
             <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:12px">戦略・立ち回り</div>
             <sc-if value="{{ legend.hasStrategy }}" hint-placeholder-val="{{ true }}">
-              <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px;font-size:14px;line-height:1.95;color:var(--ink)">{{ legend.strategyNode }}</div>
+              <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px;font-size:14px;line-height:1.95;color:var(--ink);background:var(--surface)">{{ legend.strategyNode }}</div>
             </sc-if>
             <sc-if value="{{ legend.noStrategy }}" hint-placeholder-val="{{ false }}">
               <div style="border:1px dashed var(--line);border-radius:12px;padding:34px 24px;text-align:center;font-size:12.5px;color:var(--ink-faint)">戦略ガイドは準備中です。</div>
@@ -548,7 +599,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
       <sc-if value="{{ showHome }}" hint-placeholder-val="{{ false }}">
         <div class="rb-view">
           <!-- hero -->
-          <div class="rb-hero" style="position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,#1d1811,#141110);padding:52px 44px;margin-bottom:34px">
+          <div class="rb-hero" style="position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,var(--panel-a),var(--panel-b));padding:52px 44px;margin-bottom:34px">
             <div style="position:absolute;inset:0;background:radial-gradient(90% 120% at 90% 0%,rgba(217,185,120,.14),transparent 55%);pointer-events:none"></div>
             <div style="position:relative;max-width:640px">
               <div style="font:700 11px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--gold);margin-bottom:16px">UNOFFICIAL JP TRANSLATION WIKI</div>
@@ -559,7 +610,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                 <input value="{{ queryRaw }}" onInput="{{ onSearch }}" aria-label="カードを検索" placeholder="カード名・日本語名・キーワードで検索…" style="flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:14.5px" />
               </div>
               <div style="margin-top:13px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-                <div onClick="{{ goAll }}" role="button" tabindex="0" data-kbd style="cursor:pointer;background:var(--gold);color:#1a140a;font-weight:700;font-size:13.5px;padding:11px 22px;border-radius:8px">カード一覧をすべて見る →</div>
+                <div onClick="{{ goAll }}" role="button" tabindex="0" data-kbd style="cursor:pointer;background:var(--gold);color:var(--sel-ink);font-weight:700;font-size:13.5px;padding:11px 22px;border-radius:8px">カード一覧をすべて見る →</div>
                 <span style="font-size:12px;color:var(--ink-faint)">チャンピオン名は日本語（例: ジンクス）でも検索できます</span>
               </div>
             </div>
@@ -570,14 +621,14 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <div class="rb-domain-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px">
             <sc-for list="{{ domainNav }}" as="d" hint-placeholder-count="6">
               <div onClick="{{ d.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:14px 16px" style-hover="border-color:var(--gold-dim)">
-                <span style="width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;background:#0f0d0a;box-shadow:inset 0 0 0 1px {{ d.glow }}"><img src="{{ d.icon }}" alt="{{ d.name }}" style="width:22px;height:22px"/></span>
-                <span style="font-weight:700;font-size:14px;color:{{ d.color }}">{{ d.name }}</span>
+                <span style="width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);box-shadow:inset 0 0 0 1px {{ d.glow }}"><img src="{{ d.icon }}" alt="{{ d.name }}" style="width:22px;height:22px"/></span>
+                <span style="font-weight:700;font-size:14px;color:{{ d.labelColor }}">{{ d.name }}</span>
               </div>
             </sc-for>
           </div>
           <!-- legend browse (legends are cards too) -->
-          <div onClick="{{ goLegends }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(120deg,#1d1811,#141110);padding:16px 20px;margin-bottom:36px" style-hover="border-color:var(--gold-dim)">
-            <span style="width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;background:#0f0d0a;box-shadow:inset 0 0 0 1px rgba(217,185,120,.4);font-size:19px;color:var(--gold)" aria-hidden="true">✦</span>
+          <div onClick="{{ goLegends }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:16px 20px;margin-bottom:36px" style-hover="border-color:var(--gold-dim)">
+            <span style="width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);font-size:19px;color:var(--gold)" aria-hidden="true">✦</span>
             <div style="flex:1;min-width:0">
               <div style="font-weight:700;font-size:14px;color:var(--ink)">レジェンドから探す</div>
               <div style="font-size:12px;color:var(--ink-faint);margin-top:2px">デッキの核となるレジェンドカードとシグネチャー能力を一覧で確認できます。</div>
@@ -588,14 +639,14 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <!-- resources: keyword / rules -->
           <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:16px">資料から探す</div>
           <div class="rb-res-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:36px">
-            <div onClick="{{ goKeywords }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(150deg,#1d1811,#141110);padding:20px" style-hover="border-color:var(--gold-dim)">
-              <span style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none;background:#0f0d0a;box-shadow:inset 0 0 0 1px rgba(217,185,120,.4);font-size:20px;color:var(--gold)" aria-hidden="true">◆</span>
+            <div onClick="{{ goKeywords }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:20px" style-hover="border-color:var(--gold-dim)">
+              <span style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);font-size:15px;color:var(--gold)" aria-hidden="true">◆</span>
               <div style="font-weight:700;font-size:15px;color:var(--ink)">キーワード集</div>
               <div style="font-size:12px;color:var(--ink-faint);line-height:1.65;flex:1">Ambush / Assault などの能力キーワードの日本語訳。</div>
               <span style="font-size:12px;font-weight:700;color:var(--gold)">見る →</span>
             </div>
-            <div onClick="{{ goRules }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(150deg,#1d1811,#141110);padding:20px" style-hover="border-color:var(--gold-dim)">
-              <span style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none;background:#0f0d0a;box-shadow:inset 0 0 0 1px rgba(217,185,120,.4);font-size:20px;color:var(--gold)" aria-hidden="true">§</span>
+            <div onClick="{{ goRules }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:20px" style-hover="border-color:var(--gold-dim)">
+              <span style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);font-size:20px;color:var(--gold)" aria-hidden="true">§</span>
               <div style="font-weight:700;font-size:15px;color:var(--ink)">コアルール日本語訳</div>
               <div style="font-size:12px;color:var(--ink-faint);line-height:1.65;flex:1">公式コアルールを日本語で。原文も併記で確認できます。</div>
               <span style="font-size:12px;font-weight:700;color:var(--gold)">読む →</span>
@@ -607,16 +658,16 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
       <!-- ===== RULES VIEW ===== -->
       <sc-if value="{{ showRules }}" hint-placeholder-val="{{ false }}">
         <div class="rb-view">
-          <div class="rb-rules-wrap" style="display:grid;grid-template-columns:minmax(0,1fr) 212px;gap:40px;align-items:start">
+          <div class="rb-rules-wrap" style="display:grid;grid-template-columns:minmax(0,1fr) 236px;gap:40px;align-items:start">
             <!-- sticky TOC (right rail on desktop) -->
             <aside class="rb-rules-toc" style="grid-column:2;grid-row:1;position:sticky;top:76px;align-self:start;max-height:calc(100vh - 92px);overflow:auto">
-              <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint);padding:0 6px 10px">目次</div>
+              <div style="font:700 11px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint);padding:0 6px 12px">目次</div>
               <nav style="display:flex;flex-direction:column;gap:1px">
                 <sc-for list="{{ rulesToc }}" as="t" hint-placeholder-count="9">
                   <div data-rtoc="{{ t.id }}" onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd style="position:relative;display:flex;align-items:baseline;gap:9px;padding:7px 8px 7px 12px;border-radius:6px;cursor:pointer;transition:background .12s" style-hover="background:var(--surface2)">
                     <span data-rtoc-bar style="position:absolute;left:0;top:5px;bottom:5px;width:2px;border-radius:2px;background:var(--gold);opacity:0;transition:opacity .12s"></span>
-                    <span data-rtoc-num style="font:600 10.5px 'JetBrains Mono',monospace;color:var(--gold-dim);flex:none;width:26px">{{ t.num }}</span>
-                    <span data-rtoc-title style="font-size:12.5px;color:var(--ink-dim);line-height:1.4">{{ t.title }}</span>
+                    <span data-rtoc-num style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--gold-dim);flex:none;width:28px">{{ t.num }}</span>
+                    <span data-rtoc-title style="font-size:13.5px;color:var(--ink-dim);line-height:1.45">{{ t.title }}</span>
                   </div>
                 </sc-for>
               </nav>
@@ -645,9 +696,9 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                     <div style="border:1px solid var(--line-soft);border-radius:10px;background:var(--surface2);padding:14px 16px;margin-bottom:16px;font-size:12.5px;color:var(--ink-faint);line-height:1.75">このセクションは翻訳作業中です。下の「原文を表示」から英語原文を確認できます。</div>
                   </sc-if>
 
-                  <div style="display:flex;flex-direction:column;gap:20px">
+                  <div style="display:flex;flex-direction:column;gap:12px">
                     <sc-for list="{{ sec.blocks }}" as="b" hint-placeholder-count="0">
-                      <div style="display:flex;gap:14px;align-items:flex-start">
+                      <div style="display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line-soft);border-left:3px solid var(--gold-dim);border-radius:0 4px 4px 0;padding:16px 18px">
                         <sc-if value="{{ b.hasNum }}" hint-placeholder-val="{{ true }}">
                           <span style="font:600 10px 'JetBrains Mono',monospace;color:var(--ink-faint);background:var(--surface2);border:1px solid var(--line-soft);border-radius:5px;padding:3px 7px;flex:none;margin-top:2px;min-width:44px;text-align:center">{{ b.num }}</span>
                         </sc-if>
@@ -655,7 +706,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                           <sc-if value="{{ b.hasH }}" hint-placeholder-val="{{ false }}">
                             <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:15px;color:var(--gold-2,var(--ink));margin-bottom:7px">{{ b.h }}</div>
                           </sc-if>
-                          <div style="font-size:13.5px;line-height:1.95;color:var(--ink)">{{ b.jaNode }}</div>
+                          <div style="font-size:14px;line-height:1.95;color:var(--ink)">{{ b.jaNode }}</div>
                         </div>
                       </div>
                     </sc-for>
@@ -674,7 +725,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
 
       <!-- mobile floating TOC button + bottom sheet (outside .rb-view so position:fixed tracks the viewport) -->
       <sc-if value="{{ showRules }}" hint-placeholder-val="{{ false }}">
-        <div class="rb-toc-fab" onClick="{{ openTocSheet }}" role="button" tabindex="0" data-kbd style="display:none;position:fixed;right:16px;bottom:18px;z-index:70;align-items:center;gap:9px;padding:11px 16px;border-radius:999px;background:linear-gradient(135deg,#2a2118,#171310);border:1px solid var(--gold-dim);box-shadow:0 6px 20px rgba(0,0,0,.5);cursor:pointer;color:var(--gold);font-weight:700;font-size:13px;max-width:74vw">
+        <div class="rb-toc-fab" onClick="{{ openTocSheet }}" role="button" tabindex="0" data-kbd style="display:none;position:fixed;right:16px;bottom:18px;z-index:70;align-items:center;gap:9px;padding:11px 16px;border-radius:999px;background:linear-gradient(135deg,var(--panel-a),var(--panel-b));border:1px solid var(--gold-dim);box-shadow:0 6px 20px var(--lift-shadow);cursor:pointer;color:var(--gold);font-weight:700;font-size:13px;max-width:74vw">
           <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 4h12M2 8h12M2 12h9"/></svg>
           <span data-toc-current style="color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">目次</span>
         </div>
@@ -719,6 +770,13 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
 
           <!-- FILTER BAR -->
           <div style="margin-bottom:22px;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden">
+            <div style="display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line-soft)">
+              <div style="width:15px;height:15px;border:1.7px solid var(--gold);border-radius:50%;position:relative;flex:none"><div style="position:absolute;width:6px;height:1.7px;background:var(--gold);transform:rotate(45deg);top:12px;left:10px;border-radius:2px"></div></div>
+              <input value="{{ queryRaw }}" onInput="{{ onSearch }}" aria-label="カードを検索" placeholder="カード名・日本語名・効果・キーワードで検索…" style="flex:1;min-width:0;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:13.5px" />
+              <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
+                <div onClick="{{ clearQuery }}" role="button" tabindex="0" data-kbd aria-label="検索をクリア" style="flex:none;cursor:pointer;font-size:15px;line-height:1;color:var(--ink-faint);padding:2px 4px" style-hover="color:var(--ink)">×</div>
+              </sc-if>
+            </div>
             <div style="display:flex;align-items:center;gap:12px;padding:12px 16px">
               <span style="font:700 11px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--ink-faint)">FILTER</span>
               <div onClick="{{ toggleFiltersOpen }}" role="button" tabindex="0" data-kbd style="font-size:12.5px;font-weight:700;color:var(--gold);cursor:pointer">{{ filterToggleLabel }}</div>
@@ -823,9 +881,9 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           </sc-if>
 
           <sc-if value="{{ hasResults }}" hint-placeholder-val="{{ true }}">
-            <div class="rb-table" style="display:{{ tableDisplay }}">
+            <div class="rb-table" style="display:{{ tableDisplay }};background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden">
               <!-- header row -->
-              <div class="rb-listhead" style="display:grid;grid-template-columns:52px 96px 1fr 92px 118px 96px;gap:0;border-bottom:1px solid var(--line);position:sticky;top:60px;background:var(--bg);z-index:5">
+              <div class="rb-listhead" style="display:grid;grid-template-columns:52px 96px 1fr 92px 118px 96px;gap:0;border-bottom:1px solid var(--line);position:sticky;top:60px;background:var(--surface);z-index:5">
                 <div style="padding:11px 14px;font:700 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-faint)"></div>
                 <div style="padding:11px 14px;font:700 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-faint)">タイプ</div>
                 <div onClick="{{ sortName }}" role="button" tabindex="0" data-kbd style="padding:11px 14px;font:700 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-dim);cursor:pointer;display:flex;align-items:center;gap:6px">カード名 <span style="font:600 10px 'JetBrains Mono',monospace;color:{{ inkName }}">{{ arrowName }}</span></div>
@@ -919,10 +977,19 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
   </footer>
 </div>
 
+<sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" role="button" tabindex="0" data-kbd aria-label="閉じる" class="rb-lb" style="position:fixed;inset:0;z-index:120;background:radial-gradient(120% 120% at 50% 30%,rgba(30,24,16,.82),rgba(8,7,5,.94));backdrop-filter:blur(6px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:32px;cursor:pointer">
+    <figure class="rb-lb-fig" style="margin:0;display:flex;flex-direction:column;align-items:center;max-width:min(94vw,600px)">
+      <img src="{{ lightboxImg }}" alt="{{ lightboxCap }}" style="max-width:100%;max-height:86vh;border-radius:18px;border:1px solid var(--gold-dim);box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 0 1px rgba(0,0,0,.4),0 0 60px -10px rgba(217,185,120,.35);display:block"/>
+    </figure>
+    <div aria-hidden="true" style="position:absolute;top:20px;right:24px;width:42px;height:42px;border-radius:50%;background:rgba(20,16,12,.6);border:1px solid rgba(217,185,120,.4);color:#f0e6d2;display:flex;align-items:center;justify-content:center;font-size:22px;line-height:1;transition:background .2s" style-hover="background:rgba(217,185,120,.25)">×</div>
+  </div>
+</sc-if>
+
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { view: 'home', domain: null, set: null, selectedId: null, query: '', queryRaw: '', sortKey: null, sortDir: 1, listMode: (typeof window!=='undefined' && window.innerWidth<=820) ? 'table' : 'grid', cards: [], legends: [], sets: [], keywords: [], keywordCategories: [], counts: {}, rules: null, loading: true, loadError: null, cardsLoading: false, fType: [], fTag: [], fKw: [], fSet: [], fDom: [], fRar: [], fCost: [], tagQ: '', kwQ: '', legendId: null, filtersOpen: false, tocSheet: false };
+  state = { view: 'home', domain: null, set: null, selectedId: null, query: '', queryRaw: '', sortKey: null, sortDir: 1, listMode: (typeof window!=='undefined' && window.innerWidth<=820) ? 'table' : 'grid', cards: [], legends: [], sets: [], keywords: [], keywordCategories: [], counts: {}, rules: null, loading: true, loadError: null, cardsLoading: false, fType: [], fTag: [], fKw: [], fSet: [], fDom: [], fRar: [], fCost: [], tagQ: '', kwQ: '', legendId: null, filtersOpen: false, tocSheet: false, lightbox: null, theme: (typeof document!=='undefined' && document.documentElement.getAttribute('data-theme')==='light') ? 'light' : 'dark' };
 
   // データは data/meta.json（軽量メタ）と data/cards/<CODE>.json（セット別カード）に分割。
   // メタ即読み → home/legends/keywords/rules は即描画。カード本体はカード系ビューに入ったとき遅延ロード。
@@ -1020,7 +1087,8 @@ class Component extends DCLogic {
           el.click();
         }
       } else if(e.key==='Escape'){
-        if(this.state.menuOpen || this.state.tocSheet) this.setState({ menuOpen:false, tocSheet:false });
+        if(this.state.lightbox) this.setState({ lightbox:null });
+        else if(this.state.menuOpen || this.state.tocSheet) this.setState({ menuOpen:false, tocSheet:false });
       }
     };
     document.addEventListener('keydown', this._onKey);
@@ -1079,7 +1147,7 @@ class Component extends DCLogic {
   }
   parseHash(){ return (window.RB && window.RB.parseHash) ? window.RB.parseHash() : { view:'home' }; }
   go(patch, hash){
-    const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, query:'', queryRaw:'', menuOpen:false, altView:false, fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], ...patch };
+    const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, query:'', queryRaw:'', menuOpen:false, altView:false, lightbox:null, fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], ...patch };
     this.setState(st);
     this.ensureCardsFor(st);
     if(st.view==='rules' && st.ruleSec){ this.jumpToRule(st.ruleSec); }
@@ -1199,9 +1267,12 @@ class Component extends DCLogic {
     const cat = this.state.keywordCategories.find(c=>c.id===k.cat);
     return cat ? { color:cat.color, text:cat.text } : null;
   }
+  // 能力キーワードのチップ配色（カテゴリ色。未分類は surface3+gold にフォールバック。カード詳細と統一）。
+  kwChipColors(kw){ const c=this.kwColor(kw); return { bg: c?c.color:'var(--surface3)', ink: c?c.text:'var(--gold)' }; }
   goHome(){ this.go({ view:'home' }, '#'); }
   toggleMenu(){ this.setState(s=>({ menuOpen: !s.menuOpen })); }
   closeMenu(){ this.setState({ menuOpen:false }); }
+  setTheme(t){ if(t!=='light'&&t!=='dark') return; if(typeof window!=='undefined' && window.rbSetTheme) window.rbSetTheme(t); this.setState({ theme:t }); }
   setAlt(v){ this.setState({ altView:v }); }
   goAll(){ this.go({ view:'list' }, '#list'); }
   setDomain(d){ this.go({ view:'list', domain:d }, '#domain/'+encodeURIComponent(d)); }
@@ -1223,7 +1294,29 @@ class Component extends DCLogic {
   toggleFiltersOpen(){ this.setState(s=>({ filtersOpen: !s.filtersOpen })); }
   clearFilters(){ this.setState({ fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], tagQ:'', kwQ:'', query:'', queryRaw:'' }); }
 
+  onDomChip(key){
+    const s = this.state;
+    if (s.domain){
+      if (s.domain===key){
+        try{ history.replaceState(null,'',location.pathname+location.search+'#list'); }catch(e){}
+        this.setState({ domain:null });
+      } else {
+        this.setDomain(key);
+      }
+    } else {
+      this.toggleFilter('dom', key);
+    }
+  }
+
+  // ドメイン色を明るい面（ライトの羊皮紙）に文字で載せる時の可読色。Order/Body は暗く。
+  domLabelColor(key){
+    const c = this.domColor(key);
+    if(this.state.theme==='light'){ const dk={ Order:'#8a6d10', Body:'#b25c06' }; return dk[key] || c; }
+    return c;
+  }
   domColor(key){ const d=this.DOMAINS.find(x=>x.key===key); return d?d.color:'#888'; }
+  // ドメイン色地の上に載せる文字色（明度で白/黒を切替。Chaos/Fury/Mind/Calm は暗いので白）。
+  domInk(key){ return (key==='Body' || key==='Order') ? '#1a130a' : '#fbf6ec'; }
   domGlow(key){ const d=this.DOMAINS.find(x=>x.key===key); return d?d.glow:'rgba(0,0,0,.3)'; }
   domIcon(key){ return key ? 'images/icon/'+key+'.avif' : ''; }
   domsOf(c){ return (c && c.domains && c.domains.length) ? c.domains : (c && c.domain ? [c.domain] : []); }
@@ -1255,11 +1348,29 @@ class Component extends DCLogic {
 
   renderVals(){
     const s = this.state;
+    // 本文中キーワードのチップ化用に、配色マップを描画ロジックへ渡す
+    if(window.RB && window.RB.setKeywords){
+      const km = {};
+      (s.keywords||[]).forEach(kw=>{ const b=this.kwBase(kw.kw); if(b){ const c=this.kwColor(kw.kw); km[b] = c ? {bg:c.color, ink:c.text} : {bg:'var(--surface3)', ink:'var(--gold)'}; } });
+      window.RB.setKeywords(km);
+    }
     const q = (s.query||'').trim().toLowerCase();
 
     // helper: split a card's tags
     const cardTags = (c)=> (c.tag||'').split(/[・･]/).map(t=>t.trim()).filter(Boolean);
-    const cardKws = (c)=> (c.effects||[]).map(e=>this.kwBase(e.kw)).filter(Boolean);
+    // キーワード絞り込みは「チップ化されているキーワード」のみ対象。
+    // ＝ 先頭/装備の kw フィールド ＋ 効果本文(ja)中の英語キーワード表記（英語in ja＝チップ、カタカナ＝素）。
+    const regBases = (s.keywords||[]).map(k=>this.kwBase(k.kw)).filter(Boolean);
+    const kwScanRe = regBases.length ? new RegExp('(?<![A-Za-z])(' + regBases.map(b=>b.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|') + ')(?![A-Za-z])','g') : null;
+    if(this._kwCacheN !== regBases.length){ this._kwCache = {}; this._kwCacheN = regBases.length; }
+    const cardKws = (c)=>{
+      if(this._kwCache[c.id]) return this._kwCache[c.id];
+      const found = new Set();
+      const all = [...(c.effects||[]),...(c.equip||[])];
+      all.forEach(e=>{ const b=this.kwBase(e.kw); if(b) found.add(b); });
+      if(kwScanRe){ const txt=all.map(e=>e.ja||'').join(' \n '); let m; kwScanRe.lastIndex=0; while((m=kwScanRe.exec(txt))!==null){ found.add(m[1].toUpperCase()); } }
+      const arr=[...found]; this._kwCache[c.id]=arr; return arr;
+    };
 
     // filtered set for list
     let list = this.state.cards.slice();
@@ -1289,9 +1400,9 @@ class Component extends DCLogic {
     if (s.set) scope = scope.filter(c=>c.setCode===s.set);
     const solidChip = (label, active, onClick)=>({
       label, onClick,
-      border: active ? '#d9b978' : '#332d26',
-      bg: active ? '#d9b978' : 'transparent',
-      color: active ? '#12100e' : '#b3a998',
+      border: active ? 'var(--gold)' : 'var(--line)',
+      bg: active ? 'var(--gold)' : 'transparent',
+      color: active ? 'var(--sel-ink)' : 'var(--ink-dim)',
     });
     const typeChips = this.TYPE_ORDER.filter(t=>scope.some(c=>this.typeOf(c)===t)).map(t=>
       solidChip(this.TYPE_LABEL[t]||t, s.fType.includes(t), ()=>this.toggleFilter('type',t)));
@@ -1309,29 +1420,31 @@ class Component extends DCLogic {
       const c = col?col.color:'#d9b978', txt = col?col.text:'#12100e';
       const active = s.fKw.includes(k);
       return { label:k, onClick:()=>this.toggleFilter('kw',k),
-        border: active ? c : '#332d26',
+        border: active ? c : 'var(--line)',
         bg: active ? c : 'transparent',
-        color: active ? txt : '#b3a998' };
+        color: active ? txt : 'var(--ink-dim)' };
     });
     const setChips = this.state.sets.slice().sort((a,b)=> (a.code==='OGS'?-1:0) - (b.code==='OGS'?-1:0)).map(st=>
       solidChip(st.code, s.fSet.includes(st.code), ()=>this.toggleFilter('set',st.code)));
+    let domScope = this.state.cards.slice();
+    if (s.set) domScope = domScope.filter(c=>c.setCode===s.set);
     const domChips = this.DOMAINS
-      .filter(d=> scope.some(c=> c.domain===d.key || (c.domains && c.domains.includes(d.key))))
-      .map(d=>{ const active = s.fDom.includes(d.key);
-        return { label:d.name, onClick:()=>this.toggleFilter('dom',d.key),
-          border: active ? d.color : '#332d26',
+      .filter(d=> domScope.some(c=> c.domain===d.key || (c.domains && c.domains.includes(d.key))))
+      .map(d=>{ const active = s.fDom.includes(d.key) || s.domain===d.key;
+        return { label:d.name, onClick:()=>this.onDomChip(d.key),
+          border: active ? d.color : 'var(--line)',
           bg: active ? d.color : 'transparent',
-          color: active ? '#12100e' : '#b3a998' }; });
+          color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
     const COST_BUCKETS = ['0','1','2','3','4','5','6','7+'];
     const presentCost = new Set(scope.map(c=>{ const n=parseInt(c.cost); if(isNaN(n)) return null; return n>=7?'7+':String(n); }).filter(x=>x!=null));
     const costChips = COST_BUCKETS.filter(b=>presentCost.has(b)).map(b=>{ const active=s.fCost.includes(b);
       return { label:b, onClick:()=>this.toggleFilter('cost',b),
-        border: active ? '#d9b978' : '#332d26', bg: active ? '#d9b978' : 'transparent', color: active ? '#12100e' : '#b3a998' }; });
+        border: active ? 'var(--gold)' : 'var(--line)', bg: active ? 'var(--gold)' : 'transparent', color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
     const RAR_CHIP_ORDER = ['コモン','アンコモン','レア','エピック'];
     const RAR_GLYPH = { 'コモン':'●', 'アンコモン':'▲', 'レア':'◆', 'エピック':'⬟' };
     const rarChips = RAR_CHIP_ORDER.filter(r=>scope.some(c=>c.rarity===r)).map(r=>{ const stl=this.RARITY_STYLE[r]||{}; const col=stl.color||'#d9b978'; const active=s.fRar.includes(r);
       return { label:(RAR_GLYPH[r]||'')+' '+r, onClick:()=>this.toggleFilter('rar',r),
-        border: active ? col : '#332d26', bg: active ? col : 'transparent', color: active ? '#12100e' : '#b3a998' }; });
+        border: active ? col : 'var(--line)', bg: active ? col : 'transparent', color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
     const filterCount = s.fSet.length + s.fDom.length + s.fCost.length + s.fRar.length + s.fType.length + s.fTag.length + s.fKw.length;
 
     // active-filter chips (removable), including route scope + query
@@ -1376,18 +1489,18 @@ class Component extends DCLogic {
     }).filter(g=>g.count>0);
 
     const sortArrow = (key)=> s.sortKey===key ? (s.sortDir>0?'▲':'▼') : '↕';
-    const sortInk = (key)=> s.sortKey===key ? '#d9b978' : '#7c7364';
+    const sortInk = (key)=> s.sortKey===key ? 'var(--gold)' : 'var(--ink-faint)';
 
     const activeTab = s.view;
-    const highlight = '#241f18';
+    const highlight = 'var(--nav-active)';
 
     const domCounts = (this.state.counts && this.state.counts.byDomain) || {};
     const domainNav = this.DOMAINS.map(d=>{
       const count = domCounts[d.key] != null ? domCounts[d.key]
         : this.state.cards.filter(c=>c.domain===d.key || (c.domains && c.domains.includes(d.key))).length;
       const active = s.view==='list' && s.domain===d.key;
-      return { name:d.name, color:d.color, glow:d.glow, count, icon:this.domIcon(d.key),
-        bg: active?highlight:'transparent', ink: active?'#f4efe6':'#b3a998',
+      return { name:d.name, color:d.color, labelColor:this.domLabelColor(d.key), glow:d.glow, count, icon:this.domIcon(d.key),
+        bg: active?highlight:'transparent', ink: active?'var(--ink)':'var(--ink-dim)',
         onClick:()=>this.setDomain(d.key) };
     });
 
@@ -1407,7 +1520,7 @@ class Component extends DCLogic {
       return {
         name:l.name, nameJa:l.nameJa, number:l.number, grad,
         image: l.image || (card && card.image) || '',
-        domainChips: l.domains.map(d=>({ name:d, color:this.domColor(d) })),
+        domainChips: l.domains.map(d=>({ name:d, color:this.domColor(d), text:this.domInk(d) })),
         abilityKw:l.abilityKw, abilityEn:l.abilityEn, abilityJa:l.abilityJa,
         onClick: ()=>this.openLegend(l.id),
       };
@@ -1433,7 +1546,7 @@ class Component extends DCLogic {
         const disabled = !active && legendDoms.length>=2;
         return { key:d.key, name:d.name, color:d.color, active,
           bg: active ? d.color : 'transparent',
-          ink: active ? '#12100e' : (disabled ? 'var(--ink-faint)' : 'var(--ink-dim)'),
+          ink: active ? this.domInk(d.key) : (disabled ? 'var(--ink-faint)' : 'var(--ink-dim)'),
           bd: active ? d.color : 'var(--line)',
           opacity: disabled ? '.4' : '1',
           onClick: ()=>toggleLegendDom(d.key) };
@@ -1450,12 +1563,27 @@ class Component extends DCLogic {
       const sigs = (ld.signatures||[]).map(sid=>{
         const c = this.state.cards.find(x=>x.id===sid);
         if(!c) return null;
-        const fxRows = (c.effects||[]).map(e=>({ kw:e.kw||'', hasKw:!!e.kw, node:this.richText(e.ja||'',13) }));
-        const eqRows = (c.equip||[]).map(q=>{
+        const fxRows = (c.effects||[]).map(e=>{ const cc=this.kwChipColors(e.kw); return { kw:e.kw||'', hasKw:!!e.kw, align:'left', chipBg:cc.bg, chipInk:cc.ink, node:this.richText(e.ja||'',13) }; });
+        const eqMightRows = [], eqOtherRows = [];
+        (c.equip||[]).forEach(q=>{
           const isMight = !!(q.stat && String(q.stat).trim());
-          return { kw: isMight ? (q.stat+' マイト') : (q.kw||'装備効果'), hasKw:true, node:this.richText(q.ja||'',13) };
+          if(isMight){
+            const lightT = this.state.theme==='light';
+            const badgeBg = lightT ? 'linear-gradient(135deg,#f4e7c8,#e8d3a0)' : 'linear-gradient(135deg,#2b1808,#3d2712)';
+            const statCol = lightT ? '#8a6810' : '#d9b978';
+            const labelCol = lightT ? '#9a7526' : '#a9997c';
+            eqMightRows.push({ kw:'', hasKw:false, isBadge:true, align:'right', node: React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'8px',padding:'6px 12px 6px 9px',borderRadius:'10px',background:badgeBg,border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.15)'}},
+              this.symImg('might',20),
+              React.createElement('span',{style:{font:'800 18px "JetBrains Mono",monospace',color:statCol,lineHeight:'1'}}, String(q.stat)),
+              React.createElement('span',{style:{font:'600 9px "JetBrains Mono",monospace',color:labelCol,letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
+            ) });
+          } else {
+            const cc=this.kwChipColors(q.kw);
+            eqOtherRows.push({ kw:q.kw||'', hasKw:!!(q.kw && String(q.kw).trim()), align:'left', chipBg:cc.bg, chipInk:cc.ink, node:this.richText(q.ja||'',13) });
+          }
         });
-        const rows = fxRows.concat(eqRows);
+        // マイトは効果の最後に表示する
+        const rows = fxRows.concat(eqOtherRows, eqMightRows);
         return { name:c.name, nameJa:c.nameJa, image:c.image||'', number:c.number, color:this.domColor(c.domain), onClick:()=>this.select(c.id), rows, hasRows: rows.length>0 };
       }).filter(Boolean);
       const linfo = [ {k:'ドメイン', v:this.domainDisplay(ld)} ];
@@ -1466,8 +1594,9 @@ class Component extends DCLogic {
         name:ld.name, nameJa:ld.nameJa, number:ld.number, grad:lgrad, info:linfo,
         set: (lcard&&lcard.set)||'Unleashed',
         image: ld.image || (lcard&&lcard.image) || '',
-        domainChips: ld.domains.map(d=>({name:d,color:this.domColor(d)})),
+        domainChips: ld.domains.map(d=>({name:d,color:this.domColor(d),text:this.domInk(d)})),
         abilityKw: ld.abilityKw, hasAbilityKw: !!ld.abilityKw,
+        abilityChipBg: this.kwChipColors(ld.abilityKw).bg, abilityChipInk: this.kwChipColors(ld.abilityKw).ink,
         abilityNode: this.richText(ld.abilityJa, 15), abilityEn: ld.abilityEn,
         hasErrata: !!(ld.errata && (ld.errata.oldJa||ld.errata.oldEn)),
         errataDate: ld.errata ? (ld.errata.date||'') : '',
@@ -1484,20 +1613,26 @@ class Component extends DCLogic {
     const sel = this.state.cards.find(c=>c.id===s.selectedId) || null;
     let selVals = {};
     if (sel){
+      const lightT = s.theme==='light';
+      const mbBg = lightT ? 'linear-gradient(135deg,#f4e7c8,#e8d3a0)' : 'linear-gradient(135deg,#2b1808,#3d2712)';
+      const mbStat = lightT ? '#8a6810' : '#d9b978';
+      const mbLabel = lightT ? '#9a7526' : '#a9997c';
       selVals = {
         sel: {
           name:sel.name, nameJa:sel.nameJa, number:sel.number, modified:sel.modified,
           color:this.domColor(sel.domain), glow:this.domGlow(sel.domain), icon:this.domIcon(sel.domain),
+          typeInk: this.domInk(sel.domain),
           image: sel.image || '', hasImage: !!sel.image, noImage: !sel.image,
           altImage: sel.altImage || '',
           hasAlt: !!(sel.image && sel.altImage),
           curImage: (s.altView && sel.altImage) ? sel.altImage : (sel.image || ''),
+          zoomImage: ()=>this.setState({ lightbox: { img: (s.altView && sel.altImage) ? sel.altImage : (sel.image||''), cap: sel.name + (sel.number ? ('   ·   '+sel.number) : '') } }),
           isAlt: !!(s.altView && sel.altImage),
           mainBtnBg: (s.altView ? 'transparent' : 'var(--gold)'),
-          mainBtnInk: (s.altView ? 'var(--ink-dim)' : '#12100e'),
+          mainBtnInk: (s.altView ? 'var(--ink-dim)' : 'var(--sel-ink)'),
           mainBtnLine: (s.altView ? 'var(--line)' : 'var(--gold)'),
           altBtnBg: (s.altView ? 'var(--gold)' : 'transparent'),
-          altBtnInk: (s.altView ? '#12100e' : 'var(--ink-dim)'),
+          altBtnInk: (s.altView ? 'var(--sel-ink)' : 'var(--ink-dim)'),
           altBtnLine: (s.altView ? 'var(--gold)' : 'var(--line)'),
           tags: (sel.tag || '').split(/[・･]/).map(t=>t.trim()).filter(Boolean),
           typeLabelEn: sel.type || 'Card',
@@ -1513,7 +1648,8 @@ class Component extends DCLogic {
           ],
           effects: sel.effects.map(e=>{
             const c = this.kwColor(e.kw);
-            return { ...e, jaNode: this.richText(e.ja), costNode: e.cost ? this.richText(e.cost, 13) : null, hasCost: !!(e.cost && String(e.cost).trim()), showKw: !!(e.kw && e.kw.trim()), chipBg: c ? c.color : '#2a251f', chipText: c ? c.text : '#d9b978' };
+            const embedCost = !!(e.cost && String(e.cost).trim()) && this.kwBase(e.kw)==='EQUIP';
+            return { ...e, jaNode: this.richText(e.ja), costNode: embedCost ? this.richText(e.cost, 13) : null, hasCost: embedCost, showKw: !!(e.kw && e.kw.trim()), chipBg: c ? c.color : '#2a251f', chipText: c ? c.text : '#d9b978' };
           }),
           equip: sel.equip.map(q=>{
             const isMight = !!(q.stat && String(q.stat).trim());
@@ -1522,10 +1658,10 @@ class Component extends DCLogic {
               showKw: !!(q.kw && q.kw.trim()) && !isMight,
               chipBg: c ? c.color : '#3a2a12', chipInk: c ? c.text : 'var(--gold)',
               showText: !isMight && !!(q.ja && String(q.ja).trim()),
-              mightBadge: isMight ? React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'9px',padding:'9px 15px 9px 12px',borderRadius:'11px',background:'linear-gradient(135deg,#2b1808,#3d2712)',border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.12)'}},
-                  React.createElement('img',{src:this.symSrc('might'),alt:'マイト',style:{height:'26px',width:'26px',filter:'drop-shadow(0 1px 2px rgba(0,0,0,.5))'}}),
-                  React.createElement('span',{style:{font:'800 22px "JetBrains Mono",monospace',color:'var(--gold)',lineHeight:'1',letterSpacing:'.01em'}}, String(q.stat)),
-                  React.createElement('span',{style:{font:'600 10px "JetBrains Mono",monospace',color:'var(--ink-faint)',letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
+              mightBadge: isMight ? React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'9px',padding:'9px 15px 9px 12px',borderRadius:'11px',background:mbBg,border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.15)'}},
+                  React.createElement('img',{src:this.symSrc('might'),alt:'マイト',style:{height:'26px',width:'26px'}}),
+                  React.createElement('span',{style:{font:'800 22px "JetBrains Mono",monospace',color:mbStat,lineHeight:'1',letterSpacing:'.01em'}}, String(q.stat)),
+                  React.createElement('span',{style:{font:'600 10px "JetBrains Mono",monospace',color:mbLabel,letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
                 ) : null };
           }),
           equipRows: (()=>{ const rows = sel.equip.filter(q=>!(q.stat&&String(q.stat).trim())).map(q=>{
@@ -1535,10 +1671,10 @@ class Component extends DCLogic {
               chipBg: c ? c.color : '#3a2a12', chipInk: c ? c.text : 'var(--gold)',
               showText: !!(q.ja && String(q.ja).trim()) }; });
             const m = sel.equip.find(q=>q.stat&&String(q.stat).trim());
-            const badge = m ? React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'8px',padding:'7px 13px 7px 10px',borderRadius:'10px',background:'linear-gradient(135deg,#2b1808,#3d2712)',border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.12)',flex:'none'}},
-                  React.createElement('img',{src:this.symSrc('might'),alt:'マイト',style:{height:'22px',width:'22px',filter:'drop-shadow(0 1px 2px rgba(0,0,0,.5))'}}),
-                  React.createElement('span',{style:{font:'800 20px "JetBrains Mono",monospace',color:'var(--gold)',lineHeight:'1'}}, String(m.stat)),
-                  React.createElement('span',{style:{font:'600 9px "JetBrains Mono",monospace',color:'var(--ink-faint)',letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
+            const badge = m ? React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'8px',padding:'7px 13px 7px 10px',borderRadius:'10px',background:mbBg,border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.15)',flex:'none'}},
+                  React.createElement('img',{src:this.symSrc('might'),alt:'マイト',style:{height:'22px',width:'22px'}}),
+                  React.createElement('span',{style:{font:'800 20px "JetBrains Mono",monospace',color:mbStat,lineHeight:'1'}}, String(m.stat)),
+                  React.createElement('span',{style:{font:'600 9px "JetBrains Mono",monospace',color:mbLabel,letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
                 ) : null;
             if (rows.length) { rows[0] = { ...rows[0], mightNode: badge, hasMight: !!badge }; }
             else if (badge) { rows.push({ showKw:false, showText:false, mightNode: badge, hasMight:true }); }
@@ -1563,6 +1699,12 @@ class Component extends DCLogic {
     return {
       query:s.query,
       queryRaw: s.queryRaw != null ? s.queryRaw : s.query,
+      hasQuery: !!((s.queryRaw||s.query||'').trim()),
+      clearQuery:()=>this.setState({ query:'', queryRaw:'' }),
+      lightboxOpen: !!s.lightbox,
+      lightboxImg: s.lightbox ? s.lightbox.img : '',
+      lightboxCap: s.lightbox ? s.lightbox.cap : '',
+      closeLightbox: ()=>this.setState({ lightbox:null }),
       hideImg:(e)=>this.hideImg(e),
       setAltMain:()=>this.setAlt(false),
       setAltArt:()=>this.setAlt(true),
@@ -1570,23 +1712,31 @@ class Component extends DCLogic {
       goHome:()=>this.goHome(),
       toggleMenu:()=>this.toggleMenu(),
       closeMenu:()=>this.closeMenu(),
+      setLight:()=>this.setTheme('light'),
+      setDark:()=>this.setTheme('dark'),
+      isLight: s.theme==='light',
+      isDark: s.theme!=='light',
+      lightBg: s.theme==='light' ? 'var(--gold)' : 'transparent',
+      lightInk: s.theme==='light' ? 'var(--sel-ink)' : 'var(--ink-faint)',
+      darkBg: s.theme!=='light' ? 'var(--gold)' : 'transparent',
+      darkInk: s.theme!=='light' ? 'var(--sel-ink)' : 'var(--ink-faint)',
       sideClass: s.menuOpen ? 'open' : '',
       scrimClass: s.menuOpen ? 'show' : '',
       goAll:()=>this.goAll(),
       homeBg: activeTab==='home' ? highlight : 'transparent',
-      homeInk: activeTab==='home' ? '#f4efe6' : '#b3a998',
+      homeInk: activeTab==='home' ? 'var(--ink)' : 'var(--ink-dim)',
       allBg: (activeTab==='list' && !s.domain && !s.set && !q) ? highlight : 'transparent',
-      allInk: (activeTab==='list' && !s.domain && !s.set && !q) ? '#f4efe6' : '#b3a998',
+      allInk: (activeTab==='list' && !s.domain && !s.set && !q) ? 'var(--ink)' : 'var(--ink-dim)',
       goLegends:()=>this.goLegends(),
       legBg: activeTab==='legends' ? highlight : 'transparent',
-      legInk: activeTab==='legends' ? '#f4efe6' : '#b3a998',
+      legInk: activeTab==='legends' ? 'var(--ink)' : 'var(--ink-dim)',
       goKeywords:()=>this.goKeywords(),
       kwBg: activeTab==='keywords' ? highlight : 'transparent',
-      kwInk: activeTab==='keywords' ? '#f4efe6' : '#b3a998',
+      kwInk: activeTab==='keywords' ? 'var(--ink)' : 'var(--ink-dim)',
       goRules:()=>this.goRules(),
       goRulesGlossary:()=>this.goRulesGlossary(),
       rulesBg: activeTab==='rules' ? highlight : 'transparent',
-      rulesInk: activeTab==='rules' ? '#f4efe6' : '#b3a998',
+      rulesInk: activeTab==='rules' ? 'var(--ink)' : 'var(--ink-dim)',
       showRules: s.view==='rules',
       rulesVersion: (s.rules && s.rules.version) || '',
       rulesNote: (s.rules && s.rules.note) || '',
@@ -1612,7 +1762,7 @@ class Component extends DCLogic {
       showKeywords: s.view==='keywords',
       keywordCount: `${s.keywords.length} 語`,
       keywordGroups: s.keywordCategories.map(cat=>{
-        const items = s.keywords.filter(k=>k.cat===cat.id).map(k=>({ kw:k.kw, desc:k.desc, color:cat.color, text:cat.text }));
+        const items = s.keywords.filter(k=>k.cat===cat.id).map(k=>({ kw:k.kw, desc:k.desc, descNode:this.richText(k.desc,13), color:cat.color, text:cat.text }));
         return { name:cat.name, color:cat.color, count:`${items.length}`, items };
       }).filter(g=>g.items.length>0),
       domainNav, recent,
@@ -1626,9 +1776,9 @@ class Component extends DCLogic {
       gridDisplay: s.listMode==='grid' ? 'block' : 'none',
       setTableMode: ()=>this.setListMode('table'), setGridMode: ()=>this.setListMode('grid'),
       tableTabBg: s.listMode==='table' ? 'var(--gold)' : 'transparent',
-      tableTabInk: s.listMode==='table' ? '#12100e' : 'var(--ink-dim)',
+      tableTabInk: s.listMode==='table' ? 'var(--sel-ink)' : 'var(--ink-dim)',
       gridTabBg: s.listMode==='grid' ? 'var(--gold)' : 'transparent',
-      gridTabInk: s.listMode==='grid' ? '#12100e' : 'var(--ink-dim)',
+      gridTabInk: s.listMode==='grid' ? 'var(--sel-ink)' : 'var(--ink-dim)',
       showHome: s.view==='home',
       homeTotal: `${this.state.cards.length}`,
       homeSetCount: `${this.state.sets.length}`,
@@ -1638,7 +1788,7 @@ class Component extends DCLogic {
       legendGroups, legendDomains, legendAllActive,
       clearLegendDomain: ()=>this.setState({ legendDoms:[] }),
       legendAllBg: legendAllActive ? 'var(--gold)' : 'transparent',
-      legendAllInk: legendAllActive ? '#12100e' : 'var(--ink-dim)',
+      legendAllInk: legendAllActive ? 'var(--sel-ink)' : 'var(--ink-dim)',
       legendAllBd: legendAllActive ? 'var(--gold)' : 'var(--line)',
       legendCount: `${this.state.legends.length} 体`,
       hasLegends: this.state.legends.length>0,
