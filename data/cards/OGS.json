@@ -1,0 +1,739 @@
+{
+ "cards": [
+  {
+   "id": "ogs-001",
+   "name": "Annie - Fiery",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "5",
+   "might": "4",
+   "rarity": "エピック",
+   "tag": "Annie・Noxus",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-001/024",
+   "image": "images/OGS/OGS-001.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Your spells and abilities deal 1 Bonus Damage. (Each instance of damage they deal is increased by 1.)",
+     "ja": "あなたのスペルと能力は1点のボーナスダメージを与える。(それらが与える各ダメージが1増える。)"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-002",
+   "name": "Firestorm",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "6",
+   "might": "",
+   "rarity": "アンコモン",
+   "tag": "",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-002/024",
+   "image": "images/OGS/OGS-002.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Deal 3 to all enemy units at a battlefield.",
+     "ja": "バトルフィールドにいるすべての敵ユニットに3ダメージを与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-003",
+   "name": "Incinerate",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "2",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-003/024",
+   "image": "images/OGS/OGS-003.avif",
+   "effects": [
+    {
+     "kw": "ACTION",
+     "en": "(Play on your turn or in showdowns.)",
+     "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+    },
+    {
+     "kw": "",
+     "en": "Deal 2 to a unit at a battlefield.",
+     "ja": "バトルフィールドにいるユニット1体に2ダメージを与える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ogs-004",
+   "name": "Master Yi - Meditative",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "5",
+   "might": "4",
+   "rarity": "レア",
+   "tag": "Master Yi・Ionia",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-004/024",
+   "image": "images/OGS/OGS-004.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "While you have 8+ runes, I have +4 ⟨might⟩.",
+     "ja": "あなたのルーンが8つ以上ある間、自身は+4マイトを持つ。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-005",
+   "name": "Zephyr Sage",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "6",
+   "might": "6",
+   "rarity": "レア",
+   "tag": "Ionia・Bird",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-005/024",
+   "image": "images/OGS/OGS-005.avif",
+   "effects": [
+    {
+     "kw": "SHIELD",
+     "en": "(+1 ⟨might⟩ while I'm a defender.)",
+     "ja": "(自身が防御側の間、+1マイト。)"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-006",
+   "name": "Lux - Illuminated",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "6",
+   "might": "5",
+   "rarity": "レア",
+   "tag": "Lux・Demacia",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-006/024",
+   "image": "images/OGS/OGS-006.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play a spell that costs ⑤ or more, give me +3 ⟨might⟩ this turn.",
+     "ja": "あなたが⑤以上のスペルをプレイしたとき、自身にこのターン+3マイトを与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-007",
+   "name": "Garen - Rugged",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "6",
+   "might": "5",
+   "rarity": "レア",
+   "tag": "Garen・Demacia・Elite",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-007/024",
+   "image": "images/OGS/OGS-007.avif",
+   "effects": [
+    {
+     "kw": "ASSAULT 2",
+     "en": "",
+     "ja": ""
+    },
+    {
+     "kw": "SHIELD 2",
+     "en": "(+2 ⟨might⟩ while I'm an attacker or defender.)",
+     "ja": "(自身が攻撃側または防御側の間、+2マイト。)"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-008",
+   "name": "Gentlemen's Duel",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "6",
+   "might": "",
+   "rarity": "レア",
+   "tag": "",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-008/024",
+   "image": "images/OGS/OGS-008.avif",
+   "effects": [
+    {
+     "kw": "ACTION",
+     "en": "(Play on your turn or in showdowns.)",
+     "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+    },
+    {
+     "kw": "",
+     "en": "Give a friendly unit +3 ⟨might⟩ this turn. Then choose an enemy unit. They deal damage equal to their Mights to each other.",
+     "ja": "味方ユニット1体にこのターン+3マイトを与える。その後、敵ユニット1体を選ぶ。それらは互いに自身のマイトに等しいダメージを与え合う。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-009",
+   "name": "Master Yi - Honed",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "7",
+   "might": "6",
+   "rarity": "エピック",
+   "tag": "Master Yi・Ionia",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-009/024",
+   "image": "images/OGS/OGS-009.avif",
+   "effects": [
+    {
+     "kw": "GANKING",
+     "en": "(I can move from battlefield to battlefield.)",
+     "ja": "(バトルフィールドからバトルフィールドへ移動できる。)"
+    },
+    {
+     "kw": "",
+     "en": "I enter ready.",
+     "ja": "自身はレディ状態で登場する。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-010",
+   "name": "Annie - Stubborn",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "4",
+   "might": "3",
+   "rarity": "レア",
+   "tag": "Annie・Noxus",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-010/024",
+   "image": "images/OGS/OGS-010.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me, return a spell from your trash to your hand.",
+     "ja": "自身をプレイしたとき、トラッシュからスペルを1枚手札に戻す。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-011",
+   "name": "Flash",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "2",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-011/024",
+   "image": "images/OGS/OGS-011.avif",
+   "effects": [
+    {
+     "kw": "REACTION",
+     "en": "(Play any time, even before spells and abilities resolve.)",
+     "ja": "(スペルや能力の解決前を含め、いつでもプレイできる。)"
+    },
+    {
+     "kw": "",
+     "en": "Move up to 2 friendly units to base.",
+     "ja": "味方ユニットを2体まで基地へ移動させる。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ogs-012",
+   "name": "Blast of Power",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "6",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-012/024",
+   "image": "images/OGS/OGS-012.avif",
+   "effects": [
+    {
+     "kw": "ACTION",
+     "en": "(Play on your turn or in showdowns.)",
+     "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+    },
+    {
+     "kw": "",
+     "en": "Kill a unit at a battlefield.",
+     "ja": "バトルフィールドにいるユニット1体を破壊する。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-013",
+   "name": "Garen - Commander",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "6",
+   "might": "5",
+   "rarity": "エピック",
+   "tag": "Garen・Demacia・Elite",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-013/024",
+   "image": "images/OGS/OGS-013.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Other friendly units have +1 ⟨might⟩ here.",
+     "ja": "ここにいる他の味方ユニットは+1マイトを持つ。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-014",
+   "name": "Lux - Crownguard",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "4",
+   "might": "2",
+   "rarity": "エピック",
+   "tag": "Lux・Demacia",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-014/024",
+   "image": "images/OGS/OGS-014.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "⟨消耗⟩: REACTION — ADD ②. Use only to play spells. (Abilities that add resources can't be reacted to.)",
+     "ja": "⟨イグゾースト⟩：REACTION — ②をADDする。スペルのプレイにのみ使える。(リソースを追加する能力にはリアクションできない。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ogs-015",
+   "name": "Recruit the Vanguard",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "6",
+   "might": "",
+   "rarity": "アンコモン",
+   "tag": "",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-015/024",
+   "image": "images/OGS/OGS-015.avif",
+   "effects": [
+    {
+     "kw": "ACTION",
+     "en": "(Play on your turn or in showdowns.)",
+     "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+    },
+    {
+     "kw": "",
+     "en": "Play four 1 ⟨might⟩ Recruit unit tokens. (They can be played to your base or to battlefields you control.)",
+     "ja": "1マイトの《Recruit》ユニットトークンを4体プレイする。(自分の基地、または自分がコントロールするバトルフィールドにプレイできる。)"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "tokens": [
+    "ogn-271"
+   ]
+  },
+  {
+   "id": "ogs-016",
+   "name": "Vanguard Attendant",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "6",
+   "might": "5",
+   "rarity": "コモン",
+   "tag": "Demacia・Elite",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-016/024",
+   "image": "images/OGS/OGS-016.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "I enter ready.",
+     "ja": "自身はレディ状態で登場する。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ogs-017",
+   "name": "Annie - Dark Child",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Fury",
+   "domains": [
+    "Fury",
+    "Chaos"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Annie",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-017/024",
+   "image": "images/OGS/OGS-017.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "At the end of your turn, ready 2 runes.",
+     "ja": "自分のターン終了時、ルーンを2つレディにする。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ogs-018",
+   "name": "Tibbers",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury",
+    "Chaos"
+   ],
+   "cost": "8",
+   "might": "7",
+   "rarity": "エピック",
+   "tag": "Annie・Signature Unit",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-018/024",
+   "image": "images/OGS/OGS-018.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me, deal 3 to all units at battlefields.",
+     "ja": "自身をプレイしたとき、バトルフィールドにいるすべてのユニットに3ダメージを与える。"
+    }
+   ],
+   "equip": [],
+   "power": "2"
+  },
+  {
+   "id": "ogs-019",
+   "name": "Master Yi - Wuju Bladesman",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Calm",
+   "domains": [
+    "Calm",
+    "Body"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Master Yi",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-019/024",
+   "image": "images/OGS/OGS-019.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "While a friendly unit defends alone, it gets +2 ⟨might⟩.",
+     "ja": "味方ユニットが単独で防御している間、それは+2マイトを得る。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ogs-020",
+   "name": "Highlander",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "4",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Master Yi・Signature Spell",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-020/024",
+   "image": "images/OGS/OGS-020.avif",
+   "effects": [
+    {
+     "kw": "REACTION",
+     "en": "(Play any time, even before spells and abilities resolve.)",
+     "ja": "(スペルや能力の解決前を含め、いつでもプレイできる。)"
+    },
+    {
+     "kw": "",
+     "en": "Choose a friendly unit. The next time it would die this turn, heal it, exhaust it, and recall it instead. (Send it to base. This isn’t a move.)",
+     "ja": "味方ユニット1体を選ぶ。このターン、それが次に破壊されるとき、代わりにそれを回復し、イグゾーストし、リコールする。(ベースへ送る。これは移動ではない。)"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "errata": {
+    "date": "2025-10-28",
+    "oldJa": "味方ユニット1体を選ぶ。このターンそれが次に死亡するとき、代わりにイグゾースト状態でリコールする。(基地へ送る。これは移動ではない。)",
+    "oldEn": "Choose a friendly unit. The next time it dies this turn, recall it exhausted instead. (Send it to base. This isn't a move.)"
+   }
+  },
+  {
+   "id": "ogs-021",
+   "name": "Lux - Lady of Luminosity",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Mind",
+   "domains": [
+    "Mind",
+    "Order"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Lux",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-021/024",
+   "image": "images/OGS/OGS-021.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play a spell that costs ⑤ or more, draw 1.",
+     "ja": "あなたが⑤以上のスペルをプレイしたとき、カードを1枚引く。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ogs-022",
+   "name": "Final Spark",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "8",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Lux・Signature Spell",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-022/024",
+   "image": "images/OGS/OGS-022.avif",
+   "effects": [
+    {
+     "kw": "ACTION",
+     "en": "(Play on your turn or in showdowns.)",
+     "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+    },
+    {
+     "kw": "",
+     "en": "Deal 8 to a unit.",
+     "ja": "ユニット1体に8ダメージを与える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ogs-023",
+   "name": "Garen - Might of Demacia",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Body",
+   "domains": [
+    "Body",
+    "Order"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Garen",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-023/024",
+   "image": "images/OGS/OGS-023.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you conquer, if you have 4+ units at that battlefield, draw 2.",
+     "ja": "あなたが制圧したとき、そのバトルフィールドに味方ユニットが4体以上いるなら、カードを2枚引く。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ogs-024",
+   "name": "Decisive Strike",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "5",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Garen・Signature Spell",
+   "set": "Origins: Proving Grounds",
+   "setCode": "OGS",
+   "modified": "2026-07-10",
+   "number": "OGS-024/024",
+   "image": "images/OGS/OGS-024.avif",
+   "effects": [
+    {
+     "kw": "ACTION",
+     "en": "(Play on your turn or in showdowns.)",
+     "ja": "(自分のターン中、またはショーダウン中にプレイできる。)"
+    },
+    {
+     "kw": "",
+     "en": "Give friendly units +2 ⟨might⟩ this turn.",
+     "ja": "味方ユニットにこのターン+2マイトを与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  }
+ ]
+}
