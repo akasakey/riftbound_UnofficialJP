@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://riftbound-unofficialjp.pages.dev/sitemap.xml
