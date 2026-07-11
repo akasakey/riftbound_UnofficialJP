@@ -86,7 +86,7 @@
   --bg:#e8dbbf; --surface:#fbf6ec; --surface2:#f1e8d6; --surface3:#e7dcc4;
   --line:#cdb890; --line-soft:#dccbaa;
   --ink:#2c2216; --ink-dim:#524328; --ink-faint:#6a5836;
-  --gold:#9a7526; --gold-dim:#a5813c;
+  --gold:#7d5b14; --gold-dim:#8f6d28;
   --header-a:#fbf6ec; --header-b:#efe4cf;
   --panel-a:#fbf6ec; --panel-b:#eee2cc;
   --tile:#ffffff;
@@ -175,9 +175,26 @@ a:hover{color:var(--ink)}
   .rb-lift:hover{border-color:var(--gold);transform:translateY(-7px);box-shadow:0 14px 30px -10px var(--lift-shadow),0 0 0 1px var(--gold-dim)}
   .rb-lift img{transition:transform .5s cubic-bezier(.2,.7,.3,1)}
   .rb-lift:hover img{transform:scale(1.06)}
+  /* home hero staggered entrance (A) */
+  @keyframes rbHeroIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .rb-anim{animation:rbHeroIn .5s cubic-bezier(.2,.7,.3,1) both}
+  .rb-anim-1{animation-delay:.02s}
+  .rb-anim-2{animation-delay:.10s}
+  .rb-anim-3{animation-delay:.18s}
+  .rb-anim-4{animation-delay:.26s}
+  .rb-anim-5{animation-delay:.34s}
+  /* domain tile hover (B) */
+  .rb-domtile{transition:transform .22s cubic-bezier(.2,.7,.3,1),box-shadow .22s ease,border-color .22s ease}
+  .rb-domtile:hover{transform:translateY(-3px);border-color:var(--gold-dim) !important;box-shadow:0 10px 22px -12px var(--lift-shadow)}
+  .rb-domtile .rb-domicon{transition:box-shadow .22s ease,transform .22s ease}
+  .rb-domtile:hover .rb-domicon{transform:scale(1.06)}
+  /* resource cards: gold edge only on hover */
+  .rb-hovedge{transition:border-color .2s ease}
+  .rb-hovedge:hover{border-color:var(--gold-dim) !important}
   @media (prefers-reduced-motion: reduce){
-    .rb-gcard,.rb-cardgrid img,.rb-view,.rb-detimg,.rb-lift,.rb-spin{animation:none !important;transition:none !important}
-    .rb-gcard:hover,.rb-lift:hover{transform:none !important}
+    .rb-gcard,.rb-cardgrid img,.rb-view,.rb-detimg,.rb-lift,.rb-spin,.rb-anim,.rb-domtile{animation:none !important;transition:none !important}
+    .rb-gcard:hover,.rb-lift:hover,.rb-domtile:hover{transform:none !important}
+    .rb-domtile:hover .rb-domicon{transform:none !important}
     .rb-gcard:hover img,.rb-lift:hover img{transform:none !important}
   }
   [data-kbd]{outline:none}
@@ -651,14 +668,13 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <div class="rb-hero" style="position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,var(--panel-a),var(--panel-b));padding:52px 44px;margin-bottom:34px">
             <div style="position:absolute;inset:0;background:radial-gradient(90% 120% at 90% 0%,rgba(217,185,120,.14),transparent 55%);pointer-events:none"></div>
             <div style="position:relative;max-width:640px">
-              <div style="font:700 11px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--gold);margin-bottom:16px">UNOFFICIAL JP TRANSLATION WIKI</div>
-              <h1 class="rb-hero-h1" style="margin:0;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:38px;line-height:1.25;letter-spacing:.01em">RIFTBOUND<br/>日本語翻訳 Wiki</h1>
-              <p style="margin:18px 0 24px;font-size:14px;line-height:1.9;color:var(--ink-dim)">League of Legends のトレーディングカードゲーム「RIFTBOUND」の、英語で書かれたカード効果を日本語に翻訳し、検索・閲覧できるようにまとめた<strong style="color:var(--ink)">非公式ファンサイト</strong>です。</p>
-              <div class="rb-hero-search" style="display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--gold-dim);border-radius:11px;padding:13px 18px;max-width:480px;box-shadow:0 4px 18px rgba(0,0,0,.28)">
+              <h1 class="rb-hero-h1 rb-anim rb-anim-2" style="margin:0;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:38px;line-height:1.25;letter-spacing:.01em">RIFTBOUND<br/>日本語翻訳 Wiki</h1>
+              <p class="rb-anim rb-anim-3" style="margin:18px 0 24px;font-size:14px;line-height:1.9;color:var(--ink-dim)">League of Legends のトレーディングカードゲーム「RIFTBOUND」の、英語で書かれたカード効果を日本語に翻訳し、検索・閲覧できるようにまとめた<strong style="color:var(--ink)">非公式ファンサイト</strong>です。</p>
+              <div class="rb-hero-search rb-anim rb-anim-4" style="display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--gold-dim);border-radius:11px;padding:13px 18px;max-width:480px;box-shadow:0 4px 18px rgba(0,0,0,.28)">
                 <div style="width:16px;height:16px;border:1.8px solid var(--gold);border-radius:50%;position:relative;flex:none"><div style="position:absolute;width:7px;height:1.8px;background:var(--gold);transform:rotate(45deg);top:13px;left:11px;border-radius:2px"></div></div>
                 <input value="{{ queryRaw }}" onInput="{{ onSearch }}" aria-label="カードを検索" placeholder="カード名・日本語名・キーワードで検索…" style="flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:14.5px" />
               </div>
-              <div style="margin-top:13px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+              <div class="rb-anim rb-anim-5" style="margin-top:13px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
                 <div onClick="{{ goAll }}" role="button" tabindex="0" data-kbd style="cursor:pointer;background:var(--gold);color:var(--sel-ink);font-weight:700;font-size:13.5px;padding:11px 22px;border-radius:8px">カード一覧をすべて見る →</div>
                 <span style="font-size:12px;color:var(--ink-faint)">チャンピオン名は日本語（例: ジンクス）でも検索できます</span>
               </div>
@@ -669,14 +685,14 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:16px">カードを探す</div>
           <div class="rb-domain-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px">
             <sc-for list="{{ domainNav }}" as="d" hint-placeholder-count="6">
-              <div onClick="{{ d.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:14px 16px" style-hover="border-color:var(--gold-dim)">
+              <div onClick="{{ d.onClick }}" role="button" tabindex="0" data-kbd class="rb-hovedge" style="cursor:pointer;display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:14px 16px">
                 <span style="width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);box-shadow:inset 0 0 0 1px {{ d.glow }}"><img src="{{ d.icon }}" alt="{{ d.name }}" style="width:22px;height:22px"/></span>
                 <span style="font-weight:700;font-size:14px;color:{{ d.labelColor }}">{{ d.name }}</span>
               </div>
             </sc-for>
           </div>
           <!-- legend browse (legends are cards too) -->
-          <div onClick="{{ goLegends }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:16px 20px;margin-bottom:36px" style-hover="border-color:var(--gold-dim)">
+          <div onClick="{{ goLegends }}" role="button" tabindex="0" data-kbd class="rb-hovedge" style="cursor:pointer;display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:16px 20px;margin-bottom:36px">
             <span style="width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);font-size:19px;color:var(--gold)" aria-hidden="true">✦</span>
             <div style="flex:1;min-width:0">
               <div style="font-weight:700;font-size:14px;color:var(--ink)">レジェンドから探す</div>
@@ -688,13 +704,13 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <!-- resources: keyword / rules -->
           <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:16px">資料から探す</div>
           <div class="rb-res-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:36px">
-            <div onClick="{{ goKeywords }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:20px" style-hover="border-color:var(--gold-dim)">
+            <div onClick="{{ goKeywords }}" role="button" tabindex="0" data-kbd class="rb-hovedge" style="cursor:pointer;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:20px">
               <span style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);font-size:15px;color:var(--gold)" aria-hidden="true">◆</span>
               <div style="font-weight:700;font-size:15px;color:var(--ink)">キーワード集</div>
               <div style="font-size:12px;color:var(--ink-faint);line-height:1.65;flex:1">Ambush / Assault などの能力キーワードの日本語訳。</div>
               <span style="font-size:12px;font-weight:700;color:var(--gold)">見る →</span>
             </div>
-            <div onClick="{{ goRules }}" role="button" tabindex="0" data-kbd style="cursor:pointer;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:20px" style-hover="border-color:var(--gold-dim)">
+            <div onClick="{{ goRules }}" role="button" tabindex="0" data-kbd class="rb-hovedge" style="cursor:pointer;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:20px">
               <span style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);font-size:20px;color:var(--gold)" aria-hidden="true">§</span>
               <div style="font-weight:700;font-size:15px;color:var(--ink)">コアルール日本語訳</div>
               <div style="font-size:12px;color:var(--ink-faint);line-height:1.65;flex:1">公式コアルールを日本語で。原文も併記で確認できます。</div>
