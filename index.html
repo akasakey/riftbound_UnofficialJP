@@ -1261,6 +1261,26 @@ class Component extends DCLogic {
     'Shurima':['シュリーマ'], 'The Void':['ヴォイド','虚無'], 'Zaun':['ザウン'],
     'Icathia':['イカシア'], 'Yordle':['ヨードル'],
   };
+  // ドメイン・タイプ・レアリティ・キーワードの日本語読み（検索用エイリアス）
+  DOMAIN_JA = {
+    'Fury':['フューリー','怒り'], 'Body':['ボディ','肉体'], 'Calm':['カーム','静寂','平静'],
+    'Order':['オーダー','秩序'], 'Mind':['マインド','精神'], 'Chaos':['カオス','混沌'],
+  };
+  TYPE_JA = {
+    'Unit':['ユニット'], 'Spell':['スペル','呪文'], 'Gear':['ギア','装備'],
+    'Battlefield':['バトルフィールド','戦場'], 'Token':['トークン'], 'Rune':['ルーン'], 'Legend':['レジェンド'],
+  };
+  KW_JA = {
+    'ACCELERATE':['アクセラレート'], 'ACTION':['アクション'], 'ADD':['アド','加える'],
+    'AMBUSH':['アンブッシュ','待ち伏せ'], 'ASSAULT':['アサルト','強襲'], 'BACKLINE':['バックライン'],
+    'BUFF':['バフ','強化'], 'DEATHKNELL':['デスネル','弔鐘'], 'DEFLECT':['ディフレクト'],
+    'EQUIP':['装備','イクイップ'], 'GANKING':['ガンク','ギャンク'], 'HIDDEN':['ヒドゥン','伏せ'],
+    'HUNT':['ハント','狩り'], 'LEGION':['リージョン','軍団'], 'LEVEL':['レベル'],
+    'MIGHTY':['マイティ'], 'PREDICT':['プレディクト','予測'], 'QUICK-DRAW':['クイックドロー'],
+    'REACTION':['リアクション'], 'REPEAT':['リピート','反復'], 'SHIELD':['シールド','盾'],
+    'STUN':['スタン','気絶'], 'TANK':['タンク'], 'TEMPORARY':['テンポラリー','一時'],
+    'UNIQUE':['ユニーク'], 'VISION':['ビジョン','予見'], 'WEAPONMASTER':['ウェポンマスター'],
+  };
   RARITY_STYLE = {
     'コモン':   { color:'#c4c9d0', shape:'circle' },
     'アンコモン': { color:'#3fb6c4', shape:'triangle' },
@@ -1533,8 +1553,11 @@ class Component extends DCLogic {
       const numMain = (c.number||'').split('/')[0];
       const numNoZero = numMain.replace(/-0+/,'-');
       const champJa = cardTags(c).flatMap(t=>this.CHAMPION_JA[t]||[]);
+      const domJa = [c.domain, ...(c.domains||[])].filter(Boolean).flatMap(dd=>this.DOMAIN_JA[dd]||[]);
+      const typeJa = this.TYPE_JA[c.type]||[];
+      const kwJa = [...(c.effects||[]), ...(c.equip||[])].flatMap(e=>this.KW_JA[this.kwBase(e.kw)]||[]);
       const hay = [
-        c.name, c.nameJa, c.tag, c.type, numMain, numNoZero, ...champJa,
+        c.name, c.nameJa, c.tag, c.type, c.rarity, numMain, numNoZero, ...champJa, ...domJa, ...typeJa, ...kwJa,
         ...(c.effects||[]).flatMap(e=>[e.kw, e.en, e.ja])
       ].filter(Boolean).join(' ').toLowerCase();
       return hay.includes(q);
