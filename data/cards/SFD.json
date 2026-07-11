@@ -141,7 +141,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-005",
@@ -596,7 +599,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t01"
+   ]
   },
   {
    "id": "sfd-020",
@@ -630,7 +636,10 @@
    ],
    "equip": [],
    "power": "",
-   "altImage": "images/SFD/SFD-020a.avif"
+   "altImage": "images/SFD/SFD-020a.avif",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-021",
@@ -658,7 +667,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t01"
+   ]
   },
   {
    "id": "sfd-022",
@@ -1018,7 +1030,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t02"
+   ]
   },
   {
    "id": "sfd-032",
@@ -1626,7 +1641,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/SFD/SFD-224.avif"
+   "altImage": "images/SFD/SFD-224.avif",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "sfd-050",
@@ -2129,7 +2147,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-064",
@@ -2345,7 +2366,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/UNL/UNL-222.avif"
+   "altImage": "images/UNL/UNL-222.avif",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-070",
@@ -2384,7 +2408,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-071",
@@ -2511,7 +2538,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-075",
@@ -2567,7 +2597,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t01"
+   ]
   },
   {
    "id": "sfd-077",
@@ -2748,7 +2781,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-082",
@@ -3023,7 +3059,10 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "sfd-t01"
+   ]
   },
   {
    "id": "sfd-090",
@@ -3095,7 +3134,10 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "sfd-092",
@@ -3302,7 +3344,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "sfd-099",
@@ -3403,7 +3448,11 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "sfd-t03",
+    "unl-t04"
+   ]
   },
   {
    "id": "sfd-102",
@@ -4109,7 +4158,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-122",
@@ -4388,7 +4440,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-131",
@@ -5121,7 +5176,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-153",
@@ -5197,7 +5255,10 @@
     "date": "2026-04-03",
     "oldJa": "2マイトのSand Soldierユニットトークンを1体プレイする。⟨Order⟩を支払い、それをレディ状態にしてもよい。",
     "oldEn": "Play a 2 might Sand Soldier unit token. You may pay ⟨Order⟩ to ready it."
-   }
+   },
+   "tokens": [
+    "sfd-t02"
+   ]
   },
   {
    "id": "sfd-155",
@@ -5225,7 +5286,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-156",
@@ -5281,7 +5345,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t02"
+   ]
   },
   {
    "id": "sfd-158",
@@ -5437,7 +5504,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-163",
@@ -5569,7 +5639,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "sfd-167",
@@ -5842,7 +5915,10 @@
     }
    ],
    "equip": [],
-   "power": "2"
+   "power": "2",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-175",
@@ -6438,7 +6514,10 @@
     "date": "2026-01-14",
     "oldJa": "自分がコントロールする装備品1つにつき、2マイトのSand Soldierユニットトークンを1体プレイする。その後、そのうち2体をレディ状態にする。",
     "oldEn": "Play a 2 might Sand Soldier unit token for each Equipment you control. Then ready two of them."
-   }
+   },
+   "tokens": [
+    "sfd-t02"
+   ]
   },
   {
    "id": "sfd-200",
@@ -6594,7 +6673,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t02"
+   ]
   },
   {
    "id": "sfd-208",
@@ -6919,7 +7001,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-221",
@@ -7317,7 +7402,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/SFD/SFD-247.avif"
+   "altImage": "images/SFD/SFD-247.avif",
+   "tokens": [
+    "sfd-t02"
+   ]
   },
   {
    "id": "sfd-199",
@@ -7409,7 +7497,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/SFD/SFD-249.avif"
+   "altImage": "images/SFD/SFD-249.avif",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-203",
@@ -7455,7 +7546,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/SFD/SFD-250.avif"
+   "altImage": "images/SFD/SFD-250.avif",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "sfd-205",
@@ -7507,7 +7601,7 @@
    "id": "sfd-t03",
    "name": "Gold",
    "nameJa": "",
-   "type": "Gear",
+   "type": "Token",
    "domain": "",
    "domains": [],
    "cost": "",
@@ -7518,14 +7612,54 @@
    "setCode": "SFD",
    "modified": "2026-07-08",
    "number": "SFD-T03",
-   "image": "images/SFD/SFD-T03.avif",
+   "image": "images/SFD/SFD-T03.webp",
    "effects": [
     {
      "kw": "REACTION",
-     "en": "Kill this, ⟨exhaust⟩: ADD ⟨エネルギー⟩. (Abilities that add resources can't be reacted to.)",
+     "en": "Kill this, ⟨イグゾースト⟩: ADD ⟨rune⟩. (Abilities that add resources can't be reacted to.)",
      "ja": "これを破壊、⟨イグゾースト⟩：⟨rune⟩を加える。(リソースを加える能力にはリアクションできない。)"
     }
    ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "sfd-t01",
+   "name": "Mech",
+   "nameJa": "",
+   "type": "Token",
+   "domain": "",
+   "domains": [],
+   "cost": "",
+   "might": "3",
+   "rarity": "トークン",
+   "tag": "Token Unit",
+   "set": "Spiritforged",
+   "setCode": "SFD",
+   "modified": "2026-07-11",
+   "number": "SFD-T01",
+   "image": "images/SFD/SFD-T01.webp",
+   "effects": [],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "sfd-t02",
+   "name": "Sand Soldier",
+   "nameJa": "",
+   "type": "Token",
+   "domain": "",
+   "domains": [],
+   "cost": "",
+   "might": "2",
+   "rarity": "トークン",
+   "tag": "Token Unit",
+   "set": "Spiritforged",
+   "setCode": "SFD",
+   "modified": "2026-07-11",
+   "number": "SFD-T02",
+   "image": "images/SFD/SFD-T02.webp",
+   "effects": [],
    "equip": [],
    "power": ""
   }

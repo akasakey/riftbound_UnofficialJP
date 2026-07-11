@@ -267,7 +267,6 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             <span style="margin-left:auto;font:500 10.5px 'JetBrains Mono',monospace;color:var(--ink-faint)">{{ d.count }}</span>
           </div>
         </sc-for>
-        <div onClick="{{ goLegends }}" role="button" tabindex="0" data-kbd style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;background:{{ legBg }};color:{{ legInk }}"><span aria-hidden="true" style="font-size:13px;color:var(--gold)" aria-hidden="true">✦</span>レジェンド一覧</div>
       </nav>
 
       <div style="padding:18px 20px 8px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint)">資料</div>
@@ -386,16 +385,6 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             <div style="margin-top:12px;font-size:13px;line-height:1.85;color:var(--ink-dim);padding:0 2px">{{ sel.runeNote }}</div>
           </div>
           </sc-if>
-          <sc-if value="{{ sel.isLegend }}" hint-placeholder-val="{{ false }}">
-            <div onClick="{{ sel.openHub }}" role="button" tabindex="0" data-kbd style="margin-top:22px;display:flex;align-items:center;gap:14px;border:1px solid var(--gold-dim);border-radius:12px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:16px 20px;cursor:pointer" style-hover="border-color:var(--gold)">
-              <span style="width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);font-size:18px;color:var(--gold)" aria-hidden="true">✦</span>
-              <div style="flex:1;min-width:0">
-                <div style="font-weight:700;font-size:14px;color:var(--ink)">レジェンド詳細を見る</div>
-                <div style="font-size:12px;color:var(--ink-faint);margin-top:2px">能力・シグネチャーカード・戦略ガイドをまとめて確認できます。</div>
-              </div>
-              <span style="font-size:12.5px;font-weight:700;color:var(--gold);flex:none">見る →</span>
-            </div>
-          </sc-if>
           <sc-if value="{{ sel.hasEquip }}" hint-placeholder-val="{{ false }}">
             <div style="margin-top:30px">
               <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block">装備効果</div>
@@ -416,24 +405,24 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               </div>
             </div>
           </sc-if>
-          <sc-if value="{{ sel.hasRelTokens }}" hint-placeholder-val="{{ false }}">
+          <sc-if value="{{ sel.hasRelCards }}" hint-placeholder-val="{{ false }}">
             <div style="margin-top:30px">
-              <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:14px">関連トークン</div>
+              <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:14px">関連カード</div>
               <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px">
-                <sc-for list="{{ sel.relTokens }}" as="t" hint-placeholder-count="1">
+                <sc-for list="{{ sel.relCards }}" as="t" hint-placeholder-count="1">
                   <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd class="rb-hovedge" style="cursor:pointer;display:flex;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)">
                     <img src="{{ t.image }}" alt="{{ t.name }}" onError="{{ hideImg }}" loading="lazy" decoding="async" style="width:104px;align-self:flex-start;flex:none;display:block"/>
                     <div style="padding:12px 14px;flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
                       <div style="display:flex;align-items:center;gap:8px">
-                        <span style="font:700 8.5px 'JetBrains Mono',monospace;letter-spacing:.08em;padding:2px 7px;border-radius:4px;background:var(--surface3);color:var(--gold);flex:none">TOKEN</span>
+                        <span style="font:700 8.5px 'JetBrains Mono',monospace;letter-spacing:.08em;padding:2px 7px;border-radius:4px;background:var(--surface3);color:{{ t.badgeInk }};flex:none">{{ t.badge }}</span>
                         <span style="font-weight:700;font-size:13.5px;color:var(--ink);line-height:1.3">{{ t.name }}</span>
-                        <sc-if value="{{ t.hasMight }}" hint-placeholder-val="{{ false }}"><span style="margin-left:auto;font:600 11px 'JetBrains Mono',monospace;color:var(--ink-faint);flex:none">MIGHT {{ t.might }}</span></sc-if>
+                        <sc-if value="{{ t.hasSub }}" hint-placeholder-val="{{ false }}"><span style="margin-left:auto;font:600 11px 'JetBrains Mono',monospace;color:var(--ink-faint);flex:none">{{ t.sub }}</span></sc-if>
                       </div>
                       <sc-if value="{{ t.hasRows }}" hint-placeholder-val="{{ false }}">
                         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid var(--line-soft);padding-top:9px">
                           <sc-for list="{{ t.rows }}" as="fx" hint-placeholder-count="1">
-                            <div style="font-size:12.5px;line-height:1.75;color:var(--ink-dim)">
-                              <sc-if value="{{ fx.hasKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:700 9.5px 'JetBrains Mono',monospace;letter-spacing:.05em;padding:1px 7px;border-radius:4px;background:var(--surface3);color:var(--gold);margin-right:7px;vertical-align:1px">{{ fx.kw }}</span></sc-if>
+                            <div style="font-size:12.5px;line-height:1.75;color:var(--ink-dim);text-align:{{ fx.align }}">
+                              <sc-if value="{{ fx.hasKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:700 9.5px 'JetBrains Mono',monospace;letter-spacing:.05em;padding:1px 7px;border-radius:4px;background:{{ fx.chipBg }};color:{{ fx.chipInk }};margin-right:7px;vertical-align:1px">{{ fx.kw }}</span></sc-if>
                               <span>{{ fx.node }}</span>
                             </div>
                           </sc-for>
@@ -443,6 +432,12 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                   </div>
                 </sc-for>
               </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sel.hasStrategy }}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top:30px">
+              <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:12px">戦略・立ち回り</div>
+              <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px;font-size:14px;line-height:1.95;color:var(--ink);background:var(--surface)">{{ sel.strategyNode }}</div>
             </div>
           </sc-if>
         </div>
@@ -540,7 +535,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
       <!-- ===== LEGEND DETAIL VIEW ===== -->
       <sc-if value="{{ showLegendDetail }}" hint-placeholder-val="{{ false }}">
         <div class="rb-view">
-          <div onClick="{{ goLegends }}" role="button" tabindex="0" data-kbd style="display:inline-flex;align-items:center;gap:6px;font:600 12px 'JetBrains Mono',monospace;color:var(--ink-faint);cursor:pointer;margin-bottom:18px" style-hover="color:var(--gold)">← レジェンド一覧</div>
+          <div onClick="{{ legend.openCard }}" role="button" tabindex="0" data-kbd style="display:inline-flex;align-items:center;gap:6px;font:600 12px 'JetBrains Mono',monospace;color:var(--ink-faint);cursor:pointer;margin-bottom:18px" style-hover="color:var(--gold)">← カードに戻る</div>
 
           <div style="position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:34px">
             <div class="rb-legend-hero" style="position:relative;height:220px;background:{{ legend.grad }};overflow:hidden">
@@ -694,16 +689,6 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               </div>
             </sc-for>
           </div>
-          <!-- legend browse (legends are cards too) -->
-          <div onClick="{{ goLegends }}" role="button" tabindex="0" data-kbd class="rb-hovedge" style="cursor:pointer;display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:16px 20px;margin-bottom:36px">
-            <span style="width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);font-size:19px;color:var(--gold)" aria-hidden="true">✦</span>
-            <div style="flex:1;min-width:0">
-              <div style="font-weight:700;font-size:14px;color:var(--ink)">レジェンドから探す</div>
-              <div style="font-size:12px;color:var(--ink-faint);margin-top:2px">デッキの核となるレジェンドカードとシグネチャー能力を一覧で確認できます。</div>
-            </div>
-            <span style="font-size:12.5px;font-weight:700;color:var(--gold);flex:none">見る →</span>
-          </div>
-
           <!-- resources: keyword / rules -->
           <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:16px">資料から探す</div>
           <div class="rb-res-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:36px">
@@ -1432,6 +1417,36 @@ class Component extends DCLogic {
     }).filter(Boolean);
   }
 
+  // シグネチャーカードのビューモデル（レジェンド詳細・カードページ共用）
+  buildSignatures(ids){
+    return (ids||[]).map(sid=>{
+      const c = this.state.cards.find(x=>x.id===sid);
+      if(!c) return null;
+      const fxRows = (c.effects||[]).map(e=>{ const cc=this.kwChipColors(e.kw); return { kw:e.kw||'', hasKw:!!e.kw, align:'left', chipBg:cc.bg, chipInk:cc.ink, node:this.richText(e.ja||'',13) }; });
+      const eqMightRows = [], eqOtherRows = [];
+      (c.equip||[]).forEach(q=>{
+        const isMight = !!(q.stat && String(q.stat).trim());
+        if(isMight){
+          const lightT = this.state.theme==='light';
+          const badgeBg = lightT ? 'linear-gradient(135deg,#f4e7c8,#e8d3a0)' : 'linear-gradient(135deg,#2b1808,#3d2712)';
+          const statCol = lightT ? '#8a6810' : '#d9b978';
+          const labelCol = lightT ? '#9a7526' : '#a9997c';
+          eqMightRows.push({ kw:'', hasKw:false, isBadge:true, align:'right', node: React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'8px',padding:'6px 12px 6px 9px',borderRadius:'10px',background:badgeBg,border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.15)',color:statCol}},
+            this.symImg('might',20),
+            React.createElement('span',{style:{font:'800 18px "JetBrains Mono",monospace',color:statCol,lineHeight:'1'}}, String(q.stat)),
+            React.createElement('span',{style:{font:'600 9px "JetBrains Mono",monospace',color:labelCol,letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
+          ) });
+        } else {
+          const cc=this.kwChipColors(q.kw);
+          eqOtherRows.push({ kw:q.kw||'', hasKw:!!(q.kw && String(q.kw).trim()), align:'left', chipBg:cc.bg, chipInk:cc.ink, node:this.richText(q.ja||'',13) });
+        }
+      });
+      const rows = fxRows.concat(eqOtherRows, eqMightRows);
+      return { name:c.name, nameJa:c.nameJa, image:c.image||'', number:c.number, color:this.domColor(c.domain), onClick:()=>this.select(c.id),
+        zoomImage:(e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.setState({ lightbox:{ img:c.image||'', cap:c.name + (c.number?('   ·   '+c.number):'') } }); },
+        rows, hasRows: rows.length>0 };
+    }).filter(Boolean);
+  }
   renderVals(){
     const s = this.state;
     // 本文中キーワードのチップ化用に、配色マップを描画ロジックへ渡す
@@ -1693,34 +1708,7 @@ class Component extends DCLogic {
       const lcols = ld.domains.map(d=>this.domColor(d));
       const lgrad = lcols.length>1 ? `linear-gradient(120deg, ${lcols[0]}, ${lcols[1]})` : `linear-gradient(120deg, ${lcols[0]}, ${lcols[0]})`;
       const lcard = this.state.cards.find(c=>c.id===ld.id) || null;
-      const sigs = (ld.signatures||[]).map(sid=>{
-        const c = this.state.cards.find(x=>x.id===sid);
-        if(!c) return null;
-        const fxRows = (c.effects||[]).map(e=>{ const cc=this.kwChipColors(e.kw); return { kw:e.kw||'', hasKw:!!e.kw, align:'left', chipBg:cc.bg, chipInk:cc.ink, node:this.richText(e.ja||'',13) }; });
-        const eqMightRows = [], eqOtherRows = [];
-        (c.equip||[]).forEach(q=>{
-          const isMight = !!(q.stat && String(q.stat).trim());
-          if(isMight){
-            const lightT = this.state.theme==='light';
-            const badgeBg = lightT ? 'linear-gradient(135deg,#f4e7c8,#e8d3a0)' : 'linear-gradient(135deg,#2b1808,#3d2712)';
-            const statCol = lightT ? '#8a6810' : '#d9b978';
-            const labelCol = lightT ? '#9a7526' : '#a9997c';
-            eqMightRows.push({ kw:'', hasKw:false, isBadge:true, align:'right', node: React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'8px',padding:'6px 12px 6px 9px',borderRadius:'10px',background:badgeBg,border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.15)',color:statCol}},
-              this.symImg('might',20),
-              React.createElement('span',{style:{font:'800 18px "JetBrains Mono",monospace',color:statCol,lineHeight:'1'}}, String(q.stat)),
-              React.createElement('span',{style:{font:'600 9px "JetBrains Mono",monospace',color:labelCol,letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
-            ) });
-          } else {
-            const cc=this.kwChipColors(q.kw);
-            eqOtherRows.push({ kw:q.kw||'', hasKw:!!(q.kw && String(q.kw).trim()), align:'left', chipBg:cc.bg, chipInk:cc.ink, node:this.richText(q.ja||'',13) });
-          }
-        });
-        // マイトは効果の最後に表示する
-        const rows = fxRows.concat(eqOtherRows, eqMightRows);
-        return { name:c.name, nameJa:c.nameJa, image:c.image||'', number:c.number, color:this.domColor(c.domain), onClick:()=>this.select(c.id),
-          zoomImage:(e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.setState({ lightbox:{ img:c.image||'', cap:c.name + (c.number?('   ·   '+c.number):'') } }); },
-          rows, hasRows: rows.length>0 };
-      }).filter(Boolean);
+      const sigs = this.buildSignatures(ld.signatures);
       const linfo = [ {k:'ドメイン', v:this.domainDisplay(ld)} ];
       if (lcard && lcard.cost) linfo.push({k:'エネルギー', v:this.energyPip(lcard.cost,17)});
       if (lcard && lcard.might) linfo.push({k:'マイト', v:React.createElement('span',{style:{display:'inline-flex',gap:'5px',alignItems:'center'}}, this.symImg('might',16), lcard.might)});
@@ -1770,6 +1758,12 @@ class Component extends DCLogic {
         ink: i===_vIdx ? 'var(--sel-ink)' : 'var(--ink-dim)',
         line: i===_vIdx ? 'var(--gold)' : 'var(--line)',
       }));
+      const _relSigs = this.buildSignatures((((this.state.legends)||[]).find(l=>l.id===sel.id)||{}).signatures);
+      const _relToks = this.resolveTokens(sel.tokens);
+      const _relCards = [
+        ..._relSigs.map(x=>({ image:x.image, name:x.name, hasSub:false, sub:'', badge:'SIGNATURE', badgeInk:'var(--gold)', rows:x.rows, hasRows:x.hasRows, onClick:x.onClick })),
+        ..._relToks.map(x=>({ image:x.image, name:x.name, hasSub:!!x.hasMight, sub:(x.hasMight?('MIGHT '+x.might):''), badge:'TOKEN', badgeInk:'var(--ink-faint)', rows:(x.rows||[]).map(r=>({ kw:r.kw, hasKw:r.hasKw, align:'left', chipBg:'var(--surface3)', chipInk:'var(--gold)', node:r.node })), hasRows:x.hasRows, onClick:x.onClick })),
+      ];
       selVals = {
         sel: {
           name:sel.name, nameJa:sel.nameJa, number:sel.number, modified:sel.modified,
@@ -1827,6 +1821,10 @@ class Component extends DCLogic {
           hasEquip: sel.equip.length>0,
           isLegend: !!(this.state.legends && this.state.legends.some(l=>l.id===sel.id)),
           openHub: ()=>this.openLegend(sel.id),
+          relCards: _relCards,
+          hasRelCards: _relCards.length>0,
+          strategyNode: (()=>{ const lm=(this.state.legends||[]).find(l=>l.id===sel.id); return lm&&lm.strategy ? this.richText(lm.strategy,14) : null; })(),
+          hasStrategy: !!((this.state.legends||[]).find(l=>l.id===sel.id)||{}).strategy,
           showEffects: sel.type!=='Rune',
           isRune: sel.type==='Rune',
           runeAbilities: sel.type==='Rune' ? (()=>{ const rc=this.kwChipColors('REACTION'); return [

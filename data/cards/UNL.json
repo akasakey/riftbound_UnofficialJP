@@ -523,7 +523,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "unl-019",
@@ -872,7 +875,10 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "unl-030",
@@ -993,7 +999,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t02"
+   ]
   },
   {
    "id": "unl-034",
@@ -1298,7 +1307,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "unl-044",
@@ -1328,7 +1340,10 @@
     }
    ],
    "equip": [],
-   "power": "2"
+   "power": "2",
+   "tokens": [
+    "unl-t02"
+   ]
   },
   {
    "id": "unl-045",
@@ -1532,7 +1547,10 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "unl-052",
@@ -1567,7 +1585,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "unl-053",
@@ -2189,7 +2210,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "unl-074",
@@ -2649,7 +2673,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t02"
+   ]
   },
   {
    "id": "unl-089",
@@ -3056,7 +3083,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "unl-103",
@@ -3851,7 +3881,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t02"
+   ]
   },
   {
    "id": "unl-131",
@@ -4308,7 +4341,10 @@
    ],
    "equip": [],
    "power": "",
-   "altImage": "images/UNL/UNL-145a.avif"
+   "altImage": "images/UNL/UNL-145a.avif",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "unl-146",
@@ -4567,7 +4603,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t02"
+   ]
   },
   {
    "id": "unl-154",
@@ -4757,7 +4796,10 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "unl-t02"
+   ]
   },
   {
    "id": "unl-161",
@@ -4817,7 +4859,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "unl-163",
@@ -5575,7 +5620,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/UNL/UNL-228.avif"
+   "altImage": "images/UNL/UNL-228.avif",
+   "tokens": [
+    "sfd-t03"
+   ]
   },
   {
    "id": "unl-186",
@@ -5754,7 +5802,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/UNL/UNL-230.avif"
+   "altImage": "images/UNL/UNL-230.avif",
+   "tokens": [
+    "ogn-274"
+   ]
   },
   {
    "id": "unl-190",
@@ -6015,7 +6066,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/UNL/UNL-233.avif"
+   "altImage": "images/UNL/UNL-233.avif",
+   "tokens": [
+    "unl-t03"
+   ]
   },
   {
    "id": "unl-196",
@@ -6199,7 +6253,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/UNL/UNL-235.avif"
+   "altImage": "images/UNL/UNL-235.avif",
+   "tokens": [
+    "unl-t06"
+   ]
   },
   {
    "id": "unl-200",
@@ -6289,7 +6346,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/UNL/UNL-236.avif"
+   "altImage": "images/UNL/UNL-236.avif",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "unl-202",
@@ -6730,7 +6790,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t02"
+   ]
   },
   {
    "id": "unl-218",
@@ -6755,7 +6818,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "unl-219",
@@ -6786,7 +6852,7 @@
    "id": "unl-t01",
    "name": "Baron Pit",
    "nameJa": "",
-   "type": "Battlefield",
+   "type": "Token",
    "domain": "",
    "cost": "",
    "might": "",
@@ -6811,7 +6877,7 @@
    "id": "unl-t03",
    "name": "Brush",
    "nameJa": "",
-   "type": "Battlefield",
+   "type": "Token",
    "domain": "",
    "cost": "",
    "might": "",
@@ -6877,6 +6943,58 @@
      "kw": "",
      "en": "Track gained XP here. Some cards get bonuses based on your LEVEL. Some cards can spend XP for powerful effects.",
      "ja": "得たXPをここで記録する。一部のカードはLEVELに応じてボーナスを得る。一部のカードはXPを消費して強力な効果を発動できる。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "unl-t02",
+   "name": "Bird",
+   "nameJa": "",
+   "type": "Token",
+   "domain": "",
+   "domains": [],
+   "cost": "",
+   "might": "1",
+   "rarity": "トークン",
+   "tag": "Token Unit",
+   "set": "Unleashed",
+   "setCode": "UNL",
+   "modified": "2026-07-11",
+   "number": "UNL-T02",
+   "image": "images/UNL/UNL-T02g.webp",
+   "effects": [
+    {
+     "kw": "DEFLECT",
+     "en": "(Opponents must pay ⟨rune⟩ to choose me with a spell or ability.)",
+     "ja": "(相手はスペルや能力でこのユニットを対象に選ぶとき、⟨rune⟩を払わなければならない。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "unl-t04",
+   "name": "Buff",
+   "nameJa": "",
+   "type": "Token",
+   "domain": "",
+   "domains": [],
+   "cost": "",
+   "might": "+1",
+   "rarity": "トークン",
+   "tag": "Token",
+   "set": "全セット共通",
+   "setCode": "UNL",
+   "modified": "2026-07-11",
+   "number": "UNL-T04",
+   "image": "images/UNL/UNL-T04.webp",
+   "effects": [
+    {
+     "kw": "",
+     "en": "A unit may have no more than one buff at a time.",
+     "ja": "1体のユニットは Buff を同時に1つしか持てない。"
     }
    ],
    "equip": [],

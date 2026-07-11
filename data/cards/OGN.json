@@ -1744,7 +1744,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-054",
@@ -1833,7 +1836,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-057",
@@ -1988,7 +1994,10 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-062",
@@ -2054,7 +2063,10 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-064",
@@ -2544,7 +2556,10 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/OGN/OGN-078a.avif"
+   "altImage": "images/OGN/OGN-078a.avif",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-079",
@@ -4093,7 +4108,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-125",
@@ -4473,7 +4491,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-137",
@@ -4562,7 +4583,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-140",
@@ -4623,7 +4647,10 @@
     "date": "2025-10-28",
     "oldJa": "自身をプレイしたとき、別の自分のユニット2体を強化する。(強化を持っていないユニットはそれぞれ+1⟨might⟩の強化を得る。)",
     "oldEn": "When you play me, buff two other friendly units. (Each one that doesn't have a buff gets a +1 ⟨might⟩ buff.)"
-   }
+   },
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-142",
@@ -4800,7 +4827,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-148",
@@ -4989,7 +5019,10 @@
     }
    ],
    "equip": [],
-   "power": "2"
+   "power": "2",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-154",
@@ -5400,6 +5433,9 @@
      "number": "SFD-232*/221",
      "rarity": "ショーケース"
     }
+   ],
+   "tokens": [
+    "unl-t04"
    ]
   },
   {
@@ -7144,7 +7180,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-218",
@@ -7328,7 +7367,10 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-224",
@@ -7478,7 +7520,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-229",
@@ -7723,7 +7768,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/SFD/SFD-237.avif"
+   "altImage": "images/SFD/SFD-237.avif",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-236",
@@ -8438,7 +8486,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/OGN/OGN-304.avif"
+   "altImage": "images/OGN/OGN-304.avif",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-259",
@@ -8549,7 +8600,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/OGN/OGN-306.avif"
+   "altImage": "images/OGN/OGN-306.avif",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-263",
@@ -8655,7 +8709,10 @@
      "rarity": "ショーケース"
     }
    ],
-   "altImage": "images/OGN/OGN-308.avif"
+   "altImage": "images/OGN/OGN-308.avif",
+   "tokens": [
+    "ogn-271"
+   ]
   },
   {
    "id": "ogn-267",
@@ -9165,7 +9222,10 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-271",
@@ -9488,7 +9548,10 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "tokens": [
+    "unl-t04"
+   ]
   },
   {
    "id": "ogn-284",

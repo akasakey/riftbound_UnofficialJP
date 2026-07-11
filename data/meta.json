@@ -1,5 +1,5 @@
 {
- "_readme": "メタデータ（sets/keywords/legends/counts）。カード本体は data/cards/<CODE>.json に分割。編集は data/cards.json を直し scripts/split-cards.js を流す。",
+ "_readme": "メタデータ（sets/keywordCategories/keywords/counts/legends）。カード本体は data/cards/<CODE>.json に分割。編集は data/cards.json を直し scripts/split-cards.js を流す。",
  "sets": [
   {
    "code": "OGN",
@@ -177,7 +177,7 @@
   }
  ],
  "counts": {
-  "total": 767,
+  "total": 771,
   "byDomain": {
    "Fury": 130,
    "Body": 131,
@@ -187,8 +187,8 @@
    "Chaos": 127
   },
   "bySet": {
-   "UNL": 223,
-   "SFD": 222,
+   "UNL": 225,
+   "SFD": 224,
    "OGN": 298,
    "OGS": 24
   }

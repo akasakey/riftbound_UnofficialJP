@@ -83,13 +83,14 @@
     const es = sz ? Math.round(sz) : null;
     const is = sz ? Math.round(sz * 0.92) : null;
     const circled = { '①': 1, '②': 2, '③': 3, '④': 4, '⑤': 5, '⑥': 6, '⑦': 7, '⑧': 8, '⑨': 9, '⑩': 10 };
-    const re = /⟨イグゾースト⟩|⟨rune⟩|⟨(Fury|Body|Calm|Order|Mind|Chaos)⟩|⟨(\d+)⟩|([①②③④⑤⑥⑦⑧⑨⑩])|マイト/g;
+    const re = /⟨イグゾースト⟩|⟨might⟩|⟨rune⟩|⟨(Fury|Body|Calm|Order|Mind|Chaos)⟩|⟨(\d+)⟩|([①②③④⑤⑥⑦⑧⑨⑩])|マイト/g;
     const out = []; let last = 0, m, k = 0;
     const pushText = function (t) { scanKw(t, 'w' + (k++) + '_').forEach(function (n) { out.push(n); }); };
     while ((m = re.exec(str)) !== null) {
       if (m.index > last) pushText(str.slice(last, m.index));
       const tok = m[0]; let node = null;
       if (tok === '⟨イグゾースト⟩') node = symImg('exhaust', is);
+      else if (tok === '⟨might⟩') node = symImg('might', is);
       else if (tok === '⟨rune⟩') node = symImg('rune', is);
       else if (m[1]) node = symImg(m[1], is);
       else if (m[2] != null) node = energyPip(m[2], es);
