@@ -284,10 +284,11 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             <div class="rb-detail-img">
               <sc-if value="{{ sel.hasImage }}" hint-placeholder-val="{{ true }}">
                 <img key="{{ sel.curImage }}" onClick="{{ sel.zoomImage }}" class="rb-detimg" src="{{ sel.curImage }}" alt="{{ sel.name }}" title="クリックで拡大" style="width:100%;border-radius:12px;border:1px solid var(--line);display:block"/>
-                <sc-if value="{{ sel.hasAlt }}" hint-placeholder-val="{{ false }}">
-                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-                    <div onClick="{{ setAltMain }}" role="button" tabindex="0" data-kbd style="padding:8px 6px;border-radius:7px;text-align:center;font:600 11px 'JetBrains Mono',monospace;letter-spacing:.06em;cursor:pointer;border:1px solid {{ sel.mainBtnLine }};background:{{ sel.mainBtnBg }};color:{{ sel.mainBtnInk }}">STANDARD</div>
-                    <div onClick="{{ setAltArt }}" role="button" tabindex="0" data-kbd style="padding:8px 6px;border-radius:7px;text-align:center;font:600 11px 'JetBrains Mono',monospace;letter-spacing:.06em;cursor:pointer;border:1px solid {{ sel.altBtnLine }};background:{{ sel.altBtnBg }};color:{{ sel.altBtnInk }}">ALT ART</div>
+                <sc-if value="{{ sel.hasVariants }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:stretch">
+                    <sc-for list="{{ sel.variantBtns }}" as="v" hint-placeholder-count="2">
+                      <div onClick="{{ v.onClick }}" role="button" tabindex="0" data-kbd style="flex:1;min-width:88px;min-height:40px;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 10px;border-radius:7px;font:600 11px 'JetBrains Mono',monospace;letter-spacing:.06em;line-height:1.25;cursor:pointer;border:1px solid {{ v.line }};background:{{ v.bg }};color:{{ v.ink }}">{{ v.label }}</div>
+                    </sc-for>
                   </div>
                 </sc-if>
               </sc-if>
@@ -314,6 +315,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           </div>
 
           <!-- 効果 -->
+          <sc-if value="{{ sel.showEffects }}" hint-placeholder-val="{{ true }}">
           <div style="margin-top:34px">
             <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:0">効果</div>
             <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-top:12px;background:var(--surface)">
@@ -330,6 +332,31 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               </details>
             </sc-if>
           </div>
+          </sc-if>
+          <!-- 基本ルーンの能力（Runeカードは効果欄の代わりにこれを表示） -->
+          <sc-if value="{{ sel.isRune }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:34px">
+            <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:0">基本ルーンの能力</div>
+            <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-top:12px;background:var(--surface)">
+              <div style="display:flex;flex-direction:column;gap:15px">
+                <sc-for list="{{ sel.runeAbilities }}" as="e" hint-placeholder-count="2">
+                  <div style="font-size:14px;line-height:1.95;color:var(--ink)"><span style="display:inline-flex;align-items:center;gap:5px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.05em;padding:2px 8px;border-radius:4px;background:{{ e.chipBg }};color:{{ e.chipInk }};margin-right:8px;transform:translateY(-1px)">{{ e.kw }}</span>{{ e.node }}</div>
+                </sc-for>
+              </div>
+            </div>
+            <div style="margin-top:12px;font-size:13px;line-height:1.85;color:var(--ink-dim);padding:0 2px">{{ sel.runeNote }}</div>
+          </div>
+          </sc-if>
+          <sc-if value="{{ sel.isLegend }}" hint-placeholder-val="{{ false }}">
+            <div onClick="{{ sel.openHub }}" role="button" tabindex="0" data-kbd style="margin-top:22px;display:flex;align-items:center;gap:14px;border:1px solid var(--gold-dim);border-radius:12px;background:linear-gradient(120deg,var(--panel-a),var(--panel-b));padding:16px 20px;cursor:pointer" style-hover="border-color:var(--gold)">
+              <span style="width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tile);border:1.5px solid var(--tile-edge);font-size:18px;color:var(--gold)" aria-hidden="true">✦</span>
+              <div style="flex:1;min-width:0">
+                <div style="font-weight:700;font-size:14px;color:var(--ink)">レジェンド詳細を見る</div>
+                <div style="font-size:12px;color:var(--ink-faint);margin-top:2px">能力・シグネチャーカード・戦略ガイドをまとめて確認できます。</div>
+              </div>
+              <span style="font-size:12.5px;font-weight:700;color:var(--gold);flex:none">見る →</span>
+            </div>
+          </sc-if>
           <sc-if value="{{ sel.hasEquip }}" hint-placeholder-val="{{ false }}">
             <div style="margin-top:30px">
               <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block">装備効果</div>
@@ -478,7 +505,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
 
           <div style="position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:34px">
             <div class="rb-legend-hero" style="position:relative;height:220px;background:{{ legend.grad }};overflow:hidden">
-              <img src="{{ legend.image }}" alt="{{ legend.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 16%;display:block"/>
+              <img onClick="{{ legend.zoomImage }}" title="クリックで拡大" src="{{ legend.image }}" alt="{{ legend.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 16%;display:block;cursor:pointer"/>
               <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(18,16,14,.92),rgba(18,16,14,.12) 72%)"></div>
               <div style="position:absolute;left:26px;right:26px;bottom:22px">
                 <h1 class="rb-legend-heroname" style="margin:0;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:34px;line-height:1.1;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6)">{{ legend.name }}</h1>
@@ -493,7 +520,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:12px">レジェンド能力</div>
             <div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap">
               <div style="width:180px;flex:none">
-                <img src="{{ legend.image }}" alt="{{ legend.name }}" style="width:180px;display:block;border-radius:12px;border:1px solid var(--line)"/>
+                <img onClick="{{ legend.zoomImage }}" title="クリックで拡大" src="{{ legend.image }}" alt="{{ legend.name }}" style="width:180px;display:block;border-radius:12px;border:1px solid var(--line);cursor:pointer"/>
                 <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:10px">
                   <sc-for list="{{ legend.domainChips }}" as="dc" hint-placeholder-count="2">
                     <span style="display:inline-flex;align-items:center;font:600 10px 'JetBrains Mono',monospace;color:{{ dc.text }};background:{{ dc.color }};padding:2px 8px;border-radius:20px">{{ dc.name }}</span>
@@ -501,6 +528,9 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                 </div>
                 <div style="font:500 11px 'JetBrains Mono',monospace;color:var(--ink-faint);margin-top:9px">収録セット</div>
                 <div style="font-size:12.5px;color:var(--ink-dim);margin-top:2px">{{ legend.set }}</div>
+                <sc-if value="{{ legend.hasArt }}" hint-placeholder-val="{{ false }}">
+                  <div onClick="{{ legend.openCard }}" role="button" tabindex="0" data-kbd style="margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;border-radius:8px;border:1px solid var(--gold-dim);background:var(--surface2);color:var(--gold);font:700 11px 'JetBrains Mono',monospace;letter-spacing:.05em;cursor:pointer" style-hover="border-color:var(--gold)">カードページ・アートを見る →</div>
+                </sc-if>
               </div>
               <div style="flex:1;min-width:260px">
                 <div style="border:1px solid var(--line);border-radius:10px;padding:20px 22px;background:var(--surface)">
@@ -1067,7 +1097,7 @@ class Component extends DCLogic {
       .catch(()=>{});
     this._onPop = () => {
       const patch = this.parseHash();
-      this.setState({ view:'home', domain:null, set:null, selectedId:null, legendId:null, query:'', queryRaw:'', fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], ...patch });
+      this.setState({ view:'home', domain:null, set:null, selectedId:null, legendId:null, query:'', queryRaw:'', lightbox:null, variantIdx:0, legendVariantIdx:0, fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], ...patch });
       this.ensureCardsFor(patch);
       if(patch.view==='rules' && patch.ruleSec){
         this.jumpToRule(patch.ruleSec);
@@ -1147,7 +1177,7 @@ class Component extends DCLogic {
   }
   parseHash(){ return (window.RB && window.RB.parseHash) ? window.RB.parseHash() : { view:'home' }; }
   go(patch, hash){
-    const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, query:'', queryRaw:'', menuOpen:false, altView:false, lightbox:null, fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], ...patch };
+    const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, query:'', queryRaw:'', menuOpen:false, altView:false, variantIdx:0, legendVariantIdx:0, lightbox:null, fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], ...patch };
     this.setState(st);
     this.ensureCardsFor(st);
     if(st.view==='rules' && st.ruleSec){ this.jumpToRule(st.ruleSec); }
@@ -1158,7 +1188,7 @@ class Component extends DCLogic {
   TYPE_ORDER = ['Unit','Spell','Gear','Legend','Battlefield','Token','Rune'];
   typeOf(c){ return c.type==='Champion Unit' ? 'Unit' : c.type; }
   TYPE_LABEL = { Unit:'ユニットカード', Spell:'スペルカード', Gear:'ギアカード', Legend:'レジェンド', Battlefield:'バトルフィールド', Token:'トークン', Rune:'ルーン' };
-  RARITY_ORDER = { 'コモン':0, 'Common':0, 'アンコモン':1, 'Uncommon':1, 'レア':2, 'Rare':2, 'エピック':3, 'Epic':3, 'レジェンダリー':4 };
+  RARITY_ORDER = { 'コモン':0, 'Common':0, 'アンコモン':1, 'Uncommon':1, 'レア':2, 'Rare':2, 'エピック':3, 'Epic':3, 'レジェンダリー':4, 'ショーケース':5 };
   // タグ → LoL 日本語版で確定している読み（別名）。検索用。チャンピオン名＋リージョン名。
   CHAMPION_JA = {
     // --- Champions ---
@@ -1199,12 +1229,14 @@ class Component extends DCLogic {
     'アンコモン': { color:'#3fb6c4', shape:'triangle' },
     'レア':     { color:'#d651a8', shape:'diamond' },
     'エピック':  { color:'#e8993a', shape:'pentagon' },
+    'ショーケース': { color:'#d9b978', shape:'hexagon' },
   };
   rarityShape(shape, color, size){
     const paths = {
       circle:   React.createElement('circle', { cx:50, cy:52, r:40 }),
       triangle: React.createElement('polygon', { points:'50,10 90,84 10,84' }),
       diamond:  React.createElement('polygon', { points:'50,6 92,52 50,94 8,52' }),
+      hexagon:  React.createElement('polygon', { points:'50,6 89,28 89,72 50,94 11,72 11,28' }),
       pentagon: React.createElement('polygon', { points:'50,8 92,40 74,92 26,92 8,40' }),
     };
     const el = paths[shape]; if(!el) return null;
@@ -1230,9 +1262,9 @@ class Component extends DCLogic {
   ];
 
   select(id){
-    if(this.state.legends && this.state.legends.some(l=>l.id===id)){ this.openLegend(id); return; }
     this.go({ view:'detail', selectedId:id }, '#card/'+encodeURIComponent(id));
   }
+  openCardVariant(id, vIdx){ this.go({ view:'detail', selectedId:id, variantIdx:(vIdx||0) }, '#card/'+encodeURIComponent(id)); }
   goLegends(){ this.go({ view:'legends' }, '#legends'); }
   openLegend(id){ this.go({ view:'legend', legendId:id }, '#legend/'+encodeURIComponent(id)); }
   goKeywords(){ this.go({ view:'keywords' }, '#keywords'); }
@@ -1274,6 +1306,8 @@ class Component extends DCLogic {
   closeMenu(){ this.setState({ menuOpen:false }); }
   setTheme(t){ if(t!=='light'&&t!=='dark') return; if(typeof window!=='undefined' && window.rbSetTheme) window.rbSetTheme(t); this.setState({ theme:t }); }
   setAlt(v){ this.setState({ altView:v }); }
+  setVariant(i){ this.setState({ variantIdx:i }); }
+  setLegendVariant(i){ this.setState({ legendVariantIdx:i }); }
   goAll(){ this.go({ view:'list' }, '#list'); }
   setDomain(d){ this.go({ view:'list', domain:d }, '#domain/'+encodeURIComponent(d)); }
   setSet(s){ this.go({ view:'list', set:s }, '#set/'+encodeURIComponent(s)); }
@@ -1373,7 +1407,32 @@ class Component extends DCLogic {
     };
 
     // filtered set for list
-    let list = this.state.cards.slice();
+    // overnumbered は常時、その他ショーケース（alt art / rune変種）はショーケース絞り込み時のみ合成行で出す
+    const showAllShowcase = s.fRar.includes('ショーケース');
+    const totalSuffix = (num)=>{ const m=(num||'').match(/\/(.+)$/); return m ? '/'+m[1] : ''; };
+    const synCards = [];
+    const pushSyn = (c, image, number, rarity, vIdx)=>synCards.push({
+      _artLegendId:c.id, _artVariantIdx:vIdx,
+      id:c.id+'-v'+vIdx, name:c.name, nameJa:c.nameJa,
+      type:c.type, domain:c.domain, domains:c.domains, cost:c.cost, might:c.might,
+      rarity:rarity||'ショーケース', setCode:c.setCode, set:c.set,
+      number:number||c.number, image, tag:c.tag, effects:c.effects||[],
+    });
+    for(const c of this.state.cards){
+      if(Array.isArray(c.variants) && c.variants.length){
+        c.variants.forEach((v,i)=>{
+          if(!v || !v.image) return;
+          if(v.label==='OVERNUMBERED サイン入り') return;          // 署名は同番号スロットなので出さない
+          if(v.label==='OVERNUMBERED'){ pushSyn(c, v.image, v.number, v.rarity, i); return; }
+          if(showAllShowcase && v.rarity==='ショーケース'){ pushSyn(c, v.image, v.number, v.rarity, i); }
+        });
+      } else if(showAllShowcase && c.altImage){
+        // altImage のみのカード＝ALT ART（詳細のフォールバック変種で index 1）
+        const altNum = c.altImage.split('/').pop().replace(/\.[^.]+$/,'') + totalSuffix(c.number);
+        pushSyn(c, c.altImage, altNum, 'ショーケース', 1);
+      }
+    }
+    let list = this.state.cards.concat(synCards);
     if (s.domain) list = list.filter(c=> c.domain===s.domain || (c.domains && c.domains.includes(s.domain)));
     if (s.set) list = list.filter(c=>c.setCode===s.set);
     if (s.fSet.length) list = list.filter(c=> s.fSet.includes(c.setCode));
@@ -1440,9 +1499,9 @@ class Component extends DCLogic {
     const costChips = COST_BUCKETS.filter(b=>presentCost.has(b)).map(b=>{ const active=s.fCost.includes(b);
       return { label:b, onClick:()=>this.toggleFilter('cost',b),
         border: active ? 'var(--gold)' : 'var(--line)', bg: active ? 'var(--gold)' : 'transparent', color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
-    const RAR_CHIP_ORDER = ['コモン','アンコモン','レア','エピック'];
-    const RAR_GLYPH = { 'コモン':'●', 'アンコモン':'▲', 'レア':'◆', 'エピック':'⬟' };
-    const rarChips = RAR_CHIP_ORDER.filter(r=>scope.some(c=>c.rarity===r)).map(r=>{ const stl=this.RARITY_STYLE[r]||{}; const col=stl.color||'#d9b978'; const active=s.fRar.includes(r);
+    const RAR_CHIP_ORDER = ['コモン','アンコモン','レア','エピック','ショーケース'];
+    const RAR_GLYPH = { 'コモン':'●', 'アンコモン':'▲', 'レア':'◆', 'エピック':'⬟', 'ショーケース':'⬢' };
+    const rarChips = RAR_CHIP_ORDER.filter(r=>scope.some(c=>c.rarity===r) || (r==='ショーケース' && synCards.length>0)).map(r=>{ const stl=this.RARITY_STYLE[r]||{}; const col=stl.color||'#d9b978'; const active=s.fRar.includes(r);
       return { label:(RAR_GLYPH[r]||'')+' '+r, onClick:()=>this.toggleFilter('rar',r),
         border: active ? col : 'var(--line)', bg: active ? col : 'transparent', color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
     const filterCount = s.fSet.length + s.fDom.length + s.fCost.length + s.fRar.length + s.fType.length + s.fTag.length + s.fKw.length;
@@ -1477,7 +1536,8 @@ class Component extends DCLogic {
 
     const rowVals = (c)=>({
       type:c.type, name:c.name, nameJa:c.nameJa, cost:c.cost, rarity:c.rarity,
-      set:c.setCode, domain:c.domain, color:this.domColor(c.domain), icon:this.domIcon(c.domain), image:c.image||'', onClick:()=>this.select(c.id),
+      set:c.setCode, domain:c.domain, color:this.domColor(c.domain), icon:this.domIcon(c.domain), image:c.image||'',
+      onClick: c._artLegendId ? (()=>this.openCardVariant(c._artLegendId, c._artVariantIdx)) : (()=>this.select(c.id)),
       numShort: (c.number||'').split('/')[0],
       energyNode: c.cost ? this.energyPip(c.cost,20) : null,
     });
@@ -1572,7 +1632,7 @@ class Component extends DCLogic {
             const badgeBg = lightT ? 'linear-gradient(135deg,#f4e7c8,#e8d3a0)' : 'linear-gradient(135deg,#2b1808,#3d2712)';
             const statCol = lightT ? '#8a6810' : '#d9b978';
             const labelCol = lightT ? '#9a7526' : '#a9997c';
-            eqMightRows.push({ kw:'', hasKw:false, isBadge:true, align:'right', node: React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'8px',padding:'6px 12px 6px 9px',borderRadius:'10px',background:badgeBg,border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.15)'}},
+            eqMightRows.push({ kw:'', hasKw:false, isBadge:true, align:'right', node: React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'8px',padding:'6px 12px 6px 9px',borderRadius:'10px',background:badgeBg,border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.15)',color:statCol}},
               this.symImg('might',20),
               React.createElement('span',{style:{font:'800 18px "JetBrains Mono",monospace',color:statCol,lineHeight:'1'}}, String(q.stat)),
               React.createElement('span',{style:{font:'600 9px "JetBrains Mono",monospace',color:labelCol,letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
@@ -1584,16 +1644,20 @@ class Component extends DCLogic {
         });
         // マイトは効果の最後に表示する
         const rows = fxRows.concat(eqOtherRows, eqMightRows);
-        return { name:c.name, nameJa:c.nameJa, image:c.image||'', number:c.number, color:this.domColor(c.domain), onClick:()=>this.select(c.id), rows, hasRows: rows.length>0 };
+        return { name:c.name, nameJa:c.nameJa, image:c.image||'', number:c.number, color:this.domColor(c.domain), onClick:()=>this.select(c.id),
+          zoomImage:(e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.setState({ lightbox:{ img:c.image||'', cap:c.name + (c.number?('   ·   '+c.number):'') } }); },
+          rows, hasRows: rows.length>0 };
       }).filter(Boolean);
       const linfo = [ {k:'ドメイン', v:this.domainDisplay(ld)} ];
       if (lcard && lcard.cost) linfo.push({k:'エネルギー', v:this.energyPip(lcard.cost,17)});
       if (lcard && lcard.might) linfo.push({k:'マイト', v:React.createElement('span',{style:{display:'inline-flex',gap:'5px',alignItems:'center'}}, this.symImg('might',16), lcard.might)});
       linfo.push({k:'収録セット', v:(lcard&&lcard.set)||'Unleashed'});
+      const _lStdImg = ld.image || (lcard&&lcard.image) || '';
       legendDetailVals = { legend: {
         name:ld.name, nameJa:ld.nameJa, number:ld.number, grad:lgrad, info:linfo,
         set: (lcard&&lcard.set)||'Unleashed',
-        image: ld.image || (lcard&&lcard.image) || '',
+        image: _lStdImg,
+        zoomImage: ()=>this.setState({ lightbox:{ img: _lStdImg, cap: ld.name + (ld.number?('   ·   '+ld.number):'') } }),
         domainChips: ld.domains.map(d=>({name:d,color:this.domColor(d),text:this.domInk(d)})),
         abilityKw: ld.abilityKw, hasAbilityKw: !!ld.abilityKw,
         abilityChipBg: this.kwChipColors(ld.abilityKw).bg, abilityChipInk: this.kwChipColors(ld.abilityKw).ink,
@@ -1606,6 +1670,7 @@ class Component extends DCLogic {
         hasRelTokens: this.resolveTokens(ld.tokens).length>0,
         strategyNode: ld.strategy ? this.richText(ld.strategy, 14) : null, hasStrategy: !!ld.strategy, noStrategy: !ld.strategy,
         hasCard: !!lcard, openCard: lcard?(()=>this.select(ld.id)):(()=>{}),
+        hasArt: !!(lcard && Array.isArray(lcard.variants) && lcard.variants.length),
       }};
     }
 
@@ -1617,23 +1682,30 @@ class Component extends DCLogic {
       const mbBg = lightT ? 'linear-gradient(135deg,#f4e7c8,#e8d3a0)' : 'linear-gradient(135deg,#2b1808,#3d2712)';
       const mbStat = lightT ? '#8a6810' : '#d9b978';
       const mbLabel = lightT ? '#9a7526' : '#a9997c';
+      const _variants = (Array.isArray(sel.variants) && sel.variants.length)
+        ? sel.variants.filter(v=>v && v.image)
+        : (sel.altImage ? [{label:'STANDARD',image:sel.image},{label:'ALT ART',image:sel.altImage,rarity:'ショーケース',number:sel.altImage.split('/').pop().replace(/\.[^.]+$/,'')+((sel.number&&sel.number.match(/\/(.+)$/))?'/'+sel.number.match(/\/(.+)$/)[1]:'')}] : [{label:'STANDARD',image:sel.image}]);
+      const _vIdx = Math.min(Math.max(s.variantIdx||0,0), _variants.length-1);
+      const _curImage = (_variants[_vIdx] && _variants[_vIdx].image) || sel.image || '';
+      const _cur = _variants[_vIdx] || {};
+      const curRarity = _cur.rarity || sel.rarity;
+      const curNumber = _cur.number || sel.number;
+      const curSet = _cur.set || sel.set;
+      const variantBtns = _variants.map((v,i)=>({
+        label:v.label||('#'+(i+1)), onClick:()=>this.setVariant(i),
+        bg: i===_vIdx ? 'var(--gold)' : 'transparent',
+        ink: i===_vIdx ? 'var(--sel-ink)' : 'var(--ink-dim)',
+        line: i===_vIdx ? 'var(--gold)' : 'var(--line)',
+      }));
       selVals = {
         sel: {
           name:sel.name, nameJa:sel.nameJa, number:sel.number, modified:sel.modified,
           color:this.domColor(sel.domain), glow:this.domGlow(sel.domain), icon:this.domIcon(sel.domain),
           typeInk: this.domInk(sel.domain),
           image: sel.image || '', hasImage: !!sel.image, noImage: !sel.image,
-          altImage: sel.altImage || '',
-          hasAlt: !!(sel.image && sel.altImage),
-          curImage: (s.altView && sel.altImage) ? sel.altImage : (sel.image || ''),
-          zoomImage: ()=>this.setState({ lightbox: { img: (s.altView && sel.altImage) ? sel.altImage : (sel.image||''), cap: sel.name + (sel.number ? ('   ·   '+sel.number) : '') } }),
-          isAlt: !!(s.altView && sel.altImage),
-          mainBtnBg: (s.altView ? 'transparent' : 'var(--gold)'),
-          mainBtnInk: (s.altView ? 'var(--ink-dim)' : 'var(--sel-ink)'),
-          mainBtnLine: (s.altView ? 'var(--line)' : 'var(--gold)'),
-          altBtnBg: (s.altView ? 'var(--gold)' : 'transparent'),
-          altBtnInk: (s.altView ? 'var(--sel-ink)' : 'var(--ink-dim)'),
-          altBtnLine: (s.altView ? 'var(--gold)' : 'var(--line)'),
+          curImage: _curImage,
+          zoomImage: ()=>this.setState({ lightbox: { img: _curImage, cap: sel.name + (curNumber ? ('   ·   '+curNumber) : '') } }),
+          variantBtns, hasVariants: _variants.length>1,
           tags: (sel.tag || '').split(/[・･]/).map(t=>t.trim()).filter(Boolean),
           typeLabelEn: sel.type || 'Card',
           info:[
@@ -1642,9 +1714,9 @@ class Component extends DCLogic {
             {k:'エネルギー', v: sel.cost ? this.energyPip(sel.cost,17) : '—'},
             {k:'パワー', v: sel.power ? ((sel.tag&&sel.tag.includes('Signature')&&sel.domains&&sel.domains.length>1) ? React.createElement('span',{style:{display:'inline-flex',gap:'4px',alignItems:'center'}}, this.symImg(sel.domains[0],16), React.createElement('span',{style:{color:'var(--ink-faint)',fontSize:'12px'}},'/'), this.symImg(sel.domains[1],16), React.createElement('span',{style:{marginLeft:'3px'}}, sel.power)) : React.createElement('span',{style:{display:'inline-flex',gap:'5px',alignItems:'center'}}, this.symImg(sel.domain,16), sel.power)) : '—'},
             {k:'マイト', v: sel.might ? React.createElement('span',{style:{display:'inline-flex',gap:'5px',alignItems:'center'}}, this.symImg('might',16), sel.might) : '—'},
-            {k:'レアリティ', v:sel.rarity || '—'},
-            {k:'収録セット', v:sel.set},
-            {k:'番号', v:sel.number},
+            {k:'レアリティ', v:curRarity || '—'},
+            {k:'収録セット', v:curSet},
+            {k:'番号', v:curNumber},
           ],
           effects: sel.effects.map(e=>{
             const c = this.kwColor(e.kw);
@@ -1659,7 +1731,7 @@ class Component extends DCLogic {
               chipBg: c ? c.color : '#3a2a12', chipInk: c ? c.text : 'var(--gold)',
               showText: !isMight && !!(q.ja && String(q.ja).trim()),
               mightBadge: isMight ? React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'9px',padding:'9px 15px 9px 12px',borderRadius:'11px',background:mbBg,border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.15)'}},
-                  React.createElement('img',{src:this.symSrc('might'),alt:'マイト',style:{height:'26px',width:'26px'}}),
+                  React.createElement('span',{style:{color:mbStat,display:'inline-flex',width:'26px',height:'26px'}}, this.symImg('might',26)),
                   React.createElement('span',{style:{font:'800 22px "JetBrains Mono",monospace',color:mbStat,lineHeight:'1',letterSpacing:'.01em'}}, String(q.stat)),
                   React.createElement('span',{style:{font:'600 10px "JetBrains Mono",monospace',color:mbLabel,letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
                 ) : null };
@@ -1672,7 +1744,7 @@ class Component extends DCLogic {
               showText: !!(q.ja && String(q.ja).trim()) }; });
             const m = sel.equip.find(q=>q.stat&&String(q.stat).trim());
             const badge = m ? React.createElement('span',{style:{display:'inline-flex',alignItems:'center',gap:'8px',padding:'7px 13px 7px 10px',borderRadius:'10px',background:mbBg,border:'1px solid var(--gold-dim)',boxShadow:'inset 0 1px 0 rgba(255,220,150,.15)',flex:'none'}},
-                  React.createElement('img',{src:this.symSrc('might'),alt:'マイト',style:{height:'22px',width:'22px'}}),
+                  React.createElement('span',{style:{color:mbStat,display:'inline-flex',width:'22px',height:'22px'}}, this.symImg('might',22)),
                   React.createElement('span',{style:{font:'800 20px "JetBrains Mono",monospace',color:mbStat,lineHeight:'1'}}, String(m.stat)),
                   React.createElement('span',{style:{font:'600 9px "JetBrains Mono",monospace',color:mbLabel,letterSpacing:'.08em',alignSelf:'flex-end',paddingBottom:'2px'}}, 'MIGHT')
                 ) : null;
@@ -1680,6 +1752,15 @@ class Component extends DCLogic {
             else if (badge) { rows.push({ showKw:false, showText:false, mightNode: badge, hasMight:true }); }
             return rows; })(),
           hasEquip: sel.equip.length>0,
+          isLegend: !!(this.state.legends && this.state.legends.some(l=>l.id===sel.id)),
+          openHub: ()=>this.openLegend(sel.id),
+          showEffects: sel.type!=='Rune',
+          isRune: sel.type==='Rune',
+          runeAbilities: sel.type==='Rune' ? (()=>{ const rc=this.kwChipColors('REACTION'); return [
+            { kw:'REACTION', chipBg:rc.bg, chipInk:rc.ink, node:this.richText('⟨イグゾースト⟩：①をADDする。',14) },
+            { kw:'REACTION', chipBg:rc.bg, chipInk:rc.ink, node:this.richText('これをリサイクル：このルーンのドメインのパワーを1つADDする。',14) },
+          ]; })() : [],
+          runeNote: this.richText('ルーンはコスト支払いの資源カードで、メインデッキとは別の「ルーンデッキ」に12枚入れる。エネルギー（数値コストに使う無色の資源）とパワー（ドメインに紐づく資源）を生み出す。各ドメインに対応する基本ルーンが1種ずつ存在する。',13.5),
           hasErrata: !!(sel.errata && (sel.errata.oldJa || sel.errata.oldEn)),
           errataDate: sel.errata ? (sel.errata.date||'') : '',
           errataNode: sel.errata ? this.richText(sel.errata.oldJa||'', 13) : null,
