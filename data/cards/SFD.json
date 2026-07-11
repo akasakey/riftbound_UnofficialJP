@@ -1179,7 +1179,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-036.avif",
+     "set": "Spiritforged",
+     "number": "SFD-036/221",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-221.avif",
+     "set": "Unleashed",
+     "number": "UNL-221/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-221.avif"
   },
   {
    "id": "sfd-037",
@@ -1585,7 +1602,31 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-049.avif",
+     "set": "Spiritforged",
+     "number": "SFD-049/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-224.avif",
+     "set": "Spiritforged",
+     "number": "SFD-224/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-224a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-224*/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-224.avif"
   },
   {
    "id": "sfd-050",
@@ -1869,7 +1910,37 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-057.avif",
+     "set": "Spiritforged",
+     "number": "SFD-057/221",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/SFD/SFD-057a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-057a/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-225.avif",
+     "set": "Spiritforged",
+     "number": "SFD-225/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-225a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-225*/221",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "sfd-058",
@@ -2257,7 +2328,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-069.avif",
+     "set": "Spiritforged",
+     "number": "SFD-069/221",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-222.avif",
+     "set": "Unleashed",
+     "number": "UNL-222/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-222.avif"
   },
   {
    "id": "sfd-070",
@@ -2569,7 +2657,31 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-079.avif",
+     "set": "Spiritforged",
+     "number": "SFD-079/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-228.avif",
+     "set": "Spiritforged",
+     "number": "SFD-228/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-228a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-228*/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-228.avif"
   },
   {
    "id": "sfd-080",
@@ -3218,7 +3330,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-099.avif",
+     "set": "Spiritforged",
+     "number": "SFD-099/221",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-223.webp",
+     "set": "Unleashed",
+     "number": "UNL-223/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-223.webp"
   },
   {
    "id": "sfd-100",
@@ -3793,7 +3922,31 @@
     "date": "2026-01-14",
     "oldJa": "自身が空いているバトルフィールドを征服(Conquer)したとき、ベースにいる相手のユニット1体に自身のマイトに等しいダメージを与える。",
     "oldEn": "When I conquer an open battlefield, deal damage equal to my Might to an enemy unit in a base."
-   }
+   },
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-116.avif",
+     "set": "Spiritforged",
+     "number": "SFD-116/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-233.avif",
+     "set": "Spiritforged",
+     "number": "SFD-233/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-233a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-233*/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-233.avif"
   },
   {
    "id": "sfd-117",
@@ -5637,7 +5790,31 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-173.avif",
+     "set": "Spiritforged",
+     "number": "SFD-173/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-239.avif",
+     "set": "Spiritforged",
+     "number": "SFD-239/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-239a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-239*/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-239.avif"
   },
   {
    "id": "sfd-174",
@@ -6796,7 +6973,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-181.avif",
+     "set": "Spiritforged",
+     "number": "SFD-181/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-240.avif",
+     "set": "Spiritforged",
+     "number": "SFD-240/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-240.avif"
   },
   {
    "id": "sfd-183",
@@ -6825,7 +7019,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-183.avif",
+     "set": "Spiritforged",
+     "number": "SFD-183/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-241.avif",
+     "set": "Spiritforged",
+     "number": "SFD-241/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-241.avif"
   },
   {
    "id": "sfd-185",
@@ -6854,7 +7065,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-185.avif",
+     "set": "Spiritforged",
+     "number": "SFD-185/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-242.avif",
+     "set": "Spiritforged",
+     "number": "SFD-242/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-242.avif"
   },
   {
    "id": "sfd-187",
@@ -6888,7 +7116,24 @@
     "date": "2026-01-14",
     "oldJa": "あなたが征服(Conquer)したとき、自身をイグゾーストさせて自分のメインデッキの一番上のカード2枚を公開してもよい。そのうち1枚をプレイしてもよい。その後残りをリサイクルする。",
     "oldEn": "When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest."
-   }
+   },
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-187.avif",
+     "set": "Spiritforged",
+     "number": "SFD-187/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-243.avif",
+     "set": "Spiritforged",
+     "number": "SFD-243/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-243.avif"
   },
   {
    "id": "sfd-189",
@@ -6917,7 +7162,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-189.avif",
+     "set": "Spiritforged",
+     "number": "SFD-189/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-244.avif",
+     "set": "Spiritforged",
+     "number": "SFD-244/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-244.avif"
   },
   {
    "id": "sfd-193",
@@ -6946,7 +7208,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-193.avif",
+     "set": "Spiritforged",
+     "number": "SFD-193/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-245.avif",
+     "set": "Spiritforged",
+     "number": "SFD-245/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-245.avif"
   },
   {
    "id": "sfd-195",
@@ -6975,7 +7254,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-195.avif",
+     "set": "Spiritforged",
+     "number": "SFD-195/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-246.avif",
+     "set": "Spiritforged",
+     "number": "SFD-246/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-246.avif"
   },
   {
    "id": "sfd-197",
@@ -7004,7 +7300,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-197.avif",
+     "set": "Spiritforged",
+     "number": "SFD-197/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-247.avif",
+     "set": "Spiritforged",
+     "number": "SFD-247/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-247.avif"
   },
   {
    "id": "sfd-199",
@@ -7033,7 +7346,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-199.avif",
+     "set": "Spiritforged",
+     "number": "SFD-199/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-248.avif",
+     "set": "Spiritforged",
+     "number": "SFD-248/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-248.avif"
   },
   {
    "id": "sfd-201",
@@ -7062,7 +7392,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-201.avif",
+     "set": "Spiritforged",
+     "number": "SFD-201/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-249.avif",
+     "set": "Spiritforged",
+     "number": "SFD-249/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-249.avif"
   },
   {
    "id": "sfd-203",
@@ -7091,7 +7438,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-203.avif",
+     "set": "Spiritforged",
+     "number": "SFD-203/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-250.avif",
+     "set": "Spiritforged",
+     "number": "SFD-250/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-250.avif"
   },
   {
    "id": "sfd-205",
@@ -7120,7 +7484,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-205.avif",
+     "set": "Spiritforged",
+     "number": "SFD-205/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-251.avif",
+     "set": "Spiritforged",
+     "number": "SFD-251/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-251.avif"
   },
   {
    "id": "sfd-t03",

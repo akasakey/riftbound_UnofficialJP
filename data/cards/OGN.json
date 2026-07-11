@@ -209,7 +209,30 @@
    "effects": [],
    "equip": [],
    "power": "",
-   "altImage": "images/OGN/OGN-007a.avif"
+   "altImage": "images/OGN/OGN-007a.avif",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-007.avif",
+     "set": "全セット共通",
+     "number": "OGN-007/298",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OGN・SFD ALT",
+     "image": "images/OGN/OGN-007a.avif",
+     "set": "Origins / Spiritforged",
+     "number": "OGN-007a",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "UNL ALT",
+     "image": "images/UNL/UNL-R01a.webp",
+     "set": "Unleashed",
+     "number": "UNL-R01a",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-008",
@@ -387,7 +410,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-013.avif",
+     "set": "Origins",
+     "number": "OGN-013/298",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-220.avif",
+     "set": "Unleashed",
+     "number": "UNL-220/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-220.avif"
   },
   {
    "id": "ogn-014",
@@ -1080,7 +1120,31 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-035.avif",
+     "set": "Origins",
+     "number": "OGN-035/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-223.avif",
+     "set": "Spiritforged",
+     "number": "SFD-223/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-223a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-223*/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-223.avif"
   },
   {
    "id": "ogn-036",
@@ -1236,7 +1300,24 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-040.avif",
+     "set": "Origins",
+     "number": "OGN-040/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-222.avif",
+     "set": "Spiritforged",
+     "number": "SFD-222/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-222.avif"
   },
   {
    "id": "ogn-041",
@@ -1292,7 +1373,31 @@
    "image": "images/OGN/OGN-042.avif",
    "effects": [],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-042.avif",
+     "set": "全セット共通",
+     "number": "OGN-042/298",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OGN・SFD ALT",
+     "image": "images/OGN/OGN-042a.avif",
+     "set": "Origins / Spiritforged",
+     "number": "OGN-042a",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "UNL ALT",
+     "image": "images/UNL/UNL-R02a.webp",
+     "set": "Unleashed",
+     "number": "UNL-R02a",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-042a.avif"
   },
   {
    "id": "ogn-043",
@@ -1320,8 +1425,7 @@
     }
    ],
    "equip": [],
-   "power": "1",
-   "altImage": "images/OGN/OGN-043a.avif"
+   "power": "1"
   },
   {
    "id": "ogn-044",
@@ -2536,7 +2640,24 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-081.avif",
+     "set": "Origins",
+     "number": "OGN-081/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-226.avif",
+     "set": "Spiritforged",
+     "number": "SFD-226/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-226.avif"
   },
   {
    "id": "ogn-082",
@@ -2775,7 +2896,30 @@
    "effects": [],
    "equip": [],
    "power": "",
-   "altImage": "images/OGN/OGN-089a.avif"
+   "altImage": "images/OGN/OGN-089a.avif",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-089.avif",
+     "set": "全セット共通",
+     "number": "OGN-089/298",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OGN・SFD ALT",
+     "image": "images/OGN/OGN-089a.avif",
+     "set": "Origins / Spiritforged",
+     "number": "OGN-089a",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "UNL ALT",
+     "image": "images/UNL/UNL-R03a.webp",
+     "set": "Unleashed",
+     "number": "UNL-R03a",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-090",
@@ -3718,7 +3862,37 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/OGN/OGN-119a.avif"
+   "altImage": "images/OGN/OGN-119a.avif",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-119.avif",
+     "set": "Origins",
+     "number": "OGN-119/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/OGN/OGN-119a.avif",
+     "set": "Origins",
+     "number": "OGN-119a/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-227.avif",
+     "set": "Spiritforged",
+     "number": "SFD-227/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-227a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-227*/221",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-120",
@@ -3747,7 +3921,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-120.avif",
+     "set": "Origins",
+     "number": "OGN-120/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-229.avif",
+     "set": "Spiritforged",
+     "number": "SFD-229/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-229.avif"
   },
   {
    "id": "ogn-121",
@@ -3787,7 +3978,37 @@
     "date": "2025-10-28",
     "oldJa": "自分が防御するとき、またはHIDDENからプレイされたとき、自分のメインデッキの上から5枚を公開する。HIDDENを持つカード1枚につき、ここにいる敵ユニット1体に1ダメージを与え、その後それらをリサイクルする。",
     "oldEn": "When I defend or I'm played from HIDDEN, reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with HIDDEN, then recycle them."
-   }
+   },
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-121.avif",
+     "set": "Origins",
+     "number": "OGN-121/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/OGN/OGN-121a.avif",
+     "set": "Origins",
+     "number": "OGN-121a/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-230.avif",
+     "set": "Spiritforged",
+     "number": "SFD-230/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-230a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-230*/221",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-122",
@@ -3923,7 +4144,30 @@
    "effects": [],
    "equip": [],
    "power": "",
-   "altImage": "images/OGN/OGN-126a.avif"
+   "altImage": "images/OGN/OGN-126a.avif",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-126.avif",
+     "set": "全セット共通",
+     "number": "OGN-126/298",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OGN・SFD ALT",
+     "image": "images/OGN/OGN-126a.avif",
+     "set": "Origins / Spiritforged",
+     "number": "OGN-126a",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "UNL ALT",
+     "image": "images/UNL/UNL-R04a.webp",
+     "set": "Unleashed",
+     "number": "UNL-R04a",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-127",
@@ -5074,7 +5318,24 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-163.avif",
+     "set": "Origins",
+     "number": "OGN-163/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-231.avif",
+     "set": "Spiritforged",
+     "number": "SFD-231/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-231.avif"
   },
   {
    "id": "ogn-164",
@@ -5109,7 +5370,37 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/OGN/OGN-164a.avif"
+   "altImage": "images/OGN/OGN-164a.avif",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-164.avif",
+     "set": "Origins",
+     "number": "OGN-164/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/OGN/OGN-164a.avif",
+     "set": "Origins",
+     "number": "OGN-164a/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-232.avif",
+     "set": "Spiritforged",
+     "number": "SFD-232/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-232a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-232*/221",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-165",
@@ -5160,7 +5451,30 @@
    "effects": [],
    "equip": [],
    "power": "",
-   "altImage": "images/OGN/OGN-166a.avif"
+   "altImage": "images/OGN/OGN-166a.avif",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-166.avif",
+     "set": "全セット共通",
+     "number": "OGN-166/298",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OGN・SFD ALT",
+     "image": "images/OGN/OGN-166a.avif",
+     "set": "Origins / Spiritforged",
+     "number": "OGN-166a",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "UNL ALT",
+     "image": "images/UNL/UNL-R05a.webp",
+     "set": "Unleashed",
+     "number": "UNL-R05a",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-167",
@@ -5321,7 +5635,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-171.avif",
+     "set": "Origins",
+     "number": "OGN-171/298",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-224.avif",
+     "set": "Unleashed",
+     "number": "UNL-224/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-224.avif"
   },
   {
    "id": "ogn-172",
@@ -6328,7 +6659,24 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-204.avif",
+     "set": "Origins",
+     "number": "OGN-204/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-234.avif",
+     "set": "Spiritforged",
+     "number": "SFD-234/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-234.avif"
   },
   {
    "id": "ogn-205",
@@ -6362,7 +6710,37 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/OGN/OGN-205a.avif"
+   "altImage": "images/OGN/OGN-205a.avif",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-205.avif",
+     "set": "Origins",
+     "number": "OGN-205/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/OGN/OGN-205a.avif",
+     "set": "Origins",
+     "number": "OGN-205a/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-235.avif",
+     "set": "Spiritforged",
+     "number": "SFD-235/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-235a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-235*/221",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-206",
@@ -6512,7 +6890,24 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-210.avif",
+     "set": "Origins",
+     "number": "OGN-210/298",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-225.avif",
+     "set": "Unleashed",
+     "number": "UNL-225/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-225.avif"
   },
   {
    "id": "ogn-211",
@@ -6642,7 +7037,30 @@
    "effects": [],
    "equip": [],
    "power": "",
-   "altImage": "images/OGN/OGN-214a.avif"
+   "altImage": "images/OGN/OGN-214a.avif",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-214.avif",
+     "set": "全セット共通",
+     "number": "OGN-214/298",
+     "rarity": "コモン"
+    },
+    {
+     "label": "OGN・SFD ALT",
+     "image": "images/OGN/OGN-214a.avif",
+     "set": "Origins / Spiritforged",
+     "number": "OGN-214a",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "UNL ALT",
+     "image": "images/UNL/UNL-R06a.webp",
+     "set": "Unleashed",
+     "number": "UNL-R06a",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-215",
@@ -7281,7 +7699,31 @@
     "date": "2025-10-28",
     "oldJa": "あなたがカードを1枚以上リサイクルしたとき、自分のユニット1体をバフする。(バフを持っていなければ+1⟨might⟩バフを得る。ルーンはカードではない。)",
     "oldEn": "When you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 ⟨might⟩ buff. Runes aren't cards.)"
-   }
+   },
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-235.avif",
+     "set": "Origins",
+     "number": "OGN-235/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-237.avif",
+     "set": "Spiritforged",
+     "number": "SFD-237/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-237a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-237*/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-237.avif"
   },
   {
    "id": "ogn-236",
@@ -7542,7 +7984,37 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/OGN/OGN-243a.avif"
+   "altImage": "images/OGN/OGN-243a.avif",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-243.avif",
+     "set": "Origins",
+     "number": "OGN-243/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/OGN/OGN-243a.avif",
+     "set": "Origins",
+     "number": "OGN-243a/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-236.avif",
+     "set": "Spiritforged",
+     "number": "SFD-236/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/SFD/SFD-236a.avif",
+     "set": "Spiritforged",
+     "number": "SFD-236*/221",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-244",
@@ -7599,7 +8071,24 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-245.avif",
+     "set": "Origins",
+     "number": "OGN-245/298",
+     "rarity": "エピック"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/SFD/SFD-238.avif",
+     "set": "Spiritforged",
+     "number": "SFD-238/221",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/SFD/SFD-238.avif"
   },
   {
    "id": "ogn-246",
@@ -7660,7 +8149,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-247.avif",
+     "set": "Origins",
+     "number": "OGN-247/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-299.avif",
+     "set": "Origins",
+     "number": "OGN-299/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-299a.avif",
+     "set": "Origins",
+     "number": "OGN-299*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-299.avif"
   },
   {
    "id": "ogn-249",
@@ -7689,7 +8202,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-249.avif",
+     "set": "Origins",
+     "number": "OGN-249/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-300.avif",
+     "set": "Origins",
+     "number": "OGN-300/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-300a.avif",
+     "set": "Origins",
+     "number": "OGN-300*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-300.avif"
   },
   {
    "id": "ogn-251",
@@ -7718,7 +8255,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-251.avif",
+     "set": "Origins",
+     "number": "OGN-251/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-301.avif",
+     "set": "Origins",
+     "number": "OGN-301/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-301a.avif",
+     "set": "Origins",
+     "number": "OGN-301*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-301.avif"
   },
   {
    "id": "ogn-253",
@@ -7747,7 +8308,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-253.avif",
+     "set": "Origins",
+     "number": "OGN-253/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-302.avif",
+     "set": "Origins",
+     "number": "OGN-302/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-302a.avif",
+     "set": "Origins",
+     "number": "OGN-302*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-302.avif"
   },
   {
    "id": "ogn-255",
@@ -7776,7 +8361,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-255.avif",
+     "set": "Origins",
+     "number": "OGN-255/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-303.avif",
+     "set": "Origins",
+     "number": "OGN-303/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-303a.avif",
+     "set": "Origins",
+     "number": "OGN-303*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-303.avif"
   },
   {
    "id": "ogn-257",
@@ -7805,7 +8414,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-257.avif",
+     "set": "Origins",
+     "number": "OGN-257/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-304.avif",
+     "set": "Origins",
+     "number": "OGN-304/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-304a.avif",
+     "set": "Origins",
+     "number": "OGN-304*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-304.avif"
   },
   {
    "id": "ogn-259",
@@ -7839,7 +8472,31 @@
     "date": "2025-10-28",
     "oldJa": "②、⟨イグゾースト⟩：自分のユニット1体を、自分のベースへ、またはベースから移動させる。",
     "oldEn": "②, ⟨消耗⟩: Move a friendly unit to or from your base."
-   }
+   },
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-259.avif",
+     "set": "Origins",
+     "number": "OGN-259/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-305.avif",
+     "set": "Origins",
+     "number": "OGN-305/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-305a.avif",
+     "set": "Origins",
+     "number": "OGN-305*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-305.avif"
   },
   {
    "id": "ogn-261",
@@ -7868,7 +8525,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-261.avif",
+     "set": "Origins",
+     "number": "OGN-261/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-306.avif",
+     "set": "Origins",
+     "number": "OGN-306/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-306a.avif",
+     "set": "Origins",
+     "number": "OGN-306*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-306.avif"
   },
   {
    "id": "ogn-263",
@@ -7897,7 +8578,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-263.avif",
+     "set": "Origins",
+     "number": "OGN-263/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-307.avif",
+     "set": "Origins",
+     "number": "OGN-307/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-307a.avif",
+     "set": "Origins",
+     "number": "OGN-307*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-307.avif"
   },
   {
    "id": "ogn-265",
@@ -7926,7 +8631,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-265.avif",
+     "set": "Origins",
+     "number": "OGN-265/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-308.avif",
+     "set": "Origins",
+     "number": "OGN-308/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-308a.avif",
+     "set": "Origins",
+     "number": "OGN-308*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-308.avif"
   },
   {
    "id": "ogn-267",
@@ -7955,7 +8684,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-267.avif",
+     "set": "Origins",
+     "number": "OGN-267/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-309.avif",
+     "set": "Origins",
+     "number": "OGN-309/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-309a.avif",
+     "set": "Origins",
+     "number": "OGN-309*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-309.avif"
   },
   {
    "id": "ogn-269",
@@ -7989,7 +8742,31 @@
     "date": "2025-10-28",
     "oldJa": "あなたのコントロールするバフを持つユニットが破壊されそうになったとき、⟨rune⟩を払い自身をイグゾーストさせて、そのバフを消費し代わりにそれをイグゾースト状態でリコールしてもよい。(ベースへ送る。これは移動ではない。)\n征服(Conquer)したとき、自身をレディにする。",
     "oldEn": "When a buffed unit you control would die, you may pay [C] and exhaust me to spend its buff and recall it exhausted instead. (Send it to base. This isn’t a move.)\nWhen you conquer, ready me."
-   }
+   },
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-269.avif",
+     "set": "Origins",
+     "number": "OGN-269/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/OGN/OGN-310.avif",
+     "set": "Origins",
+     "number": "OGN-310/298",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/OGN/OGN-310a.avif",
+     "set": "Origins",
+     "number": "OGN-310*/298",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/OGN/OGN-310.avif"
   },
   {
    "id": "ogn-248",

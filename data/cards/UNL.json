@@ -4372,6 +4372,29 @@
    "altImage": "images/UNL/UNL-147a.avif",
    "tokens": [
     "unl-t01"
+   ],
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-147.avif",
+     "set": "Unleashed",
+     "number": "UNL-147/219",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/UNL/UNL-147a.avif",
+     "set": "Unleashed",
+     "number": "UNL-147a/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-238.avif",
+     "set": "Unleashed",
+     "number": "UNL-238/219",
+     "rarity": "ショーケース"
+    }
    ]
   },
   {
@@ -5353,7 +5376,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-181.avif",
+     "set": "Unleashed",
+     "number": "UNL-181/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-226.avif",
+     "set": "Unleashed",
+     "number": "UNL-226/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-226a.avif",
+     "set": "Unleashed",
+     "number": "UNL-226*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-226.avif"
   },
   {
    "id": "unl-183",
@@ -5382,7 +5429,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-183.avif",
+     "set": "Unleashed",
+     "number": "UNL-183/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-227.avif",
+     "set": "Unleashed",
+     "number": "UNL-227/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-227a.avif",
+     "set": "Unleashed",
+     "number": "UNL-227*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-227.avif"
   },
   {
    "id": "unl-182",
@@ -5480,7 +5551,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-185.avif",
+     "set": "Unleashed",
+     "number": "UNL-185/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-228.avif",
+     "set": "Unleashed",
+     "number": "UNL-228/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-228a.avif",
+     "set": "Unleashed",
+     "number": "UNL-228*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-228.avif"
   },
   {
    "id": "unl-186",
@@ -5543,7 +5638,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-187.avif",
+     "set": "Unleashed",
+     "number": "UNL-187/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-229.avif",
+     "set": "Unleashed",
+     "number": "UNL-229/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-229a.avif",
+     "set": "Unleashed",
+     "number": "UNL-229*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-229.avif"
   },
   {
    "id": "unl-188",
@@ -5611,7 +5730,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-189.avif",
+     "set": "Unleashed",
+     "number": "UNL-189/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-230.avif",
+     "set": "Unleashed",
+     "number": "UNL-230/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-230a.avif",
+     "set": "Unleashed",
+     "number": "UNL-230*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-230.avif"
   },
   {
    "id": "unl-190",
@@ -5674,7 +5817,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-191.avif",
+     "set": "Unleashed",
+     "number": "UNL-191/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-231.avif",
+     "set": "Unleashed",
+     "number": "UNL-231/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-231a.avif",
+     "set": "Unleashed",
+     "number": "UNL-231*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-231.avif"
   },
   {
    "id": "unl-192",
@@ -5737,7 +5904,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-193.avif",
+     "set": "Unleashed",
+     "number": "UNL-193/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-232.avif",
+     "set": "Unleashed",
+     "number": "UNL-232/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-232a.avif",
+     "set": "Unleashed",
+     "number": "UNL-232*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-232.avif"
   },
   {
    "id": "unl-194",
@@ -5800,7 +5991,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-195.avif",
+     "set": "Unleashed",
+     "number": "UNL-195/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-233.avif",
+     "set": "Unleashed",
+     "number": "UNL-233/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-233a.avif",
+     "set": "Unleashed",
+     "number": "UNL-233*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-233.avif"
   },
   {
    "id": "unl-196",
@@ -5868,7 +6083,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-197.avif",
+     "set": "Unleashed",
+     "number": "UNL-197/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-234.avif",
+     "set": "Unleashed",
+     "number": "UNL-234/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-234a.avif",
+     "set": "Unleashed",
+     "number": "UNL-234*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-234.avif"
   },
   {
    "id": "unl-198",
@@ -5936,7 +6175,31 @@
     "date": "2026-04-03",
     "oldJa": "自身が征服(Conquer)またはホールドしたとき、カードを1枚捨てて自身をイグゾーストさせ、そこにレディ状態のReflectionユニットトークン1体をプレイしてもよい。それはそこにいる別のユニットのコピーになる。それにTEMPORARYを与える。",
     "oldEn": "When you conquer or hold, you may discard 1 and exhaust me to play a ready Reflection unit token there. It becomes a copy of another unit there. Give it TEMPORARY."
-   }
+   },
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-199.avif",
+     "set": "Unleashed",
+     "number": "UNL-199/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-235.avif",
+     "set": "Unleashed",
+     "number": "UNL-235/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-235a.avif",
+     "set": "Unleashed",
+     "number": "UNL-235*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-235.avif"
   },
   {
    "id": "unl-200",
@@ -6002,7 +6265,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-201.avif",
+     "set": "Unleashed",
+     "number": "UNL-201/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-236.avif",
+     "set": "Unleashed",
+     "number": "UNL-236/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-236a.avif",
+     "set": "Unleashed",
+     "number": "UNL-236*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-236.avif"
   },
   {
    "id": "unl-202",
@@ -6060,7 +6347,31 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-203.avif",
+     "set": "Unleashed",
+     "number": "UNL-203/219",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/UNL/UNL-237.avif",
+     "set": "Unleashed",
+     "number": "UNL-237/219",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED サイン入り",
+     "image": "images/UNL/UNL-237a.avif",
+     "set": "Unleashed",
+     "number": "UNL-237*/219",
+     "rarity": "ショーケース"
+    }
+   ],
+   "altImage": "images/UNL/UNL-237.avif"
   },
   {
    "id": "unl-204",
