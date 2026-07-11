@@ -191,6 +191,9 @@ a:hover{color:var(--ink)}
   /* resource cards: gold edge only on hover */
   .rb-hovedge{transition:border-color .2s ease}
   .rb-hovedge:hover{border-color:var(--gold-dim) !important}
+  .rb-imgwrap{aspect-ratio:63/88}
+  .rb-cimg{width:100%;height:100%;object-fit:cover;display:block}
+  .rb-cimg.contain{object-fit:contain}
   @media (prefers-reduced-motion: reduce){
     .rb-gcard,.rb-cardgrid img,.rb-view,.rb-detimg,.rb-lift,.rb-spin,.rb-anim,.rb-domtile{animation:none !important;transition:none !important}
     .rb-gcard:hover,.rb-lift:hover,.rb-domtile:hover{transform:none !important}
@@ -418,7 +421,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:14px">関連トークン</div>
               <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px">
                 <sc-for list="{{ sel.relTokens }}" as="t" hint-placeholder-count="1">
-                  <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd class="rb-lift" style="cursor:pointer;display:flex;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)" style-hover="border-color:var(--gold-dim)">
+                  <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd class="rb-hovedge" style="cursor:pointer;display:flex;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)">
                     <img src="{{ t.image }}" alt="{{ t.name }}" onError="{{ hideImg }}" loading="lazy" decoding="async" style="width:104px;align-self:flex-start;flex:none;display:block"/>
                     <div style="padding:12px 14px;flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
                       <div style="display:flex;align-items:center;gap:8px">
@@ -624,7 +627,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:14px">関連トークン</div>
               <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px">
                 <sc-for list="{{ legend.relTokens }}" as="t" hint-placeholder-count="1">
-                  <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd class="rb-lift" style="cursor:pointer;display:flex;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)" style-hover="border-color:var(--gold-dim)">
+                  <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd class="rb-hovedge" style="cursor:pointer;display:flex;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)">
                     <img src="{{ t.image }}" alt="{{ t.name }}" onError="{{ hideImg }}" loading="lazy" decoding="async" style="width:104px;align-self:flex-start;flex:none;display:block"/>
                     <div style="padding:12px 14px;flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
                       <div style="display:flex;align-items:center;gap:8px">
@@ -749,6 +752,18 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                 <span style="color:var(--gold);font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;flex:none;margin-top:2px">SOURCE</span>
                 <div style="font-size:12px;line-height:1.7;color:var(--ink-faint)">出典: {{ rulesSourceLabel }}<br/><a href="{{ rulesSourceUrl }}" target="_blank" rel="noopener" style="color:var(--gold)">{{ rulesSourceUrl }}</a> — 本ページは同ルール（英語）の非公式日本語訳です。</div>
               </div>
+
+              <div style="display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--gold-dim);border-radius:10px;padding:11px 15px;margin-bottom:14px;max-width:680px">
+                <div style="width:15px;height:15px;border:1.8px solid var(--gold);border-radius:50%;position:relative;flex:none"><div style="position:absolute;width:6px;height:1.8px;background:var(--gold);transform:rotate(45deg);top:12px;left:10px;border-radius:2px"></div></div>
+                <input value="{{ rulesQuery }}" onInput="{{ onRuleSearch }}" aria-label="ルールを検索" placeholder="ルールを検索（用語・番号・本文）…" style="flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:14px" />
+                <sc-if value="{{ ruleSearchActive }}" hint-placeholder-val="{{ false }}">
+                  <span style="font:600 11px 'JetBrains Mono',monospace;color:var(--ink-faint);flex:none">{{ ruleMatchCount }}件</span>
+                  <div onClick="{{ clearRuleSearch }}" role="button" tabindex="0" data-kbd aria-label="検索をクリア" style="cursor:pointer;flex:none;width:20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:5px;color:var(--ink-faint);font-size:15px" style-hover="color:var(--ink)">×</div>
+                </sc-if>
+              </div>
+              <sc-if value="{{ ruleNoResults }}" hint-placeholder-val="{{ false }}">
+                <div style="border:1px solid var(--line-soft);border-radius:10px;background:var(--surface2);padding:16px 18px;margin-bottom:16px;font-size:13px;color:var(--ink-dim);line-height:1.75">「{{ rulesQuery }}」に一致するルールは見つかりませんでした。用語（例: Banish / Chain / スタン）や番号（例: 427）で試してください。</div>
+              </sc-if>
 
               <sc-for list="{{ rulesSections }}" as="sec" hint-placeholder-count="9">
                 <section id="{{ sec.secId }}" style="scroll-margin-top:74px;margin-bottom:40px">
@@ -998,8 +1013,8 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                   <div class="rb-cardgrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(152px,1fr));gap:14px;margin-bottom:10px">
                     <sc-for list="{{ g.rows }}" as="c" hint-placeholder-count="6">
                       <div onClick="{{ c.onClick }}" role="button" tabindex="0" data-kbd class="rb-gcard" style="cursor:pointer;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s ease,border-color .28s ease;will-change:transform" style-hover="border-color:var(--gold);transform:translateY(-7px);box-shadow:0 14px 30px -10px rgba(0,0,0,.55),0 0 0 1px var(--gold-dim)">
-                        <div data-fallback="var(--surface3)" style="position:relative;aspect-ratio:63/88;overflow:hidden;background:var(--surface3)">
-                          <img src="{{ c.image }}" onError="{{ hideImg }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"/>
+                        <div data-fallback="var(--surface3)" class="rb-imgwrap" style="position:relative;overflow:hidden;background:var(--surface3)">
+                          <img src="{{ c.image }}" onError="{{ hideImg }}" loading="lazy" decoding="async" class="{{ c.imgFit }}"/>
                           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(18,16,14,.86),rgba(18,16,14,0) 44%)"></div>
                           <div style="position:absolute;left:10px;right:10px;bottom:8px">
                             <div style="font-weight:700;font-size:12.5px;line-height:1.25;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.7);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ c.name }}</div>
@@ -1132,7 +1147,8 @@ class Component extends DCLogic {
       .catch(()=>{});
     this._onPop = () => {
       const patch = this.parseHash();
-      this.setState({ view:'home', domain:null, set:null, selectedId:null, legendId:null, query:'', queryRaw:'', lightbox:null, variantIdx:0, legendVariantIdx:0, fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], ...patch });
+      const clearF = ['home','legends','keywords','rules'].includes(patch.view) ? this.FILTER_RESET : {};
+      this.setState({ view:'home', domain:null, set:null, selectedId:null, legendId:null, lightbox:null, variantIdx:0, legendVariantIdx:0, ...clearF, ...patch });
       this.ensureCardsFor(patch);
       if(patch.view==='rules' && patch.ruleSec){
         this.jumpToRule(patch.ruleSec);
@@ -1211,8 +1227,9 @@ class Component extends DCLogic {
     if(this._searchT){ clearTimeout(this._searchT); }
   }
   parseHash(){ return (window.RB && window.RB.parseHash) ? window.RB.parseHash() : { view:'home' }; }
+  FILTER_RESET = { query:'', queryRaw:'', fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], tagQ:'', kwQ:'' };
   go(patch, hash){
-    const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, query:'', queryRaw:'', menuOpen:false, altView:false, variantIdx:0, legendVariantIdx:0, lightbox:null, fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], ...patch };
+    const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, menuOpen:false, altView:false, variantIdx:0, legendVariantIdx:0, lightbox:null, ...patch };
     this.setState(st);
     this.ensureCardsFor(st);
     if(st.view==='rules' && st.ruleSec){ this.jumpToRule(st.ruleSec); }
@@ -1300,11 +1317,11 @@ class Component extends DCLogic {
     this.go({ view:'detail', selectedId:id }, '#card/'+encodeURIComponent(id));
   }
   openCardVariant(id, vIdx){ this.go({ view:'detail', selectedId:id, variantIdx:(vIdx||0) }, '#card/'+encodeURIComponent(id)); }
-  goLegends(){ this.go({ view:'legends' }, '#legends'); }
+  goLegends(){ this.go({ view:'legends', ...this.FILTER_RESET }, '#legends'); }
   openLegend(id){ this.go({ view:'legend', legendId:id }, '#legend/'+encodeURIComponent(id)); }
-  goKeywords(){ this.go({ view:'keywords' }, '#keywords'); }
-  goRules(){ this.go({ view:'rules' }, '#rules'); }
-  goRulesGlossary(){ this.go({ view:'rules', ruleSec:'glossary' }, '#rules/glossary'); }
+  goKeywords(){ this.go({ view:'keywords', ...this.FILTER_RESET }, '#keywords'); }
+  goRules(){ this.go({ view:'rules', ...this.FILTER_RESET }, '#rules'); }
+  goRulesGlossary(){ this.go({ view:'rules', ruleSec:'glossary', ...this.FILTER_RESET }, '#rules/glossary'); }
   scrollToRule(id){
     const el = document.getElementById('rulesec-'+id);
     if(el){ const y = el.getBoundingClientRect().top + window.pageYOffset - 74; window.scrollTo({ top:y, behavior:'smooth' }); }
@@ -1336,7 +1353,7 @@ class Component extends DCLogic {
   }
   // 能力キーワードのチップ配色（カテゴリ色。未分類は surface3+gold にフォールバック。カード詳細と統一）。
   kwChipColors(kw){ const c=this.kwColor(kw); return { bg: c?c.color:'var(--surface3)', ink: c?c.text:'var(--gold)' }; }
-  goHome(){ this.go({ view:'home' }, '#'); }
+  goHome(){ this.go({ view:'home', ...this.FILTER_RESET }, '#'); }
   toggleMenu(){ this.setState(s=>({ menuOpen: !s.menuOpen })); }
   closeMenu(){ this.setState({ menuOpen:false }); }
   setTheme(t){ if(t!=='light'&&t!=='dark') return; if(typeof window!=='undefined' && window.rbSetTheme) window.rbSetTheme(t); this.setState({ theme:t }); }
@@ -1424,6 +1441,26 @@ class Component extends DCLogic {
       window.RB.setKeywords(km);
     }
     const q = (s.query||'').trim().toLowerCase();
+    // ルール検索（用語・番号・本文でフィルタ。セクションタイトル/番号一致は全ブロック表示）
+    const rq = (s.ruleQ||'').trim().toLowerCase();
+    let ruleMatchCount = 0;
+    const rulesSectionsF = ((s.rules && s.rules.sections) || []).map(sec=>{
+      const allBlocks = sec.blocks || [];
+      const secHit = rq && ((sec.title||'').toLowerCase().includes(rq) || String(sec.num||'').toLowerCase().includes(rq));
+      const fblocks = (!rq || secHit) ? allBlocks
+        : allBlocks.filter(b=> ((b.h||'')+' '+(b.ja||'')+' '+(b.n||'')).toLowerCase().includes(rq));
+      if(rq) ruleMatchCount += fblocks.length;
+      return { sec, fblocks, visible: !rq || secHit || fblocks.length>0 };
+    }).filter(x=>x.visible).map(({sec,fblocks})=>({
+      id: sec.id, secId: 'rulesec-'+sec.id, num: sec.num, title: sec.title,
+      done: sec.done, notDone: !sec.done,
+      blocks: fblocks.map((b,bi)=>({
+        key: sec.id+'-'+bi, num: b.n, hasNum: !!b.n,
+        h: b.h||'', hasH: !!b.h,
+        jaNode: this.ruleNodes(b.ja),
+      })),
+      en: sec.en || '',
+    }));
 
     // helper: split a card's tags
     const cardTags = (c)=> (c.tag||'').split(/[・･]/).map(t=>t.trim()).filter(Boolean);
@@ -1574,6 +1611,7 @@ class Component extends DCLogic {
       set:c.setCode, domain:c.domain, color:this.domColor(c.domain), icon:this.domIcon(c.domain), image:c.image||'',
       onClick: c._artLegendId ? (()=>this.openCardVariant(c._artLegendId, c._artVariantIdx)) : (()=>this.select(c.id)),
       numShort: (c.number||'').split('/')[0],
+      imgFit: (/Battlefield/i.test(c.type||'')||/Battlefield/i.test(c.tag||'')) ? 'rb-cimg contain' : 'rb-cimg',
       energyNode: c.cost ? this.energyPip(c.cost,20) : null,
     });
 
@@ -1865,16 +1903,13 @@ class Component extends DCLogic {
       tocSheetOpen: s.tocSheet,
       openTocSheet: ()=>this.setState({ tocSheet:true }),
       closeTocSheet: ()=>this.closeTocSheet(),
-      rulesSections: ((s.rules && s.rules.sections) || []).map(sec=>({
-        id: sec.id, secId: 'rulesec-'+sec.id, num: sec.num, title: sec.title,
-        done: sec.done, notDone: !sec.done,
-        blocks: (sec.blocks||[]).map((b,bi)=>({
-          key: sec.id+'-'+bi, num: b.n, hasNum: !!b.n,
-          h: b.h||'', hasH: !!b.h,
-          jaNode: this.ruleNodes(b.ja),
-        })),
-        en: sec.en || '',
-      })),
+      rulesQuery: s.ruleQ || '',
+      ruleSearchActive: !!(s.ruleQ && s.ruleQ.trim()),
+      ruleMatchCount: ruleMatchCount,
+      ruleNoResults: !!(s.ruleQ && s.ruleQ.trim()) && rulesSectionsF.length===0,
+      onRuleSearch: (e)=>this.setState({ ruleQ: e.target.value }),
+      clearRuleSearch: ()=>this.setState({ ruleQ:'' }),
+      rulesSections: rulesSectionsF,
       showKeywords: s.view==='keywords',
       keywordCount: `${s.keywords.length} 語`,
       keywordGroups: s.keywordCategories.map(cat=>{
