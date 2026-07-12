@@ -1461,6 +1461,19 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
   </div>
 </sc-if>
 
+<sc-if value="{{ confirmDeleteOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ cancelDeleteDeck }}" role="button" tabindex="0" data-kbd aria-label="閉じる" class="rb-lb" style="position:fixed;inset:0;z-index:130;background:radial-gradient(120% 120% at 50% 30%,rgba(30,24,16,.82),rgba(8,7,5,.94));backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;cursor:pointer">
+    <div onClick="{{ stopEvt }}" role="dialog" aria-modal="true" class="rb-lb-fig" style="cursor:default;width:min(92vw,380px);background:var(--surface);border:1px solid var(--gold-dim);border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.4);padding:24px 22px">
+      <div style="font:700 16px 'Zen Kaku Gothic New',sans-serif;color:var(--ink);margin-bottom:8px">デッキを削除しますか？</div>
+      <div style="font:500 13px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-dim);line-height:1.6;margin-bottom:20px">「{{ confirmDeleteName }}」を削除します。この操作は取り消せません。</div>
+      <div style="display:flex;gap:10px;justify-content:flex-end">
+        <div onClick="{{ cancelDeleteDeck }}" role="button" tabindex="0" data-kbd style="cursor:pointer;white-space:nowrap;font:600 12.5px 'Zen Kaku Gothic New',sans-serif;padding:9px 16px;border-radius:8px;border:1px solid var(--line);color:var(--ink);background:var(--surface2);transition:background .18s" style-hover="background:var(--surface3)">キャンセル</div>
+        <div onClick="{{ confirmDeleteDeck }}" role="button" tabindex="0" data-kbd style="cursor:pointer;white-space:nowrap;font:700 12.5px 'Zen Kaku Gothic New',sans-serif;padding:9px 16px;border-radius:8px;border:1px solid #c0392b;color:#fff;background:#c0392b;transition:filter .18s" style-hover="filter:brightness(1.12)">削除する</div>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
@@ -1568,7 +1581,8 @@ class Component extends DCLogic {
           el.click();
         }
       } else if(e.key==='Escape'){
-        if(this.state.lightbox) this.setState({ lightbox:null });
+        if(this.state.confirmDelete) this.setState({ confirmDelete:null });
+        else if(this.state.lightbox) this.setState({ lightbox:null });
         else if(this.state.menuOpen || this.state.tocSheet) this.setState({ menuOpen:false, tocSheet:false });
       }
     };
@@ -1921,11 +1935,17 @@ class Component extends DCLogic {
   createDeck(){ const d=this.newDeckObj(); this.persistDecks([...(this.state.decks||[]), d], d.id); }
   selectDeck(e){ const id=e.target.value; this.persistDecks(this.state.decks, id); }
   deleteActiveDeck(){
-    if(!window.confirm('このデッキを削除しますか？')) return;
-    let decks=(this.state.decks||[]).filter(d=>d.id!==this.state.activeDeckId);
+    const d=this.activeDeck();
+    this.setState({ confirmDelete: this.state.activeDeckId, confirmDeleteName: (d&&d.name)||'デッキ' });
+  }
+  confirmDeleteDeck(){
+    const id=this.state.confirmDelete;
+    let decks=(this.state.decks||[]).filter(d=>d.id!==id);
+    this.setState({ confirmDelete:null });
     if(!decks.length){ const d=this.newDeckObj(); this.persistDecks([d], d.id); return; }
     this.persistDecks(decks, decks[0].id);
   }
+  cancelDeleteDeck(){ this.setState({ confirmDelete:null }); }
   renameDeck(e){ const v=e.target.value; this.mutateDeck(d=>{ d.name=v; }); }
   deckLegendCard(){ const d=this.activeDeck(); return d && d.legendId ? this.state.cards.find(c=>c.id===d.legendId) : null; }
   deckDomains(){
@@ -2559,6 +2579,11 @@ class Component extends DCLogic {
       lightboxImg: s.lightbox ? s.lightbox.img : '',
       lightboxCap: s.lightbox ? s.lightbox.cap : '',
       closeLightbox: ()=>this.setState({ lightbox:null }),
+      confirmDeleteOpen: !!s.confirmDelete,
+      confirmDeleteName: s.confirmDeleteName||'',
+      confirmDeleteDeck: ()=>this.confirmDeleteDeck(),
+      cancelDeleteDeck: ()=>this.cancelDeleteDeck(),
+      stopEvt: (e)=>{ if(e) e.stopPropagation(); },
       hideImg:(e)=>this.hideImg(e),
       setAltMain:()=>this.setAlt(false),
       setAltArt:()=>this.setAlt(true),
