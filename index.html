@@ -666,6 +666,11 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <div class="rb-hero" style="position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,var(--panel-a),var(--panel-b));padding:52px 44px;margin-bottom:34px">
             <div style="position:absolute;inset:0;background:radial-gradient(90% 120% at 90% 0%,rgba(217,185,120,.14),transparent 55%);pointer-events:none"></div>
             <div style="position:relative;max-width:640px">
+              <div onClick="{{ goVen }}" role="button" tabindex="0" data-kbd class="rb-anim rb-anim-1 rb-hovedge" style="cursor:pointer;display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--gold);border-radius:100px;padding:5px 7px 5px 14px;margin-bottom:16px">
+                <span style="flex:none;font-size:9.5px;font-weight:800;letter-spacing:.06em;background:var(--gold);color:var(--sel-ink);padding:3px 8px;border-radius:100px">NEW</span>
+                <span style="font-size:12.5px;line-height:1.4;color:var(--ink)">新セット「<strong>Vendetta</strong>」先行公開分を追加中</span>
+                <span style="flex:none;color:var(--gold);font-weight:700;font-size:14px">→</span>
+              </div>
               <h1 class="rb-hero-h1 rb-anim rb-anim-2" style="margin:0;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:38px;line-height:1.25;letter-spacing:.01em">RIFTBOUND<br/>日本語翻訳 Wiki</h1>
               <p class="rb-anim rb-anim-3" style="margin:18px 0 24px;font-size:14px;line-height:1.9;color:var(--ink-dim)">League of Legends のトレーディングカードゲーム「RIFTBOUND」の、英語で書かれたカード効果を日本語に翻訳し、検索・閲覧できるようにまとめた<strong style="color:var(--ink)">非公式ファンサイト</strong>です。</p>
               <div class="rb-hero-search rb-anim rb-anim-4" style="display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--gold-dim);border-radius:11px;padding:13px 18px;max-width:480px;box-shadow:0 4px 18px rgba(0,0,0,.28)">
@@ -705,6 +710,18 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               <span style="font-size:12px;font-weight:700;color:var(--gold)">読む →</span>
             </div>
           </div>
+
+          <sc-if value="{{ hasChangelog }}" hint-placeholder-val="{{ false }}">
+            <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:inline-block;margin-bottom:16px">更新履歴</div>
+            <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-bottom:36px">
+              <sc-for list="{{ changelog }}" as="e" hint-placeholder-count="3">
+                <div style="display:flex;gap:16px;align-items:baseline;padding:12px 18px;border-top:1px solid var(--line-soft)">
+                  <span style="font:600 11px 'JetBrains Mono',monospace;color:var(--gold-dim);flex:none;min-width:78px">{{ e.date }}</span>
+                  <span style="font-size:13px;color:var(--ink-dim);line-height:1.65">{{ e.text }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
         </div>
       </sc-if>
 
@@ -1058,7 +1075,7 @@ class Component extends DCLogic {
 
   // データは data/meta.json（軽量メタ）と data/cards/<CODE>.json（セット別カード）に分割。
   // メタ即読み → home/legends/keywords/rules は即描画。カード本体はカード系ビューに入ったとき遅延ロード。
-  SET_LOAD_ORDER = ['UNL','SFD','OGN','OGS'];
+  SET_LOAD_ORDER = ['VEN','UNL','SFD','OGN','OGS'];
   _loaded = new Set();   // 読込済みセットコード
   _setP = {};            // セット別 fetch Promise（多重fetch防止）
 
@@ -1120,6 +1137,7 @@ class Component extends DCLogic {
           keywords: d.keywords || [],
           keywordCategories: d.keywordCategories || [],
           counts: d.counts || {},
+          changelog: d.changelog || [],
           loading: false,
           ...patch,
         });
@@ -1223,7 +1241,7 @@ class Component extends DCLogic {
   }
 
   TYPE_ORDER = ['Unit','Spell','Gear','Legend','Battlefield','Token','Rune'];
-  typeOf(c){ return c.type==='Champion Unit' ? 'Unit' : c.type; }
+  typeOf(c){ return (c.type==='Champion Unit'||c.type==='Unit Gear') ? 'Unit' : c.type; }
   TYPE_LABEL = { Unit:'ユニットカード', Spell:'スペルカード', Gear:'ギアカード', Legend:'レジェンド', Battlefield:'バトルフィールド', Token:'トークン', Rune:'ルーン' };
   RARITY_ORDER = { 'コモン':0, 'Common':0, 'アンコモン':1, 'Uncommon':1, 'レア':2, 'Rare':2, 'エピック':3, 'Epic':3, 'レジェンダリー':4, 'ショーケース':5 };
   // タグ → LoL 日本語版で確定している読み（別名）。検索用。チャンピオン名＋リージョン名。
@@ -1253,6 +1271,15 @@ class Component extends DCLogic {
     'Volibear':['ボリベア'], 'Warwick':['ワーウィック'], 'Xerath':['ゼラス'],
     'Xin Zhao':['シン・ジャオ','シンジャオ'], 'Yasuo':['ヤスオ'], 'Yone':['ヨネ'], 'Yuumi':['ユーミ'],
     'Zilean':['ジリアン'],
+    'Akali':['アカリ'], 'Zed':['ゼド'], 'Nasus':['ナサス'], 'Morgana':['モルガナ'],
+    'Renekton':['レネクトン'], 'Riven':['リヴェン','リブェン'], 'Kennen':['ケネン'],
+    'Gangplank':['ガングプランク','GP'], 'Illaoi':['イラオイ'], 'Ambessa':['アンベッサ'], 'Mel':['メル'],
+    // --- Creature subtypes ---
+    'Poro':['ポロ'], 'Dragon':['ドラゴン','竜'], 'Fae':['フェイ','妖精'], 'Cat':['キャット','猫'],
+    'Dog':['ドッグ','犬'], 'Mech':['メック'], 'Pirate':['パイレーツ','海賊'],
+    'Spirit':['スピリット','精霊'], 'Elite':['エリート'], 'Demon':['デーモン','悪魔'],
+    'Sentinel':['センチネル','番人'], 'Spider':['スパイダー','蜘蛛'], 'Bird':['バード','鳥'],
+    'Trifarian':['トライファリアン'], 'Kathkan':['カスカン'],
     // --- Regions / factions ---
     'Bandle City':['バンドルシティ','バンドル・シティ'], 'Bilgewater':['ビルジウォーター'],
     'Demacia':['デマーシア'], 'Freljord':['フレヨルド'], 'Ionia':['アイオニア'],
@@ -1269,6 +1296,7 @@ class Component extends DCLogic {
   TYPE_JA = {
     'Unit':['ユニット'], 'Spell':['スペル','呪文'], 'Gear':['ギア','装備'],
     'Battlefield':['バトルフィールド','戦場'], 'Token':['トークン'], 'Rune':['ルーン'], 'Legend':['レジェンド'],
+    'Champion Unit':['チャンピオンユニット','チャンピオン'], 'Unit Gear':['ユニットギア','ユニット','ギア'],
   };
   KW_JA = {
     'ACCELERATE':['アクセラレート'], 'ACTION':['アクション'], 'ADD':['アド','加える'],
@@ -1280,6 +1308,7 @@ class Component extends DCLogic {
     'REACTION':['リアクション'], 'REPEAT':['リピート','反復'], 'SHIELD':['シールド','盾'],
     'STUN':['スタン','気絶'], 'TANK':['タンク'], 'TEMPORARY':['テンポラリー','一時'],
     'UNIQUE':['ユニーク'], 'VISION':['ビジョン','予見'], 'WEAPONMASTER':['ウェポンマスター'],
+    'BURN':['バーン'], 'EMPOWER':['エンパワー'], 'EMPOWERED':['エンパワード'], 'FLOW':['フロー'],
   };
   RARITY_STYLE = {
     'コモン':   { color:'#c4c9d0', shape:'circle' },
@@ -1898,6 +1927,7 @@ class Component extends DCLogic {
       sideClass: s.menuOpen ? 'open' : '',
       scrimClass: s.menuOpen ? 'show' : '',
       goAll:()=>this.goAll(),
+      goVen:()=>this.setSet('VEN'),
       homeBg: activeTab==='home' ? highlight : 'transparent',
       homeInk: activeTab==='home' ? 'var(--ink)' : 'var(--ink-dim)',
       allBg: (activeTab==='list' && !s.domain && !s.set && !q) ? highlight : 'transparent',
@@ -1938,6 +1968,8 @@ class Component extends DCLogic {
         return { name:cat.name, color:cat.color, count:`${items.length}`, items };
       }).filter(g=>g.items.length>0),
       domainNav, recent,
+      changelog: (this.state.changelog||[]).slice(0,6),
+      hasChangelog: (this.state.changelog||[]).length>0,
       showDetail: s.view==='detail' && !!sel,
       showLegends: s.view==='legends',
       showLegendDetail: s.view==='legend' && !!ld,

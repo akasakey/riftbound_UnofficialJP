@@ -1,6 +1,10 @@
 {
- "_readme": "メタデータ（sets/keywordCategories/keywords/counts/legends）。カード本体は data/cards/<CODE>.json に分割。編集は data/cards.json を直し scripts/split-cards.js を流す。",
+ "_readme": "メタデータ。",
  "sets": [
+  {
+   "code": "VEN",
+   "name": "Vendetta"
+  },
   {
    "code": "OGN",
    "name": "Origins"
@@ -174,19 +178,40 @@
    "kw": "WEAPONMASTER",
    "cat": "ability",
    "desc": "自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストでEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。"
+  },
+  {
+   "kw": "BURN X",
+   "cat": "ability",
+   "desc": "対象のプレイヤーは、自分のメインデッキの一番上からX枚を捨て札に置く。"
+  },
+  {
+   "kw": "EMPOWER X",
+   "cat": "ability",
+   "desc": "規定のコストを支払うと、このカードをEMPOWERED（エンパワード）状態にできる。すでにEMPOWEREDなら使えない。"
+  },
+  {
+   "kw": "EMPOWERED",
+   "cat": "score",
+   "desc": "EMPOWERED（エンパワード）状態の間、記載の強化効果を得る。"
+  },
+  {
+   "kw": "FLOW X",
+   "cat": "timing",
+   "desc": "このカードを捨て札からFLOWコストで使用できる。使用後は追放(Banish)する。"
   }
  ],
  "counts": {
-  "total": 771,
+  "total": 870,
   "byDomain": {
-   "Fury": 130,
-   "Body": 131,
-   "Calm": 131,
-   "Order": 132,
-   "Mind": 132,
-   "Chaos": 127
+   "Fury": 149,
+   "Body": 146,
+   "Calm": 148,
+   "Order": 147,
+   "Mind": 152,
+   "Chaos": 145
   },
   "bySet": {
+   "VEN": 99,
    "UNL": 225,
    "SFD": 224,
    "OGN": 298,
@@ -934,6 +959,176 @@
    ],
    "strategy": "",
    "image": "images/OGS/OGS-023.avif"
+  },
+  {
+   "id": "ven-139",
+   "name": "Akali - Rogue Assassin",
+   "nameJa": "",
+   "number": "VEN-139/166",
+   "domains": [
+    "Fury",
+    "Calm"
+   ],
+   "abilityKw": "",
+   "abilityEn": "EMPOWER ③⟨rune⟩ (③⟨rune⟩: Empower me. Use only if not Empowered.) ACTION ⟨イグゾースト⟩: If it's your turn, move a friendly unit in a showdown to base and if I'm EMPOWERED ready it.",
+   "abilityJa": "EMPOWER ③⟨rune⟩ (③⟨rune⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。) ACTION ⟨イグゾースト⟩：自分のターンなら、ショーダウン中の味方ユニット1体をベースへ移動させ、自身がEMPOWEREDならそれをレディ状態にする。",
+   "signatures": [
+    "ven-140"
+   ],
+   "strategy": "",
+   "image": "images/VEN/VEN-139.avif"
+  },
+  {
+   "id": "ven-141",
+   "name": "Renekton - Butcher of the Sands",
+   "nameJa": "",
+   "number": "VEN-141/166",
+   "domains": [
+    "Fury",
+    "Body"
+   ],
+   "abilityKw": "",
+   "abilityEn": "REACTION ⟨rune⟩⟨rune⟩, ⟨イグゾースト⟩: ADD ②. Spend this Energy only to play units or activated abilities of units.",
+   "abilityJa": "REACTION ⟨rune⟩⟨rune⟩、⟨イグゾースト⟩：②をADDする。このエネルギーはユニットのプレイ、またはユニットの起動型能力にのみ支払える。",
+   "signatures": [
+    "ven-142"
+   ],
+   "strategy": "",
+   "image": "images/VEN/VEN-141.avif"
+  },
+  {
+   "id": "ven-143",
+   "name": "Zed - Master of Shadows",
+   "nameJa": "",
+   "number": "VEN-143/166",
+   "domains": [
+    "Fury",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you banish a card you own, empower me. (I become Empowered if I'm not already.) ACTION Disempower me, ⟨イグゾースト⟩: Discard 1, then draw 1.",
+   "abilityJa": "自分が所有するカードを追放(Banish)したとき、自身をエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。) ACTION 自身をディスエンパワーする、⟨イグゾースト⟩：カードを1枚捨て、その後1枚引く。",
+   "signatures": [
+    "ven-144"
+   ],
+   "strategy": "",
+   "image": "images/VEN/VEN-143.avif"
+  },
+  {
+   "id": "ven-145",
+   "name": "Nasus - Curator of the Sands",
+   "nameJa": "",
+   "number": "VEN-145/166",
+   "domains": [
+    "Calm",
+    "Mind"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you play a unit, gear, or activated ability with Energy cost ⑦ or more, you may exhaust me to ready up to 2 runes.",
+   "abilityJa": "エネルギーコスト⑦以上のユニット、ギア、または起動型能力をプレイ／使用したとき、自身をイグゾーストさせてルーンを最大2つレディ状態にしてもよい。",
+   "signatures": [
+    "ven-146"
+   ],
+   "strategy": "",
+   "image": "images/VEN/VEN-145.avif"
+  },
+  {
+   "id": "ven-147",
+   "name": "Shen - Eye of Twilight",
+   "nameJa": "",
+   "number": "VEN-147/166",
+   "domains": [
+    "Calm",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "ACTION ⟨イグゾースト⟩: Give a friendly unit TANK this turn. (It must be assigned combat damage first.)",
+   "abilityJa": "ACTION ⟨イグゾースト⟩：味方ユニット1体にこのターンTANKを与える。(戦闘ダメージは、そのユニットから割り当てなければならない。)",
+   "signatures": [],
+   "strategy": "",
+   "image": "images/VEN/VEN-147.avif"
+  },
+  {
+   "id": "ven-149",
+   "name": "Jayce - Defender of Tomorrow",
+   "nameJa": "",
+   "number": "VEN-149/166",
+   "domains": [
+    "Mind",
+    "Body"
+   ],
+   "abilityKw": "",
+   "abilityEn": "EMPOWER ②⟨rune⟩⟨rune⟩ (②⟨rune⟩⟨rune⟩: Empower me. Use only if not Empowered.) ①, ⟨イグゾースト⟩: Ready a gear. EMPOWERED ①, ⟨イグゾースト⟩: Ready 2 gear.",
+   "abilityJa": "EMPOWER ②⟨rune⟩⟨rune⟩ (②⟨rune⟩⟨rune⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。) ①、⟨イグゾースト⟩：ギア1つをレディ状態にする。 EMPOWERED ①、⟨イグゾースト⟩：ギア2つをレディ状態にする。",
+   "signatures": [],
+   "strategy": "",
+   "image": "images/VEN/VEN-149.avif"
+  },
+  {
+   "id": "ven-151",
+   "name": "Mel - Soul’s Reflection",
+   "nameJa": "",
+   "number": "VEN-151/166",
+   "domains": [
+    "Mind",
+    "Chaos"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you empower something else, empower me. (I become Empowered if I'm not already.) Disempower me, ⟨イグゾースト⟩: Give a unit at a battlefield -2 ⟨might⟩ this turn.",
+   "abilityJa": "自分が他の何かをエンパワーしたとき、自身をエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。) 自身をディスエンパワーする、⟨イグゾースト⟩：バトルフィールドにいるユニット1体にこのターン-2⟨might⟩を与える。",
+   "signatures": [
+    "ven-152"
+   ],
+   "strategy": "",
+   "image": "images/VEN/VEN-151.avif"
+  },
+  {
+   "id": "ven-153",
+   "name": "Ambessa - Matriarch of War",
+   "nameJa": "",
+   "number": "VEN-153/166",
+   "domains": [
+    "Fury",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you empower something else, empower me. (I become Empowered if I'm not already.) Disempower me, ⟨rune⟩, ⟨イグゾースト⟩: Ready a unit.",
+   "abilityJa": "自分が他の何かをエンパワーしたとき、自身をエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。) 自身をディスエンパワーする、⟨rune⟩、⟨イグゾースト⟩：ユニット1体をレディ状態にする。",
+   "signatures": [],
+   "strategy": "",
+   "image": "images/VEN/VEN-153.avif"
+  },
+  {
+   "id": "ven-155",
+   "name": "Kennen - Heart of the Tempest",
+   "nameJa": "",
+   "number": "VEN-155/166",
+   "domains": [
+    "Chaos",
+    "Order"
+   ],
+   "abilityKw": "",
+   "abilityEn": "When you play a card from anywhere other than your hand, empower me. ACTION Disempower me, ⟨イグゾースト⟩: Give a unit ASSAULT 2 this turn. (+2 ⟨might⟩ while it's an attacker.)",
+   "abilityJa": "自分が手札以外の場所からカードをプレイしたとき、自身をエンパワーする。 ACTION 自身をディスエンパワーする、⟨イグゾースト⟩：ユニット1体にこのターンASSAULT 2を与える。(攻撃側の間+2⟨might⟩。)",
+   "signatures": [
+    "ven-156"
+   ],
+   "strategy": "",
+   "image": "images/VEN/VEN-155.avif"
+  }
+ ],
+ "changelog": [
+  {
+   "date": "2026-07-12",
+   "text": "Vendetta にレジェンド・シグネチャー・バトルフィールド・ショーケース／プロモを追加しました。"
+  },
+  {
+   "date": "2026-07-12",
+   "text": "新セット「Vendetta」を追加しました（先行公開分）。"
+  },
+  {
+   "date": "2026-07-12",
+   "text": "サイトを公開しました（β版）。"
   }
  ]
 }

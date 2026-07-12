@@ -1,0 +1,3167 @@
+{
+ "cards": [
+  {
+   "id": "ven-002",
+   "name": "Blade Twirler",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "4",
+   "might": "4",
+   "rarity": "コモン",
+   "tag": "Ionia・Yordle",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-002/166",
+   "image": "images/VEN/VEN-002.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "The first time I move each turn, choose a player. They BURN 1. (They put the top card of their Main Deck into their trash.)",
+     "ja": "各ターン、自身が最初に移動したとき、プレイヤー1人を選ぶ。そのプレイヤーはBURN 1する。(メインデッキの一番上のカードを捨て札に置く。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-006",
+   "name": "Oasis Raider",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "4",
+   "might": "4",
+   "rarity": "コモン",
+   "tag": "Shurima",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-006/166",
+   "image": "images/VEN/VEN-006.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "If you control fewer runes than an opponent at the start of your Beginning Phase, give me +2 ⟨might⟩ and GANKING this turn. (I can move from battlefield to battlefield.)",
+     "ja": "自分のビギニングフェイズ開始時、コントロールしているルーンが相手より少ない場合、このターン自身に+2⟨might⟩とGANKINGを与える。(バトルフィールドからバトルフィールドへ移動できる。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-007",
+   "name": "Punching Poro",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "2",
+   "might": "2",
+   "rarity": "コモン",
+   "tag": "Ionia・Poro",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-007/166",
+   "image": "images/VEN/VEN-007.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "— Discard 1 (Pay the cost: Empower me. Use only if not Empowered.)",
+     "ja": "— カードを1枚捨てる。(コストを支払い、自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "I have +1 ⟨might⟩.",
+     "ja": "自身は+1⟨might⟩を得る。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-009",
+   "name": "Baccai Reaper",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "3",
+   "might": "4",
+   "rarity": "アンコモン",
+   "tag": "Shurima",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-009/166",
+   "image": "images/VEN/VEN-009.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When I attack, you may pay ⟨Fury⟩ to give me ASSAULT 2 this turn. (+2 ⟨might⟩ while I'm an attacker.)",
+     "ja": "自身が攻撃したとき、⟨Fury⟩を支払って自身にこのターンASSAULT 2を与えてもよい。(攻撃側の間+2⟨might⟩。)"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-012",
+   "name": "Perfect Execution",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "3",
+   "might": "",
+   "rarity": "アンコモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-012/166",
+   "image": "images/VEN/VEN-012.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Ready a unit and give it ASSAULT 3 this turn. (+3 ⟨might⟩ while it's an attacker.)",
+     "ja": "ユニット1体をレディ状態にし、このターンASSAULT 3を与える。(攻撃側の間+3⟨might⟩。)"
+    },
+    {
+     "kw": "FLOW",
+     "en": "③⟨Fury⟩ — (You may play this from your trash for its Flow cost. Then banish it.)",
+     "ja": "③⟨Fury⟩ — (これを捨て札からFLOWコストで使用してもよい。その後、追放(Banish)する。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-013",
+   "name": "Shadow Assassin",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "5",
+   "might": "5",
+   "rarity": "アンコモン",
+   "tag": "Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-013/166",
+   "image": "images/VEN/VEN-013.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "I enter ready if you have a card with my name in your trash.",
+     "ja": "自分の捨て札に自身と同じ名前のカードがあるなら、レディ状態で登場する。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-016",
+   "name": "Eclipse Dragon",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "8",
+   "might": "8",
+   "rarity": "レア",
+   "tag": "Mount Targon・Dragon",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-016/166",
+   "image": "images/VEN/VEN-016.avif",
+   "effects": [
+    {
+     "kw": "ACCELERATE",
+     "en": "(You may pay ①⟨Fury⟩ as an additional cost to have me enter ready.)",
+     "ja": "(追加コストとして①⟨Fury⟩を支払い、自身をレディ状態で登場させてもよい。)"
+    },
+    {
+     "kw": "",
+     "en": "When I move, if you control 4 or fewer runes, draw 1.",
+     "ja": "自身が移動したとき、コントロールしているルーンが4つ以下なら、カードを1枚引く。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-017",
+   "name": "Morgana - Vindictive",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "5",
+   "might": "5",
+   "rarity": "レア",
+   "tag": "Morgana・Demacia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-017/166",
+   "image": "images/VEN/VEN-017.avif",
+   "effects": [
+    {
+     "kw": "AMBUSH",
+     "en": "(You may play me as a REACTION to a battlefield where you have units.)",
+     "ja": "(自身をREACTIONとして、味方ユニットがいるバトルフィールドにプレイできる。)"
+    },
+    {
+     "kw": "",
+     "en": "When you play me, deal damage to a unit equal to the damage marked on it.",
+     "ja": "自身をプレイしたとき、ユニット1体に、それにマークされているダメージに等しいダメージを与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-018",
+   "name": "Rage Amplifier",
+   "nameJa": "",
+   "type": "Gear",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "4",
+   "might": "",
+   "rarity": "レア",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-018/166",
+   "image": "images/VEN/VEN-018.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "⑥⟨rune⟩ (⑥⟨rune⟩: Empower this. Use only if not Empowered.)",
+     "ja": "⑥⟨rune⟩ (⑥⟨rune⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "",
+     "en": "Your units have +1 ⟨might⟩. If I'm EMPOWERED, they have +2 ⟨might⟩ instead.",
+     "ja": "自分のユニットは+1⟨might⟩を得る。自身がEMPOWEREDなら、代わりに+2⟨might⟩を得る。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-019",
+   "name": "Renekton - Rage Fueled",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "6",
+   "might": "6",
+   "rarity": "レア",
+   "tag": "Renekton・Shurima",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-019/166",
+   "image": "images/VEN/VEN-019.avif",
+   "effects": [
+    {
+     "kw": "ACCELERATE",
+     "en": "(You may pay ①⟨Fury⟩ as an additional cost to have me enter ready.)",
+     "ja": "(追加コストとして①⟨Fury⟩を支払い、自身をレディ状態で登場させてもよい。)"
+    },
+    {
+     "kw": "",
+     "en": "When I attack, if you control 4 or fewer runes, deal 2 to all enemy units here.",
+     "ja": "自身が攻撃したとき、コントロールしているルーンが4つ以下なら、ここにいるすべての敵ユニットに2ダメージを与える。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-019a.avif"
+  },
+  {
+   "id": "ven-021",
+   "name": "Akali - Deadly Weapon",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "3",
+   "might": "3",
+   "rarity": "エピック",
+   "tag": "Akali・Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-021/166",
+   "image": "images/VEN/VEN-021.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "②⟨Fury⟩ (②⟨Fury⟩: Empower me. Use only if not Empowered.)",
+     "ja": "②⟨Fury⟩ (②⟨Fury⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "",
+     "en": "When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm EMPOWERED, deal 2 instead.",
+     "ja": "自身が移動したとき、移動元または移動先のバトルフィールドにいるユニット1体に1ダメージを与えてもよい。自身がEMPOWEREDなら、代わりに2ダメージを与える。"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "I have +1 ⟨might⟩.",
+     "ja": "自身は+1⟨might⟩を得る。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-021a.avif"
+  },
+  {
+   "id": "ven-023",
+   "name": "Zed - From the Shadows",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "4",
+   "might": "4",
+   "rarity": "エピック",
+   "tag": "Zed・Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-023/166",
+   "image": "images/VEN/VEN-023.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "You may discard 1 as an additional cost to play me.",
+     "ja": "追加コストとしてカードを1枚捨てて自身をプレイしてもよい。"
+    },
+    {
+     "kw": "",
+     "en": "When you play me, if you paid the additional cost, play a 0 ⟨might⟩ Shadow Clone unit token. (It has \"When I attack, you may banish a unit from your trash. If you do, give me ASSAULT 4 this turn.\")",
+     "ja": "自身をプレイしたとき、追加コストを支払っていたなら、0⟨might⟩のShadow Cloneユニットトークンを1体プレイする。(そのトークンは「自身が攻撃したとき、自分の捨て札のユニット1体を追放(Banish)してもよい。そうしたなら、このターン自身にASSAULT 4を与える。」を持つ。)"
+    }
+   ],
+   "equip": [],
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/VEN/VEN-023.avif",
+     "number": "VEN-023/166",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/VEN/VEN-023a.avif",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "SHOWCASE",
+     "image": "images/VEN/VEN-169.avif",
+     "number": "VEN-169/166",
+     "rarity": "ショーケース"
+    }
+   ]
+  },
+  {
+   "id": "ven-025",
+   "name": "Esteemed Hierophant",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "5",
+   "might": "5",
+   "rarity": "コモン",
+   "tag": "Shurima",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-025/166",
+   "image": "images/VEN/VEN-025.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "While you control 7 or more runes, prevent all damage that enemy spells and abilities would deal to me.",
+     "ja": "コントロールしているルーンが7つ以上ある間、敵のスペルや能力が自身に与えるダメージをすべて軽減する。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-026",
+   "name": "Field Musicians",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "4",
+   "might": "3",
+   "rarity": "コモン",
+   "tag": "Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-026/166",
+   "image": "images/VEN/VEN-026.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me, give a unit +3 ⟨might⟩ this turn.",
+     "ja": "自身をプレイしたとき、ユニット1体にこのターン+3⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-028",
+   "name": "Mournful Witness",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "2",
+   "might": "2",
+   "rarity": "コモン",
+   "tag": "Ionia・Fae",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-028/166",
+   "image": "images/VEN/VEN-028.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When a combat that I was in ends, empower me. (I become Empowered if I'm not already.)",
+     "ja": "自身が参加した戦闘が終了したとき、自身をエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "I have +2 ⟨might⟩.",
+     "ja": "自身は+2⟨might⟩を得る。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-029",
+   "name": "Ol' Poro",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "2",
+   "might": "4",
+   "rarity": "コモン",
+   "tag": "Bandle City・Poro",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-029/166",
+   "image": "images/VEN/VEN-029.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "I can't be played on your first, second, or third turns.",
+     "ja": "自身は自分の1・2・3ターン目にはプレイできない。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-031",
+   "name": "Twilight Shroud",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "1",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-031/166",
+   "image": "images/VEN/VEN-031.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Give a friendly unit +1 ⟨might⟩ this turn. It can't be chosen by enemy spells and abilities this turn.",
+     "ja": "味方ユニット1体にこのターン+1⟨might⟩を与える。そのユニットはこのターン、敵のスペルや能力の対象に選ばれない。"
+    },
+    {
+     "kw": "FLOW",
+     "en": "② — (You may play this from your trash for its Flow cost. Then banish it.)",
+     "ja": "② — (これを捨て札からFLOWコストで使用してもよい。その後、追放(Banish)する。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-037",
+   "name": "Tomb-Raider Barbara",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "4",
+   "might": "4",
+   "rarity": "アンコモン",
+   "tag": "Shurima",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-037/166",
+   "image": "images/VEN/VEN-037.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me, if you control 7 or more runes, choose an enemy gear. If it's EMPOWERED, disempower it. Otherwise, kill it.",
+     "ja": "自身をプレイしたとき、コントロールしているルーンが7つ以上ある場合、敵のギア1つを選ぶ。それがEMPOWEREDならディスエンパワーする。そうでなければ破壊する。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-038",
+   "name": "Akali - Silent",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "4",
+   "might": "4",
+   "rarity": "アンコモン",
+   "tag": "Akali・Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-038/166",
+   "image": "images/VEN/VEN-038.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "I can't be chosen by enemy spells and abilities unless I'm in combat.",
+     "ja": "自身は戦闘中でない限り、敵のスペルや能力の対象に選ばれない。"
+    },
+    {
+     "kw": "",
+     "en": "When I move to a battlefield, give me +2 ⟨might⟩ this turn.",
+     "ja": "自身がバトルフィールドへ移動したとき、このターン自身に+2⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1",
+   "altImage": "images/VEN/VEN-038a.avif"
+  },
+  {
+   "id": "ven-041",
+   "name": "Riven - Shattered",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "3",
+   "might": "3",
+   "rarity": "アンコモン",
+   "tag": "Riven・Noxus",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-041/166",
+   "image": "images/VEN/VEN-041.avif",
+   "effects": [
+    {
+     "kw": "WEAPONMASTER",
+     "en": "(When you play me, you may EQUIP one of your Equipment to me for ⟨rune⟩ less, even if it's already attached.)",
+     "ja": "(自身をプレイしたとき、自分の装備1つを⟨rune⟩少ないコストで自身にEQUIPしてもよい。すでに他のユニットに装備されているものでもよい。)"
+    },
+    {
+     "kw": "",
+     "en": "When I attack, choose an enemy unit here. Deal 2 to it for each Equipment attached to me.",
+     "ja": "自身が攻撃したとき、ここにいる敵ユニット1体を選ぶ。自身に装備されている装備品1つにつき、それに2ダメージを与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-042",
+   "name": "Shen - Scourge of Shadows",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "5",
+   "might": "6",
+   "rarity": "アンコモン",
+   "tag": "Shen・Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-042/166",
+   "image": "images/VEN/VEN-042.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When I hold, if there is exactly one other unit you control here, draw 1.",
+     "ja": "自身がホールドしたとき、ここに自分がコントロールする他のユニットがちょうど1体いるなら、カードを1枚引く。"
+    }
+   ],
+   "equip": [],
+   "power": "1",
+   "altImage": "images/VEN/VEN-042a.avif"
+  },
+  {
+   "id": "ven-043",
+   "name": "Steel Paws",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "1",
+   "might": "0",
+   "rarity": "アンコモン",
+   "tag": "Piltover・Cat",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-043/166",
+   "image": "images/VEN/VEN-043.avif",
+   "effects": [
+    {
+     "kw": "DEFLECT",
+     "en": "(Opponents must pay ⟨rune⟩ to choose me with a spell or ability.)",
+     "ja": "(相手はスペルや能力で自身を対象に選ぶとき、⟨rune⟩を支払わなければならない。)"
+    },
+    {
+     "kw": "EMPOWER",
+     "en": "⑦ (⑦: Empower me. Use only if not Empowered.)",
+     "ja": "⑦ (⑦:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "I have +7 ⟨might⟩.",
+     "ja": "自身は+7⟨might⟩を得る。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-046",
+   "name": "Nasus - Ascended",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "8",
+   "might": "8",
+   "rarity": "エピック",
+   "tag": "Nasus・Shurima・Dog",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-046/166",
+   "image": "images/VEN/VEN-046.avif",
+   "effects": [
+    {
+     "kw": "DEFLECT",
+     "en": "2 (Opponents must pay ⟨rune⟩⟨rune⟩ to choose me with a spell or ability.)",
+     "ja": "2 (相手はスペルや能力で自身を対象に選ぶとき、⟨rune⟩⟨rune⟩を支払わなければならない。)"
+    },
+    {
+     "kw": "EMPOWER",
+     "en": "⑧ (⑧: Empower me. Use only if not Empowered.)",
+     "ja": "⑧ (⑧:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "When I conquer, you score 1 point.",
+     "ja": "自身が征服(Conquer)したとき、1点を獲得する。"
+    }
+   ],
+   "equip": [],
+   "power": "1",
+   "altImage": "images/VEN/VEN-046a.avif"
+  },
+  {
+   "id": "ven-047",
+   "name": "Apprentice Mage",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "3",
+   "might": "3",
+   "rarity": "コモン",
+   "tag": "Bilgewater",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-047/166",
+   "image": "images/VEN/VEN-047.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "② (②: Empower me. Use only if not Empowered.)",
+     "ja": "② (②:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "",
+     "en": "When I become EMPOWERED, PREDICT 2. (Look at the top 2 cards of your Main Deck. Recycle any of them and put the rest back in any order.)",
+     "ja": "自身がEMPOWEREDになったとき、PREDICT 2する。(メインデッキの上から2枚を見る。任意の枚数をリサイクルし、残りを好きな順で戻す。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "I have +1 ⟨might⟩.",
+     "ja": "自身は+1⟨might⟩を得る。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-048",
+   "name": "Cloud Drake",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "6",
+   "might": "5",
+   "rarity": "コモン",
+   "tag": "Demacia・Dragon",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-048/166",
+   "image": "images/VEN/VEN-048.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me, draw 1.",
+     "ja": "自身をプレイしたとき、カードを1枚引く。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-052",
+   "name": "Mesmerize",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "1",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-052/166",
+   "image": "images/VEN/VEN-052.avif",
+   "effects": [
+    {
+     "kw": "REACTION",
+     "en": "(Play any time, even before spells and abilities resolve.)",
+     "ja": "(いつでもプレイできる。スペルや能力が解決する前でもよい。)"
+    },
+    {
+     "kw": "",
+     "en": "Choose one —\n・Return a friendly unit to its owner's hand.\n・Give an enemy unit -2 ⟨might⟩ this turn.",
+     "ja": "次から1つを選ぶ——\n・味方ユニット1体を持ち主の手札に戻す。\n・敵ユニット1体にこのターン-2⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-054",
+   "name": "Questionable Tome",
+   "nameJa": "",
+   "type": "Gear",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "3",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-054/166",
+   "image": "images/VEN/VEN-054.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "— ⟨イグゾースト⟩ (Pay the cost: Empower this. Use only if not Empowered.)",
+     "ja": "— ⟨イグゾースト⟩ (コストを支払い、自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "",
+     "en": "Disempower this, ①, ⟨イグゾースト⟩: Draw 1.",
+     "ja": "自身をディスエンパワーする、①、⟨イグゾースト⟩：カードを1枚引く。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-058",
+   "name": "Patched Porobot",
+   "nameJa": "",
+   "type": "Unit Gear",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "2",
+   "might": "2",
+   "rarity": "アンコモン",
+   "tag": "Piltover・Mech・Poro",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-058/166",
+   "image": "images/VEN/VEN-058.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "(I enter exhausted.)",
+     "ja": "(自身はイグゾースト状態で登場する。)"
+    },
+    {
+     "kw": "",
+     "en": "When you play me, if you control 3 or more other gear, draw 1.",
+     "ja": "自身をプレイしたとき、自分が他に3つ以上のギアをコントロールしているなら、カードを1枚引く。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-060",
+   "name": "Sky Cruiser",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "4",
+   "might": "3",
+   "rarity": "コモン",
+   "tag": "Piltover",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-060/166",
+   "image": "images/VEN/VEN-060.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Discard a gear, ①, ⟨イグゾースト⟩: Deal 4 to a unit at a battlefield.",
+     "ja": "ギアを1つ捨てる、①、⟨イグゾースト⟩：バトルフィールドにいるユニット1体に4ダメージを与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-061",
+   "name": "Decree of Insight",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "1",
+   "might": "",
+   "rarity": "アンコモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-061/166",
+   "image": "images/VEN/VEN-061.avif",
+   "effects": [
+    {
+     "kw": "REACTION",
+     "en": "(Play any time, even before spells and abilities resolve.)",
+     "ja": "(いつでもプレイできる。スペルや能力が解決する前でもよい。)"
+    },
+    {
+     "kw": "",
+     "en": "Ignore DEFLECT while paying this spell's cost. Give an enemy Body ⟨Body⟩ unit -5 ⟨might⟩ this turn.",
+     "ja": "このスペルのコストを支払う間、DEFLECTを無視する。敵のBody⟨Body⟩ユニット1体にこのターン-5⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-062",
+   "name": "Hextech Formula",
+   "nameJa": "",
+   "type": "Gear",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "2",
+   "might": "",
+   "rarity": "レア",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-062/166",
+   "image": "images/VEN/VEN-062.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "This enters exhausted.",
+     "ja": "自身はイグゾースト状態で登場する。"
+    },
+    {
+     "kw": "",
+     "en": "⟨イグゾースト⟩: Empower another gear. (It becomes Empowered if it's not already.)",
+     "ja": "⟨イグゾースト⟩：別のギア1つをエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-063",
+   "name": "Nasus - Guardian of Knowledge",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "5",
+   "might": "6",
+   "rarity": "レア",
+   "tag": "Nasus・Shurima・Dog",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-063/166",
+   "image": "images/VEN/VEN-063.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Once each turn, when an enemy unit here dies, channel 1 rune exhausted.",
+     "ja": "各ターンに1回、ここで敵ユニットが死亡したとき、ルーンを1つイグゾースト状態でチャネルする。"
+    }
+   ],
+   "equip": [],
+   "power": "1",
+   "altImage": "images/VEN/VEN-063a.avif"
+  },
+  {
+   "id": "ven-066",
+   "name": "Temporal Breach",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "2",
+   "might": "",
+   "rarity": "アンコモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-066/166",
+   "image": "images/VEN/VEN-066.avif",
+   "effects": [
+    {
+     "kw": "HIDDEN",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せて配置し、後でコスト⟨0⟩でREACTIONとして使える。)"
+    },
+    {
+     "kw": "",
+     "en": "Banish a unit, then its owner plays it to the same location, ignoring its cost.",
+     "ja": "ユニット1体を追放(Banish)し、その持ち主がコストを無視して同じ場所にそれをプレイする。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-067",
+   "name": "Bottled Constellation",
+   "nameJa": "",
+   "type": "Gear",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "10",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-067/166",
+   "image": "images/VEN/VEN-067.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "At the start of your Main Phase, you may kill 3 other friendly units and/or gear to score 1 point.",
+     "ja": "自分のメインフェイズ開始時、他の味方ユニットおよび／またはギアを合計3つ破壊して1点を獲得してもよい。"
+    }
+   ],
+   "equip": [],
+   "power": "2"
+  },
+  {
+   "id": "ven-068",
+   "name": "Jayce - Brilliant Inventor",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "6",
+   "might": "6",
+   "rarity": "エピック",
+   "tag": "Jayce・Piltover",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-068/166",
+   "image": "images/VEN/VEN-068.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me or the first time you play a non-token gear each turn, you may ready something besides me that's exhausted.",
+     "ja": "自身をプレイしたとき、または各ターンに最初に非トークンのギアをプレイしたとき、自身以外のイグゾースト状態のものを1つレディ状態にしてもよい。"
+    }
+   ],
+   "equip": [],
+   "power": "1",
+   "altImage": "images/VEN/VEN-068a.avif"
+  },
+  {
+   "id": "ven-069",
+   "name": "Mel - Newly Awakened",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "4",
+   "might": "4",
+   "rarity": "エピック",
+   "tag": "Mel・Noxus",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-069/166",
+   "image": "images/VEN/VEN-069.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me, draw 1.",
+     "ja": "自身をプレイしたとき、カードを1枚引く。"
+    },
+    {
+     "kw": "EMPOWER",
+     "en": "③ (③: Empower me. Use only if not Empowered.)",
+     "ja": "③ (③:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "Your spells and abilities can't be countered. If a spell or ability you control would give -⟨might⟩ to a unit it chooses, it gives an additional -1 ⟨might⟩.",
+     "ja": "自分のスペルと能力は打ち消されない。自分がコントロールするスペルや能力が、選んだユニットに-⟨might⟩を与えるなら、追加で-1⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1",
+   "altImage": "images/VEN/VEN-069a.avif"
+  },
+  {
+   "id": "ven-073",
+   "name": "Jagged Cutlass",
+   "nameJa": "",
+   "type": "Gear",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "3",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "Equipment",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-073/166",
+   "image": "images/VEN/VEN-073.avif",
+   "effects": [
+    {
+     "kw": "EQUIP",
+     "en": "⟨rune⟩ (⟨rune⟩: Attach this to a unit you control.)",
+     "ja": "⟨rune⟩ (⟨rune⟩:自分がコントロールするユニットに装備する。)"
+    },
+    {
+     "kw": "",
+     "en": "I can't be moved by enemy spells and abilities.",
+     "ja": "自身は敵のスペルや能力によって移動されない。"
+    }
+   ],
+   "equip": [
+    {
+     "kw": "",
+     "stat": "+2",
+     "ja": ""
+    }
+   ],
+   "power": ""
+  },
+  {
+   "id": "ven-077",
+   "name": "Tools of Empire",
+   "nameJa": "",
+   "type": "Gear",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "4",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-077/166",
+   "image": "images/VEN/VEN-077.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "② (②: Empower this. Use only if not Empowered.)",
+     "ja": "② (②:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "",
+     "en": "⟨イグゾースト⟩: Give a unit +2 ⟨might⟩ this turn. If this is EMPOWERED, give that unit +4 ⟨might⟩ this turn instead.",
+     "ja": "⟨イグゾースト⟩：ユニット1体にこのターン+2⟨might⟩を与える。自身がEMPOWEREDなら、代わりにそのユニットにこのターン+4⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-079",
+   "name": "Dame the Despoiler",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "5",
+   "might": "5",
+   "rarity": "アンコモン",
+   "tag": "Noxus",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-079/166",
+   "image": "images/VEN/VEN-079.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "⑤⟨rune⟩ (⑤⟨rune⟩: Empower me. Use only if not Empowered.)",
+     "ja": "⑤⟨rune⟩ (⑤⟨rune⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "When I attack or defend, choose a unit here. Increase my Might to its Might this turn, then give me +1 ⟨might⟩ this turn.",
+     "ja": "自身が攻撃または防御したとき、ここにいるユニット1体を選ぶ。このターン自身のマイトをそのユニットのマイトまで上げ、その後このターン自身に+1⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-080",
+   "name": "Noxian Demolitionist",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "2",
+   "might": "1",
+   "rarity": "アンコモン",
+   "tag": "Noxus",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-080/166",
+   "image": "images/VEN/VEN-080.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When I conquer, you may kill a gear with Energy cost no more than my Might.",
+     "ja": "自身が征服(Conquer)したとき、エネルギーコストが自身のマイト以下のギア1つを破壊してもよい。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-083",
+   "name": "Rampage",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "3",
+   "might": "",
+   "rarity": "アンコモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-083/166",
+   "image": "images/VEN/VEN-083.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "As you play this, you may pay ⟨rune⟩ as an additional cost.",
+     "ja": "これをプレイする際、追加コストとして⟨rune⟩を支払ってもよい。"
+    },
+    {
+     "kw": "",
+     "en": "Choose a friendly unit and an enemy unit. If you paid the additional cost, give the friendly unit +2 ⟨might⟩ this turn. They deal damage equal to their Mights to each other.",
+     "ja": "味方ユニット1体と敵ユニット1体を選ぶ。追加コストを支払っていたなら、味方ユニットにこのターン+2⟨might⟩を与える。両者は互いに、それぞれのマイトに等しいダメージを与え合う。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-086",
+   "name": "Gangplank - Naval",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "6",
+   "might": "6",
+   "rarity": "レア",
+   "tag": "Gangplank・Bilgewater・Pirate",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-086/166",
+   "image": "images/VEN/VEN-086.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "⟨rune⟩⟨rune⟩ (⟨rune⟩⟨rune⟩: Empower me. Use only if not Empowered.)",
+     "ja": "⟨rune⟩⟨rune⟩ (⟨rune⟩⟨rune⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "If a spell or ability that chooses me would stun me, give me -⟨might⟩, or return me to hand, give me +3 ⟨might⟩ instead.",
+     "ja": "自身を選ぶスペルや能力が自身をスタンさせる、-⟨might⟩を与える、または手札に戻そうとするとき、代わりに自身に+3⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-181.avif"
+  },
+  {
+   "id": "ven-087",
+   "name": "Hextech Disc",
+   "nameJa": "",
+   "type": "Gear",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "4",
+   "might": "",
+   "rarity": "レア",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-087/166",
+   "image": "images/VEN/VEN-087.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "— ⟨イグゾースト⟩ (Pay the cost: Empower this. Use only if not Empowered.)",
+     "ja": "— ⟨イグゾースト⟩ (コストを支払い、自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "",
+     "en": "Disempower this, ①, ⟨イグゾースト⟩: Play a 3 ⟨might⟩ Mech unit token to your base.",
+     "ja": "自身をディスエンパワーする、①、⟨イグゾースト⟩：3⟨might⟩のMechユニットトークンを1体自分のベースにプレイする。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-088",
+   "name": "Jayce - Hammer in Hand",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "4",
+   "might": "5",
+   "rarity": "レア",
+   "tag": "Jayce・Piltover",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-088/166",
+   "image": "images/VEN/VEN-088.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When I become ready, choose one to give me this turn —\n・ASSAULT 2 (+2 ⟨might⟩ while I'm an attacker.)\n・DEFLECT 2 (Opponents must pay ⟨rune⟩⟨rune⟩ to choose me with a spell or ability.)\n・GANKING (I can move from battlefield to battlefield.)",
+     "ja": "自身がレディ状態になったとき、このターン自身に与えるものを1つ選ぶ——\n・ASSAULT 2 (攻撃側の間+2⟨might⟩。)\n・DEFLECT 2 (相手はスペルや能力で自身を対象に選ぶとき、⟨rune⟩⟨rune⟩を支払う。)\n・GANKING (バトルフィールドからバトルフィールドへ移動できる。)"
+    }
+   ],
+   "equip": [],
+   "power": "1",
+   "altImage": "images/VEN/VEN-088a.avif"
+  },
+  {
+   "id": "ven-089",
+   "name": "Wild Claw",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "7",
+   "might": "",
+   "rarity": "レア",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-089/166",
+   "image": "images/VEN/VEN-089.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Look at the top 5 cards of your Main Deck. You may banish a unit or gear from among them and play it, reducing its Energy cost by ⑤. Recycle the rest. Then you may do this: Empower it. (It becomes Empowered if it's not already.)",
+     "ja": "メインデッキの上から5枚を見る。その中からユニットまたはギア1枚を追放(Banish)し、エネルギーコストを⑤少なくしてプレイしてもよい。残りをリサイクルする。その後、次を行ってもよい：それをエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-091",
+   "name": "Corrupted Dragon",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "10",
+   "might": "10",
+   "rarity": "エピック",
+   "tag": "Shadow Isles・Dragon",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-091/166",
+   "image": "images/VEN/VEN-091.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "If your score is not within 3 points of the Victory Score, I enter ready.",
+     "ja": "自分のスコアがビクトリースコアの3点差以内でないなら、自身はレディ状態で登場する。"
+    },
+    {
+     "kw": "",
+     "en": "When I attack, you may move any number of enemy units here each with 5 ⟨might⟩ or less to its base.",
+     "ja": "自身が攻撃したとき、ここにいる、それぞれ5⟨might⟩以下の敵ユニットを好きな数だけそのベースへ移動させてもよい。"
+    }
+   ],
+   "equip": [],
+   "power": "2"
+  },
+  {
+   "id": "ven-093",
+   "name": "Kinkou Lifeblade",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "4",
+   "might": "4",
+   "rarity": "コモン",
+   "tag": "Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-093/166",
+   "image": "images/VEN/VEN-093.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "② (②: Empower me. Use only if not Empowered.)",
+     "ja": "② (②:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "I have +1 ⟨might⟩ and GANKING. (I can move from battlefield to battlefield.)",
+     "ja": "自身は+1⟨might⟩とGANKINGを得る。(バトルフィールドからバトルフィールドへ移動できる。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-095",
+   "name": "Shadow Order Disciple",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "2",
+   "might": "2",
+   "rarity": "コモン",
+   "tag": "Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-095/166",
+   "image": "images/VEN/VEN-095.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When I move, you may BURN 1 to give me +1 ⟨might⟩ this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",
+     "ja": "自身が移動したとき、BURN 1して自身にこのターン+1⟨might⟩を与えてもよい。(BURN 1＝メインデッキの一番上のカードを捨て札に置く。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-101",
+   "name": "Gust Monk",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "2",
+   "might": "2",
+   "rarity": "アンコモン",
+   "tag": "Bandle City・Yordle",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-101/166",
+   "image": "images/VEN/VEN-101.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "You may pay ① as an additional cost to play me.",
+     "ja": "追加コストとして①を支払って自身をプレイしてもよい。"
+    },
+    {
+     "kw": "",
+     "en": "When you play me, if you paid the additional cost, banish a card from any trash to give a unit ASSAULT 2 this turn. (+2 ⟨might⟩ while it's an attacker.)",
+     "ja": "自身をプレイしたとき、追加コストを支払っていたなら、いずれかの捨て札のカード1枚を追放(Banish)して、ユニット1体にこのターンASSAULT 2を与える。(攻撃側の間+2⟨might⟩。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-102",
+   "name": "Ravenbloom Prefect",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "3",
+   "might": "3",
+   "rarity": "アンコモン",
+   "tag": "Noxus",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-102/166",
+   "image": "images/VEN/VEN-102.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When an opponent plays a gear, you may banish me to banish it.",
+     "ja": "相手がギアをプレイしたとき、自身を追放(Banish)してそのギアを追放(Banish)してもよい。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-103",
+   "name": "Shadows of the Past",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "3",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-103/166",
+   "image": "images/VEN/VEN-103.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Return up to 2 units from trashes to their owners' hands.",
+     "ja": "捨て札にあるユニットを最大2体、持ち主の手札に戻す。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-106",
+   "name": "Wind and Ghosts",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "3",
+   "might": "",
+   "rarity": "アンコモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-106/166",
+   "image": "images/VEN/VEN-106.avif",
+   "effects": [
+    {
+     "kw": "ACTION",
+     "en": "(Play on your turn or in showdowns.)",
+     "ja": "(自分のターン、またはショーダウン中にプレイする。)"
+    },
+    {
+     "kw": "",
+     "en": "Choose a unit at a battlefield. If it has 3 ⟨might⟩ or less, banish it. Otherwise, return it to its owner's hand.",
+     "ja": "バトルフィールドにいるユニット1体を選ぶ。それが3⟨might⟩以下なら追放(Banish)する。そうでなければ持ち主の手札に戻す。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-107",
+   "name": "Decree of Discord",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "1",
+   "might": "",
+   "rarity": "コモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-107/166",
+   "image": "images/VEN/VEN-107.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Return any number of enemy Order ⟨Order⟩ units with total Might 5 or less to their owners' hands.",
+     "ja": "マイトの合計が5以下になるように、敵のOrder⟨Order⟩ユニットを好きな数だけ持ち主の手札に戻す。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-109",
+   "name": "Illaoi - Prophet of the Great Kraken",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "6",
+   "might": "4",
+   "rarity": "レア",
+   "tag": "Illaoi・Bilgewater",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-109/166",
+   "image": "images/VEN/VEN-109.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me or when I score, play a 1 ⟨might⟩ Tentacle unit token from Bilgewater. I have +1 ⟨might⟩ for each token unit you control.",
+     "ja": "自身をプレイしたとき、または自身が得点したとき、Bilgewaterの1⟨might⟩のTentacleユニットトークンを1体プレイする。自身は、自分がコントロールするトークンユニット1体につき+1⟨might⟩を得る。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-182.avif"
+  },
+  {
+   "id": "ven-110",
+   "name": "Mel - Defiant Soul",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "5",
+   "might": "4",
+   "rarity": "レア",
+   "tag": "Mel・Noxus",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-110/166",
+   "image": "images/VEN/VEN-110.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "— Discard a spell (Pay the cost: Empower me. Use only if not Empowered.)",
+     "ja": "— スペルを1枚捨てる。(コストを支払い、自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "",
+     "en": "When I become EMPOWERED, banish an enemy unit at a battlefield with 3 ⟨might⟩ or less.",
+     "ja": "自身がEMPOWEREDになったとき、バトルフィールドにいる3⟨might⟩以下の敵ユニット1体を追放(Banish)する。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-110a.avif"
+  },
+  {
+   "id": "ven-112",
+   "name": "Zed - Without a Sound",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "5",
+   "might": "5",
+   "rarity": "レア",
+   "tag": "Zed・Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-112/166",
+   "image": "images/VEN/VEN-112.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When I conquer, play a 0 ⟨might⟩ Shadow Clone unit token to your base. (It has \"When I attack, you may banish a unit from your trash. If you do, give me ASSAULT 4 this turn.\")",
+     "ja": "自身が征服(Conquer)したとき、0⟨might⟩のShadow Cloneユニットトークンを1体自分のベースにプレイする。(そのトークンは「自身が攻撃したとき、自分の捨て札のユニット1体を追放(Banish)してもよい。そうしたなら、このターン自身にASSAULT 4を与える。」を持つ。)"
+    },
+    {
+     "kw": "ACTION",
+     "en": "①⟨イグゾースト⟩: Move me and a Shadow Clone you control to each other's locations.",
+     "ja": "①⟨イグゾースト⟩：自身と、自分がコントロールするShadow Clone 1体の位置を入れ替える。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-112a.avif"
+  },
+  {
+   "id": "ven-113",
+   "name": "Kennen - Storm of Shuriken",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "3",
+   "might": "4",
+   "rarity": "エピック",
+   "tag": "Kennen・Ionia・Yordle",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-113/166",
+   "image": "images/VEN/VEN-113.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me, BURN 2. (Put the top 2 cards of your Main Deck into your trash.)",
+     "ja": "自身をプレイしたとき、BURN 2する。(メインデッキの上から2枚を捨て札に置く。)"
+    },
+    {
+     "kw": "",
+     "en": "When I conquer, give a spell in your trash FLOW equal to its cost this turn. (You may play it from your trash for its Flow cost. Then banish it.)",
+     "ja": "自身が征服(Conquer)したとき、自分の捨て札のスペル1枚に、このターン、そのコストに等しいFLOWを与える。(それを捨て札からFLOWコストで使用してもよい。その後、追放(Banish)する。)"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-115",
+   "name": "Ocean Drake",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "8",
+   "might": "7",
+   "rarity": "アンコモン",
+   "tag": "Ionia・Dragon",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-115/166",
+   "image": "images/VEN/VEN-115.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "You may play me to an open battlefield. When you play me, you may return a non-Dragon unit to its owner's hand.",
+     "ja": "自身は開いているバトルフィールドにプレイしてもよい。自身をプレイしたとき、Dragon以外のユニット1体を持ち主の手札に戻してもよい。"
+    }
+   ],
+   "equip": [],
+   "power": "2"
+  },
+  {
+   "id": "ven-118",
+   "name": "Horns of the Dragon",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "6",
+   "might": "6",
+   "rarity": "コモン",
+   "tag": "Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-118/166",
+   "image": "images/VEN/VEN-118.avif",
+   "effects": [
+    {
+     "kw": "TANK",
+     "en": "(I must be assigned combat damage first.)",
+     "ja": "(戦闘ダメージは、自身から割り当てなければならない。)"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-119",
+   "name": "Keeper of Law",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "5",
+   "might": "5",
+   "rarity": "コモン",
+   "tag": "Shurima",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-119/166",
+   "image": "images/VEN/VEN-119.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "I cost ②⟨Order⟩ less if you control a battlefield with exactly two units there.",
+     "ja": "ちょうど2体のユニットがいるバトルフィールドを自分がコントロールしているなら、自身のコストは②⟨Order⟩少なくなる。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-121",
+   "name": "Reluctant Leader",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "4",
+   "might": "3",
+   "rarity": "コモン",
+   "tag": "Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-121/166",
+   "image": "images/VEN/VEN-121.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play another unit, give me +2 ⟨might⟩ this turn.",
+     "ja": "自分が他のユニットをプレイしたとき、このターン自身に+2⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-126",
+   "name": "Ki Barrier",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "2",
+   "might": "",
+   "rarity": "アンコモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-126/166",
+   "image": "images/VEN/VEN-126.avif",
+   "effects": [
+    {
+     "kw": "REACTION",
+     "en": "(Play any time, even before spells and abilities resolve.)",
+     "ja": "(いつでもプレイできる。スペルや能力が解決する前でもよい。)"
+    },
+    {
+     "kw": "",
+     "en": "Choose a unit. Prevent the next 7 damage that would be dealt to it this turn. (Opponents can assign it extra combat damage to kill it.)",
+     "ja": "ユニット1体を選ぶ。このターン、それに与えられる次の7ダメージを軽減する。(相手は追加の戦闘ダメージを割り当ててそれを破壊できる。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-127",
+   "name": "Lacerate",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "2",
+   "might": "",
+   "rarity": "アンコモン",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-127/166",
+   "image": "images/VEN/VEN-127.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Choose a unit. If it's EMPOWERED, disempower it. Then kill it if it has 3 ⟨might⟩ or less.",
+     "ja": "ユニット1体を選ぶ。それがEMPOWEREDならディスエンパワーする。その後、それが3⟨might⟩以下なら破壊する。"
+    },
+    {
+     "kw": "FLOW",
+     "en": "④⟨Order⟩⟨Order⟩ — (You may play this from your trash for its Flow cost. Then banish it.)",
+     "ja": "④⟨Order⟩⟨Order⟩ — (これを捨て札からFLOWコストで使用してもよい。その後、追放(Banish)する。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-129",
+   "name": "Sacred Protector",
+   "nameJa": "",
+   "type": "Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "4",
+   "might": "6",
+   "rarity": "コモン",
+   "tag": "Ionia・Fae",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-129/166",
+   "image": "images/VEN/VEN-129.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "I don't deal combat damage unless I'm at a battlefield with exactly one other unit you control.",
+     "ja": "自身は、自分がコントロールする他のユニットがちょうど1体いるバトルフィールドにいない限り、戦闘ダメージを与えない。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-133",
+   "name": "Glowstone",
+   "nameJa": "",
+   "type": "Gear",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "2",
+   "might": "",
+   "rarity": "レア",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-133/166",
+   "image": "images/VEN/VEN-133.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "⟨Order⟩⟨Order⟩ (⟨Order⟩⟨Order⟩: Empower me. Use only if not Empowered.)",
+     "ja": "⟨Order⟩⟨Order⟩ (⟨Order⟩⟨Order⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "",
+     "en": "Disempower this, ⟨イグゾースト⟩: Choose a player. They gain control of this and recall it. (Send it to their base.)",
+     "ja": "自身をディスエンパワーする、⟨イグゾースト⟩：プレイヤー1人を選ぶ。そのプレイヤーは自身のコントロールを得て、リコールする。(そのベースへ送る。)"
+    },
+    {
+     "kw": "",
+     "en": "At the end of your turn, kill this and deal 5 to all units you control.",
+     "ja": "自分のターン終了時、自身を破壊し、自分がコントロールするすべてのユニットに5ダメージを与える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-135",
+   "name": "Kennen - Keeper of Balance",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "3",
+   "might": "2",
+   "rarity": "アンコモン",
+   "tag": "Kennen・Ionia・Yordle",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-135/166",
+   "image": "images/VEN/VEN-135.avif",
+   "effects": [
+    {
+     "kw": "HIDDEN",
+     "en": "(Hide now for ⟨rune⟩ to react with later for ⟨0⟩.)",
+     "ja": "(⟨rune⟩を払って今伏せて配置し、後でコスト⟨0⟩でREACTIONとして使える。)"
+    },
+    {
+     "kw": "",
+     "en": "When you play me or I attack, you may pay ② to STUN a unit. (It doesn't deal combat damage this turn.)",
+     "ja": "自身をプレイしたとき、または自身が攻撃したとき、②を支払ってユニット1体をSTUNしてもよい。(そのユニットはこのターン戦闘ダメージを与えない。)"
+    },
+    {
+     "kw": "",
+     "en": "While there's a stunned enemy unit here, I have +2 ⟨might⟩.",
+     "ja": "ここにスタンした敵ユニットがいる間、自身は+2⟨might⟩を得る。"
+    }
+   ],
+   "equip": [],
+   "power": "1",
+   "altImage": "images/VEN/VEN-135a.avif"
+  },
+  {
+   "id": "ven-136",
+   "name": "Ambessa - Respected and Feared",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "5",
+   "might": "5",
+   "rarity": "レア",
+   "tag": "Ambessa・Noxus",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-136/166",
+   "image": "images/VEN/VEN-136.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "①⟨Order⟩⟨Order⟩ (①⟨Order⟩⟨Order⟩: Empower me. Use only if not Empowered.)",
+     "ja": "①⟨Order⟩⟨Order⟩ (①⟨Order⟩⟨Order⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "I have ASSAULT 2. (+2 ⟨might⟩ while I'm an attacker.)",
+     "ja": "自身はASSAULT 2を得る。(攻撃側の間+2⟨might⟩。)"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "When I attack, kill an enemy unit here with less Might than me.",
+     "ja": "自身が攻撃したとき、ここにいる自身よりマイトが低い敵ユニット1体を破壊する。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-136a.avif"
+  },
+  {
+   "id": "ven-137",
+   "name": "Shady Spectacles",
+   "nameJa": "",
+   "type": "Gear",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "4",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Equipment",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-137/166",
+   "image": "images/VEN/VEN-137.avif",
+   "effects": [
+    {
+     "kw": "EQUIP",
+     "en": "①⟨Order⟩ (①⟨Order⟩: Attach this to a unit you control.)",
+     "ja": "①⟨Order⟩ (①⟨Order⟩:自分がコントロールするユニットに装備する。)"
+    }
+   ],
+   "equip": [
+    {
+     "kw": "",
+     "stat": "+0",
+     "ja": "装備している間、別の味方ユニット1体を選ぶ。装備したユニットは、これが装備されている間そのユニットのコピーになる。(自身は選ばれたユニットのコピーである。)"
+    }
+   ],
+   "power": ""
+  },
+  {
+   "id": "ven-138",
+   "name": "Shen - Leader of the Kinkou Order",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "6",
+   "might": "7",
+   "rarity": "エピック",
+   "tag": "Shen・Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-138/166",
+   "image": "images/VEN/VEN-138.avif",
+   "effects": [
+    {
+     "kw": "SHIELD",
+     "en": "(+1 ⟨might⟩ while I'm a defender.)",
+     "ja": "(防御側である間、+1⟨might⟩。)"
+    },
+    {
+     "kw": "",
+     "en": "When I hold, if there is exactly one other unit you control here, you score 1 point.",
+     "ja": "自身がホールドしたとき、ここに自分がコントロールする他のユニットがちょうど1体いるなら、1点を獲得する。"
+    }
+   ],
+   "equip": [],
+   "power": "2",
+   "altImage": "images/VEN/VEN-138a.avif"
+  },
+  {
+   "id": "ven-139",
+   "name": "Akali - Rogue Assassin",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Fury",
+   "domains": [
+    "Fury",
+    "Calm"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Akali",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-139/166",
+   "image": "images/VEN/VEN-139.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "③⟨rune⟩ (③⟨rune⟩: Empower me. Use only if not Empowered.)",
+     "ja": "③⟨rune⟩ (③⟨rune⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "ACTION",
+     "en": "⟨イグゾースト⟩: If it's your turn, move a friendly unit in a showdown to base and if I'm EMPOWERED ready it.",
+     "ja": "⟨イグゾースト⟩：自分のターンなら、ショーダウン中の味方ユニット1体をベースへ移動させ、自身がEMPOWEREDならそれをレディ状態にする。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-189.avif"
+  },
+  {
+   "id": "ven-141",
+   "name": "Renekton - Butcher of the Sands",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Fury",
+   "domains": [
+    "Fury",
+    "Body"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Renekton",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-141/166",
+   "image": "images/VEN/VEN-141.avif",
+   "effects": [
+    {
+     "kw": "REACTION",
+     "en": "⟨rune⟩⟨rune⟩, ⟨イグゾースト⟩: ADD ②. Spend this Energy only to play units or activated abilities of units.",
+     "ja": "⟨rune⟩⟨rune⟩、⟨イグゾースト⟩：②をADDする。このエネルギーはユニットのプレイ、またはユニットの起動型能力にのみ支払える。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-190.avif"
+  },
+  {
+   "id": "ven-143",
+   "name": "Zed - Master of Shadows",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Fury",
+   "domains": [
+    "Fury",
+    "Chaos"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Zed",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-143/166",
+   "image": "images/VEN/VEN-143.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you banish a card you own, empower me. (I become Empowered if I'm not already.)",
+     "ja": "自分が所有するカードを追放(Banish)したとき、自身をエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。)"
+    },
+    {
+     "kw": "ACTION",
+     "en": "Disempower me, ⟨イグゾースト⟩: Discard 1, then draw 1.",
+     "ja": "自身をディスエンパワーする、⟨イグゾースト⟩：カードを1枚捨て、その後1枚引く。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-191.avif"
+  },
+  {
+   "id": "ven-145",
+   "name": "Nasus - Curator of the Sands",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Calm",
+   "domains": [
+    "Calm",
+    "Mind"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Nasus",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-145/166",
+   "image": "images/VEN/VEN-145.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play a unit, gear, or activated ability with Energy cost ⑦ or more, you may exhaust me to ready up to 2 runes.",
+     "ja": "エネルギーコスト⑦以上のユニット、ギア、または起動型能力をプレイ／使用したとき、自身をイグゾーストさせてルーンを最大2つレディ状態にしてもよい。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-192.avif"
+  },
+  {
+   "id": "ven-147",
+   "name": "Shen - Eye of Twilight",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Calm",
+   "domains": [
+    "Calm",
+    "Order"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Shen",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-147/166",
+   "image": "images/VEN/VEN-147.avif",
+   "effects": [
+    {
+     "kw": "ACTION",
+     "en": "⟨イグゾースト⟩: Give a friendly unit TANK this turn. (It must be assigned combat damage first.)",
+     "ja": "⟨イグゾースト⟩：味方ユニット1体にこのターンTANKを与える。(戦闘ダメージは、そのユニットから割り当てなければならない。)"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-193.avif"
+  },
+  {
+   "id": "ven-149",
+   "name": "Jayce - Defender of Tomorrow",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Mind",
+   "domains": [
+    "Mind",
+    "Body"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Jayce",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-149/166",
+   "image": "images/VEN/VEN-149.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "②⟨rune⟩⟨rune⟩ (②⟨rune⟩⟨rune⟩: Empower me. Use only if not Empowered.)",
+     "ja": "②⟨rune⟩⟨rune⟩ (②⟨rune⟩⟨rune⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。)"
+    },
+    {
+     "kw": "",
+     "en": "①, ⟨イグゾースト⟩: Ready a gear.",
+     "ja": "①、⟨イグゾースト⟩：ギア1つをレディ状態にする。"
+    },
+    {
+     "kw": "EMPOWERED",
+     "en": "①, ⟨イグゾースト⟩: Ready 2 gear.",
+     "ja": "①、⟨イグゾースト⟩：ギア2つをレディ状態にする。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-151",
+   "name": "Mel - Soul’s Reflection",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Mind",
+   "domains": [
+    "Mind",
+    "Chaos"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Mel",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-151/166",
+   "image": "images/VEN/VEN-151.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you empower something else, empower me. (I become Empowered if I'm not already.)",
+     "ja": "自分が他の何かをエンパワーしたとき、自身をエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。)"
+    },
+    {
+     "kw": "",
+     "en": "Disempower me, ⟨イグゾースト⟩: Give a unit at a battlefield -2 ⟨might⟩ this turn.",
+     "ja": "自身をディスエンパワーする、⟨イグゾースト⟩：バトルフィールドにいるユニット1体にこのターン-2⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-195.avif"
+  },
+  {
+   "id": "ven-153",
+   "name": "Ambessa - Matriarch of War",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Fury",
+   "domains": [
+    "Fury",
+    "Order"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Ambessa",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-153/166",
+   "image": "images/VEN/VEN-153.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you empower something else, empower me. (I become Empowered if I'm not already.)",
+     "ja": "自分が他の何かをエンパワーしたとき、自身をエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。)"
+    },
+    {
+     "kw": "",
+     "en": "Disempower me, ⟨rune⟩, ⟨イグゾースト⟩: Ready a unit.",
+     "ja": "自身をディスエンパワーする、⟨rune⟩、⟨イグゾースト⟩：ユニット1体をレディ状態にする。"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-196.avif"
+  },
+  {
+   "id": "ven-155",
+   "name": "Kennen - Heart of the Tempest",
+   "nameJa": "",
+   "type": "Legend",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos",
+    "Order"
+   ],
+   "cost": "",
+   "might": "",
+   "rarity": "レア",
+   "tag": "Kennen",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-155/166",
+   "image": "images/VEN/VEN-155.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play a card from anywhere other than your hand, empower me.",
+     "ja": "自分が手札以外の場所からカードをプレイしたとき、自身をエンパワーする。"
+    },
+    {
+     "kw": "ACTION",
+     "en": "Disempower me, ⟨イグゾースト⟩: Give a unit ASSAULT 2 this turn. (+2 ⟨might⟩ while it's an attacker.)",
+     "ja": "自身をディスエンパワーする、⟨イグゾースト⟩：ユニット1体にこのターンASSAULT 2を与える。(攻撃側の間+2⟨might⟩。)"
+    }
+   ],
+   "equip": [],
+   "power": "",
+   "altImage": "images/VEN/VEN-197.avif"
+  },
+  {
+   "id": "ven-140",
+   "name": "Shuriken Flip",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "1",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Akali・Signature Spell",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-140/166",
+   "image": "images/VEN/VEN-140.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Deal 2 to up to one enemy unit at a battlefield, then move a friendly unit.",
+     "ja": "バトルフィールドにいる敵ユニット最大1体に2ダメージを与え、その後、味方ユニット1体を移動させる。"
+    },
+    {
+     "kw": "FLOW",
+     "en": "③⟨rune⟩ — (You may play this from your trash for its Flow cost. Then banish it.)",
+     "ja": "③⟨rune⟩ — (これを捨て札からFLOWコストで使用してもよい。その後、追放(Banish)する。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-142",
+   "name": "Dominus",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "4",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Renekton・Signature Spell",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-142/166",
+   "image": "images/VEN/VEN-142.avif",
+   "effects": [
+    {
+     "kw": "ACTION",
+     "en": "(Play on your turn or in showdowns.)",
+     "ja": "(自分のターン、またはショーダウン中にプレイする。)"
+    },
+    {
+     "kw": "",
+     "en": "This turn, double a unit's Might and give it \"⟨rune⟩⟨rune⟩: Ready me.\"",
+     "ja": "このターン、ユニット1体のマイトを2倍にし、それに「⟨rune⟩⟨rune⟩：自身をレディ状態にする。」を与える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-144",
+   "name": "Death Mark",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "2",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Zed・Signature Spell",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-144/166",
+   "image": "images/VEN/VEN-144.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "BURN 3. (Put the top 3 cards of your Main Deck into your trash.)",
+     "ja": "BURN 3する。(メインデッキの上から3枚を捨て札に置く。)"
+    },
+    {
+     "kw": "",
+     "en": "Play a 0 ⟨might⟩ Shadow Clone unit token. (It has \"When I attack, you may banish a unit from your trash. If you do, give me ASSAULT 4 this turn.\")",
+     "ja": "0⟨might⟩のShadow Cloneユニットトークンを1体プレイする。(そのトークンは「自身が攻撃したとき、自分の捨て札のユニット1体を追放(Banish)してもよい。そうしたなら、このターン自身にASSAULT 4を与える。」を持つ。)"
+    },
+    {
+     "kw": "FLOW",
+     "en": "①⟨rune⟩⟨rune⟩ — (You may play this from your trash for its Flow cost. Then banish it.)",
+     "ja": "①⟨rune⟩⟨rune⟩ — (これを捨て札からFLOWコストで使用してもよい。その後、追放(Banish)する。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-146",
+   "name": "Siphoning Strike",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "4",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Nasus・Signature Spell",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-146/166",
+   "image": "images/VEN/VEN-146.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Deal 4 to a unit at a battlefield. If you control 7 or more runes, deal 7 to it instead. When it dies this turn, channel 1 rune exhausted.",
+     "ja": "バトルフィールドにいるユニット1体に4ダメージを与える。コントロールしているルーンが7つ以上なら、代わりに7ダメージを与える。それがこのターン死亡したとき、ルーンを1つイグゾースト状態でチャネルする。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-152",
+   "name": "Rebuttal",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "1",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Mel・Signature Spell",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-152/166",
+   "image": "images/VEN/VEN-152.avif",
+   "effects": [
+    {
+     "kw": "REACTION",
+     "en": "(Play any time, even before spells and abilities resolve.)",
+     "ja": "(いつでもプレイできる。スペルや能力が解決する前でもよい。)"
+    },
+    {
+     "kw": "",
+     "en": "Choose a spell with Energy cost no more than ④. You may pay ⟨rune⟩. If you do, gain control of it and you may make new choices for it. Otherwise, counter it.",
+     "ja": "エネルギーコスト④以下のスペル1つを選ぶ。⟨rune⟩を支払ってもよい。そうしたなら、そのコントロールを得て、その選択をやり直してもよい。そうでなければ、それを打ち消す。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-156",
+   "name": "Lightning Rush",
+   "nameJa": "",
+   "type": "Spell",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "1",
+   "might": "",
+   "rarity": "エピック",
+   "tag": "Kennen・Signature Spell",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-156/166",
+   "image": "images/VEN/VEN-156.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Look at the top 3 cards of your Main Deck. You may choose a card from among them and draw it. Put the rest into your trash.",
+     "ja": "メインデッキの上から3枚を見る。その中から1枚を選んで引いてもよい。残りを捨て札に置く。"
+    },
+    {
+     "kw": "FLOW",
+     "en": "②⟨rune⟩ — (You may play this from your trash for its Flow cost. Then banish it.)",
+     "ja": "②⟨rune⟩ — (これを捨て札からFLOWコストで使用してもよい。その後、追放(Banish)する。)"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-158",
+   "name": "Heisho, Shell of the World",
+   "nameJa": "",
+   "type": "Battlefield",
+   "domain": "",
+   "domains": [],
+   "cost": "",
+   "might": "",
+   "rarity": "",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-158/166",
+   "image": "images/VEN/VEN-158.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Players ignore DEFLECT while paying for spells and abilities choosing something here.",
+     "ja": "プレイヤーは、ここにあるものを対象に選ぶスペルや能力のコストを支払う間、DEFLECTを無視する。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-161",
+   "name": "Piltovan Forge",
+   "nameJa": "",
+   "type": "Battlefield",
+   "domain": "",
+   "domains": [],
+   "cost": "",
+   "might": "",
+   "rarity": "",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-161/166",
+   "image": "images/VEN/VEN-161.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "While you control this battlefield, the first friendly gear activated ability played each turn costs ① less.",
+     "ja": "このバトルフィールドをコントロールしている間、各ターンに最初に使用する味方ギアの起動型能力のコストは①少なくなる。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-163",
+   "name": "Risen Altar",
+   "nameJa": "",
+   "type": "Battlefield",
+   "domain": "",
+   "domains": [],
+   "cost": "",
+   "might": "",
+   "rarity": "",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-163/166",
+   "image": "images/VEN/VEN-163.avif",
+   "effects": [
+    {
+     "kw": "EMPOWER",
+     "en": "",
+     "ja": "(EMPOWER) ここにいる自分のユニットのコストは①または⟨rune⟩少なくなる。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-164",
+   "name": "Sandswept Tomb",
+   "nameJa": "",
+   "type": "Battlefield",
+   "domain": "",
+   "domains": [],
+   "cost": "",
+   "might": "",
+   "rarity": "",
+   "tag": "",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-164/166",
+   "image": "images/VEN/VEN-164.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "Each spell that chooses one or more units here that are friendly to it costs ⟨rune⟩ less.",
+     "ja": "ここにいる、それにとって味方であるユニットを1体以上対象に選ぶスペルは、コストが⟨rune⟩少なくなる。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-167",
+   "name": "Vi - Destructive",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "2",
+   "might": "3",
+   "rarity": "ショーケース",
+   "tag": "Vi・Piltover",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-167/166",
+   "image": "images/VEN/VEN-167.avif",
+   "effects": [
+    {
+     "kw": "GANKING",
+     "en": "(I can move from battlefield to battlefield.)",
+     "ja": "(バトルフィールドからバトルフィールドへ移動できる。)"
+    },
+    {
+     "kw": "",
+     "en": "Recycle 1 from your trash: Give me +1 ⟨might⟩ this turn.",
+     "ja": "自分の捨て札から1枚リサイクルする：このターン自身に+1⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-168",
+   "name": "Jinx - Demolitionist",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Fury",
+   "domains": [
+    "Fury"
+   ],
+   "cost": "3",
+   "might": "4",
+   "rarity": "ショーケース",
+   "tag": "Jinx・Zaun",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-168/166",
+   "image": "images/VEN/VEN-168.avif",
+   "effects": [
+    {
+     "kw": "ACCELERATE",
+     "en": "(You may pay ①⟨Fury⟩ as an additional cost to have me enter ready.)",
+     "ja": "(追加コストとして①⟨Fury⟩を支払い、自身をレディ状態で登場させてもよい。)"
+    },
+    {
+     "kw": "ASSAULT",
+     "en": "2 (+2 ⟨might⟩ while I'm an attacker.)",
+     "ja": "2 (攻撃側の間+2⟨might⟩。)"
+    },
+    {
+     "kw": "",
+     "en": "When you play me, discard 2.",
+     "ja": "自身をプレイしたとき、カードを2枚捨てる。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-175",
+   "name": "Jayce - Man of Progress",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "4",
+   "might": "4",
+   "rarity": "ショーケース",
+   "tag": "Jayce・Piltover",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-175/166",
+   "image": "images/VEN/VEN-175.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than ⑦ from hand this turn, ignoring its Energy cost.",
+     "ja": "自身をプレイしたとき、味方のギア1つを破壊してもよい。そうしたなら、このターン、エネルギーコスト⑦以下のギア1つを、エネルギーコストを無視して手札からプレイしてもよい。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  },
+  {
+   "id": "ven-176",
+   "name": "Viktor - Innovator",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "4",
+   "might": "3",
+   "rarity": "ショーケース",
+   "tag": "Viktor・Zaun",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-176/166",
+   "image": "images/VEN/VEN-176.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play a card on an opponent's turn, play a 1 ⟨might⟩ Recruit unit token to your base.",
+     "ja": "相手のターンにカードをプレイしたとき、1⟨might⟩のRecruitユニットトークンを1体自分のベースにプレイする。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-179",
+   "name": "Rengar - Trophy Hunter",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "5",
+   "might": "6",
+   "rarity": "ショーケース",
+   "tag": "Rengar・Ixtal・Cat",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-179/166",
+   "image": "images/VEN/VEN-179.avif",
+   "effects": [
+    {
+     "kw": "AMBUSH",
+     "en": "I can be played to a battlefield where there are enemy units.",
+     "ja": "自身は、敵ユニットがいるバトルフィールドにプレイできる。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-180",
+   "name": "Kha’Zix - Evolving Hunter",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "5",
+   "might": "5",
+   "rarity": "ショーケース",
+   "tag": "Kha'Zix・The Void",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-180/166",
+   "image": "images/VEN/VEN-180.avif",
+   "effects": [
+    {
+     "kw": "HUNT",
+     "en": "(Gain XP when I conquer or hold a battlefield.)",
+     "ja": "(自身がバトルフィールドを征服(Conquer)またはホールドしたとき、XPを得る。)"
+    },
+    {
+     "kw": "",
+     "en": "When I attack, you may spend 3 XP to deal damage equal to my Might to an enemy unit here.",
+     "ja": "自身が攻撃したとき、3XPを支払って、ここにいる敵ユニット1体に自身のマイトに等しいダメージを与えてもよい。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-sp2",
+   "name": "Sona - Harmonious",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Calm",
+   "domains": [
+    "Calm"
+   ],
+   "cost": "4",
+   "might": "4",
+   "rarity": "ショーケース",
+   "tag": "Sona・Demacia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-SP2/006",
+   "image": "images/VEN/VEN-SP2.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "At the end of your turn, if I'm at a battlefield, ready up to 4 friendly runes.",
+     "ja": "自分のターン終了時、自身がバトルフィールドにいるなら、味方のルーンを最大4つレディ状態にする。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-sp3",
+   "name": "Ahri - Inquisitive",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Mind",
+   "domains": [
+    "Mind"
+   ],
+   "cost": "3",
+   "might": "3",
+   "rarity": "ショーケース",
+   "tag": "Ahri・Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-SP3/006",
+   "image": "images/VEN/VEN-SP3.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When I attack or defend, give an enemy unit here -2 ⟨might⟩ this turn, to a minimum of 1 ⟨might⟩.",
+     "ja": "自身が攻撃または防御したとき、ここにいる敵ユニット1体にこのターン-2⟨might⟩を与える(最低1⟨might⟩)。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-sp4",
+   "name": "Sett - Brawler",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Body",
+   "domains": [
+    "Body"
+   ],
+   "cost": "5",
+   "might": "4",
+   "rarity": "ショーケース",
+   "tag": "Sett・Ionia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-SP4/006",
+   "image": "images/VEN/VEN-SP4.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me or when I conquer, BUFF me.",
+     "ja": "自身をプレイしたとき、または自身が征服(Conquer)したとき、自身をBUFFする。"
+    },
+    {
+     "kw": "",
+     "en": "Spend my buff: Give me +4 ⟨might⟩ this turn.",
+     "ja": "自身のバフを消費する：このターン自身に+4⟨might⟩を与える。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-sp5",
+   "name": "Ezreal - Prodigy",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Chaos",
+   "domains": [
+    "Chaos"
+   ],
+   "cost": "3",
+   "might": "3",
+   "rarity": "ショーケース",
+   "tag": "Ezreal・Piltover",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-SP5/006",
+   "image": "images/VEN/VEN-SP5.avif",
+   "effects": [
+    {
+     "kw": "",
+     "en": "When you play me, discard 1, then draw 2. Optional additional costs you pay cost ① or ⟨rune⟩ less.",
+     "ja": "自身をプレイしたとき、カードを1枚捨て、その後2枚引く。自分が支払う任意の追加コストは①または⟨rune⟩少なくなる。"
+    }
+   ],
+   "equip": [],
+   "power": "1"
+  },
+  {
+   "id": "ven-sp6",
+   "name": "Lux - Crownguard",
+   "nameJa": "",
+   "type": "Champion Unit",
+   "domain": "Order",
+   "domains": [
+    "Order"
+   ],
+   "cost": "4",
+   "might": "2",
+   "rarity": "ショーケース",
+   "tag": "Lux・Demacia",
+   "set": "Vendetta",
+   "setCode": "VEN",
+   "modified": "2026-07-12",
+   "number": "VEN-SP6/006",
+   "image": "images/VEN/VEN-SP6.avif",
+   "effects": [
+    {
+     "kw": "REACTION",
+     "en": "⟨イグゾースト⟩: ADD ②. Spend this Energy only to play spells.",
+     "ja": "⟨イグゾースト⟩：②をADDする。このエネルギーはスペルのプレイにのみ支払える。"
+    }
+   ],
+   "equip": [],
+   "power": ""
+  }
+ ]
+}
