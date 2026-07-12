@@ -1,5 +1,5 @@
 {
- "_readme": "メタデータ。",
+ "_readme": "メタデータ（sets/keywords/legends/counts）。カード本体は data/cards/<CODE>.json に分割。編集は data/cards.json を直し scripts/split-cards.js を流す。",
  "sets": [
   {
    "code": "VEN",
@@ -1118,6 +1118,10 @@
   }
  ],
  "changelog": [
+  {
+   "date": "2026-07-13",
+   "text": "デッキビルダーを β版として公開しました。"
+  },
   {
    "date": "2026-07-12",
    "text": "Vendetta にレジェンド・シグネチャー・バトルフィールド・ショーケース／プロモを追加しました。"

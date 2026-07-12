@@ -149,6 +149,8 @@ a:hover{color:var(--ink)}
   .rb-gcard:hover img{transform:scale(1.07)}
   @keyframes rbViewIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   .rb-view{animation:rbViewIn .34s cubic-bezier(.2,.7,.3,1) both}
+  @keyframes rbFadeIn{from{opacity:0}to{opacity:1}}
+  .rb-view.noxform{animation-name:rbFadeIn}
   @keyframes rbCardIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   .rb-gcard{animation:rbCardIn .42s cubic-bezier(.2,.7,.3,1) backwards}
   .rb-cardgrid>div:nth-child(1){animation-delay:.00s}
@@ -201,6 +203,30 @@ a:hover{color:var(--ink)}
     .rb-gcard:hover img,.rb-lift:hover img{transform:none !important}
   }
   [data-kbd]{outline:none}
+  .rb-main.wide{max-width:1500px !important}
+  .rb-deck-grid{display:grid;grid-template-columns:1fr 400px;gap:22px;align-items:start}
+  .rb-deck-panel{position:sticky;top:78px;max-height:calc(100vh - 96px);overflow-y:auto}
+  .rb-pickgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+  .rb-deck-fab{display:none}
+  .rb-deck-sheet-scrim{display:none}
+  @media (max-width:1080px){
+    .rb-deck-grid{grid-template-columns:1fr}
+    .rb-deck-left{padding-bottom:70px}
+    .rb-deck-fab{display:flex !important}
+    .rb-deck-panel{position:fixed !important;left:0;right:0;bottom:0;top:auto;z-index:70;
+      max-height:86vh !important;overflow-y:auto;margin:0 !important;padding:0 15px 22px;
+      background:var(--bg);border-top:1px solid var(--gold-dim);border-radius:18px 18px 0 0;
+      box-shadow:0 -12px 40px rgba(0,0,0,.4);transform:translateY(100%);
+      transition:transform .28s cubic-bezier(.32,.72,0,1);will-change:transform;visibility:hidden}
+    .rb-deck-panel.open{transform:translateY(0);visibility:visible}
+    .rb-deck-sheet-scrim.show{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:65}
+    .rb-sheet-handle{display:flex !important}
+  }
+  @media (max-width:820px){
+    .rb-deck-grid{display:flex !important;flex-direction:column}
+    .rb-pickgrid{grid-template-columns:repeat(2,1fr) !important;gap:9px !important}
+  }
+  .rb-sheet-handle{display:none}
   [data-kbd]:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:8px}
   input:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
   a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
@@ -239,6 +265,9 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
     <div class="rb-search" style="margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--gold-dim);border-radius:9px;padding:8px 14px;width:300px;box-shadow:0 1px 8px -2px var(--lift-shadow)">
       <div style="width:14px;height:14px;border:1.7px solid var(--gold);border-radius:50%;position:relative;flex:none"><div style="position:absolute;width:6px;height:1.7px;background:var(--gold);transform:rotate(45deg);bottom:-2px;right:-3px;border-radius:2px"></div></div>
       <input value="{{ queryRaw }}" onInput="{{ onSearch }}" aria-label="カードを検索" placeholder="カードを検索…" style="flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:13px"/>
+      <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ clearQuery }}" role="button" tabindex="0" data-kbd aria-label="検索をクリア" style="flex:none;cursor:pointer;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:14px;line-height:1;color:var(--ink-faint);border-radius:50%" style-hover="color:var(--ink);background:var(--surface2)">×</div>
+      </sc-if>
     </div>
   </header>
 
@@ -269,6 +298,11 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
         </sc-for>
       </nav>
 
+      <div style="padding:18px 20px 8px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint)">ツール</div>
+      <nav style="display:flex;flex-direction:column;gap:2px;padding:0 14px 4px">
+        <div onClick="{{ goDeck }}" role="button" tabindex="0" data-kbd style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;background:{{ deckBg }};color:{{ deckInk }}"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linejoin="round" style="flex:none"><rect x="2.2" y="3.2" width="7" height="9.6" rx="1.3"/><path d="M10.4 4.3l3 1a1.3 1.3 0 0 1 .8 1.6l-2 6"/></svg>デッキビルダー<span style="margin-left:auto;font:800 8px 'JetBrains Mono',monospace;letter-spacing:.06em;background:var(--gold);color:var(--sel-ink);padding:2px 6px;border-radius:100px">BETA</span></div>
+      </nav>
+
       <div style="padding:18px 20px 8px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint)">資料</div>
       <nav style="display:flex;flex-direction:column;gap:2px;padding:0 14px 4px">
         <div onClick="{{ goKeywords }}" role="button" tabindex="0" data-kbd style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;background:{{ kwBg }};color:{{ kwInk }}"><span aria-hidden="true" style="font-size:13px">◈</span>キーワード集</div>
@@ -290,7 +324,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
     </aside>
 
     <!-- MAIN -->
-    <main class="rb-main" style="min-width:0;padding:26px 34px 60px;max-width:1100px">
+    <main class="rb-main {{ mainWide }}" style="min-width:0;padding:26px 34px 60px;max-width:1100px">
 
       <!-- breadcrumb -->
       <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-faint);margin-bottom:22px">
@@ -668,7 +702,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             <div style="position:relative;max-width:640px">
               <div onClick="{{ goVen }}" role="button" tabindex="0" data-kbd class="rb-anim rb-anim-1 rb-hovedge" style="cursor:pointer;display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--gold);border-radius:100px;padding:5px 7px 5px 14px;margin-bottom:16px">
                 <span style="flex:none;font-size:9.5px;font-weight:800;letter-spacing:.06em;background:var(--gold);color:var(--sel-ink);padding:3px 8px;border-radius:100px">NEW</span>
-                <span style="font-size:12.5px;line-height:1.4;color:var(--ink)">新セット「<strong>Vendetta</strong>」先行公開分を追加中</span>
+                <span style="font-size:12.5px;line-height:1.4;color:var(--ink);white-space:nowrap">新セット「<strong>Vendetta</strong>」先行公開分を追加中</span>
                 <span style="flex:none;color:var(--gold);font-weight:700;font-size:14px">→</span>
               </div>
               <h1 class="rb-hero-h1 rb-anim rb-anim-2" style="margin:0;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:38px;line-height:1.25;letter-spacing:.01em">RIFTBOUND<br/>日本語翻訳 Wiki</h1>
@@ -676,6 +710,9 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               <div class="rb-hero-search rb-anim rb-anim-4" style="display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--gold-dim);border-radius:11px;padding:13px 18px;max-width:480px;box-shadow:0 4px 18px rgba(0,0,0,.28)">
                 <div style="width:16px;height:16px;border:1.8px solid var(--gold);border-radius:50%;position:relative;flex:none"><div style="position:absolute;width:7px;height:1.8px;background:var(--gold);transform:rotate(45deg);top:13px;left:11px;border-radius:2px"></div></div>
                 <input value="{{ queryRaw }}" onInput="{{ onSearch }}" aria-label="カードを検索" placeholder="カード名・日本語名・キーワードで検索…" style="flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:14.5px" />
+                <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
+                  <div onClick="{{ clearQuery }}" role="button" tabindex="0" data-kbd aria-label="検索をクリア" style="flex:none;cursor:pointer;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1;color:var(--ink-faint);border-radius:50%" style-hover="color:var(--ink);background:var(--surface2)">×</div>
+                </sc-if>
               </div>
               <div class="rb-anim rb-anim-5" style="margin-top:13px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
                 <div onClick="{{ goAll }}" role="button" tabindex="0" data-kbd style="cursor:pointer;background:var(--gold);color:var(--sel-ink);font-weight:700;font-size:13.5px;padding:11px 22px;border-radius:8px">カード一覧をすべて見る →</div>
@@ -1047,6 +1084,362 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
         </div>
       </sc-if>
 
+      <!-- ===== DECKBUILDER VIEW ===== -->
+      <sc-if value="{{ showDeck }}" hint-placeholder-val="{{ false }}">
+        <div class="rb-view noxform" data-screen-label="デッキビルダー">
+          <!-- toolbar -->
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px">
+            <h1 style="margin:0;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:28px;letter-spacing:.01em">デッキビルダー</h1>
+            <span style="font:800 8px 'JetBrains Mono',monospace;letter-spacing:.08em;background:var(--gold);color:var(--sel-ink);padding:3px 8px;border-radius:100px">BETA</span>
+          </div>
+          <p style="margin:0 0 20px;font-size:12.5px;color:var(--ink-dim);line-height:1.7">レジェンドの2ドメインに沿ってメインデッキ40枚・ルーン12枚・バトルフィールド3枚を組みます。作成したデッキはこのブラウザに保存されます。</p>
+
+          <!-- deck selector bar -->
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:20px;padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:var(--surface)">
+            <span style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.1em;color:var(--ink-faint)">DECK</span>
+            <select value="{{ activeDeckId }}" onChange="{{ selectDeck }}" aria-label="デッキを選択" style="font:600 13px 'Zen Kaku Gothic New',sans-serif;padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface2);color:var(--ink);max-width:190px">
+              <sc-for list="{{ deckOptions }}" as="o" hint-placeholder-count="1"><option value="{{ o.id }}">{{ o.name }}</option></sc-for>
+            </select>
+            <input value="{{ deckName }}" onInput="{{ renameDeck }}" aria-label="デッキ名" placeholder="デッキ名" style="flex:1;min-width:140px;font:600 13.5px 'Zen Kaku Gothic New',sans-serif;padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)" />
+            <div onClick="{{ createDeck }}" role="button" tabindex="0" data-kbd style="cursor:pointer;white-space:nowrap;font:700 12px 'Zen Kaku Gothic New',sans-serif;padding:8px 14px;border-radius:8px;background:var(--gold);color:var(--sel-ink)">＋ 新規</div>
+            <div onClick="{{ deleteActiveDeck }}" role="button" tabindex="0" data-kbd aria-label="デッキを削除" style="cursor:pointer;white-space:nowrap;font:600 12px 'Zen Kaku Gothic New',sans-serif;padding:8px 12px;border-radius:8px;border:1px solid var(--line);color:var(--ink-dim)" style-hover="border-color:#d92d2a;color:#d92d2a">削除</div>
+          </div>
+
+          <div class="rb-deck-grid">
+            <!-- ===== LEFT: card picker ===== -->
+            <div class="rb-deck-left" style="min-width:0">
+
+              <!-- domain hint -->
+              <sc-if value="{{ deckHasDomains }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:14px;font-size:12px;color:var(--ink-dim)">
+                  <span style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--ink-faint)">DOMAIN</span>
+                  <sc-for list="{{ deckDomChips }}" as="d" hint-placeholder-count="2">
+                    <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 11px 4px 8px;border-radius:20px;background:{{ d.color }};color:{{ d.ink }};font-weight:700;font-size:12px"><img src="{{ d.icon }}" alt="" style="width:15px;height:15px" onError="{{ hideImg }}"/>{{ d.name }}</span>
+                  </sc-for>
+                  <span style="color:var(--ink-faint)">に適合するカードのみ表示中</span>
+                </div>
+              </sc-if>
+
+              <!-- tabs -->
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+                <sc-for list="{{ deckTabs }}" as="t" hint-placeholder-count="5">
+                  <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 12px 'Zen Kaku Gothic New',sans-serif;white-space:nowrap;padding:7px 15px;border-radius:20px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.ink }}">{{ t.label }}</div>
+                </sc-for>
+              </div>
+
+              <!-- search -->
+              <div style="display:flex;align-items:center;gap:10px;padding:10px 13px;border:1px solid var(--line);border-radius:9px;background:var(--surface);margin-bottom:16px">
+                <div style="width:14px;height:14px;border:1.7px solid var(--gold);border-radius:50%;position:relative;flex:none"><div style="position:absolute;width:6px;height:1.7px;background:var(--gold);transform:rotate(45deg);top:11px;left:9px;border-radius:2px"></div></div>
+                <input value="{{ deckQ }}" onInput="{{ onDeckQ }}" aria-label="カードを検索" placeholder="カード名・日本語名で絞り込み…" style="flex:1;min-width:0;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:13px" />
+                <sc-if value="{{ deckQHas }}" hint-placeholder-val="{{ false }}">
+                  <div onClick="{{ clearDeckQ }}" role="button" tabindex="0" data-kbd aria-label="検索をクリア" style="flex:none;cursor:pointer;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:14px;line-height:1;color:var(--ink-faint);border-radius:50%" style-hover="color:var(--ink);background:var(--surface2)">×</div>
+                </sc-if>
+              </div>
+
+              <!-- picker grid -->
+              <sc-if value="{{ pickEmpty }}" hint-placeholder-val="{{ false }}">
+                <div style="border:1px dashed var(--line);border-radius:12px;padding:44px 24px;text-align:center;font-size:12.5px;color:var(--ink-faint)">{{ pickEmptyMsg }}</div>
+              </sc-if>
+              <div class="rb-pickgrid">
+                <sc-for list="{{ pickRows }}" as="c" hint-placeholder-count="8">
+                  <div style="border:1.5px solid {{ c.selBorder }};border-radius:11px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column;box-shadow:{{ c.selShadow }}">
+                    <div onClick="{{ c.onAdd }}" onContextMenu="{{ c.onCtx }}" role="button" tabindex="0" data-kbd style="position:relative;cursor:pointer;background:var(--surface3);aspect-ratio:63/88;overflow:hidden">
+                      <img src="{{ c.image }}" alt="{{ c.name }}" onError="{{ hideImg }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"/>
+                      <sc-if value="{{ c.count }}" hint-placeholder-val="{{ 0 }}">
+                        <span style="position:absolute;inset:0;background:{{ c.selTint }};pointer-events:none"></span>
+                        <span style="position:absolute;left:0;right:0;bottom:0;padding:6px 8px;display:flex;align-items:center;justify-content:center;gap:5px;background:linear-gradient(0deg,rgba(18,16,14,.82),transparent);pointer-events:none">
+                          <span style="font:800 13px 'JetBrains Mono',monospace;color:#fff">{{ c.badgeLabel }}</span>
+                        </span>
+                      </sc-if>
+                    </div>
+                    <div style="padding:7px 9px 6px;flex:1;min-width:0;display:flex;align-items:center;gap:6px">
+                      <div style="font-weight:700;font-size:11.5px;line-height:1.3;color:var(--gold);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0">{{ c.name }}</div>
+                      <span onClick="{{ c.onInfo }}" role="button" tabindex="0" data-kbd aria-label="日本語訳を見る" title="日本語訳を見る" style="flex:none;padding:2px 7px;border-radius:6px;background:var(--surface2);border:1px solid var(--line);font:800 10px 'Zen Old Mincho',serif;color:var(--gold);cursor:pointer" style-hover="background:var(--gold);color:var(--sel-ink)">訳</span>
+                    </div>
+                    <!-- controls -->
+                    <sc-if value="{{ c.isStepper }}" hint-placeholder-val="{{ true }}">
+                      <div style="display:flex;align-items:stretch;border-top:1px solid var(--line-soft)">
+                        <div onClick="{{ c.onSub }}" role="button" tabindex="0" data-kbd aria-label="減らす" style="flex:1;cursor:pointer;text-align:center;padding:7px 0;font:700 15px 'JetBrains Mono',monospace;color:var(--ink-dim)" style-hover="background:var(--surface2)">−</div>
+                        <div style="width:1px;background:var(--line-soft)"></div>
+                        <div onClick="{{ c.onAdd }}" role="button" tabindex="0" data-kbd aria-label="増やす" style="flex:1;cursor:pointer;text-align:center;padding:7px 0;font:700 15px 'JetBrains Mono',monospace;color:var(--gold)" style-hover="background:var(--surface2)">＋</div>
+                      </div>
+                    </sc-if>
+                    <sc-if value="{{ c.isToggle }}" hint-placeholder-val="{{ false }}">
+                      <div onClick="{{ c.onAdd }}" role="button" tabindex="0" data-kbd style="cursor:pointer;text-align:center;padding:8px 0;border-top:1px solid var(--line-soft);font:700 12px 'Zen Kaku Gothic New',sans-serif;background:{{ c.toggleBg }};color:{{ c.toggleInk }}">{{ c.toggleLabel }}</div>
+                    </sc-if>
+                  </div>
+                </sc-for>
+              </div>
+              <sc-if value="{{ pickHasMore }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:12px;text-align:center;font-size:11.5px;color:var(--ink-faint)">{{ pickMore }}</div>
+              </sc-if>
+            </div>
+
+            <!-- ===== RIGHT: deck panel ===== -->
+            <div class="rb-deck-panel {{ deckSheetClass }}">
+              <!-- mobile sheet handle -->
+              <div class="rb-sheet-handle" style="position:sticky;top:0;z-index:2;flex-direction:column;gap:8px;padding:8px 0 10px;background:var(--bg)">
+                <span style="align-self:center;width:38px;height:4px;border-radius:2px;background:var(--line)"></span>
+                <div style="display:flex;align-items:center;gap:9px">
+                  <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:15px">デッキ内容</span>
+                  <span style="font:800 10px 'JetBrains Mono',monospace;letter-spacing:.06em;color:{{ deckValidInk }}">{{ deckValidTag }}</span>
+                  <span onClick="{{ closeDeckSheet }}" role="button" tabindex="0" data-kbd aria-label="閉じる" style="margin-left:auto;cursor:pointer;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--ink-dim)">×</span>
+                </div>
+              </div>
+              <!-- panel sub-tabs -->
+              <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px">
+                <sc-for list="{{ panelTabs }}" as="p" hint-placeholder-count="5">
+                  <div onClick="{{ p.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 11.5px 'Zen Kaku Gothic New',sans-serif;white-space:nowrap;padding:6px 13px;border-radius:18px;border:1px solid {{ p.border }};background:{{ p.bg }};color:{{ p.ink }}">{{ p.label }}</div>
+                </sc-for>
+              </div>
+
+              <!-- === 概要 === -->
+              <sc-if value="{{ ptOverview }}" hint-placeholder-val="{{ true }}">
+              <!-- validation summary -->
+              <div style="border:1px solid {{ deckValidBorder }};border-radius:12px;overflow:hidden;background:var(--surface);margin-bottom:16px">
+                <div style="padding:12px 15px;background:{{ deckValidHeadBg }};display:flex;align-items:center;gap:9px">
+                  <span style="font-size:15px">{{ deckValidIcon }}</span>
+                  <span style="font-weight:700;font-size:13px;color:var(--ink)">{{ deckValidText }}</span>
+                </div>
+                <sc-if value="{{ hasViolation }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:6px 15px 12px">
+                  <sc-for list="{{ checksFailed }}" as="k" hint-placeholder-count="2">
+                    <div style="display:flex;align-items:center;gap:9px;padding:6px 0;border-bottom:1px solid var(--line-soft)">
+                      <span style="width:18px;height:18px;flex:none;border-radius:50%;background:{{ k.col }};color:#fff;font:800 11px 'JetBrains Mono',monospace;display:flex;align-items:center;justify-content:center">{{ k.mark }}</span>
+                      <span style="flex:1;font-size:12.5px;color:var(--ink)">{{ k.label }}</span>
+                      <span style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--ink-faint)">{{ k.detail }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+                </sc-if>
+              </div>
+
+              <!-- legend + champion slots -->
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+                <div style="border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--surface)">
+                  <div style="padding:8px 11px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--ink-faint);border-bottom:1px solid var(--line-soft)">LEGEND</div>
+                  <sc-if value="{{ hasLegend }}" hint-placeholder-val="{{ false }}">
+                    <div style="padding:10px 11px;display:flex;align-items:center;gap:9px">
+                      <span onClick="{{ legendCard.onOpen }}" role="button" tabindex="0" data-kbd data-fallback="var(--surface3)" style="cursor:pointer;width:30px;height:42px;border-radius:4px;overflow:hidden;flex:none;background:var(--surface3)"><img src="{{ legendCard.image }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover"/></span>
+                      <span style="flex:1;min-width:0;font-weight:700;font-size:12px;color:var(--gold);line-height:1.3">{{ legendCard.name }}</span>
+                      <span onClick="{{ legendCard.onClear }}" role="button" tabindex="0" data-kbd aria-label="外す" style="cursor:pointer;font-size:14px;color:var(--ink-faint);padding:2px 4px" style-hover="color:#d92d2a">×</span>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ noLegend }}" hint-placeholder-val="{{ true }}">
+                    <div style="padding:14px 11px;font-size:11.5px;color:var(--ink-faint);line-height:1.5">「レジェンド」タブから選択</div>
+                  </sc-if>
+                </div>
+                <div style="border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--surface)">
+                  <div style="padding:8px 11px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--ink-faint);border-bottom:1px solid var(--line-soft)">CHAMPION</div>
+                  <sc-if value="{{ hasChampion }}" hint-placeholder-val="{{ false }}">
+                    <div style="padding:10px 11px;display:flex;align-items:center;gap:9px">
+                      <span onClick="{{ championCard.onOpen }}" role="button" tabindex="0" data-kbd data-fallback="var(--surface3)" style="cursor:pointer;width:30px;height:42px;border-radius:4px;overflow:hidden;flex:none;background:var(--surface3)"><img src="{{ championCard.image }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover"/></span>
+                      <span style="flex:1;min-width:0;font-weight:700;font-size:12px;color:var(--gold);line-height:1.3">{{ championCard.name }}</span>
+                      <span onClick="{{ championCard.onClear }}" role="button" tabindex="0" data-kbd aria-label="外す" style="cursor:pointer;font-size:14px;color:var(--ink-faint);padding:2px 4px" style-hover="color:#d92d2a">×</span>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ noChampion }}" hint-placeholder-val="{{ true }}">
+                    <div style="padding:14px 11px;font-size:11.5px;color:var(--ink-faint);line-height:1.5">カード詳細で指定（後日対応）</div>
+                  </sc-if>
+                </div>
+              </div>
+              </sc-if>
+
+              <!-- === メイン === -->
+              <sc-if value="{{ ptMain }}" hint-placeholder-val="{{ false }}">
+              <!-- main deck -->
+              <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-bottom:16px">
+                <div style="padding:11px 15px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line-soft)">
+                  <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:14px">メインデッキ</span>
+                  <span style="margin-left:auto;font:700 13px 'JetBrains Mono',monospace;color:{{ mainCountCol }}">{{ mainTotal }}<span style="color:var(--ink-faint);font-weight:500"> / {{ mainMin }}+</span></span>
+                </div>
+                <sc-if value="{{ mainEmpty }}" hint-placeholder-val="{{ true }}">
+                  <div style="padding:26px 15px;text-align:center;font-size:12px;color:var(--ink-faint);line-height:1.6">左からカードを追加してください</div>
+                </sc-if>
+                <div style="padding:4px 0">
+                  <sc-for list="{{ mainGroups }}" as="g" hint-placeholder-count="0">
+                    <div style="padding:9px 15px 4px;display:flex;align-items:center;gap:8px">
+                      <span style="width:7px;height:13px;border-radius:2px;background:var(--gold)"></span>
+                      <span style="font-weight:700;font-size:12px;color:var(--ink-dim)">{{ g.label }}</span>
+                      <span style="font:600 11px 'JetBrains Mono',monospace;color:var(--ink-faint)">{{ g.count }}</span>
+                    </div>
+                    <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="0">
+                      <div style="display:flex;align-items:center;gap:8px;padding:5px 15px" style-hover="background:var(--surface2)">
+                        <span data-fallback="{{ r.color }}" style="width:15px;height:15px;border-radius:3px;overflow:hidden;flex:none;display:inline-flex"><img src="{{ r.icon }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:contain"/></span>
+                        <span onClick="{{ r.onOpen }}" role="button" tabindex="0" data-kbd style="flex:1;min-width:0;cursor:pointer;font-size:12px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" style-hover="color:var(--gold)">{{ r.name }}</span>
+                        <div style="display:flex;align-items:center;gap:2px;flex:none">
+                          <span onClick="{{ r.onSub }}" role="button" tabindex="0" data-kbd aria-label="減らす" style="cursor:pointer;width:22px;height:22px;border-radius:5px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 13px 'JetBrains Mono',monospace;color:var(--ink-dim)" style-hover="border-color:var(--gold-dim)">−</span>
+                          <span style="min-width:18px;text-align:center;font:800 12.5px 'JetBrains Mono',monospace;color:var(--ink)">{{ r.n }}</span>
+                          <span onClick="{{ r.onAdd }}" role="button" tabindex="0" data-kbd aria-label="増やす" style="cursor:pointer;width:22px;height:22px;border-radius:5px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 13px 'JetBrains Mono',monospace;color:var(--gold)" style-hover="border-color:var(--gold-dim)">＋</span>
+                        </div>
+                      </div>
+                    </sc-for>
+                  </sc-for>
+                </div>
+              </div>
+              </sc-if>
+
+              <!-- === ルーン (概要と同じタブ) === -->
+              <sc-if value="{{ ptOverview }}" hint-placeholder-val="{{ true }}">
+              <!-- runes -->
+              <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-bottom:16px">
+                <div style="padding:11px 15px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line-soft)">
+                  <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:14px">ルーンデッキ</span>
+                  <span style="margin-left:auto;font:700 13px 'JetBrains Mono',monospace;color:{{ runeCountCol }}">{{ runeTotal }}<span style="color:var(--ink-faint);font-weight:500"> / 12</span></span>
+                </div>
+                <div style="padding:6px 0">
+                  <sc-for list="{{ runeRows }}" as="r" hint-placeholder-count="2">
+                    <div style="display:flex;align-items:center;gap:9px;padding:7px 15px">
+                      <span data-fallback="{{ r.color }}" style="width:20px;height:20px;border-radius:4px;overflow:hidden;flex:none;display:inline-flex"><img src="{{ r.icon }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:contain"/></span>
+                      <span style="flex:1;font-size:12.5px;font-weight:600;color:{{ r.color }}">{{ r.name }} Rune</span>
+                      <div style="display:flex;align-items:center;gap:3px;flex:none">
+                        <span onClick="{{ r.onSub }}" role="button" tabindex="0" data-kbd aria-label="減らす" style="cursor:pointer;width:24px;height:24px;border-radius:6px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 14px 'JetBrains Mono',monospace;color:var(--ink-dim)" style-hover="border-color:var(--gold-dim)">−</span>
+                        <span style="min-width:22px;text-align:center;font:800 13.5px 'JetBrains Mono',monospace;color:var(--ink)">{{ r.n }}</span>
+                        <span onClick="{{ r.onAdd }}" role="button" tabindex="0" data-kbd aria-label="増やす" style="cursor:pointer;width:24px;height:24px;border-radius:6px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 14px 'JetBrains Mono',monospace;color:var(--gold)" style-hover="border-color:var(--gold-dim)">＋</span>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+              </sc-if>
+
+              <!-- === BF (メインと同じタブ) === -->
+              <sc-if value="{{ ptMain }}" hint-placeholder-val="{{ false }}">
+              <!-- battlefields -->
+              <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-bottom:16px">
+                <div style="padding:11px 15px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line-soft)">
+                  <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:14px">バトルフィールド</span>
+                  <span style="margin-left:auto;font:700 13px 'JetBrains Mono',monospace;color:{{ bfCountCol }}">{{ bfCount }}<span style="color:var(--ink-faint);font-weight:500"> / 3</span></span>
+                </div>
+                <div style="padding:12px 15px;display:grid;grid-template-columns:repeat(3,1fr);gap:9px">
+                  <sc-for list="{{ bfSlots }}" as="b" hint-placeholder-count="3">
+                    <sc-if value="{{ b.empty }}" hint-placeholder-val="{{ true }}">
+                      <div style="aspect-ratio:88/63;border:1px dashed var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10.5px;color:var(--ink-faint);text-align:center;padding:6px">BFタブ<br/>から追加</div>
+                    </sc-if>
+                    <sc-if value="{{ b.empty }}" hint-placeholder-val="{{ false }}"></sc-if>
+                    <sc-if value="{{ b.filled }}" hint-placeholder-val="{{ false }}">
+                      <div style="position:relative;aspect-ratio:88/63;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface3)">
+                        <img onClick="{{ b.onOpen }}" role="button" src="{{ b.image }}" alt="{{ b.name }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"/>
+                        <span onClick="{{ b.onRemove }}" role="button" tabindex="0" data-kbd aria-label="外す" style="position:absolute;top:3px;right:3px;width:19px;height:19px;border-radius:50%;background:rgba(18,16,14,.78);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;cursor:pointer">×</span>
+                      </div>
+                    </sc-if>
+                  </sc-for>
+                </div>
+              </div>
+              </sc-if>
+
+              <!-- === 統計 (概要と同じタブ) === -->
+              <sc-if value="{{ ptOverview }}" hint-placeholder-val="{{ true }}">
+              <!-- stats: energy curve -->
+              <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)">
+                <div style="padding:11px 15px;border-bottom:1px solid var(--line-soft);display:flex;align-items:center;justify-content:space-between">
+                  <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:14px">エネルギーカーブ</span>
+                  <span style="font:600 10.5px 'JetBrains Mono',monospace;color:var(--ink-faint)">平均 <span style="color:var(--gold);font-weight:800;font-size:12px">{{ avgEnergy }}</span></span>
+                </div>
+                <div style="padding:20px 15px 24px;display:flex;gap:8px;height:158px">
+                  <div style="position:relative;width:14px;flex:none;margin-bottom:14px">
+                    <sc-for list="{{ curveTicks }}" as="tk" hint-placeholder-count="5">
+                      <span style="position:absolute;right:0;bottom:{{ tk.gpct }};transform:translateY(50%);font:600 8.5px 'JetBrains Mono',monospace;color:var(--ink-faint);line-height:1">{{ tk.vText }}</span>
+                    </sc-for>
+                  </div>
+                  <div style="flex:1;position:relative;margin-bottom:14px">
+                    <sc-for list="{{ curveTicks }}" as="tk" hint-placeholder-count="5">
+                      <div style="position:absolute;left:0;right:0;bottom:{{ tk.gpct }};height:1px;background:var(--line-soft);pointer-events:none"></div>
+                    </sc-for>
+                    <div style="position:absolute;inset:0;display:flex;align-items:flex-end;gap:6px">
+                      <sc-for list="{{ curve }}" as="b" hint-placeholder-count="8">
+                        <div style="position:relative;flex:1;height:100%">
+                          <div style="position:absolute;left:0;right:0;bottom:0;border-radius:5px 5px 0 0;background:{{ b.barBg }};min-height:2px;height:{{ b.pct }};transition:height .25s ease"></div>
+                          <span style="position:absolute;left:0;right:0;text-align:center;bottom:{{ b.labelBottom }};font:800 10px 'JetBrains Mono',monospace;color:var(--ink)">{{ b.nText }}</span>
+                        </div>
+                      </sc-for>
+                    </div>
+                    <div style="position:absolute;left:0;right:0;top:100%;padding-top:5px;display:flex;gap:6px">
+                      <sc-for list="{{ curve }}" as="b" hint-placeholder-count="8">
+                        <span style="flex:1;text-align:center;font:700 10px 'JetBrains Mono',monospace;color:{{ b.labCol }}">{{ b.label }}</span>
+                      </sc-for>
+                    </div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:0;border-top:1px solid var(--line-soft)">
+                  <sc-for list="{{ typeCounts }}" as="t" hint-placeholder-count="3">
+                    <div style="flex:1;text-align:center;padding:10px 4px;border-right:1px solid var(--line-soft)">
+                      <div style="font:800 16px 'JetBrains Mono',monospace;color:var(--ink)">{{ t.n }}</div>
+                      <div style="font-size:10.5px;color:var(--ink-faint);margin-top:2px">{{ t.label }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+              </sc-if>
+            </div>
+          </div>
+
+          <!-- in-place card preview modal -->
+          <sc-if value="{{ hasDeckPreview }}" hint-placeholder-val="{{ false }}">
+            <div onClick="{{ closeDeckPreview }}" style="position:fixed;inset:0;z-index:80;background:radial-gradient(circle at 50% 40%,rgba(30,24,16,.55),rgba(8,7,6,.86));display:flex;align-items:center;justify-content:center;padding:24px">
+              <div onClick="{{ stopEvt }}" style="width:100%;max-width:620px;max-height:88vh;overflow:auto;background:var(--surface);border:1px solid var(--gold-dim);border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.6)">
+                <div style="display:flex;gap:16px;padding:18px;align-items:flex-start">
+                  <img src="{{ deckPreview.image }}" alt="{{ deckPreview.name }}" onError="{{ hideImg }}" style="width:150px;flex:none;border-radius:9px;aspect-ratio:63/88;object-fit:cover;background:var(--surface3);cursor:pointer" onClick="{{ deckPreview.onOpen }}"/>
+                  <div style="flex:1;min-width:0">
+                    <div style="display:flex;align-items:flex-start;gap:8px">
+                      <div style="flex:1;min-width:0">
+                        <div style="font-family:'Zen Old Mincho',serif;font-weight:800;font-size:18px;line-height:1.25;color:var(--gold)">{{ deckPreview.name }}</div>
+                        <sc-if value="{{ deckPreview.nameJa }}" hint-placeholder-val="{{ false }}"><div style="font-size:12px;color:var(--ink-dim);margin-top:2px">{{ deckPreview.nameJa }}</div></sc-if>
+                      </div>
+                      <span onClick="{{ closeDeckPreview }}" role="button" tabindex="0" data-kbd aria-label="閉じる" style="flex:none;cursor:pointer;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--ink-dim)">×</span>
+                    </div>
+                    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;font:700 12px 'JetBrains Mono',monospace;color:var(--ink-dim)">
+                      <span>{{ deckPreview.typeJa }}</span>
+                      <sc-if value="{{ deckPreview.hasCost }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ deckPreview.costNode }}</span></sc-if>
+                      <sc-if value="{{ deckPreview.hasPower }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ deckPreview.powerNode }}</span></sc-if>
+                      <sc-if value="{{ deckPreview.hasMight }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ deckPreview.mightNode }}</span></sc-if>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding:0 18px 18px">
+                  <sc-if value="{{ deckPreview.hasEffects }}" hint-placeholder-val="{{ true }}">
+                    <div style="display:flex;flex-direction:column;gap:9px">
+                      <sc-for list="{{ deckPreview.effects }}" as="e" hint-placeholder-count="2">
+                        <div style="border:1px solid var(--line-soft);border-radius:9px;padding:11px 13px;background:var(--surface2);font-size:14px;line-height:1.75;color:var(--ink)">
+                          <sc-if value="{{ e.showKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:800 10.5px 'JetBrains Mono',monospace;letter-spacing:.04em;padding:2px 7px;border-radius:5px;margin-right:7px;vertical-align:middle;background:{{ e.chipBg }};color:{{ e.chipText }}">{{ e.kw }}</span></sc-if>
+                          {{ e.jaNode }}
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ deckPreview.hasEquip }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin-top:9px;display:flex;flex-direction:column;gap:9px">
+                      <div style="font:700 10.5px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">装備効果</div>
+                      <sc-for list="{{ deckPreview.equip }}" as="e" hint-placeholder-count="1">
+                        <div style="border:1px solid var(--line-soft);border-radius:9px;padding:11px 13px;background:var(--surface2);font-size:14px;line-height:1.75;color:var(--ink)">
+                          <sc-if value="{{ e.showKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:800 10.5px 'JetBrains Mono',monospace;letter-spacing:.04em;padding:2px 7px;border-radius:5px;margin-right:7px;vertical-align:middle;background:{{ e.chipBg }};color:{{ e.chipText }}">{{ e.kw }}</span></sc-if>
+                          {{ e.jaNode }}
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ deckPreview.noText }}" hint-placeholder-val="{{ false }}">
+                    <div style="text-align:center;padding:20px;font-size:13px;color:var(--ink-faint)">効果テキストはありません。</div>
+                  </sc-if>
+                  <div onClick="{{ deckPreview.onOpen }}" role="button" tabindex="0" data-kbd style="margin-top:14px;text-align:center;cursor:pointer;font:700 12px 'Zen Kaku Gothic New',sans-serif;padding:10px;border:1px solid var(--gold-dim);border-radius:9px;color:var(--gold)" style-hover="background:var(--surface2)">カードページを開く →</div>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+          <!-- mobile: bottom bar + sheet scrim -->
+          <div class="rb-deck-sheet-scrim {{ deckScrimClass }}" onClick="{{ closeDeckSheet }}"></div>
+          <div class="rb-deck-fab" onClick="{{ openDeckSheet }}" role="button" tabindex="0" data-kbd style="position:fixed;left:12px;right:12px;bottom:12px;z-index:60;cursor:pointer;align-items:center;gap:9px;padding:12px 15px;border:1px solid var(--gold-dim);border-radius:13px;background:var(--surface);box-shadow:0 8px 26px rgba(0,0,0,.4)">
+            <span style="font:800 12px 'JetBrains Mono',monospace;color:{{ mainCountCol }}">MAIN {{ mainTotal }}<span style="color:var(--ink-faint);font-weight:500">/{{ mainMin }}</span></span>
+            <span style="width:1px;height:13px;background:var(--line)"></span>
+            <span style="font:800 12px 'JetBrains Mono',monospace;color:{{ runeCountCol }}">RUNE {{ runeTotal }}<span style="color:var(--ink-faint);font-weight:500">/12</span></span>
+            <span style="width:1px;height:13px;background:var(--line)"></span>
+            <span style="font:800 12px 'JetBrains Mono',monospace;color:{{ bfCountCol }}">BF {{ bfCount }}<span style="color:var(--ink-faint);font-weight:500">/3</span></span>
+            <span style="margin-left:auto;display:inline-flex;align-items:center;gap:6px;font:800 11px 'Zen Kaku Gothic New',sans-serif;color:var(--gold)">デッキを見る<span style="font-size:9px">▲</span></span>
+          </div>
+        </div>
+      </sc-if>
+
     </main>
   </div>
 
@@ -1071,7 +1464,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { view: 'home', domain: null, set: null, selectedId: null, query: '', queryRaw: '', sortKey: null, sortDir: 1, listMode: (typeof window!=='undefined' && window.innerWidth<=820) ? 'table' : 'grid', cards: [], legends: [], sets: [], keywords: [], keywordCategories: [], counts: {}, rules: null, loading: true, loadError: null, cardsLoading: false, fType: [], fTag: [], fKw: [], fSet: [], fDom: [], fRar: [], fCost: [], tagQ: '', kwQ: '', legendId: null, filtersOpen: false, tocSheet: false, lightbox: null, theme: (typeof document!=='undefined' && document.documentElement.getAttribute('data-theme')==='light') ? 'light' : 'dark' };
+  state = { view: 'home', domain: null, set: null, selectedId: null, query: '', queryRaw: '', sortKey: null, sortDir: 1, listMode: (typeof window!=='undefined' && window.innerWidth<=820) ? 'table' : 'grid', cards: [], legends: [], sets: [], keywords: [], keywordCategories: [], counts: {}, rules: null, loading: true, loadError: null, cardsLoading: false, fType: [], fTag: [], fKw: [], fSet: [], fDom: [], fRar: [], fCost: [], tagQ: '', kwQ: '', legendId: null, filtersOpen: false, tocSheet: false, lightbox: null, theme: (typeof document!=='undefined' && document.documentElement.getAttribute('data-theme')==='light') ? 'light' : 'dark', decks: [], activeDeckId: null, deckTab: 'Legend', deckQ: '' };
 
   // データは data/meta.json（軽量メタ）と data/cards/<CODE>.json（セット別カード）に分割。
   // メタ即読み → home/legends/keywords/rules は即描画。カード本体はカード系ビューに入ったとき遅延ロード。
@@ -1122,11 +1515,15 @@ class Component extends DCLogic {
     } else if(v==='list'){
       if(patch.set && !patch.query){ this.loadSet(patch.set); }
       else { this.loadAllCards(); }
+    } else if(v==='deck'){
+      this.loadAllCards();
     }
     // home / legends / keywords / rules はメタのみで描画（カード不要）
   }
 
   componentDidMount(){
+    const dd=this.loadDecks();
+    this.setState({ decks:dd.decks, activeDeckId:dd.activeId });
     fetch('./data/meta.json', { cache: 'no-cache' })
       .then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
       .then(d => {
@@ -1263,7 +1660,7 @@ class Component extends DCLogic {
     'Nami':['ナミ'], 'Nidalee':['ニダリー'], 'Nilah':['ナイラ'], 'Nocturne':['ノクターン'],
     'Ornn':['オーン'], 'Poppy':['ポッピー'], 'Pyke':['パイク'], 'Qiyana':['キヤナ'],
     "Rek'Sai":['レク＝サイ','レクサイ'], 'Rell':['レル'], 'Renata Glasc':['レナータ・グラスク','レナータ'],
-    'Rengar':['レンガー'], 'Rumble':['ランブル'], 'Sett':['セット'], 'Shen':['シェン'],
+    'Rengar':['レンガー'], 'Rumble':['ランブル'], 'Sett':['セット','セト'], 'Shen':['シェン'],
     'Sivir':['シヴィア'], 'Sona':['ソナ'], 'Soraka':['ソラカ'], 'Syndra':['シンドラ'],
     'Taric':['タリック'], 'Teemo':['ティーモ'], 'Tryndamere':['トリンダミア'],
     'Twisted Fate':['ツイステッド・フェイト','ツイステッドフェイト','TF'], 'Udyr':['ウディア'],
@@ -1496,6 +1893,271 @@ class Component extends DCLogic {
         rows, hasRows: rows.length>0 };
     }).filter(Boolean);
   }
+  // ===== DECKBUILDER =====
+  DECK_KEY = 'rb-decks';
+  DECK_COPY_LIMIT = 3;      // 同名カード上限（チョーズン含む）
+  RUNE_TOTAL = 12;          // ルーンデッキ総数
+  BF_TOTAL = 3;             // バトルフィールド枚数
+  MAIN_MIN = 40;            // メインデッキ最低枚数
+  newDeckObj(){ return { id:'d'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), name:'新しいデッキ', legendId:null, championId:null, main:{}, runes:{}, battlefields:[], updated:Date.now() }; }
+  loadDecks(){
+    let data=null;
+    try{ data=JSON.parse(localStorage.getItem(this.DECK_KEY)||'null'); }catch(e){}
+    if(!data || !Array.isArray(data.decks) || !data.decks.length){ const d=this.newDeckObj(); data={ decks:[d], activeId:d.id }; }
+    if(!data.decks.some(d=>d.id===data.activeId)) data.activeId=data.decks[0].id;
+    return data;
+  }
+  persistDecks(decks, activeId){ try{ localStorage.setItem(this.DECK_KEY, JSON.stringify({ decks, activeId })); }catch(e){} this.setState({ decks, activeDeckId:activeId }); }
+  activeDeck(){ return (this.state.decks||[]).find(d=>d.id===this.state.activeDeckId) || null; }
+  mutateDeck(fn){
+    const decks=(this.state.decks||[]).map(d=>{
+      if(d.id!==this.state.activeDeckId) return d;
+      const nd={ ...d, main:{...d.main}, runes:{...d.runes}, battlefields:[...d.battlefields] };
+      fn(nd); nd.updated=Date.now(); return nd;
+    });
+    this.persistDecks(decks, this.state.activeDeckId);
+  }
+  goDeck(){ this.go({ view:'deck' }, '#deck'); }
+  createDeck(){ const d=this.newDeckObj(); this.persistDecks([...(this.state.decks||[]), d], d.id); }
+  selectDeck(e){ const id=e.target.value; this.persistDecks(this.state.decks, id); }
+  deleteActiveDeck(){
+    if(!window.confirm('このデッキを削除しますか？')) return;
+    let decks=(this.state.decks||[]).filter(d=>d.id!==this.state.activeDeckId);
+    if(!decks.length){ const d=this.newDeckObj(); this.persistDecks([d], d.id); return; }
+    this.persistDecks(decks, decks[0].id);
+  }
+  renameDeck(e){ const v=e.target.value; this.mutateDeck(d=>{ d.name=v; }); }
+  deckLegendCard(){ const d=this.activeDeck(); return d && d.legendId ? this.state.cards.find(c=>c.id===d.legendId) : null; }
+  deckDomains(){
+    const l=this.deckLegendCard(); if(l) return this.domsOf(l);
+    const d=this.activeDeck(); const le=(this.state.legends||[]).find(x=>x.id===(d&&d.legendId));
+    return le ? (le.domains||[]) : [];
+  }
+  setDeckLegend(id){ this.mutateDeck(d=>{ d.legendId = d.legendId===id ? null : id; }); }
+  setDeckChampion(id){ this.mutateDeck(d=>{ d.championId = d.championId===id ? null : id; }); }
+  cardLegalForDeck(c){ const doms=this.deckDomains(); if(!doms.length) return true; const cd=this.domsOf(c); if(!cd.length) return true; return cd.every(x=>doms.includes(x)); }
+  mainCount(id){ const d=this.activeDeck(); return d ? (d.main[id]||0) : 0; }
+  cardHay(c){
+    const numMain = (c.number||'').split('/')[0];
+    const numNoZero = numMain.replace(/-0+/,'-');
+    const tags = (c.tag||'').split(/[・･]/).map(t=>t.trim()).filter(Boolean);
+    const champJa = tags.flatMap(t=>this.CHAMPION_JA[t]||[]);
+    const domJa = [c.domain, ...(c.domains||[])].filter(Boolean).flatMap(dd=>this.DOMAIN_JA[dd]||[]);
+    const typeJa = this.TYPE_JA[c.type]||[];
+    const kwJa = [...(c.effects||[]), ...(c.equip||[])].flatMap(e=>this.KW_JA[this.kwBase(e.kw)]||[]);
+    return [
+      c.name, c.nameJa, c.tag, c.type, c.rarity, numMain, numNoZero, ...champJa, ...domJa, ...typeJa, ...kwJa,
+      ...(c.effects||[]).flatMap(e=>[e.kw, e.en, e.ja])
+    ].filter(Boolean).join(' ').toLowerCase();
+  }
+  mainTotal(){ const d=this.activeDeck(); if(!d) return 0; return Object.values(d.main).reduce((a,b)=>a+b,0) + (d.championId?1:0); }
+  addMain(id){ this.mutateDeck(d=>{ const champCopy=(d.championId===id?1:0); const n=(d.main[id]||0); if(n+champCopy<this.DECK_COPY_LIMIT) d.main[id]=n+1; }); }
+  subMain(id){ this.mutateDeck(d=>{ const n=(d.main[id]||0); if(n<=1) delete d.main[id]; else d.main[id]=n-1; }); }
+  runeCount(dom){ const d=this.activeDeck(); return d ? (d.runes[dom]||0) : 0; }
+  runeTotal(){ const d=this.activeDeck(); return d ? Object.values(d.runes).reduce((a,b)=>a+b,0) : 0; }
+  addRune(dom){ this.mutateDeck(d=>{ const t=Object.values(d.runes).reduce((a,b)=>a+b,0); if(t<this.RUNE_TOTAL) d.runes[dom]=(d.runes[dom]||0)+1; }); }
+  subRune(dom){ this.mutateDeck(d=>{ const n=(d.runes[dom]||0); if(n<=1) delete d.runes[dom]; else d.runes[dom]=n-1; }); }
+  bfIn(id){ const d=this.activeDeck(); return d ? d.battlefields.includes(id) : false; }
+  toggleBattlefield(id){ this.mutateDeck(d=>{ const i=d.battlefields.indexOf(id); if(i>=0) d.battlefields.splice(i,1); else if(d.battlefields.length<this.BF_TOTAL) d.battlefields.push(id); }); }
+  setDeckTab(t){ this.setState({ deckTab:t }); }
+  setPanelTab(t){ this.setState({ deckPanelTab:t }); }
+  onDeckQ(e){ this.setState({ deckQ:e.target.value }); }
+  toggleDeckSheet(v){ this.setState({ deckSheetOpen: v===undefined ? !this.state.deckSheetOpen : v }); }
+
+  // デッキ画面のビューモデル
+  deckVM(){
+    const cards=this.state.cards||[];
+    const d=this.activeDeck();
+    const deckOptions=(this.state.decks||[]).map(x=>({ id:x.id, name:x.name||'(無題)' }));
+    if(!d) return { showDeck:true, deckReady:false, deckOptions, activeDeckId:this.state.activeDeckId, deckName:'' };
+    const doms=this.deckDomains();
+    const legendCard=this.deckLegendCard();
+    const deckDomChips=doms.map(k=>({ key:k, name:k, color:this.domColor(k), icon:this.domIcon(k), ink:this.domInk(k) }));
+
+    // ---- カードピッカー ----
+    const TABS=['Legend','Champion','Unit','Spell','Gear','Battlefield'];
+    const TAB_LABEL={ Unit:'ユニット', Spell:'スペル', Gear:'ギア', Legend:'レジェンド', Champion:'チャンピオン', Battlefield:'BF' };
+    const tab=this.state.deckTab||'Legend';
+    const q=(this.state.deckQ||'').trim().toLowerCase();
+    const legTagForPick = legendCard ? (legendCard.tag||'') : '';
+    const deckTabs=TABS.map(t=>({ key:t, label:TAB_LABEL[t], onClick:()=>this.setDeckTab(t),
+      border: t===tab ? 'var(--gold)' : 'var(--line)',
+      bg: t===tab ? 'var(--gold)' : 'transparent',
+      ink: t===tab ? 'var(--sel-ink)' : 'var(--ink-dim)' }));
+    let pool, champNeedsLegend=false;
+    const pickable=cards.filter(c=>c.rarity!=='ショーケース');
+    if(tab==='Champion'){
+      if(!legTagForPick){ pool=[]; champNeedsLegend=true; }
+      else pool=pickable.filter(c=>/Unit/i.test(c.type) && (c.tag||'').split('・').map(s=>s.trim()).includes(legTagForPick));
+    } else {
+      pool=pickable.filter(c=>this.typeOf(c)===tab && this.typeOf(c)!=='Token');
+      if(tab!=='Legend' && tab!=='Battlefield' && doms.length) pool=pool.filter(c=>this.cardLegalForDeck(c));
+    }
+    if(q) pool=pool.filter(c=> this.cardHay(c).includes(q));
+    pool=pool.slice().sort((a,b)=>{ const ca=parseInt(a.cost)||0, cb=parseInt(b.cost)||0; if(ca!==cb) return ca-cb; return (a.name||'').localeCompare(b.name||''); });
+    const PICK_CAP=120;
+    const pickTotal=pool.length;
+    const pickRows=pool.slice(0,PICK_CAP).map(c=>{
+      const t=this.typeOf(c);
+      const isLegend=t==='Legend', isBf=t==='Battlefield', isChamp=(tab==='Champion');
+      const inDeck = isChamp ? (d.championId===c.id) : isLegend ? (d.legendId===c.id) : isBf ? d.battlefields.includes(c.id) : this.mainCount(c.id)>0;
+      const cnt = isChamp||isLegend||isBf ? (inDeck?1:0) : this.mainCount(c.id);
+      return {
+        id:c.id, name:c.name, nameJa:c.nameJa||'', image:c.image||'', cost:c.cost||'',
+        color:this.domColor(c.domain), icon:this.domIcon(c.domain),
+        count:cnt, inDeck, isStepper: !(isChamp||isLegend||isBf), isToggle: (isChamp||isLegend||isBf),
+        selBorder: inDeck ? 'var(--gold)' : 'var(--line)',
+        selShadow: inDeck ? '0 0 0 3px rgba(184,142,47,.28)' : 'none',
+        selTint: inDeck ? 'rgba(184,142,47,.18)' : 'transparent',
+        badgeLabel: (isChamp||isLegend||isBf) ? '✓ 選択中' : ('デッキに '+cnt+' 枚'),
+        toggleLabel: inDeck ? '✓ 選択中' : (isChamp?'チャンピオンに設定':isLegend?'レジェンドに設定':'BFに追加'),
+        toggleBg: inDeck ? 'var(--gold)' : 'transparent',
+        toggleInk: inDeck ? 'var(--sel-ink)' : 'var(--gold)',
+        onAdd: isChamp ? (()=>this.setDeckChampion(c.id)) : isLegend ? (()=>this.setDeckLegend(c.id)) : isBf ? (()=>this.toggleBattlefield(c.id)) : (()=>this.addMain(c.id)),
+        onSub: ()=>this.subMain(c.id),
+        onCtx: (e)=>{ e.preventDefault(); if(isChamp){ if(d.championId===c.id) this.setDeckChampion(c.id); } else if(isLegend){ if(d.legendId===c.id) this.setDeckLegend(c.id); } else if(isBf){ if(d.battlefields.includes(c.id)) this.toggleBattlefield(c.id); } else { this.subMain(c.id); } },
+        onOpen: ()=>this.select(c.id),
+        onInfo: (e)=>{ if(e){ e.preventDefault(); e.stopPropagation(); } this.setState({ deckPreview:c.id }); },
+      };
+    });
+
+    // ---- 右パネル: メインデッキ一覧（タイプ別） ----
+    const ORDER=['Unit','Spell','Gear'];
+    const OLABEL={ Unit:'ユニット', Spell:'スペル', Gear:'ギア' };
+    const byType={};
+    Object.keys(d.main).forEach(id=>{ const c=cards.find(x=>x.id===id); if(!c) return; const t=this.typeOf(c); (byType[t]=byType[t]||[]).push({ c, n:d.main[id] }); });
+    const mainGroups=ORDER.filter(t=>byType[t]&&byType[t].length).map(t=>({
+      label:OLABEL[t]||t, count:byType[t].reduce((a,x)=>a+x.n,0),
+      rows:byType[t].sort((a,b)=>{ const ca=parseInt(a.c.cost)||0, cb=parseInt(b.c.cost)||0; if(ca!==cb) return ca-cb; return (a.c.name||'').localeCompare(b.c.name||''); }).map(x=>({
+        id:x.c.id, name:x.c.name, cost:x.c.cost||'', n:x.n, color:this.domColor(x.c.domain), icon:this.domIcon(x.c.domain),
+        legal:this.cardLegalForDeck(x.c),
+        onAdd:()=>this.addMain(x.c.id), onSub:()=>this.subMain(x.c.id), onOpen:()=>this.select(x.c.id),
+      }))
+    }));
+
+    // ---- ルーン（ドメイン別ステッパー。レジェンドの2ドメインのみ） ----
+    const runeRows=(doms.length?doms:this.DOMAINS.map(x=>x.key)).map(k=>({
+      key:k, name:k, color:this.domColor(k), icon:this.domIcon(k), n:this.runeCount(k),
+      onAdd:()=>this.addRune(k), onSub:()=>this.subRune(k),
+    }));
+
+    // ---- バトルフィールドスロット ----
+    const bfCards=d.battlefields.map(id=>cards.find(c=>c.id===id)).filter(Boolean).map(c=>({
+      id:c.id, name:c.name, image:c.image||'', onOpen:()=>this.select(c.id), onRemove:()=>this.toggleBattlefield(c.id),
+    }));
+    const bfSlots=[]; for(let i=0;i<this.BF_TOTAL;i++){ const b=bfCards[i]; bfSlots.push(b ? { ...b, filled:true } : { empty:true, key:'bf'+i }); }
+
+    // ---- チャンピオン候補（レジェンドtag一致のチャンピオンユニット） ----
+    const legTag = legendCard ? legendCard.tag : null;
+    const championCard = d.championId ? cards.find(c=>c.id===d.championId) : null;
+
+    // ---- バリデーション ----
+    const mainTotal=this.mainTotal(), runeTotal=this.runeTotal(), bfCount=d.battlefields.length;
+    const overCopies=Object.entries(d.main).filter(([id,n])=>n+(d.championId===id?1:0)>this.DECK_COPY_LIMIT).length>0;
+    const illegalCards=Object.keys(d.main).map(id=>cards.find(c=>c.id===id)).filter(c=>c&&!this.cardLegalForDeck(c));
+    const sigCount=Object.keys(d.main).map(id=>cards.find(c=>c.id===id)).filter(c=>c && /Signature/i.test(c.tag||'')).reduce((a,c)=>a+(d.main[c.id]||0),0);
+    const champOk = !!championCard && (!legTag || (championCard.tag||'').split('・').map(s=>s.trim()).includes(legTag));
+    const checks=[
+      { label:'レジェンド', ok:!!d.legendId, detail: legendCard?legendCard.name:'未選択' },
+      { label:'チョーズン・チャンピオン', ok:champOk, detail: championCard?championCard.name:'未選択' },
+      { label:'メインデッキ '+this.MAIN_MIN+'枚ちょうど', ok:mainTotal===this.MAIN_MIN, detail:mainTotal+'/'+this.MAIN_MIN },
+      { label:'ルーンデッキ 12枚ちょうど', ok:runeTotal===this.RUNE_TOTAL, detail:runeTotal+'/12' },
+      { label:'バトルフィールド 3枚ちょうど', ok:bfCount===this.BF_TOTAL, detail:bfCount+'/3' },
+      { label:'同名 3枚以内', ok:!overCopies, detail: overCopies?'超過あり':'OK' },
+      { label:'ドメイン適合', ok:illegalCards.length===0, detail: illegalCards.length?illegalCards.length+'枚 不適合':'OK' },
+      { label:'シグネチャー 3枚以内', ok:sigCount<=3, detail: sigCount+'枚' },
+    ].map(x=>({ ...x, mark: x.ok?'✓':'!', col: x.ok?'#4f9c3b':'#d92d2a' }));
+    const deckValid=checks.every(x=>x.ok);
+
+    // ---- 統計: エネルギーカーブ ----
+    const curveBuckets=[0,0,0,0,0,0,0,0]; // 0..6, 7+
+    Object.keys(d.main).forEach(id=>{ const c=cards.find(x=>x.id===id); if(!c) return; let e=parseInt(c.cost); if(isNaN(e)) e=0; const b=Math.min(e,7); curveBuckets[b]+=d.main[id]; });
+    const curveMax=Math.max(1,...curveBuckets);
+    const curveStep = curveMax<=3 ? 1 : (curveMax<=6 ? 2 : Math.ceil(curveMax/5));
+    let curveAxisMax = Math.ceil(curveMax/curveStep)*curveStep;
+    if(curveAxisMax===curveMax) curveAxisMax += curveStep; // 最上バーの上に余白
+    const curveTickVals=[]; for(let v=0;v<=curveAxisMax;v+=curveStep) curveTickVals.push(v);
+    const curveTicks=curveTickVals.map(v=>({ v, vText: v===0 ? '' : String(v), gpct: (v/curveAxisMax*100)+'%' }));
+    const curveTotal=curveBuckets.reduce((a,x)=>a+x,0);
+    const curveSum=curveBuckets.reduce((a,x,i)=>a+x*i,0);
+    const avgEnergy=curveTotal?  (curveSum/curveTotal).toFixed(1) : '–';
+    const curve=curveBuckets.map((n,i)=>{ const p = n>0? (n/curveAxisMax*100) : 0; return { label:i===7?'7+':String(i), n, nText: n>0?String(n):'', pct: p+'%', labelBottom: 'calc('+p+'% + 3px)', barBg: (n>0 && n===curveMax)?'linear-gradient(180deg,var(--gold),var(--gold-dim))':'linear-gradient(180deg,var(--gold-dim),color-mix(in srgb,var(--gold-dim) 55%,transparent))', labCol: n>0?'var(--ink-dim)':'var(--ink-faint)' }; });
+    const typeCounts=ORDER.map(t=>({ label:OLABEL[t], n:(byType[t]||[]).reduce((a,x)=>a+x.n,0) }));
+
+    // ---- in-place card preview (Japanese effects) ----
+    let deckPreview=null;
+    if (this.state.deckPreview){
+      const pc=cards.find(x=>x.id===this.state.deckPreview);
+      if (pc){
+        const effs=(pc.effects||[]).map(e=>{
+          const col=this.kwColor(e.kw);
+          return { jaNode:this.richText(e.ja), showKw:!!(e.kw&&e.kw.trim()), kw:e.kw||'',
+            chipBg: col?col.color:'#2a251f', chipText: col?col.text:'#d9b978' };
+        });
+        const eqs=(pc.equip||[]).map(q=>{
+          const col=this.kwColor(q.kw); const isMight=!!(q.stat&&String(q.stat).trim());
+          return { jaNode: isMight ? ('マイト '+String(q.stat)) : this.richText(q.ja),
+            showKw:!!(q.kw&&q.kw.trim())&&!isMight, kw:q.kw||'',
+            chipBg: col?col.color:'#3a2a12', chipText: col?col.text:'var(--gold)' };
+        });
+        deckPreview={
+          id:pc.id, name:pc.name, nameJa:pc.nameJa||'', image:pc.image||'',
+          typeJa:(this.TYPE_JA&&this.TYPE_JA[this.typeOf(pc)])?this.TYPE_JA[this.typeOf(pc)][0]:this.typeOf(pc),
+          costNode: pc.cost ? this.energyPip(pc.cost,15) : null, hasCost: !!pc.cost,
+          powerNode: pc.power ? React.createElement('span',{style:{display:'inline-flex',gap:'4px',alignItems:'center'}}, this.symImg(pc.domain,15), pc.power) : null, hasPower: !!pc.power,
+          mightNode: pc.might ? React.createElement('span',{style:{display:'inline-flex',gap:'4px',alignItems:'center'}}, this.symImg('might',15), pc.might) : null, hasMight: !!pc.might,
+          effects:effs, hasEffects:effs.length>0,
+          equip:eqs, hasEquip:eqs.length>0,
+          noText: effs.length===0 && eqs.length===0,
+          onOpen:()=>this.select(pc.id),
+        };
+      }
+    }
+
+    return {
+      curveTicks,
+      deckPreview, hasDeckPreview: !!deckPreview,
+      closeDeckPreview: ()=>this.setState({ deckPreview:null }),
+      stopEvt: (e)=>{ if(e) e.stopPropagation(); },
+      showDeck:true, deckReady:true, deckOptions, activeDeckId:this.state.activeDeckId, deckName:d.name||'',
+      deckHasDomains:doms.length>0, deckDomChips,
+      deckTabs, deckQ:this.state.deckQ||'', deckQHas: !!((this.state.deckQ||'').trim()), pickRows, pickEmpty:pickRows.length===0,
+      pickEmptyMsg: champNeedsLegend ? '先にレジェンドを選ぶと、そのチャンピオンが表示されます。' : 'この条件に一致するカードがありません。タブや検索を変えてお試しください。',
+      pickMore: pickTotal>PICK_CAP ? ('絞り込み結果 '+pickTotal+'件のうち先頭'+PICK_CAP+'件を表示。検索で絞り込めます。') : '',
+      pickHasMore: pickTotal>PICK_CAP,
+      legendCard: legendCard ? { id:legendCard.id, name:legendCard.name, nameJa:legendCard.nameJa||'', image:legendCard.image||'', onOpen:()=>this.select(legendCard.id), onClear:()=>this.setDeckLegend(legendCard.id) } : null,
+      hasLegend: !!legendCard, noLegend: !legendCard,
+      championCard: championCard ? { id:championCard.id, name:championCard.name, image:championCard.image||'', ok:champOk, onOpen:()=>this.select(championCard.id), onClear:()=>this.setDeckChampion(championCard.id) } : null,
+      hasChampion: !!championCard, noChampion: !championCard,
+      mainGroups, mainEmpty: mainTotal===0, mainTotal, mainMin:this.MAIN_MIN,
+      mainCountCol: mainTotal===this.MAIN_MIN ? '#4f9c3b' : (mainTotal>this.MAIN_MIN ? '#d92d2a' : 'var(--gold)'),
+      runeRows, runeTotal, runeOk: runeTotal===this.RUNE_TOTAL,
+      runeCountCol: runeTotal===this.RUNE_TOTAL ? '#4f9c3b' : (runeTotal>this.RUNE_TOTAL ? '#d92d2a' : 'var(--gold)'),
+      bfSlots, bfCount, bfCountCol: bfCount===this.BF_TOTAL ? '#4f9c3b' : 'var(--gold)',
+      checks, deckValid, deckValidText: deckValid?'このデッキは構築ルールを満たしています':'未達の項目があります',
+      checksFailed: checks.filter(x=>!x.ok), hasViolation: !deckValid,
+      deckValidBorder: deckValid ? 'rgba(79,156,59,.5)' : 'var(--line)',
+      deckValidInk: deckValid ? '#4f9c3b' : 'var(--gold)',
+      deckValidTag: deckValid ? 'READY' : 'INCOMPLETE',
+      deckSheetOpen: !!this.state.deckSheetOpen,
+      panelTabs: ['概要','メイン'].map(t=>({ key:t, label:t, onClick:()=>this.setPanelTab(t),
+        border: (this.state.deckPanelTab||'概要')===t ? 'var(--gold)' : 'var(--line)',
+        bg: (this.state.deckPanelTab||'概要')===t ? 'var(--gold)' : 'transparent',
+        ink: (this.state.deckPanelTab||'概要')===t ? 'var(--sel-ink)' : 'var(--ink-dim)' })),
+      ptOverview: (this.state.deckPanelTab||'概要')==='概要',
+      ptMain: (this.state.deckPanelTab||'概要')==='メイン',
+      ptRune: (this.state.deckPanelTab||'概要')==='ルーン',
+      ptBf: (this.state.deckPanelTab||'概要')==='BF',
+      ptStats: (this.state.deckPanelTab||'概要')==='統計',      deckSheetClass: this.state.deckSheetOpen ? 'open' : '',
+      deckScrimClass: this.state.deckSheetOpen ? 'show' : '',
+      openDeckSheet: ()=>this.toggleDeckSheet(true),
+      closeDeckSheet: ()=>this.toggleDeckSheet(false),
+      deckValidHeadBg: deckValid ? 'rgba(79,156,59,.14)' : 'var(--surface2)',
+      deckValidIcon: deckValid ? '✓' : '⚠',
+      curve, typeCounts, avgEnergy,
+    };
+  }
+
   renderVals(){
     const s = this.state;
     // 本文中キーワードのチップ化用に、配色マップを描画ロジックへ渡す
@@ -1578,19 +2240,7 @@ class Component extends DCLogic {
     if (s.fType.length) list = list.filter(c=> s.fType.includes(this.typeOf(c)));
     if (s.fTag.length) list = list.filter(c=>{ const t=cardTags(c); return s.fTag.some(x=>t.includes(x)); });
     if (s.fKw.length) list = list.filter(c=>{ const k=cardKws(c); return s.fKw.some(x=>k.includes(x)); });
-    if (q) list = list.filter(c=>{
-      const numMain = (c.number||'').split('/')[0];
-      const numNoZero = numMain.replace(/-0+/,'-');
-      const champJa = cardTags(c).flatMap(t=>this.CHAMPION_JA[t]||[]);
-      const domJa = [c.domain, ...(c.domains||[])].filter(Boolean).flatMap(dd=>this.DOMAIN_JA[dd]||[]);
-      const typeJa = this.TYPE_JA[c.type]||[];
-      const kwJa = [...(c.effects||[]), ...(c.equip||[])].flatMap(e=>this.KW_JA[this.kwBase(e.kw)]||[]);
-      const hay = [
-        c.name, c.nameJa, c.tag, c.type, c.rarity, numMain, numNoZero, ...champJa, ...domJa, ...typeJa, ...kwJa,
-        ...(c.effects||[]).flatMap(e=>[e.kw, e.en, e.ja])
-      ].filter(Boolean).join(' ').toLowerCase();
-      return hay.includes(q);
-    });
+    if (q) list = list.filter(c=> this.cardHay(c).includes(q));
 
     // available filter chips (from all cards, respecting domain/set scope)
     let scope = this.state.cards.slice();
@@ -1939,6 +2589,17 @@ class Component extends DCLogic {
       kwBg: activeTab==='keywords' ? highlight : 'transparent',
       kwInk: activeTab==='keywords' ? 'var(--ink)' : 'var(--ink-dim)',
       goRules:()=>this.goRules(),
+      goDeck:()=>this.goDeck(),
+      deckBg: activeTab==='deck' ? highlight : 'transparent',
+      deckInk: activeTab==='deck' ? 'var(--ink)' : 'var(--ink-dim)',
+      mainWide: s.view==='deck' ? 'wide' : '',
+      createDeck:()=>this.createDeck(),
+      selectDeck:(e)=>this.selectDeck(e),
+      deleteActiveDeck:()=>this.deleteActiveDeck(),
+      renameDeck:(e)=>this.renameDeck(e),
+      onDeckQ:(e)=>this.onDeckQ(e),
+      clearDeckQ:()=>this.setState({ deckQ:'' }),
+      ...(s.view==='deck' ? this.deckVM() : { showDeck:false }),
       goRulesGlossary:()=>this.goRulesGlossary(),
       rulesBg: activeTab==='rules' ? highlight : 'transparent',
       rulesInk: activeTab==='rules' ? 'var(--ink)' : 'var(--ink-dim)',
@@ -1998,7 +2659,7 @@ class Component extends DCLogic {
       hasLegends: this.state.legends.length>0,
       noLegends: this.state.legends.length===0,
       crumbShow: s.view!=='home',
-      crumbText: s.view==='detail' && sel ? `${sel.domain} / ${sel.name}` : (s.view==='legends' ? 'レジェンド一覧' : (s.view==='legend' ? (ld ? ld.name : 'レジェンド') : (s.view==='keywords' ? 'キーワード集' : (s.view==='rules' ? '公式ルール翻訳' : listTitle)))),
+      crumbText: s.view==='detail' && sel ? `${sel.domain} / ${sel.name}` : (s.view==='deck' ? 'デッキビルダー' : (s.view==='legends' ? 'レジェンド一覧' : (s.view==='legend' ? (ld ? ld.name : 'レジェンド') : (s.view==='keywords' ? 'キーワード集' : (s.view==='rules' ? '公式ルール翻訳' : listTitle))))),
       ...selVals,
       listTitle, listDesc,
       listCount: `${list.length} 件`,
