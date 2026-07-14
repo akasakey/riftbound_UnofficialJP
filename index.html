@@ -1022,7 +1022,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                     <span style="font:500 11px 'JetBrains Mono',monospace;color:var(--ink-faint)">{{ g.count }}</span>
                   </div>
                   <sc-for list="{{ g.rows }}" as="c" hint-placeholder-count="4">
-                    <div onClick="{{ c.onClick }}" role="button" tabindex="0" data-kbd class="rb-listrow" style="display:grid;grid-template-columns:52px 96px 1fr 92px 118px 96px;border-bottom:1px solid var(--line-soft);cursor:pointer;align-items:center" style-hover="background:var(--surface2)">
+                    <div onClick="{{ c.onClick }}" onMouseEnter="{{ c.onHoverIn }}" onMouseLeave="{{ c.onHoverOut }}" role="button" tabindex="0" data-kbd class="rb-listrow" style="display:grid;grid-template-columns:52px 96px 1fr 92px 118px 96px;border-bottom:1px solid var(--line-soft);cursor:pointer;align-items:center" style-hover="background:var(--surface2)">
                       <div style="padding:6px 8px 6px 14px;display:flex;align-items:center">
                         <span data-fallback="var(--surface3)" style="width:30px;height:42px;border-radius:4px;background:var(--surface3);display:inline-flex;align-items:center;justify-content:center;overflow:hidden;flex:none;border:1px solid var(--line-soft)"><img src="{{ c.image }}" onError="{{ hideImg }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover"/></span>
                       </div>
@@ -1054,7 +1054,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                   </div>
                   <div class="rb-cardgrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(152px,1fr));gap:14px;margin-bottom:10px">
                     <sc-for list="{{ g.rows }}" as="c" hint-placeholder-count="6">
-                      <div onClick="{{ c.onClick }}" role="button" tabindex="0" data-kbd class="rb-gcard" style="cursor:pointer;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s ease,border-color .28s ease;will-change:transform" style-hover="border-color:var(--gold);transform:translateY(-7px);box-shadow:0 14px 30px -10px rgba(0,0,0,.55),0 0 0 1px var(--gold-dim)">
+                      <div onClick="{{ c.onClick }}" onMouseEnter="{{ c.onHoverIn }}" onMouseLeave="{{ c.onHoverOut }}" role="button" tabindex="0" data-kbd class="rb-gcard" style="cursor:pointer;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s ease,border-color .28s ease;will-change:transform" style-hover="border-color:var(--gold);transform:translateY(-7px);box-shadow:0 14px 30px -10px rgba(0,0,0,.55),0 0 0 1px var(--gold-dim)">
                         <div data-fallback="var(--surface3)" class="rb-imgwrap" style="position:relative;overflow:hidden;background:var(--surface3)">
                           <img src="{{ c.image }}" onError="{{ hideImg }}" loading="lazy" decoding="async" class="{{ c.imgFit }}"/>
                           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(18,16,14,.86),rgba(18,16,14,0) 44%)"></div>
@@ -1431,50 +1431,6 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           </sc-if>
 
           <!-- hover translation popover -->
-          <sc-if value="{{ hasHoverPreview }}" hint-placeholder-val="{{ false }}">
-            <div style="{{ hoverPreview.style }}" class="rb-hovpop">
-              <div style="display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--gold-dim);border-radius:14px;box-shadow:0 20px 54px -12px rgba(0,0,0,.6),0 0 0 4px rgba(184,142,47,.06);overflow:hidden;max-height:inherit;padding:13px">
-                <div style="padding-bottom:10px;margin-bottom:11px;border-bottom:1px solid var(--line-soft)">
-                  <div style="font-family:'Zen Old Mincho',serif;font-weight:800;font-size:15px;line-height:1.3;color:var(--gold)">{{ hoverPreview.name }}</div>
-                  <sc-if value="{{ hoverPreview.nameJa }}" hint-placeholder-val="{{ false }}"><div style="font-size:11.5px;color:var(--ink-dim);margin-top:1px">{{ hoverPreview.nameJa }}</div></sc-if>
-                  <div style="display:flex;flex-wrap:wrap;gap:11px;margin-top:7px;font:700 12px 'JetBrains Mono',monospace;color:var(--ink-dim)">
-                    <span>{{ hoverPreview.typeJa }}</span>
-                    <sc-if value="{{ hoverPreview.hasCost }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ hoverPreview.costNode }}</span></sc-if>
-                    <sc-if value="{{ hoverPreview.hasPower }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ hoverPreview.powerNode }}</span></sc-if>
-                    <sc-if value="{{ hoverPreview.hasMight }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ hoverPreview.mightNode }}</span></sc-if>
-                  </div>
-                </div>
-                <div style="flex:1;min-width:0;overflow:auto">
-                  <div style="font:700 9.5px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--gold-dim);margin-bottom:8px">日本語訳</div>
-                  <sc-if value="{{ hoverPreview.hasEffects }}" hint-placeholder-val="{{ true }}">
-                    <div style="display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.75;color:var(--ink)">
-                      <sc-for list="{{ hoverPreview.effects }}" as="e" hint-placeholder-count="2">
-                        <div>
-                          <sc-if value="{{ e.showKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:800 10px 'JetBrains Mono',monospace;letter-spacing:.04em;padding:2px 7px;border-radius:5px;margin-right:6px;vertical-align:middle;background:{{ e.chipBg }};color:{{ e.chipText }}">{{ e.kw }}</span></sc-if>
-                          {{ e.jaNode }}
-                        </div>
-                      </sc-for>
-                    </div>
-                  </sc-if>
-                  <sc-if value="{{ hoverPreview.hasEquip }}" hint-placeholder-val="{{ false }}">
-                    <div style="margin-top:9px;display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.75;color:var(--ink)">
-                      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">装備効果</div>
-                      <sc-for list="{{ hoverPreview.equip }}" as="e" hint-placeholder-count="1">
-                        <div>
-                          <sc-if value="{{ e.showKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:800 10px 'JetBrains Mono',monospace;letter-spacing:.04em;padding:2px 7px;border-radius:5px;margin-right:6px;vertical-align:middle;background:{{ e.chipBg }};color:{{ e.chipText }}">{{ e.kw }}</span></sc-if>
-                          {{ e.jaNode }}
-                        </div>
-                      </sc-for>
-                    </div>
-                  </sc-if>
-                  <sc-if value="{{ hoverPreview.noText }}" hint-placeholder-val="{{ false }}">
-                    <div style="font-size:12.5px;color:var(--ink-faint)">効果テキストはありません。</div>
-                  </sc-if>
-                </div>
-              </div>
-            </div>
-          </sc-if>
-
           <!-- mobile: bottom bar + sheet scrim -->
           <div class="rb-deck-sheet-scrim {{ deckScrimClass }}" onClick="{{ closeDeckSheet }}"></div>
           <div class="rb-deck-fab" onClick="{{ openDeckSheet }}" role="button" tabindex="0" data-kbd style="position:fixed;left:12px;right:12px;bottom:12px;z-index:60;cursor:pointer;align-items:center;gap:9px;padding:12px 15px;border:1px solid var(--gold-dim);border-radius:13px;background:var(--surface);box-shadow:0 8px 26px rgba(0,0,0,.4)">
@@ -1499,6 +1455,51 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
     <span style="color:var(--ink-faint);opacity:.85">本サイトはファンによる非公式サイトです。RIFTBOUND および League of Legends は Riot Games, Inc. の商標であり、権利はすべて同社に帰属します。当サイトは Riot Games とは一切関係ありません。</span>
   </footer>
 </div>
+
+<!-- hover translation popover (shared: list + deck) -->
+<sc-if value="{{ hasHoverPreview }}" hint-placeholder-val="{{ false }}">
+  <div style="{{ hoverPreview.style }}" class="rb-hovpop">
+    <div style="display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--gold-dim);border-radius:14px;box-shadow:0 20px 54px -12px rgba(0,0,0,.6),0 0 0 4px rgba(184,142,47,.06);overflow:hidden;max-height:inherit;padding:13px">
+      <div style="padding-bottom:10px;margin-bottom:11px;border-bottom:1px solid var(--line-soft)">
+        <div style="font-family:'Zen Old Mincho',serif;font-weight:800;font-size:15px;line-height:1.3;color:var(--gold)">{{ hoverPreview.name }}</div>
+        <sc-if value="{{ hoverPreview.nameJa }}" hint-placeholder-val="{{ false }}"><div style="font-size:11.5px;color:var(--ink-dim);margin-top:1px">{{ hoverPreview.nameJa }}</div></sc-if>
+        <div style="display:flex;flex-wrap:wrap;gap:11px;margin-top:7px;font:700 12px 'JetBrains Mono',monospace;color:var(--ink-dim)">
+          <span>{{ hoverPreview.typeJa }}</span>
+          <sc-if value="{{ hoverPreview.hasCost }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ hoverPreview.costNode }}</span></sc-if>
+          <sc-if value="{{ hoverPreview.hasPower }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ hoverPreview.powerNode }}</span></sc-if>
+          <sc-if value="{{ hoverPreview.hasMight }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ hoverPreview.mightNode }}</span></sc-if>
+        </div>
+      </div>
+      <div style="flex:1;min-width:0;overflow:auto">
+        <div style="font:700 9.5px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--gold-dim);margin-bottom:8px">日本語訳</div>
+        <sc-if value="{{ hoverPreview.hasEffects }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.75;color:var(--ink)">
+            <sc-for list="{{ hoverPreview.effects }}" as="e" hint-placeholder-count="2">
+              <div>
+                <sc-if value="{{ e.showKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:800 10px 'JetBrains Mono',monospace;letter-spacing:.04em;padding:2px 7px;border-radius:5px;margin-right:6px;vertical-align:middle;background:{{ e.chipBg }};color:{{ e.chipText }}">{{ e.kw }}</span></sc-if>
+                {{ e.jaNode }}
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ hoverPreview.hasEquip }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:9px;display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.75;color:var(--ink)">
+            <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">装備効果</div>
+            <sc-for list="{{ hoverPreview.equip }}" as="e" hint-placeholder-count="1">
+              <div>
+                <sc-if value="{{ e.showKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:800 10px 'JetBrains Mono',monospace;letter-spacing:.04em;padding:2px 7px;border-radius:5px;margin-right:6px;vertical-align:middle;background:{{ e.chipBg }};color:{{ e.chipText }}">{{ e.kw }}</span></sc-if>
+                {{ e.jaNode }}
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ hoverPreview.noText }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:12.5px;color:var(--ink-faint)">効果テキストはありません。</div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</sc-if>
 
 <sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
   <div onClick="{{ closeLightbox }}" role="button" tabindex="0" data-kbd aria-label="閉じる" class="rb-lb" style="position:fixed;inset:0;z-index:120;background:radial-gradient(120% 120% at 50% 30%,rgba(30,24,16,.82),rgba(8,7,5,.94));backdrop-filter:blur(6px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:32px;cursor:pointer">
@@ -2197,16 +2198,10 @@ class Component extends DCLogic {
       const pc=cards.find(x=>x.id===this.state.deckPreview);
       if (pc) deckPreview=this.cardPreviewData(pc);
     }
-    let hoverPreview=null;
-    if (this.state.hoverPreview){
-      const hc=cards.find(x=>x.id===this.state.hoverPreview);
-      if (hc){ hoverPreview=this.cardPreviewData(hc); hoverPreview.style=this.hoverPopStyle(); }
-    }
 
     return {
       curveTicks,
       deckPreview, hasDeckPreview: !!deckPreview,
-      hoverPreview, hasHoverPreview: !!hoverPreview,
       closeDeckPreview: ()=>this.setState({ deckPreview:null }),
       stopEvt: (e)=>{ if(e) e.stopPropagation(); },
       showDeck:true, deckReady:true, deckOptions, activeDeckId:this.state.activeDeckId, deckName:d.name||'',
@@ -2257,6 +2252,12 @@ class Component extends DCLogic {
       window.RB.setKeywords(km);
     }
     const q = (s.query||'').trim().toLowerCase();
+    // ホバー訳ポップアップ（全ビュー共通）
+    let hoverPreview=null;
+    if (this.state.hoverPreview){
+      const hc=(this.state.cards||[]).find(x=>x.id===this.state.hoverPreview);
+      if (hc){ hoverPreview=this.cardPreviewData(hc); hoverPreview.style=this.hoverPopStyle(); }
+    }
     // ルール検索（用語・番号・本文でフィルタ。セクションタイトル/番号一致は全ブロック表示）
     const rq = (s.ruleQ||'').trim().toLowerCase();
     let ruleMatchCount = 0;
@@ -2417,6 +2418,8 @@ class Component extends DCLogic {
       type:c.type, name:c.name, nameJa:c.nameJa, cost:c.cost, rarity:c.rarity,
       set:c.setCode, domain:c.domain, color:this.domColor(c.domain), icon:this.domIcon(c.domain), image:c.image||'',
       onClick: c._artLegendId ? (()=>this.openCardVariant(c._artLegendId, c._artVariantIdx)) : (()=>this.select(c.id)),
+      onHoverIn: (e)=>{ this.clearHoverTimer(); const el=e&&e.currentTarget; const r=el&&el.getBoundingClientRect(); this._hoverRect=r?{left:r.left,right:r.right,top:r.top,bottom:r.bottom}:null; const hid=c._artLegendId||c.id; this._hoverTimer=setTimeout(()=>{ this.setState({ hoverPreview:hid }); }, 500); },
+      onHoverOut: ()=>{ this.clearHoverTimer(); if(this.state.hoverPreview) this.setState({ hoverPreview:null }); },
       numShort: (c.number||'').split('/')[0],
       imgFit: (/Battlefield/i.test(c.type||'')||/Battlefield/i.test(c.tag||'')) ? 'rb-cimg contain' : 'rb-cimg',
       energyNode: c.cost ? this.energyPip(c.cost,20) : null,
@@ -2754,6 +2757,7 @@ class Component extends DCLogic {
       hasLegends: this.state.legends.length>0,
       noLegends: this.state.legends.length===0,
       crumbShow: s.view!=='home',
+      hoverPreview, hasHoverPreview: !!hoverPreview,
       crumbText: s.view==='detail' && sel ? `${sel.domain} / ${sel.name}` : (s.view==='deck' ? 'デッキビルダー' : (s.view==='legends' ? 'レジェンド一覧' : (s.view==='legend' ? (ld ? ld.name : 'レジェンド') : (s.view==='keywords' ? 'キーワード集' : (s.view==='rules' ? '公式ルール翻訳' : listTitle))))),
       ...selVals,
       listTitle, listDesc,
