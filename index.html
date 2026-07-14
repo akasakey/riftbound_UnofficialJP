@@ -1117,7 +1117,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                 <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:14px;font-size:12px;color:var(--ink-dim)">
                   <span style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--ink-faint)">DOMAIN</span>
                   <sc-for list="{{ deckDomChips }}" as="d" hint-placeholder-count="2">
-                    <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 11px 4px 8px;border-radius:20px;background:{{ d.color }};color:{{ d.ink }};font-weight:700;font-size:12px"><img src="{{ d.icon }}" alt="" style="width:15px;height:15px" onError="{{ hideImg }}"/>{{ d.name }}</span>
+                    <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 11px 4px 5px;border-radius:20px;background:{{ d.color }};color:{{ d.ink }};font-weight:700;font-size:12px"><span style="display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 0 0 1px rgba(0,0,0,.08)"><img src="{{ d.icon }}" alt="" style="width:13px;height:13px" onError="{{ hideImg }}"/></span>{{ d.name }}</span>
                   </sc-for>
                   <span style="color:var(--ink-faint)">に適合するカードのみ表示中</span>
                 </div>
@@ -1129,6 +1129,21 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                   <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 12px 'Zen Kaku Gothic New',sans-serif;white-space:nowrap;padding:7px 15px;border-radius:20px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.ink }}">{{ t.label }}</div>
                 </sc-for>
               </div>
+
+              <!-- 追加先: メイン / サイド -->
+              <sc-if value="{{ showAddTarget }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:12px">
+                  <span style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--ink-faint)">追加先</span>
+                  <div style="display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden">
+                    <sc-for list="{{ addTargetSeg }}" as="s" hint-placeholder-count="2">
+                      <div onClick="{{ s.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 11.5px 'Zen Kaku Gothic New',sans-serif;padding:6px 16px;background:{{ s.bg }};color:{{ s.ink }}">{{ s.label }}</div>
+                    </sc-for>
+                  </div>
+                  <sc-if value="{{ addTargetSide }}" hint-placeholder-val="{{ false }}">
+                    <span style="font-size:11px;color:var(--ink-faint)">サイドボードに追加中（0 または 8 枚）</span>
+                  </sc-if>
+                </div>
+              </sc-if>
 
               <!-- search -->
               <div style="display:flex;align-items:center;gap:10px;padding:10px 13px;border:1px solid var(--line);border-radius:9px;background:var(--surface);margin-bottom:16px">
@@ -1274,6 +1289,37 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                           <span onClick="{{ r.onSub }}" role="button" tabindex="0" data-kbd aria-label="減らす" style="cursor:pointer;width:22px;height:22px;border-radius:5px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 13px 'JetBrains Mono',monospace;color:var(--ink-dim)" style-hover="border-color:var(--gold-dim)">−</span>
                           <span style="min-width:18px;text-align:center;font:800 12.5px 'JetBrains Mono',monospace;color:var(--ink)">{{ r.n }}</span>
                           <span onClick="{{ r.onAdd }}" role="button" tabindex="0" data-kbd aria-label="増やす" style="cursor:pointer;width:22px;height:22px;border-radius:5px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 13px 'JetBrains Mono',monospace;color:var(--gold)" style-hover="border-color:var(--gold-dim)">＋</span>
+                        </div>
+                      </div>
+                    </sc-for>
+                  </sc-for>
+                </div>
+              </div>
+              <!-- sideboard -->
+              <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-bottom:16px">
+                <div style="padding:11px 15px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line-soft)">
+                  <span style="width:7px;height:14px;border-radius:2px;background:#7c6cc4"></span>
+                  <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:14px">サイドボード</span>
+                  <span style="margin-left:auto;font:700 13px 'JetBrains Mono',monospace;color:{{ sideCountCol }}">{{ sideTotal }}<span style="color:var(--ink-faint);font-weight:500"> / {{ sideTotalMax }}</span></span>
+                </div>
+                <sc-if value="{{ sideEmpty }}" hint-placeholder-val="{{ true }}">
+                  <div style="padding:20px 15px;text-align:center;font-size:11.5px;color:var(--ink-faint);line-height:1.6">「追加先」を<span style="color:#7c6cc4;font-weight:700">サイド</span>に切り替えてカードを追加。ちょうど 0 枚か 8 枚で構築します。</div>
+                </sc-if>
+                <div style="padding:4px 0">
+                  <sc-for list="{{ sideGroups }}" as="g" hint-placeholder-count="0">
+                    <div style="padding:9px 15px 4px;display:flex;align-items:center;gap:8px">
+                      <span style="width:7px;height:13px;border-radius:2px;background:#7c6cc4"></span>
+                      <span style="font-weight:700;font-size:12px;color:var(--ink-dim)">{{ g.label }}</span>
+                      <span style="font:600 11px 'JetBrains Mono',monospace;color:var(--ink-faint)">{{ g.count }}</span>
+                    </div>
+                    <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="0">
+                      <div style="display:flex;align-items:center;gap:8px;padding:5px 15px" style-hover="background:var(--surface2)">
+                        <span data-fallback="{{ r.color }}" style="width:15px;height:15px;border-radius:3px;overflow:hidden;flex:none;display:inline-flex"><img src="{{ r.icon }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:contain"/></span>
+                        <span onClick="{{ r.onOpen }}" role="button" tabindex="0" data-kbd style="flex:1;min-width:0;cursor:pointer;font-size:12px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" style-hover="color:var(--gold)">{{ r.name }}</span>
+                        <div style="display:flex;align-items:center;gap:2px;flex:none">
+                          <span onClick="{{ r.onSub }}" role="button" tabindex="0" data-kbd aria-label="減らす" style="cursor:pointer;width:22px;height:22px;border-radius:5px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 13px 'JetBrains Mono',monospace;color:var(--ink-dim)" style-hover="border-color:var(--gold-dim)">−</span>
+                          <span style="min-width:18px;text-align:center;font:800 12.5px 'JetBrains Mono',monospace;color:var(--ink)">{{ r.n }}</span>
+                          <span onClick="{{ r.onAdd }}" role="button" tabindex="0" data-kbd aria-label="増やす" style="cursor:pointer;width:22px;height:22px;border-radius:5px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 13px 'JetBrains Mono',monospace;color:#7c6cc4" style-hover="border-color:#7c6cc4">＋</span>
                         </div>
                       </div>
                     </sc-for>
@@ -1615,11 +1661,15 @@ class Component extends DCLogic {
       if(patch.view==='rules' && patch.ruleSec){
         this.jumpToRule(patch.ruleSec);
       } else {
-        window.scrollTo(0,0);
+        // 戻る/進むで以前の位置に復元（無ければ先頭へ）
+        const key = location.hash || '#';
+        const y = (this._scrollMem && this._scrollMem[key] != null) ? this._scrollMem[key] : 0;
+        requestAnimationFrame(()=>{ window.scrollTo(0, y); setTimeout(()=>window.scrollTo(0, y), 60); });
       }
     };
     window.addEventListener('popstate', this._onPop);
     window.addEventListener('hashchange', this._onPop);
+    try{ if('scrollRestoration' in history) history.scrollRestoration='manual'; }catch(e){}
     this._onScrollSpy = () => this.updateRuleSpy();
     window.addEventListener('scroll', this._onScrollSpy, { passive:true });
     this._onKey = (e) => {
@@ -1729,6 +1779,9 @@ class Component extends DCLogic {
   parseHash(){ return (window.RB && window.RB.parseHash) ? window.RB.parseHash() : { view:'home' }; }
   FILTER_RESET = { query:'', queryRaw:'', fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], tagQ:'', kwQ:'' };
   go(patch, hash){
+    // 現在地のスクロール位置を退避（戻ったとき復元するため）
+    this._scrollMem = this._scrollMem || {};
+    this._scrollMem[location.hash || '#'] = window.scrollY || window.pageYOffset || 0;
     const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, menuOpen:false, altView:false, variantIdx:0, legendVariantIdx:0, lightbox:null, ...patch };
     this.setState(st);
     this.ensureCardsFor(st);
@@ -1998,8 +2051,9 @@ class Component extends DCLogic {
   DECK_COPY_LIMIT = 3;      // 同名カード上限（チョーズン含む）
   RUNE_TOTAL = 12;          // ルーンデッキ総数
   BF_TOTAL = 3;             // バトルフィールド枚数
+  SIDE_TOTAL = 8;           // サイドボード枚数（0 または 8）
   MAIN_MIN = 40;            // メインデッキ最低枚数
-  newDeckObj(){ return { id:'d'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), name:'新しいデッキ', legendId:null, championId:null, main:{}, runes:{}, battlefields:[], updated:Date.now() }; }
+  newDeckObj(){ return { id:'d'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), name:'新しいデッキ', legendId:null, championId:null, main:{}, side:{}, runes:{}, battlefields:[], updated:Date.now() }; }
   loadDecks(){
     let data=null;
     try{ data=JSON.parse(localStorage.getItem(this.DECK_KEY)||'null'); }catch(e){}
@@ -2057,8 +2111,16 @@ class Component extends DCLogic {
     ].filter(Boolean).join(' ').toLowerCase();
   }
   mainTotal(){ const d=this.activeDeck(); if(!d) return 0; return Object.values(d.main).reduce((a,b)=>a+b,0) + (d.championId?1:0); }
-  addMain(id){ this.mutateDeck(d=>{ const champCopy=(d.championId===id?1:0); const n=(d.main[id]||0); if(n+champCopy<this.DECK_COPY_LIMIT) d.main[id]=n+1; }); }
+  // 同名の総枚数（メイン＋サイド＋チョーズン）。上限判定はこの合計に対して行う。
+  copiesOf(d, id){ return (d.main[id]||0) + ((d.side&&d.side[id])||0) + (d.championId===id?1:0); }
+  addMain(id){ this.mutateDeck(d=>{ if(this.copiesOf(d,id)<this.DECK_COPY_LIMIT) d.main[id]=(d.main[id]||0)+1; }); }
   subMain(id){ this.mutateDeck(d=>{ const n=(d.main[id]||0); if(n<=1) delete d.main[id]; else d.main[id]=n-1; }); }
+  // ---- サイドボード（0 または 8 枚。メインと同じ有効カード。同名上限はメインと合算） ----
+  sideCount(id){ const d=this.activeDeck(); return d && d.side ? (d.side[id]||0) : 0; }
+  sideTotal(){ const d=this.activeDeck(); return d && d.side ? Object.values(d.side).reduce((a,b)=>a+b,0) : 0; }
+  addSide(id){ this.mutateDeck(d=>{ d.side=d.side||{}; const t=Object.values(d.side).reduce((a,b)=>a+b,0); if(this.copiesOf(d,id)<this.DECK_COPY_LIMIT && t<this.SIDE_TOTAL) d.side[id]=(d.side[id]||0)+1; }); }
+  subSide(id){ this.mutateDeck(d=>{ d.side=d.side||{}; const n=(d.side[id]||0); if(n<=1) delete d.side[id]; else d.side[id]=n-1; }); }
+  setAddTarget(t){ this.setState({ addTarget:t }); }
   runeCount(dom){ const d=this.activeDeck(); return d ? (d.runes[dom]||0) : 0; }
   runeTotal(){ const d=this.activeDeck(); return d ? Object.values(d.runes).reduce((a,b)=>a+b,0) : 0; }
   addRune(dom){ this.mutateDeck(d=>{ const t=Object.values(d.runes).reduce((a,b)=>a+b,0); if(t<this.RUNE_TOTAL) d.runes[dom]=(d.runes[dom]||0)+1; }); }
@@ -2103,31 +2165,45 @@ class Component extends DCLogic {
     pool=pool.slice().sort((a,b)=>{ const ca=parseInt(a.cost)||0, cb=parseInt(b.cost)||0; if(ca!==cb) return ca-cb; return (a.name||'').localeCompare(b.name||''); });
     const PICK_CAP=120;
     const pickTotal=pool.length;
+    // 追加先（メイン/サイド）。サイドはメインプール（Unit/Spell/Gear）のみ対象。
+    const addTarget = (this.state.addTarget==='side') ? 'side' : 'main';
+    const isMainPoolTab = (tab==='Unit'||tab==='Spell'||tab==='Gear');
+    const toSide = isMainPoolTab && addTarget==='side';
     const pickRows=pool.slice(0,PICK_CAP).map(c=>{
       const t=this.typeOf(c);
       const isLegend=t==='Legend', isBf=t==='Battlefield', isChamp=(tab==='Champion');
-      const inDeck = isChamp ? (d.championId===c.id) : isLegend ? (d.legendId===c.id) : isBf ? d.battlefields.includes(c.id) : this.mainCount(c.id)>0;
-      const cnt = isChamp||isLegend||isBf ? (inDeck?1:0) : this.mainCount(c.id);
+      const isMainPool = !(isChamp||isLegend||isBf);
+      const useSide = isMainPool && toSide;
+      const inDeck = isChamp ? (d.championId===c.id) : isLegend ? (d.legendId===c.id) : isBf ? d.battlefields.includes(c.id) : useSide ? this.sideCount(c.id)>0 : this.mainCount(c.id)>0;
+      const cnt = isChamp||isLegend||isBf ? (inDeck?1:0) : useSide ? this.sideCount(c.id) : this.mainCount(c.id);
       return {
         id:c.id, name:c.name, nameJa:c.nameJa||'', image:c.image||'', cost:c.cost||'',
         color:this.domColor(c.domain), icon:this.domIcon(c.domain),
-        count:cnt, inDeck, isStepper: !(isChamp||isLegend||isBf), isToggle: (isChamp||isLegend||isBf),
-        selBorder: inDeck ? 'var(--gold)' : 'var(--line)',
-        selShadow: inDeck ? '0 0 0 3px rgba(184,142,47,.28)' : 'none',
-        selTint: inDeck ? 'rgba(184,142,47,.18)' : 'transparent',
-        badgeLabel: (isChamp||isLegend||isBf) ? '✓ 選択中' : ('デッキに '+cnt+' 枚'),
+        count:cnt, inDeck, isStepper: isMainPool, isToggle: (isChamp||isLegend||isBf),
+        selBorder: inDeck ? (useSide?'#7c6cc4':'var(--gold)') : 'var(--line)',
+        selShadow: inDeck ? (useSide?'0 0 0 3px rgba(124,108,196,.30)':'0 0 0 3px rgba(184,142,47,.28)') : 'none',
+        selTint: inDeck ? (useSide?'rgba(124,108,196,.20)':'rgba(184,142,47,.18)') : 'transparent',
+        badgeLabel: (isChamp||isLegend||isBf) ? '✓ 選択中' : ((useSide?'サイドに ':'デッキに ')+cnt+' 枚'),
         toggleLabel: inDeck ? '✓ 選択中' : (isChamp?'チャンピオンに設定':isLegend?'レジェンドに設定':'BFに追加'),
         toggleBg: inDeck ? 'var(--gold)' : 'transparent',
         toggleInk: inDeck ? 'var(--sel-ink)' : 'var(--gold)',
-        onAdd: isChamp ? (()=>this.setDeckChampion(c.id)) : isLegend ? (()=>this.setDeckLegend(c.id)) : isBf ? (()=>this.toggleBattlefield(c.id)) : (()=>this.addMain(c.id)),
-        onSub: ()=>this.subMain(c.id),
-        onCtx: (e)=>{ e.preventDefault(); if(isChamp){ if(d.championId===c.id) this.setDeckChampion(c.id); } else if(isLegend){ if(d.legendId===c.id) this.setDeckLegend(c.id); } else if(isBf){ if(d.battlefields.includes(c.id)) this.toggleBattlefield(c.id); } else { this.subMain(c.id); } },
+        onAdd: isChamp ? (()=>this.setDeckChampion(c.id)) : isLegend ? (()=>this.setDeckLegend(c.id)) : isBf ? (()=>this.toggleBattlefield(c.id)) : useSide ? (()=>this.addSide(c.id)) : (()=>this.addMain(c.id)),
+        onSub: useSide ? (()=>this.subSide(c.id)) : (()=>this.subMain(c.id)),
+        onCtx: (e)=>{ e.preventDefault(); if(isChamp){ if(d.championId===c.id) this.setDeckChampion(c.id); } else if(isLegend){ if(d.legendId===c.id) this.setDeckLegend(c.id); } else if(isBf){ if(d.battlefields.includes(c.id)) this.toggleBattlefield(c.id); } else if(useSide){ this.subSide(c.id); } else { this.subMain(c.id); } },
         onOpen: ()=>this.select(c.id),
         onInfo: (e)=>{ if(e){ e.preventDefault(); e.stopPropagation(); } this.clearHoverTimer(); this.setState({ deckPreview:c.id }); },
         onHoverIn: (e)=>{ this.clearHoverTimer(); const el=e&&e.currentTarget; const r=el&&el.getBoundingClientRect(); this._hoverRect=r?{left:r.left,right:r.right,top:r.top,bottom:r.bottom}:null; this._hoverTimer=setTimeout(()=>{ this.setState({ hoverPreview:c.id }); }, 500); },
         onHoverOut: ()=>{ this.clearHoverTimer(); if(this.state.hoverPreview) this.setState({ hoverPreview:null }); },
       };
     });
+    // 追加先トグル（メインプールのタブでのみ有効）
+    const addTargetSeg = [
+      { key:'main', label:'メイン', active: addTarget==='main', onClick:()=>this.setAddTarget('main') },
+      { key:'side', label:'サイド', active: addTarget==='side', onClick:()=>this.setAddTarget('side') },
+    ].map(x=>({ ...x,
+      border: x.active ? (x.key==='side'?'#7c6cc4':'var(--gold)') : 'var(--line)',
+      bg: x.active ? (x.key==='side'?'#7c6cc4':'var(--gold)') : 'transparent',
+      ink: x.active ? 'var(--sel-ink)' : 'var(--ink-dim)' }));
 
     // ---- 右パネル: メインデッキ一覧（タイプ別） ----
     const ORDER=['Unit','Spell','Gear'];
@@ -2143,7 +2219,17 @@ class Component extends DCLogic {
       }))
     }));
 
-    // ---- ルーン（ドメイン別ステッパー。レジェンドの2ドメインのみ） ----
+    // ---- 右パネル: サイドボード一覧（タイプ別） ----
+    const side = d.side || {};
+    const sideByType={};
+    Object.keys(side).forEach(id=>{ const c=cards.find(x=>x.id===id); if(!c) return; const t=this.typeOf(c); (sideByType[t]=sideByType[t]||[]).push({ c, n:side[id] }); });
+    const sideGroups=ORDER.filter(t=>sideByType[t]&&sideByType[t].length).map(t=>({
+      label:OLABEL[t]||t, count:sideByType[t].reduce((a,x)=>a+x.n,0),
+      rows:sideByType[t].sort((a,b)=>{ const ca=parseInt(a.c.cost)||0, cb=parseInt(b.c.cost)||0; if(ca!==cb) return ca-cb; return (a.c.name||'').localeCompare(b.c.name||''); }).map(x=>({
+        id:x.c.id, name:x.c.name, cost:x.c.cost||'', n:x.n, color:this.domColor(x.c.domain), icon:this.domIcon(x.c.domain),
+        onAdd:()=>this.addSide(x.c.id), onSub:()=>this.subSide(x.c.id), onOpen:()=>this.select(x.c.id),
+      }))
+    }));
     const runeRows=(doms.length?doms:this.DOMAINS.map(x=>x.key)).map(k=>({
       key:k, name:k, color:this.domColor(k), icon:this.domIcon(k), n:this.runeCount(k),
       onAdd:()=>this.addRune(k), onSub:()=>this.subRune(k),
@@ -2161,18 +2247,22 @@ class Component extends DCLogic {
 
     // ---- バリデーション ----
     const mainTotal=this.mainTotal(), runeTotal=this.runeTotal(), bfCount=d.battlefields.length;
-    const overCopies=Object.entries(d.main).filter(([id,n])=>n+(d.championId===id?1:0)>this.DECK_COPY_LIMIT).length>0;
+    const overCopies=Array.from(new Set([...Object.keys(d.main), ...Object.keys(d.side||{})])).some(id=>this.copiesOf(d,id)>this.DECK_COPY_LIMIT);
     const illegalCards=Object.keys(d.main).map(id=>cards.find(c=>c.id===id)).filter(c=>c&&!this.cardLegalForDeck(c));
     const sigCount=Object.keys(d.main).map(id=>cards.find(c=>c.id===id)).filter(c=>c && /Signature/i.test(c.tag||'')).reduce((a,c)=>a+(d.main[c.id]||0),0);
     const champOk = !!championCard && (!legTag || (championCard.tag||'').split('・').map(s=>s.trim()).includes(legTag));
+    const sideTotal=this.sideTotal();
+    const sideOk = sideTotal===0 || sideTotal===this.SIDE_TOTAL;
+    const sideIllegal=Object.keys(side).map(id=>cards.find(c=>c.id===id)).filter(c=>c&&!this.cardLegalForDeck(c));
     const checks=[
       { label:'レジェンド', ok:!!d.legendId, detail: legendCard?legendCard.name:'未選択' },
       { label:'チョーズン・チャンピオン', ok:champOk, detail: championCard?championCard.name:'未選択' },
       { label:'メインデッキ '+this.MAIN_MIN+'枚ちょうど', ok:mainTotal===this.MAIN_MIN, detail:mainTotal+'/'+this.MAIN_MIN },
       { label:'ルーンデッキ 12枚ちょうど', ok:runeTotal===this.RUNE_TOTAL, detail:runeTotal+'/12' },
       { label:'バトルフィールド 3枚ちょうど', ok:bfCount===this.BF_TOTAL, detail:bfCount+'/3' },
-      { label:'同名 3枚以内', ok:!overCopies, detail: overCopies?'超過あり':'OK' },
-      { label:'ドメイン適合', ok:illegalCards.length===0, detail: illegalCards.length?illegalCards.length+'枚 不適合':'OK' },
+      { label:'サイドボード 0 または 8 枚', ok:sideOk, detail:sideTotal+'/8' },
+      { label:'同名 3枚以内（メイン＋サイド）', ok:!overCopies, detail: overCopies?'超過あり':'OK' },
+      { label:'ドメイン適合', ok:illegalCards.length===0 && sideIllegal.length===0, detail: (illegalCards.length+sideIllegal.length)?(illegalCards.length+sideIllegal.length)+'枚 不適合':'OK' },
       { label:'シグネチャー 3枚以内', ok:sigCount<=3, detail: sigCount+'枚' },
     ].map(x=>({ ...x, mark: x.ok?'✓':'!', col: x.ok?'#4f9c3b':'#d92d2a' }));
     const deckValid=checks.every(x=>x.ok);
@@ -2216,6 +2306,9 @@ class Component extends DCLogic {
       hasChampion: !!championCard, noChampion: !championCard,
       mainGroups, mainEmpty: mainTotal===0, mainTotal, mainMin:this.MAIN_MIN,
       mainCountCol: mainTotal===this.MAIN_MIN ? '#4f9c3b' : (mainTotal>this.MAIN_MIN ? '#d92d2a' : 'var(--gold)'),
+      sideGroups, sideEmpty: sideTotal===0, sideTotal, sideTotalMax:this.SIDE_TOTAL,
+      sideCountCol: sideTotal===0 ? 'var(--ink-faint)' : (sideOk ? '#4f9c3b' : '#d92d2a'),
+      addTargetSeg, addTargetSide: addTarget==='side', showAddTarget: isMainPoolTab,
       runeRows, runeTotal, runeOk: runeTotal===this.RUNE_TOTAL,
       runeCountCol: runeTotal===this.RUNE_TOTAL ? '#4f9c3b' : (runeTotal>this.RUNE_TOTAL ? '#d92d2a' : 'var(--gold)'),
       bfSlots, bfCount, bfCountCol: bfCount===this.BF_TOTAL ? '#4f9c3b' : 'var(--gold)',
