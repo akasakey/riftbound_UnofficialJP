@@ -171,6 +171,9 @@ a:hover{color:var(--ink)}
   .rb-detimg:hover{box-shadow:0 12px 34px -10px var(--lift-shadow),0 0 0 1px var(--gold-dim);transform:translateY(-2px)}
   @keyframes rbLbBg{from{opacity:0}to{opacity:1}}
   @keyframes rbLbPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+  @keyframes rbHovPop{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:none}}
+  .rb-hovpop{animation:rbHovPop .16s cubic-bezier(.2,.9,.35,1) both}
+  .rb-hovpop img{animation:rbImgFade .35s ease both}
   .rb-lb{animation:rbLbBg .12s ease both}
   .rb-lb-fig{animation:rbLbPop .17s cubic-bezier(.2,.9,.35,1) both}
   .rb-lift{transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s ease,border-color .28s ease;will-change:transform}
@@ -1143,7 +1146,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               <div class="rb-pickgrid">
                 <sc-for list="{{ pickRows }}" as="c" hint-placeholder-count="8">
                   <div style="border:1.5px solid {{ c.selBorder }};border-radius:11px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column;box-shadow:{{ c.selShadow }}">
-                    <div onClick="{{ c.onAdd }}" onContextMenu="{{ c.onCtx }}" role="button" tabindex="0" data-kbd style="position:relative;cursor:pointer;background:var(--surface3);aspect-ratio:63/88;overflow:hidden">
+                    <div onClick="{{ c.onAdd }}" onContextMenu="{{ c.onCtx }}" onMouseEnter="{{ c.onHoverIn }}" onMouseLeave="{{ c.onHoverOut }}" role="button" tabindex="0" data-kbd style="position:relative;cursor:pointer;background:var(--surface3);aspect-ratio:63/88;overflow:hidden">
                       <img src="{{ c.image }}" alt="{{ c.name }}" onError="{{ hideImg }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"/>
                       <sc-if value="{{ c.count }}" hint-placeholder-val="{{ 0 }}">
                         <span style="position:absolute;inset:0;background:{{ c.selTint }};pointer-events:none"></span>
@@ -1154,7 +1157,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                     </div>
                     <div style="padding:7px 9px 6px;flex:1;min-width:0;display:flex;align-items:center;gap:6px">
                       <div style="font-weight:700;font-size:11.5px;line-height:1.3;color:var(--gold);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0">{{ c.name }}</div>
-                      <span onClick="{{ c.onInfo }}" role="button" tabindex="0" data-kbd aria-label="日本語訳を見る" title="日本語訳を見る" style="flex:none;padding:2px 7px;border-radius:6px;background:var(--surface2);border:1px solid var(--line);font:800 10px 'Zen Old Mincho',serif;color:var(--gold);cursor:pointer" style-hover="background:var(--gold);color:var(--sel-ink)">訳</span>
+                      <span onClick="{{ c.onOpen }}" role="button" tabindex="0" data-kbd aria-label="カード詳細を見る" title="カード詳細を見る" style="flex:none;padding:2px 8px;border-radius:6px;background:var(--surface2);border:1px solid var(--line);font:800 10px 'Zen Kaku Gothic New',sans-serif;color:var(--gold);cursor:pointer" style-hover="background:var(--gold);color:var(--sel-ink)">詳細</span>
                     </div>
                     <!-- controls -->
                     <sc-if value="{{ c.isStepper }}" hint-placeholder-val="{{ true }}">
@@ -1427,6 +1430,51 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             </div>
           </sc-if>
 
+          <!-- hover translation popover -->
+          <sc-if value="{{ hasHoverPreview }}" hint-placeholder-val="{{ false }}">
+            <div style="{{ hoverPreview.style }}" class="rb-hovpop">
+              <div style="display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--gold-dim);border-radius:14px;box-shadow:0 20px 54px -12px rgba(0,0,0,.6),0 0 0 4px rgba(184,142,47,.06);overflow:hidden;max-height:inherit;padding:13px">
+                <div style="padding-bottom:10px;margin-bottom:11px;border-bottom:1px solid var(--line-soft)">
+                  <div style="font-family:'Zen Old Mincho',serif;font-weight:800;font-size:15px;line-height:1.3;color:var(--gold)">{{ hoverPreview.name }}</div>
+                  <sc-if value="{{ hoverPreview.nameJa }}" hint-placeholder-val="{{ false }}"><div style="font-size:11.5px;color:var(--ink-dim);margin-top:1px">{{ hoverPreview.nameJa }}</div></sc-if>
+                  <div style="display:flex;flex-wrap:wrap;gap:11px;margin-top:7px;font:700 12px 'JetBrains Mono',monospace;color:var(--ink-dim)">
+                    <span>{{ hoverPreview.typeJa }}</span>
+                    <sc-if value="{{ hoverPreview.hasCost }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ hoverPreview.costNode }}</span></sc-if>
+                    <sc-if value="{{ hoverPreview.hasPower }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ hoverPreview.powerNode }}</span></sc-if>
+                    <sc-if value="{{ hoverPreview.hasMight }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:4px">{{ hoverPreview.mightNode }}</span></sc-if>
+                  </div>
+                </div>
+                <div style="flex:1;min-width:0;overflow:auto">
+                  <div style="font:700 9.5px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--gold-dim);margin-bottom:8px">日本語訳</div>
+                  <sc-if value="{{ hoverPreview.hasEffects }}" hint-placeholder-val="{{ true }}">
+                    <div style="display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.75;color:var(--ink)">
+                      <sc-for list="{{ hoverPreview.effects }}" as="e" hint-placeholder-count="2">
+                        <div>
+                          <sc-if value="{{ e.showKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:800 10px 'JetBrains Mono',monospace;letter-spacing:.04em;padding:2px 7px;border-radius:5px;margin-right:6px;vertical-align:middle;background:{{ e.chipBg }};color:{{ e.chipText }}">{{ e.kw }}</span></sc-if>
+                          {{ e.jaNode }}
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ hoverPreview.hasEquip }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin-top:9px;display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.75;color:var(--ink)">
+                      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">装備効果</div>
+                      <sc-for list="{{ hoverPreview.equip }}" as="e" hint-placeholder-count="1">
+                        <div>
+                          <sc-if value="{{ e.showKw }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;font:800 10px 'JetBrains Mono',monospace;letter-spacing:.04em;padding:2px 7px;border-radius:5px;margin-right:6px;vertical-align:middle;background:{{ e.chipBg }};color:{{ e.chipText }}">{{ e.kw }}</span></sc-if>
+                          {{ e.jaNode }}
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ hoverPreview.noText }}" hint-placeholder-val="{{ false }}">
+                    <div style="font-size:12.5px;color:var(--ink-faint)">効果テキストはありません。</div>
+                  </sc-if>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
           <!-- mobile: bottom bar + sheet scrim -->
           <div class="rb-deck-sheet-scrim {{ deckScrimClass }}" onClick="{{ closeDeckSheet }}"></div>
           <div class="rb-deck-fab" onClick="{{ openDeckSheet }}" role="button" tabindex="0" data-kbd style="position:fixed;left:12px;right:12px;bottom:12px;z-index:60;cursor:pointer;align-items:center;gap:9px;padding:12px 15px;border:1px solid var(--gold-dim);border-radius:13px;background:var(--surface);box-shadow:0 8px 26px rgba(0,0,0,.4)">
@@ -1639,6 +1687,43 @@ class Component extends DCLogic {
     if(this._onScrollSpy){ window.removeEventListener('scroll', this._onScrollSpy); }
     if(this._onKey){ document.removeEventListener('keydown', this._onKey); }
     if(this._searchT){ clearTimeout(this._searchT); }
+    this.clearHoverTimer();
+  }
+  clearHoverTimer(){ if(this._hoverTimer){ clearTimeout(this._hoverTimer); this._hoverTimer=null; } }
+  cardPreviewData(pc){
+    const effs=(pc.effects||[]).map(e=>{
+      const col=this.kwColor(e.kw);
+      return { jaNode:this.richText(e.ja), showKw:!!(e.kw&&e.kw.trim()), kw:e.kw||'',
+        chipBg: col?col.color:'#2a251f', chipText: col?col.text:'#d9b978' };
+    });
+    const eqs=(pc.equip||[]).map(q=>{
+      const col=this.kwColor(q.kw); const isMight=!!(q.stat&&String(q.stat).trim());
+      return { jaNode: isMight ? ('マイト '+String(q.stat)) : this.richText(q.ja),
+        showKw:!!(q.kw&&q.kw.trim())&&!isMight, kw:q.kw||'',
+        chipBg: col?col.color:'#3a2a12', chipText: col?col.text:'var(--gold)' };
+    });
+    return {
+      id:pc.id, name:pc.name, nameJa:pc.nameJa||'', image:pc.image||'',
+      typeJa:(this.TYPE_JA&&this.TYPE_JA[this.typeOf(pc)])?this.TYPE_JA[this.typeOf(pc)][0]:this.typeOf(pc),
+      costNode: pc.cost ? this.energyPip(pc.cost,15) : null, hasCost: !!pc.cost,
+      powerNode: pc.power ? React.createElement('span',{style:{display:'inline-flex',gap:'4px',alignItems:'center'}}, this.symImg(pc.domain,15), pc.power) : null, hasPower: !!pc.power,
+      mightNode: pc.might ? React.createElement('span',{style:{display:'inline-flex',gap:'4px',alignItems:'center'}}, this.symImg('might',15), pc.might) : null, hasMight: !!pc.might,
+      effects:effs, hasEffects:effs.length>0,
+      equip:eqs, hasEquip:eqs.length>0,
+      noText: effs.length===0 && eqs.length===0,
+      onOpen:()=>this.select(pc.id),
+    };
+  }
+  hoverPopStyle(){
+    const r=this._hoverRect; const W=300, M=10;
+    const vw=window.innerWidth||1200, vh=window.innerHeight||800;
+    let left, top;
+    if(r){
+      left = (r.right + M + W <= vw) ? (r.right + M) : (r.left - M - W);
+      if(left < M) left = Math.min(Math.max(M,(vw-W)/2), vw-W-M);
+      top = Math.max(M, Math.min(r.top, vh - 60));
+    } else { left=(vw-W)/2; top=80; }
+    return { position:'fixed', left:left+'px', top:top+'px', width:W+'px', maxHeight:(vh-2*M)+'px', zIndex:90, pointerEvents:'none' };
   }
   parseHash(){ return (window.RB && window.RB.parseHash) ? window.RB.parseHash() : { view:'home' }; }
   FILTER_RESET = { query:'', queryRaw:'', fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], tagQ:'', kwQ:'' };
@@ -2037,7 +2122,9 @@ class Component extends DCLogic {
         onSub: ()=>this.subMain(c.id),
         onCtx: (e)=>{ e.preventDefault(); if(isChamp){ if(d.championId===c.id) this.setDeckChampion(c.id); } else if(isLegend){ if(d.legendId===c.id) this.setDeckLegend(c.id); } else if(isBf){ if(d.battlefields.includes(c.id)) this.toggleBattlefield(c.id); } else { this.subMain(c.id); } },
         onOpen: ()=>this.select(c.id),
-        onInfo: (e)=>{ if(e){ e.preventDefault(); e.stopPropagation(); } this.setState({ deckPreview:c.id }); },
+        onInfo: (e)=>{ if(e){ e.preventDefault(); e.stopPropagation(); } this.clearHoverTimer(); this.setState({ deckPreview:c.id }); },
+        onHoverIn: (e)=>{ this.clearHoverTimer(); const el=e&&e.currentTarget; const r=el&&el.getBoundingClientRect(); this._hoverRect=r?{left:r.left,right:r.right,top:r.top,bottom:r.bottom}:null; this._hoverTimer=setTimeout(()=>{ this.setState({ hoverPreview:c.id }); }, 500); },
+        onHoverOut: ()=>{ this.clearHoverTimer(); if(this.state.hoverPreview) this.setState({ hoverPreview:null }); },
       };
     });
 
@@ -2108,35 +2195,18 @@ class Component extends DCLogic {
     let deckPreview=null;
     if (this.state.deckPreview){
       const pc=cards.find(x=>x.id===this.state.deckPreview);
-      if (pc){
-        const effs=(pc.effects||[]).map(e=>{
-          const col=this.kwColor(e.kw);
-          return { jaNode:this.richText(e.ja), showKw:!!(e.kw&&e.kw.trim()), kw:e.kw||'',
-            chipBg: col?col.color:'#2a251f', chipText: col?col.text:'#d9b978' };
-        });
-        const eqs=(pc.equip||[]).map(q=>{
-          const col=this.kwColor(q.kw); const isMight=!!(q.stat&&String(q.stat).trim());
-          return { jaNode: isMight ? ('マイト '+String(q.stat)) : this.richText(q.ja),
-            showKw:!!(q.kw&&q.kw.trim())&&!isMight, kw:q.kw||'',
-            chipBg: col?col.color:'#3a2a12', chipText: col?col.text:'var(--gold)' };
-        });
-        deckPreview={
-          id:pc.id, name:pc.name, nameJa:pc.nameJa||'', image:pc.image||'',
-          typeJa:(this.TYPE_JA&&this.TYPE_JA[this.typeOf(pc)])?this.TYPE_JA[this.typeOf(pc)][0]:this.typeOf(pc),
-          costNode: pc.cost ? this.energyPip(pc.cost,15) : null, hasCost: !!pc.cost,
-          powerNode: pc.power ? React.createElement('span',{style:{display:'inline-flex',gap:'4px',alignItems:'center'}}, this.symImg(pc.domain,15), pc.power) : null, hasPower: !!pc.power,
-          mightNode: pc.might ? React.createElement('span',{style:{display:'inline-flex',gap:'4px',alignItems:'center'}}, this.symImg('might',15), pc.might) : null, hasMight: !!pc.might,
-          effects:effs, hasEffects:effs.length>0,
-          equip:eqs, hasEquip:eqs.length>0,
-          noText: effs.length===0 && eqs.length===0,
-          onOpen:()=>this.select(pc.id),
-        };
-      }
+      if (pc) deckPreview=this.cardPreviewData(pc);
+    }
+    let hoverPreview=null;
+    if (this.state.hoverPreview){
+      const hc=cards.find(x=>x.id===this.state.hoverPreview);
+      if (hc){ hoverPreview=this.cardPreviewData(hc); hoverPreview.style=this.hoverPopStyle(); }
     }
 
     return {
       curveTicks,
       deckPreview, hasDeckPreview: !!deckPreview,
+      hoverPreview, hasHoverPreview: !!hoverPreview,
       closeDeckPreview: ()=>this.setState({ deckPreview:null }),
       stopEvt: (e)=>{ if(e) e.stopPropagation(); },
       showDeck:true, deckReady:true, deckOptions, activeDeckId:this.state.activeDeckId, deckName:d.name||'',
