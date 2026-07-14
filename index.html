@@ -929,6 +929,16 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                       </div>
                     </div>
                   </sc-if>
+                  <sc-if value="{{ hasPowerChips }}" hint-placeholder-val="{{ false }}">
+                    <div>
+                      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint);margin-bottom:9px">POWER</div>
+                      <div style="display:flex;flex-wrap:wrap;gap:6px">
+                        <sc-for list="{{ powerChips }}" as="t" hint-placeholder-count="5">
+                          <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;min-width:30px;text-align:center;font:700 12px 'JetBrains Mono',monospace;padding:5px 11px;border-radius:20px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.color }};transition:.12s">{{ t.label }}</div>
+                        </sc-for>
+                      </div>
+                    </div>
+                  </sc-if>
                   <sc-if value="{{ hasRarChips }}" hint-placeholder-val="{{ true }}">
                     <div>
                       <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint);margin-bottom:9px">RARITY</div>
@@ -1123,27 +1133,20 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                 </div>
               </sc-if>
 
-              <!-- tabs -->
-              <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+              <!-- tabs + 追加先トグル(右端) -->
+              <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:12px">
                 <sc-for list="{{ deckTabs }}" as="t" hint-placeholder-count="5">
                   <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 12px 'Zen Kaku Gothic New',sans-serif;white-space:nowrap;padding:7px 15px;border-radius:20px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.ink }}">{{ t.label }}</div>
                 </sc-for>
-              </div>
-
-              <!-- 追加先: メイン / サイド -->
-              <sc-if value="{{ showAddTarget }}" hint-placeholder-val="{{ false }}">
-                <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:12px">
-                  <span style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--ink-faint)">追加先</span>
-                  <div style="display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden">
+                <sc-if value="{{ showAddTarget }}" hint-placeholder-val="{{ false }}">
+                  <div style="margin-left:auto;display:inline-flex;border:1px solid var(--line);border-radius:20px;overflow:hidden">
                     <sc-for list="{{ addTargetSeg }}" as="s" hint-placeholder-count="2">
-                      <div onClick="{{ s.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 11.5px 'Zen Kaku Gothic New',sans-serif;padding:6px 16px;background:{{ s.bg }};color:{{ s.ink }}">{{ s.label }}</div>
+                      <div onClick="{{ s.onClick }}" role="button" tabindex="0" data-kbd title="追加先" style="cursor:pointer;white-space:nowrap;font:700 11.5px 'Zen Kaku Gothic New',sans-serif;padding:7px 15px;background:{{ s.bg }};color:{{ s.ink }}">{{ s.label }}</div>
                     </sc-for>
                   </div>
-                  <sc-if value="{{ addTargetSide }}" hint-placeholder-val="{{ false }}">
-                    <span style="font-size:11px;color:var(--ink-faint)">サイドボードに追加中（0 または 8 枚）</span>
-                  </sc-if>
-                </div>
-              </sc-if>
+                </sc-if>
+              </div>
+
 
               <!-- search -->
               <div style="display:flex;align-items:center;gap:10px;padding:10px 13px;border:1px solid var(--line);border-radius:9px;background:var(--surface);margin-bottom:16px">
@@ -1153,6 +1156,53 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                   <div onClick="{{ clearDeckQ }}" role="button" tabindex="0" data-kbd aria-label="検索をクリア" style="flex:none;cursor:pointer;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:14px;line-height:1;color:var(--ink-faint);border-radius:50%" style-hover="color:var(--ink);background:var(--surface2)">×</div>
                 </sc-if>
               </div>
+
+              <!-- filter bar -->
+              <sc-if value="{{ deckHasFilterChips }}" hint-placeholder-val="{{ false }}">
+                <div style="border:1px solid var(--line);border-radius:10px;background:var(--surface);margin-bottom:16px;overflow:hidden">
+                  <div style="display:flex;align-items:center;gap:12px;padding:10px 13px">
+                    <span style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--ink-faint)">FILTER</span>
+                    <div onClick="{{ toggleDeckFiltersOpen }}" role="button" tabindex="0" data-kbd style="font-size:12px;font-weight:700;color:var(--gold);cursor:pointer">{{ deckFilterToggleLabel }}</div>
+                    <sc-if value="{{ deckHasActiveFilters }}" hint-placeholder-val="{{ false }}">
+                      <div onClick="{{ clearDeckFilters }}" role="button" tabindex="0" data-kbd style="margin-left:auto;white-space:nowrap;font-size:11px;color:var(--ink-faint);cursor:pointer;border:1px solid var(--line);border-radius:6px;padding:3px 9px" style-hover="border-color:var(--gold-dim);color:var(--ink)">クリア</div>
+                    </sc-if>
+                  </div>
+                  <sc-if value="{{ deckFiltersOpen }}" hint-placeholder-val="{{ false }}">
+                    <div style="padding:4px 13px 14px;display:flex;flex-direction:column;gap:15px;border-top:1px solid var(--line-soft)">
+                      <sc-if value="{{ deckHasCostChips }}" hint-placeholder-val="{{ true }}">
+                        <div>
+                          <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint);margin:11px 0 9px">ENERGY</div>
+                          <div style="display:flex;flex-wrap:wrap;gap:6px">
+                            <sc-for list="{{ deckCostChips }}" as="t" hint-placeholder-count="6">
+                              <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;min-width:30px;text-align:center;font:700 12px 'JetBrains Mono',monospace;padding:5px 11px;border-radius:20px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.color }}">{{ t.label }}</div>
+                            </sc-for>
+                          </div>
+                        </div>
+                      </sc-if>
+                      <sc-if value="{{ deckHasPowerChips }}" hint-placeholder-val="{{ false }}">
+                        <div>
+                          <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint);margin-bottom:9px">POWER</div>
+                          <div style="display:flex;flex-wrap:wrap;gap:6px">
+                            <sc-for list="{{ deckPowerChips }}" as="t" hint-placeholder-count="5">
+                              <div onClick="{{ t.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;min-width:30px;text-align:center;font:700 12px 'JetBrains Mono',monospace;padding:5px 11px;border-radius:20px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.color }}">{{ t.label }}</div>
+                            </sc-for>
+                          </div>
+                        </div>
+                      </sc-if>
+                      <sc-if value="{{ deckHasKwChips }}" hint-placeholder-val="{{ false }}">
+                        <div>
+                          <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint);margin-bottom:9px">KEYWORD</div>
+                          <div style="display:flex;flex-wrap:wrap;gap:6px;max-height:104px;overflow-y:auto">
+                            <sc-for list="{{ deckKwChips }}" as="k" hint-placeholder-count="6">
+                              <div onClick="{{ k.onClick }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 11px 'JetBrains Mono',monospace;letter-spacing:.03em;padding:5px 11px;border-radius:20px;border:1px solid {{ k.border }};background:{{ k.bg }};color:{{ k.color }}">{{ k.label }}</div>
+                            </sc-for>
+                          </div>
+                        </div>
+                      </sc-if>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-if>
 
               <!-- picker grid -->
               <sc-if value="{{ pickEmpty }}" hint-placeholder-val="{{ false }}">
@@ -1352,8 +1402,8 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               </div>
               </sc-if>
 
-              <!-- === BF (メインと同じタブ) === -->
-              <sc-if value="{{ ptMain }}" hint-placeholder-val="{{ false }}">
+              <!-- === BF (概要タブ) === -->
+              <sc-if value="{{ ptOverview }}" hint-placeholder-val="{{ true }}">
               <!-- battlefields -->
               <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-bottom:16px">
                 <div style="padding:11px 15px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line-soft)">
@@ -1377,8 +1427,8 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               </div>
               </sc-if>
 
-              <!-- === 統計 (概要と同じタブ) === -->
-              <sc-if value="{{ ptOverview }}" hint-placeholder-val="{{ true }}">
+              <!-- === 統計タブ === -->
+              <sc-if value="{{ ptStats }}" hint-placeholder-val="{{ false }}">
               <!-- stats: energy curve -->
               <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)">
                 <div style="padding:11px 15px;border-bottom:1px solid var(--line-soft);display:flex;align-items:center;justify-content:space-between">
@@ -1419,11 +1469,40 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                   </sc-for>
                 </div>
               </div>
+
+              <!-- stats: power distribution -->
+              <sc-if value="{{ hasPowerData }}" hint-placeholder-val="{{ false }}">
+              <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-top:16px">
+                <div style="padding:11px 15px;border-bottom:1px solid var(--line-soft);display:flex;align-items:center;justify-content:space-between">
+                  <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:14px">パワー分布</span>
+                  <span style="font:600 10.5px 'JetBrains Mono',monospace;color:var(--ink-faint)">平均 <span style="color:var(--gold);font-weight:800;font-size:12px">{{ avgPower }}</span></span>
+                </div>
+                <div style="padding:12px 15px 6px;display:flex;flex-direction:column;gap:8px">
+                  <sc-for list="{{ powerRows }}" as="p" hint-placeholder-count="3">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <span style="flex:none;width:34px;display:inline-flex;align-items:center;gap:4px;font:800 12.5px 'JetBrains Mono',monospace;color:var(--gold)"><span style="color:var(--gold-dim);font-size:11px">◆</span>{{ p.label }}</span>
+                      <div style="flex:1;height:16px;border-radius:5px;background:var(--surface3);overflow:hidden;position:relative">
+                        <div style="position:absolute;left:0;top:0;bottom:0;width:{{ p.pct }};border-radius:5px;background:linear-gradient(90deg,var(--gold),var(--gold-dim));transition:width .25s ease"></div>
+                      </div>
+                      <span style="flex:none;min-width:20px;text-align:right;font:800 12.5px 'JetBrains Mono',monospace;color:var(--ink)">{{ p.n }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+                <div style="display:flex;gap:0;border-top:1px solid var(--line-soft);margin-top:6px">
+                  <div style="flex:1;text-align:center;padding:10px 4px;border-right:1px solid var(--line-soft)">
+                    <div style="font:800 16px 'JetBrains Mono',monospace;color:var(--ink)">{{ powerYes }}</div>
+                    <div style="font-size:10.5px;color:var(--ink-faint);margin-top:2px">パワーあり</div>
+                  </div>
+                  <div style="flex:1;text-align:center;padding:10px 4px">
+                    <div style="font:800 16px 'JetBrains Mono',monospace;color:var(--ink)">{{ powerNo }}</div>
+                    <div style="font-size:10.5px;color:var(--ink-faint);margin-top:2px">パワーなし</div>
+                  </div>
+                </div>
+              </div>
+              </sc-if>
               </sc-if>
             </div>
           </div>
-
-          <!-- in-place card preview modal -->
           <sc-if value="{{ hasDeckPreview }}" hint-placeholder-val="{{ false }}">
             <div onClick="{{ closeDeckPreview }}" style="position:fixed;inset:0;z-index:80;background:radial-gradient(circle at 50% 40%,rgba(30,24,16,.55),rgba(8,7,6,.86));display:flex;align-items:center;justify-content:center;padding:24px">
               <div onClick="{{ stopEvt }}" style="width:100%;max-width:620px;max-height:88vh;overflow:auto;background:var(--surface);border:1px solid var(--gold-dim);border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.6)">
@@ -1655,8 +1734,13 @@ class Component extends DCLogic {
       .catch(()=>{});
     this._onPop = () => {
       const patch = this.parseHash();
+      const curHash = location.hash || '#';
+      if(this._lastHash === curHash) return; // popstate と hashchange の二重発火を無視
+      this._lastHash = curHash;
+      this._navDepth = Math.max(0, (this._navDepth||0) - 1);
+      this.clearHoverTimer();
       const clearF = ['home','legends','keywords','rules'].includes(patch.view) ? this.FILTER_RESET : {};
-      this.setState({ view:'home', domain:null, set:null, selectedId:null, legendId:null, lightbox:null, variantIdx:0, legendVariantIdx:0, ...clearF, ...patch });
+      this.setState({ view:'home', domain:null, set:null, selectedId:null, legendId:null, lightbox:null, variantIdx:0, legendVariantIdx:0, hoverPreview:null, ...clearF, ...patch });
       this.ensureCardsFor(patch);
       if(patch.view==='rules' && patch.ruleSec){
         this.jumpToRule(patch.ruleSec);
@@ -1715,6 +1799,7 @@ class Component extends DCLogic {
     if(cur!==this._activeToc) this.setActiveToc(cur);
   }
   componentDidUpdate(prevProps, prevState){
+    if(!prevState) return;
     if(prevState.view !== this.state.view && this.state.view==='rules'){
       requestAnimationFrame(()=>{
         if(this.state.ruleSec){ this.jumpToRule(this.state.ruleSec); }
@@ -1777,17 +1862,20 @@ class Component extends DCLogic {
     return { position:'fixed', left:left+'px', top:top+'px', width:W+'px', maxHeight:(vh-2*M)+'px', zIndex:90, pointerEvents:'none' };
   }
   parseHash(){ return (window.RB && window.RB.parseHash) ? window.RB.parseHash() : { view:'home' }; }
-  FILTER_RESET = { query:'', queryRaw:'', fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], tagQ:'', kwQ:'' };
+  FILTER_RESET = { query:'', queryRaw:'', fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], fPower:[], tagQ:'', kwQ:'' };
   go(patch, hash){
     // 現在地のスクロール位置を退避（戻ったとき復元するため）
     this._scrollMem = this._scrollMem || {};
     this._scrollMem[location.hash || '#'] = window.scrollY || window.pageYOffset || 0;
-    const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, menuOpen:false, altView:false, variantIdx:0, legendVariantIdx:0, lightbox:null, ...patch };
+    const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, menuOpen:false, altView:false, variantIdx:0, legendVariantIdx:0, lightbox:null, hoverPreview:null, ...patch };
+    this.clearHoverTimer();
     this.setState(st);
     this.ensureCardsFor(st);
+    this._navDepth = (this._navDepth||0) + 1;
     if(st.view==='rules' && st.ruleSec){ this.jumpToRule(st.ruleSec); }
     else { window.scrollTo(0,0); }
     try{ history.pushState({ nav:st }, '', hash); }catch(e){ location.hash = hash; }
+    this._lastHash = location.hash || '#';
   }
 
   TYPE_ORDER = ['Unit','Spell','Gear','Legend','Battlefield','Token','Rune'];
@@ -1952,8 +2040,8 @@ class Component extends DCLogic {
   setListMode(m){ this.setState({ listMode:m }); }
   toggleFilter(kind, val){
     this.setState(s=>{
-      const key = kind==='type'?'fType':kind==='tag'?'fTag':kind==='set'?'fSet':kind==='dom'?'fDom':kind==='rar'?'fRar':kind==='cost'?'fCost':'fKw';
-      const arr = s[key].slice();
+      const key = kind==='type'?'fType':kind==='tag'?'fTag':kind==='set'?'fSet':kind==='dom'?'fDom':kind==='rar'?'fRar':kind==='cost'?'fCost':kind==='power'?'fPower':'fKw';
+      const arr = (s[key]||[]).slice();
       const i = arr.indexOf(val);
       if(i<0) arr.push(val); else arr.splice(i,1);
       const patch = { [key]: arr };
@@ -1962,7 +2050,20 @@ class Component extends DCLogic {
     });
   }
   toggleFiltersOpen(){ this.setState(s=>({ filtersOpen: !s.filtersOpen })); }
-  clearFilters(){ this.setState({ fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], tagQ:'', kwQ:'', query:'', queryRaw:'' }); }
+  clearFilters(){ this.setState({ fType:[], fTag:[], fKw:[], fSet:[], fDom:[], fRar:[], fCost:[], fPower:[], tagQ:'', kwQ:'', query:'', queryRaw:'' }); }
+  // ---- デッキピッカー専用の絞り込み（一覧のfilterとは別state） ----
+  toggleDeckFilter(kind, val){
+    this.setState(s=>{
+      const key = kind==='cost'?'dfCost':kind==='power'?'dfPower':'dfKw';
+      const arr = (s[key]||[]).slice();
+      const i = arr.indexOf(val); if(i>=0) arr.splice(i,1); else arr.push(val);
+      return { [key]: arr };
+    });
+  }
+  toggleDeckFiltersOpen(){ this.setState(s=>({ deckFiltersOpen: !s.deckFiltersOpen })); }
+  clearDeckFilters(){ this.setState({ dfCost:[], dfPower:[], dfKw:[] }); }
+  // kwフィールド由来のチップ・キーワード（デッキピッカーの絞り込み用）
+  cardKwsChip(c){ const found=new Set(); [...(c.effects||[]),...(c.equip||[])].forEach(e=>{ const b=this.kwBase(e.kw); if(b) found.add(b); }); return [...found]; }
 
   onDomChip(key){
     const s = this.state;
@@ -2162,6 +2263,31 @@ class Component extends DCLogic {
       if(tab!=='Legend' && tab!=='Battlefield' && doms.length) pool=pool.filter(c=>this.cardLegalForDeck(c));
     }
     if(q) pool=pool.filter(c=> this.cardHay(c).includes(q));
+    // デッキピッカー絞り込み（ENERGY / RARITY / KEYWORD）。チップ候補は絞り込み前のプールから作る。
+    const dfCost=(this.state.dfCost||[]), dfPower=(this.state.dfPower||[]), dfKw=(this.state.dfKw||[]);
+    const filterScope=pool.slice();
+    const costBucket=(c)=>{ const n=parseInt(c.cost); if(isNaN(n)) return null; return n>=7?'7+':String(n); };
+    const HAS_POWER=(c)=>['Unit','Champion Unit','Spell','Gear','Unit Gear'].includes(c.type);
+    const powerBucket=(c)=>{ if(!HAS_POWER(c)) return null; const raw=(c.power==null?'':String(c.power)).trim(); const n= raw==='' ? 0 : parseInt(raw); if(isNaN(n)) return null; return n>=4?'4+':String(n); };
+    if(dfCost.length) pool=pool.filter(c=>{ const b=costBucket(c); return b!=null && dfCost.includes(b); });
+    if(dfPower.length) pool=pool.filter(c=>{ const b=powerBucket(c); return b!=null && dfPower.includes(b); });
+    if(dfKw.length) pool=pool.filter(c=>{ const k=this.cardKwsChip(c); return dfKw.some(x=>k.includes(x)); });
+    const COST_BUCKETS=['0','1','2','3','4','5','6','7+'];
+    const presentCost=new Set(filterScope.map(costBucket).filter(x=>x!=null));
+    const deckCostChips=COST_BUCKETS.filter(b=>presentCost.has(b)).map(b=>{ const active=dfCost.includes(b);
+      return { label:b, onClick:()=>this.toggleDeckFilter('cost',b),
+        border: active?'var(--gold)':'var(--line)', bg: active?'var(--gold)':'transparent', color: active?'var(--sel-ink)':'var(--ink-dim)' }; });
+    const POWER_BUCKETS=['0','1','2','3','4+'];
+    const presentPower=new Set(filterScope.map(powerBucket).filter(x=>x!=null));
+    const deckPowerChips=POWER_BUCKETS.filter(b=>presentPower.has(b)).map(b=>{ const active=dfPower.includes(b);
+      return { label:b, onClick:()=>this.toggleDeckFilter('power',b),
+        border: active?'var(--gold)':'var(--line)', bg: active?'var(--gold)':'transparent', color: active?'var(--sel-ink)':'var(--ink-dim)' }; });
+    const kwSet=[...new Set(filterScope.flatMap(c=>this.cardKwsChip(c)))].sort();
+    const deckKwChips=kwSet.map(k=>{ const col=this.kwColor(k); const c=col?col.color:'#d9b978', txt=col?col.text:'#12100e'; const active=dfKw.includes(k);
+      return { label:k, onClick:()=>this.toggleDeckFilter('kw',k),
+        border: active?c:'var(--line)', bg: active?c:'transparent', color: active?txt:'var(--ink-dim)' }; });
+    const deckFilterCount=dfCost.length+dfPower.length+dfKw.length;
+    const deckHasFilterChips=deckCostChips.length>0||deckPowerChips.length>0||deckKwChips.length>0;
     pool=pool.slice().sort((a,b)=>{ const ca=parseInt(a.cost)||0, cb=parseInt(b.cost)||0; if(ca!==cb) return ca-cb; return (a.name||'').localeCompare(b.name||''); });
     const PICK_CAP=120;
     const pickTotal=pool.length;
@@ -2282,6 +2408,23 @@ class Component extends DCLogic {
     const curve=curveBuckets.map((n,i)=>{ const p = n>0? (n/curveAxisMax*100) : 0; return { label:i===7?'7+':String(i), n, nText: n>0?String(n):'', pct: p+'%', labelBottom: 'calc('+p+'% + 3px)', barBg: (n>0 && n===curveMax)?'linear-gradient(180deg,var(--gold),var(--gold-dim))':'linear-gradient(180deg,var(--gold-dim),color-mix(in srgb,var(--gold-dim) 55%,transparent))', labCol: n>0?'var(--ink-dim)':'var(--ink-faint)' }; });
     const typeCounts=ORDER.map(t=>({ label:OLABEL[t], n:(byType[t]||[]).reduce((a,x)=>a+x.n,0) }));
 
+    // ---- 統計: パワー分布（メインデッキのパワー値ごとの採用枚数） ----
+    const powerMap={};
+    let powerYes=0, powerNo=0, powerSum=0;
+    Object.keys(d.main).forEach(id=>{ const c=cards.find(x=>x.id===id); if(!c) return; const n=d.main[id];
+      const raw=(c.power==null?'':String(c.power)).trim();
+      const pv=parseInt(raw);
+      if(raw==='' || isNaN(pv)){ powerNo+=n; }
+      else { powerMap[pv]=(powerMap[pv]||0)+n; powerYes+=n; powerSum+=pv*n; }
+    });
+    const powerKeys=Object.keys(powerMap).map(Number).sort((a,b)=>a-b);
+    const powerBarMax=Math.max(1,...powerKeys.map(k=>powerMap[k]));
+    const powerRows=powerKeys.map(k=>({
+      label:String(k), n:powerMap[k], pct:(powerMap[k]/powerBarMax*100)+'%',
+    }));
+    const avgPower = powerYes ? (powerSum/powerYes).toFixed(1) : '–';
+    const hasPowerData = powerYes>0 || powerNo>0;
+
     // ---- in-place card preview (Japanese effects) ----
     let deckPreview=null;
     if (this.state.deckPreview){
@@ -2297,6 +2440,13 @@ class Component extends DCLogic {
       showDeck:true, deckReady:true, deckOptions, activeDeckId:this.state.activeDeckId, deckName:d.name||'',
       deckHasDomains:doms.length>0, deckDomChips,
       deckTabs, deckQ:this.state.deckQ||'', deckQHas: !!((this.state.deckQ||'').trim()), pickRows, pickEmpty:pickRows.length===0,
+      deckCostChips, deckPowerChips, deckKwChips, deckHasFilterChips,
+      deckHasCostChips: deckCostChips.length>0, deckHasPowerChips: deckPowerChips.length>0, deckHasKwChips: deckKwChips.length>0,
+      deckFiltersOpen: !!this.state.deckFiltersOpen,
+      deckFilterToggleLabel: this.state.deckFiltersOpen ? '閉じる' : (deckFilterCount>0 ? ('絞り込み中 · '+deckFilterCount) : '絞り込み'),
+      deckHasActiveFilters: deckFilterCount>0,
+      clearDeckFilters: ()=>this.clearDeckFilters(),
+      toggleDeckFiltersOpen: ()=>this.toggleDeckFiltersOpen(),
       pickEmptyMsg: champNeedsLegend ? '先にレジェンドを選ぶと、そのチャンピオンが表示されます。' : 'この条件に一致するカードがありません。タブや検索を変えてお試しください。',
       pickMore: pickTotal>PICK_CAP ? ('絞り込み結果 '+pickTotal+'件のうち先頭'+PICK_CAP+'件を表示。検索で絞り込めます。') : '',
       pickHasMore: pickTotal>PICK_CAP,
@@ -2318,7 +2468,7 @@ class Component extends DCLogic {
       deckValidInk: deckValid ? '#4f9c3b' : 'var(--gold)',
       deckValidTag: deckValid ? 'READY' : 'INCOMPLETE',
       deckSheetOpen: !!this.state.deckSheetOpen,
-      panelTabs: ['概要','メイン'].map(t=>({ key:t, label:t, onClick:()=>this.setPanelTab(t),
+      panelTabs: ['概要','メイン','統計'].map(t=>({ key:t, label:t, onClick:()=>this.setPanelTab(t),
         border: (this.state.deckPanelTab||'概要')===t ? 'var(--gold)' : 'var(--line)',
         bg: (this.state.deckPanelTab||'概要')===t ? 'var(--gold)' : 'transparent',
         ink: (this.state.deckPanelTab||'概要')===t ? 'var(--sel-ink)' : 'var(--ink-dim)' })),
@@ -2333,6 +2483,7 @@ class Component extends DCLogic {
       deckValidHeadBg: deckValid ? 'rgba(79,156,59,.14)' : 'var(--surface2)',
       deckValidIcon: deckValid ? '✓' : '⚠',
       curve, typeCounts, avgEnergy,
+      powerRows, hasPowerData, avgPower, powerYes, powerNo,
     };
   }
 
@@ -2396,7 +2547,7 @@ class Component extends DCLogic {
     const pushSyn = (c, image, number, rarity, vIdx)=>synCards.push({
       _artLegendId:c.id, _artVariantIdx:vIdx,
       id:c.id+'-v'+vIdx, name:c.name, nameJa:c.nameJa,
-      type:c.type, domain:c.domain, domains:c.domains, cost:c.cost, might:c.might,
+      type:c.type, domain:c.domain, domains:c.domains, cost:c.cost, might:c.might, power:c.power,
       rarity:rarity||'ショーケース', setCode:c.setCode, set:c.set,
       number:number||c.number, image, tag:c.tag, effects:c.effects||[],
     });
@@ -2420,6 +2571,7 @@ class Component extends DCLogic {
     if (s.fSet.length) list = list.filter(c=> s.fSet.includes(c.setCode));
     if (s.fDom.length) list = list.filter(c=> s.fDom.some(d=> c.domain===d || (c.domains && c.domains.includes(d))));
     if (s.fCost.length) list = list.filter(c=>{ const n=parseInt(c.cost); if(isNaN(n)) return false; const b=n>=7?'7+':String(n); return s.fCost.includes(b); });
+    if ((s.fPower||[]).length) list = list.filter(c=>{ if(!['Unit','Champion Unit','Spell','Gear','Unit Gear'].includes(c.type)) return false; const raw=(c.power==null?'':String(c.power)).trim(); const n= raw==='' ? 0 : parseInt(raw); const b= isNaN(n)?null:(n>=4?'4+':String(n)); return b!=null && s.fPower.includes(b); });
     if (s.fRar.length) list = list.filter(c=> s.fRar.includes(c.rarity));
     if (s.fType.length) list = list.filter(c=> s.fType.includes(this.typeOf(c)));
     if (s.fTag.length) list = list.filter(c=>{ const t=cardTags(c); return s.fTag.some(x=>t.includes(x)); });
@@ -2472,12 +2624,19 @@ class Component extends DCLogic {
     const costChips = COST_BUCKETS.filter(b=>presentCost.has(b)).map(b=>{ const active=s.fCost.includes(b);
       return { label:b, onClick:()=>this.toggleFilter('cost',b),
         border: active ? 'var(--gold)' : 'var(--line)', bg: active ? 'var(--gold)' : 'transparent', color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
+    const powerBucket = (c)=>{ if(!['Unit','Champion Unit','Spell','Gear','Unit Gear'].includes(c.type)) return null; const raw=(c.power==null?'':String(c.power)).trim(); const n= raw==='' ? 0 : parseInt(raw); if(isNaN(n)) return null; return n>=4?'4+':String(n); };
+    const POWER_BUCKETS = ['0','1','2','3','4+'];
+    const presentPower = new Set(scope.map(powerBucket).filter(x=>x!=null));
+    const fPower = s.fPower||[];
+    const powerChips = POWER_BUCKETS.filter(b=>presentPower.has(b)).map(b=>{ const active=fPower.includes(b);
+      return { label:b, onClick:()=>this.toggleFilter('power',b),
+        border: active ? 'var(--gold)' : 'var(--line)', bg: active ? 'var(--gold)' : 'transparent', color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
     const RAR_CHIP_ORDER = ['コモン','アンコモン','レア','エピック','ショーケース'];
     const RAR_GLYPH = { 'コモン':'●', 'アンコモン':'▲', 'レア':'◆', 'エピック':'⬟', 'ショーケース':'⬢' };
     const rarChips = RAR_CHIP_ORDER.filter(r=>scope.some(c=>c.rarity===r) || (r==='ショーケース' && synCards.length>0)).map(r=>{ const stl=this.RARITY_STYLE[r]||{}; const col=stl.color||'#d9b978'; const active=s.fRar.includes(r);
       return { label:(RAR_GLYPH[r]||'')+' '+r, onClick:()=>this.toggleFilter('rar',r),
         border: active ? col : 'var(--line)', bg: active ? col : 'transparent', color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
-    const filterCount = s.fSet.length + s.fDom.length + s.fCost.length + s.fRar.length + s.fType.length + s.fTag.length + s.fKw.length;
+    const filterCount = s.fSet.length + s.fDom.length + s.fCost.length + (s.fPower||[]).length + s.fRar.length + s.fType.length + s.fTag.length + s.fKw.length;
 
     // active-filter chips (removable), including route scope + query
     const activeChips = [];
@@ -2486,6 +2645,7 @@ class Component extends DCLogic {
     s.fSet.forEach(v=>activeChips.push({ label:`セット: ${v}`, onClick:()=>this.toggleFilter('set',v) }));
     s.fDom.forEach(v=>activeChips.push({ label:`ドメイン: ${v}`, onClick:()=>this.toggleFilter('dom',v) }));
     s.fCost.forEach(v=>activeChips.push({ label:`エネルギー: ${v}`, onClick:()=>this.toggleFilter('cost',v) }));
+    (s.fPower||[]).forEach(v=>activeChips.push({ label:`パワー: ${v}`, onClick:()=>this.toggleFilter('power',v) }));
     s.fRar.forEach(v=>activeChips.push({ label:`レアリティ: ${v}`, onClick:()=>this.toggleFilter('rar',v) }));
     s.fType.forEach(v=>activeChips.push({ label:this.TYPE_LABEL[v]||v, onClick:()=>this.toggleFilter('type',v) }));
     s.fKw.forEach(v=>activeChips.push({ label:v, onClick:()=>this.toggleFilter('kw',v) }));
@@ -2855,8 +3015,8 @@ class Component extends DCLogic {
       ...selVals,
       listTitle, listDesc,
       listCount: `${list.length} 件`,
-      setChips, domChips, costChips, rarChips, typeChips, tagChips, kwChips,
-      hasSetChips: setChips.length>1, hasDomChips: domChips.length>0, hasCostChips: costChips.length>0, hasRarChips: rarChips.length>0, hasTypeChips: typeChips.length>0,
+      setChips, domChips, costChips, powerChips, rarChips, typeChips, tagChips, kwChips,
+      hasSetChips: setChips.length>1, hasDomChips: domChips.length>0, hasCostChips: costChips.length>0, hasPowerChips: powerChips.length>0, hasRarChips: rarChips.length>0, hasTypeChips: typeChips.length>0,
       hasTagChips: tagSet.length>0, hasKwChips: kwSet.length>0,
       tagQ: s.tagQ||'', kwQ: s.kwQ||'',
       onTagQ:(e)=>this.setState({tagQ:e.target.value}), onKwQ:(e)=>this.setState({kwQ:e.target.value}),
