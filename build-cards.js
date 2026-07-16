@@ -4,8 +4,12 @@
  * Cloudflare Pages は card/ogn-001.html を /card/ogn-001 で配信する。
  *
  *   node build-cards.js            … サンプル10枚だけ生成（動作確認用）
- *   node build-cards.js --all      … 全カード生成
+ *   node build-cards.js --all      … 全カード生成 + cards.html + sitemap.xml
  *   node build-cards.js --clean    … 生成物を消す
+ *
+ * --all は cards.html（全カードへの索引）と sitemap.xml も書き出す。
+ * sitemap.xml はこのスクリプトの生成物なので手で編集しない。
+ * cards.html は主に Google が854枚を辿るための導線で、人向けの一覧は SPA の #list。
  *
  * 効果テキストの記号（⟨might⟩ ① など）とキーワードチップは riftbound-render.js の
  * richText をそのまま呼んで描いている。React.createElement を「HTML文字列を返す関数」に
@@ -312,12 +316,153 @@ ${equip}
 `;
 }
 
+/* ---- 共通の頭と足（カードページから抜き出したもの） ---- */
+const HEAD_COMMON = `<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="256x256" href="/images/icon/favicon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+// index.html と同じ判定。保存済みのテーマがあれば従い、無ければ OS 設定に合わせる。
+(function(){
+  try{
+    var saved = localStorage.getItem('rb-theme');
+    var theme = (saved === 'light' || saved === 'dark') ? saved
+      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  }catch(e){ document.documentElement.setAttribute('data-theme','dark'); }
+})();
+</script>`;
+
+const CSS_COMMON = `/* index.html のトークンをそのまま使う */
+:root{
+  --bg:#12100e; --surface:#191612; --surface2:#211d18; --surface3:#2a251f;
+  --line:#332d26; --line-soft:#28231d;
+  --ink:#f4efe6; --ink-dim:#b3a998; --ink-faint:#7c7364;
+  --gold:#d9b978; --gold-dim:#8a744a;
+  --header-a:#1c1813; --header-b:#161310;
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#e8dbbf; --surface:#fbf6ec; --surface2:#f1e8d6; --surface3:#e7dcc4;
+  --line:#cdb890; --line-soft:#dccbaa;
+  --ink:#2c2216; --ink-dim:#524328; --ink-faint:#6a5836;
+  --gold:#7d5b14; --gold-dim:#8f6d28;
+  --header-a:#fbf6ec; --header-b:#efe4cf;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:'Zen Kaku Gothic New',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold)}
+.rb-header{display:flex;align-items:center;gap:18px;padding:0 26px;height:60px;
+ background:linear-gradient(180deg,var(--header-a),var(--header-b));
+ border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.brand{font-family:'Zen Old Mincho',serif;font-weight:700;font-size:17px;color:var(--ink);
+ text-decoration:none;letter-spacing:.02em}
+.brand b{color:var(--gold)}
+.rb-main{max-width:1100px;margin:0 auto;padding:26px 34px 60px}
+@media(max-width:760px){.rb-main{padding:20px 18px 48px}}
+.foot{border-top:1px solid var(--line);margin-top:52px}
+.foot div{max-width:1100px;margin:0 auto;padding:22px 34px;color:var(--ink-faint);font-size:12px;line-height:1.9}`;
+
+const FOOTER = `<footer class="foot">
+  <div>
+    RiftBound 日本語翻訳 Wiki ・ 本サイトはファンによる非公式サイトです。
+    RIFTBOUND および League of Legends は Riot Games, Inc. の商標であり、権利はすべて同社に帰属します。
+    当サイトは Riot Games とは一切関係ありません。
+  </div>
+</footer>`;
+
+/* ---- 索引ページ（/cards） ---- */
+function renderIndex(cards, meta) {
+  const order = (meta.sets || []).map(s => s.code);
+  const bySet = new Map();
+  for (const c of cards) {
+    if (!bySet.has(c.setCode)) bySet.set(c.setCode, []);
+    bySet.get(c.setCode).push(c);
+  }
+  const codes = [...bySet.keys()].sort((a, b) => order.indexOf(a) - order.indexOf(b));
+
+  const sections = codes.map(code => {
+    const list = bySet.get(code).slice().sort((a, b) => a.number.localeCompare(b.number, 'en', { numeric: true }));
+    const set = (meta.sets || []).find(s => s.code === code);
+    const links = list.map(c =>
+      `      <li><a href="/card/${esc(c.id)}">${esc(c.name)}<span class="n">${esc(c.number)}</span></a></li>`).join('\n');
+    return `  <h2>${esc(set ? set.name : code)}<span class="cnt">${list.length}枚</span></h2>
+  <ul class="cards">
+${links}
+  </ul>`;
+  }).join('\n\n');
+
+  return `<!DOCTYPE html>
+<html lang="ja">
+<head>
+${HEAD_COMMON}
+<title>カード索引（全${cards.length}枚）| Riftbound 日本語カードデータベース</title>
+<meta name="description" content="Riftbound の全${cards.length}枚のカードの日本語訳ページ一覧。セット別に収録カードを並べています。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="${BASE}/cards">
+<meta property="og:type" content="website">
+<meta property="og:title" content="カード索引（全${cards.length}枚）">
+<meta property="og:description" content="Riftbound の全${cards.length}枚のカードの日本語訳ページ一覧。">
+<meta property="og:url" content="${BASE}/cards">
+<meta property="og:site_name" content="Riftbound 日本語カードデータベース">
+<meta property="og:locale" content="ja_JP">
+<style>
+${CSS_COMMON}
+h1{font-family:'Zen Old Mincho',serif;font-size:30px;margin:0 0 8px}
+.lead{color:var(--ink-dim);font-size:13.5px;line-height:1.9;margin:0 0 8px;max-width:640px}
+h2{font-family:'Zen Old Mincho',serif;font-size:17px;margin:38px 0 12px;padding-bottom:9px;
+ border-bottom:2px solid var(--gold);display:flex;align-items:baseline;gap:10px}
+.cnt{font:500 11px 'JetBrains Mono',monospace;color:var(--ink-faint)}
+ul.cards{list-style:none;margin:0;padding:0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2px}
+ul.cards a{display:flex;align-items:baseline;gap:8px;padding:7px 10px;border-radius:6px;
+ text-decoration:none;color:var(--ink);font-size:13.5px}
+ul.cards a:hover{background:var(--surface2)}
+.n{margin-left:auto;font:500 10.5px 'JetBrains Mono',monospace;color:var(--ink-faint);flex:none}
+</style>
+</head>
+<body>
+<header class="rb-header">
+  <a class="brand" href="/"><b>RIFTBOUND</b> 日本語翻訳</a>
+</header>
+<main class="rb-main">
+  <h1>カード索引</h1>
+  <p class="lead">日本語訳のある全${cards.length}枚です。検索・絞り込みをするなら <a href="/#list">サイトのカード一覧</a> のほうが便利です。</p>
+
+${sections}
+
+  <p class="lead" style="margin-top:38px">効果テキストを持たないカード（ルーンなど）はこの索引には含まれません。<a href="/#list">サイトのカード一覧</a>では見られます。</p>
+</main>
+${FOOTER}
+</body>
+</html>
+`;
+}
+
+/* ---- sitemap.xml ---- */
+function renderSitemap(cards) {
+  const latest = cards.map(c => c.modified).filter(Boolean).sort().pop() || '';
+  const url = (loc, extra) => `  <url>\n    <loc>${loc}</loc>\n${extra}  </url>`;
+  const entries = [
+    url(BASE + '/', '    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n'),
+    url(BASE + '/cards', `    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n${latest ? `    <lastmod>${latest}</lastmod>\n` : ''}`),
+    ...cards.map(c => url(`${BASE}/card/${c.id}`,
+      `    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n${c.modified ? `    <lastmod>${c.modified}</lastmod>\n` : ''}`)),
+  ];
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join('\n')}\n</urlset>\n`;
+}
+
 /* ---- 実行 ---- */
 function main() {
   const argv = process.argv.slice(2);
   if (argv.includes('--clean')) {
     fs.rmSync(OUT, { recursive: true, force: true });
-    console.log('removed ' + path.relative(ROOT, OUT) + '/');
+    fs.rmSync(path.join(ROOT, 'cards.html'), { force: true });
+    console.log('removed card/ and cards.html  (sitemap.xml left alone - rerun --all to rebuild it)');
     return;
   }
   const RB = loadRB();
@@ -347,6 +492,20 @@ function main() {
   }
   console.log(`generated ${targets.length} page(s) into ${path.relative(ROOT, OUT)}/  (${(bytes / 1024).toFixed(1)} KB, avg ${(bytes / targets.length / 1024).toFixed(1)} KB)`);
   console.log(`skipped ${skipped} card(s) with no Japanese effect text`);
+
+  // 索引と sitemap は全カード揃っているときだけ。10枚のサンプルで sitemap を
+  // 上書きすると Google に「10枚しかない」と伝えることになる。
+  if (!argv.includes('--all')) {
+    console.log('cards.html / sitemap.xml not written (--all only)');
+    return;
+  }
+  const idx = renderIndex(targets, meta);
+  fs.writeFileSync(path.join(ROOT, 'cards.html'), idx, 'utf8');
+  console.log(`wrote cards.html  (${(Buffer.byteLength(idx) / 1024).toFixed(1)} KB, ${targets.length} links)`);
+
+  const sm = renderSitemap(targets);
+  fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sm, 'utf8');
+  console.log(`wrote sitemap.xml (${(Buffer.byteLength(sm) / 1024).toFixed(1)} KB, ${targets.length + 2} urls)`);
 }
 
 main();

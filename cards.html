@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="256x256" href="/images/icon/favicon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+// index.html と同じ判定。保存済みのテーマがあれば従い、無ければ OS 設定に合わせる。
+(function(){
+  try{
+    var saved = localStorage.getItem('rb-theme');
+    var theme = (saved === 'light' || saved === 'dark') ? saved
+      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  }catch(e){ document.documentElement.setAttribute('data-theme','dark'); }
+})();
+</script>
+<title>カード索引（全854枚）| Riftbound 日本語カードデータベース</title>
+<meta name="description" content="Riftbound の全854枚のカードの日本語訳ページ一覧。セット別に収録カードを並べています。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://riftbound-unofficialjp.pages.dev/cards">
+<meta property="og:type" content="website">
+<meta property="og:title" content="カード索引（全854枚）">
+<meta property="og:description" content="Riftbound の全854枚のカードの日本語訳ページ一覧。">
+<meta property="og:url" content="https://riftbound-unofficialjp.pages.dev/cards">
+<meta property="og:site_name" content="Riftbound 日本語カードデータベース">
+<meta property="og:locale" content="ja_JP">
+<style>
+/* index.html のトークンをそのまま使う */
+:root{
+  --bg:#12100e; --surface:#191612; --surface2:#211d18; --surface3:#2a251f;
+  --line:#332d26; --line-soft:#28231d;
+  --ink:#f4efe6; --ink-dim:#b3a998; --ink-faint:#7c7364;
+  --gold:#d9b978; --gold-dim:#8a744a;
+  --header-a:#1c1813; --header-b:#161310;
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#e8dbbf; --surface:#fbf6ec; --surface2:#f1e8d6; --surface3:#e7dcc4;
+  --line:#cdb890; --line-soft:#dccbaa;
+  --ink:#2c2216; --ink-dim:#524328; --ink-faint:#6a5836;
+  --gold:#7d5b14; --gold-dim:#8f6d28;
+  --header-a:#fbf6ec; --header-b:#efe4cf;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:'Zen Kaku Gothic New',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold)}
+.rb-header{display:flex;align-items:center;gap:18px;padding:0 26px;height:60px;
+ background:linear-gradient(180deg,var(--header-a),var(--header-b));
+ border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.brand{font-family:'Zen Old Mincho',serif;font-weight:700;font-size:17px;color:var(--ink);
+ text-decoration:none;letter-spacing:.02em}
+.brand b{color:var(--gold)}
+.rb-main{max-width:1100px;margin:0 auto;padding:26px 34px 60px}
+@media(max-width:760px){.rb-main{padding:20px 18px 48px}}
+.foot{border-top:1px solid var(--line);margin-top:52px}
+.foot div{max-width:1100px;margin:0 auto;padding:22px 34px;color:var(--ink-faint);font-size:12px;line-height:1.9}
+h1{font-family:'Zen Old Mincho',serif;font-size:30px;margin:0 0 8px}
+.lead{color:var(--ink-dim);font-size:13.5px;line-height:1.9;margin:0 0 8px;max-width:640px}
+h2{font-family:'Zen Old Mincho',serif;font-size:17px;margin:38px 0 12px;padding-bottom:9px;
+ border-bottom:2px solid var(--gold);display:flex;align-items:baseline;gap:10px}
+.cnt{font:500 11px 'JetBrains Mono',monospace;color:var(--ink-faint)}
+ul.cards{list-style:none;margin:0;padding:0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2px}
+ul.cards a{display:flex;align-items:baseline;gap:8px;padding:7px 10px;border-radius:6px;
+ text-decoration:none;color:var(--ink);font-size:13.5px}
+ul.cards a:hover{background:var(--surface2)}
+.n{margin-left:auto;font:500 10.5px 'JetBrains Mono',monospace;color:var(--ink-faint);flex:none}
+</style>
+</head>
+<body>
+<header class="rb-header">
+  <a class="brand" href="/"><b>RIFTBOUND</b> 日本語翻訳</a>
+</header>
+<main class="rb-main">
+  <h1>カード索引</h1>
+  <p class="lead">日本語訳のある全854枚です。検索・絞り込みをするなら <a href="/#list">サイトのカード一覧</a> のほうが便利です。</p>
+
+  <h2>Vendetta<span class="cnt">99枚</span></h2>
+  <ul class="cards">
+      <li><a href="/card/ven-002">Blade Twirler<span class="n">VEN-002/166</span></a></li>
+      <li><a href="/card/ven-006">Oasis Raider<span class="n">VEN-006/166</span></a></li>
+      <li><a href="/card/ven-007">Punching Poro<span class="n">VEN-007/166</span></a></li>
+      <li><a href="/card/ven-009">Baccai Reaper<span class="n">VEN-009/166</span></a></li>
+      <li><a href="/card/ven-012">Perfect Execution<span class="n">VEN-012/166</span></a></li>
+      <li><a href="/card/ven-013">Shadow Assassin<span class="n">VEN-013/166</span></a></li>
+      <li><a href="/card/ven-016">Eclipse Dragon<span class="n">VEN-016/166</span></a></li>
+      <li><a href="/card/ven-017">Morgana - Vindictive<span class="n">VEN-017/166</span></a></li>
+      <li><a href="/card/ven-018">Rage Amplifier<span class="n">VEN-018/166</span></a></li>
+      <li><a href="/card/ven-019">Renekton - Rage Fueled<span class="n">VEN-019/166</span></a></li>
+      <li><a href="/card/ven-021">Akali - Deadly Weapon<span class="n">VEN-021/166</span></a></li>
+      <li><a href="/card/ven-023">Zed - From the Shadows<span class="n">VEN-023/166</span></a></li>
+      <li><a href="/card/ven-025">Esteemed Hierophant<span class="n">VEN-025/166</span></a></li>
+      <li><a href="/card/ven-026">Field Musicians<span class="n">VEN-026/166</span></a></li>
+      <li><a href="/card/ven-028">Mournful Witness<span class="n">VEN-028/166</span></a></li>
+      <li><a href="/card/ven-029">Ol&#39; Poro<span class="n">VEN-029/166</span></a></li>
+      <li><a href="/card/ven-031">Twilight Shroud<span class="n">VEN-031/166</span></a></li>
+      <li><a href="/card/ven-037">Tomb-Raider Barbara<span class="n">VEN-037/166</span></a></li>
+      <li><a href="/card/ven-038">Akali - Silent<span class="n">VEN-038/166</span></a></li>
+      <li><a href="/card/ven-041">Riven - Shattered<span class="n">VEN-041/166</span></a></li>
+      <li><a href="/card/ven-042">Shen - Scourge of Shadows<span class="n">VEN-042/166</span></a></li>
+      <li><a href="/card/ven-043">Steel Paws<span class="n">VEN-043/166</span></a></li>
+      <li><a href="/card/ven-046">Nasus - Ascended<span class="n">VEN-046/166</span></a></li>
+      <li><a href="/card/ven-047">Apprentice Mage<span class="n">VEN-047/166</span></a></li>
+      <li><a href="/card/ven-048">Cloud Drake<span class="n">VEN-048/166</span></a></li>
+      <li><a href="/card/ven-052">Mesmerize<span class="n">VEN-052/166</span></a></li>
+      <li><a href="/card/ven-054">Questionable Tome<span class="n">VEN-054/166</span></a></li>
+      <li><a href="/card/ven-058">Patched Porobot<span class="n">VEN-058/166</span></a></li>
+      <li><a href="/card/ven-060">Sky Cruiser<span class="n">VEN-060/166</span></a></li>
+      <li><a href="/card/ven-061">Decree of Insight<span class="n">VEN-061/166</span></a></li>
+      <li><a href="/card/ven-062">Hextech Formula<span class="n">VEN-062/166</span></a></li>
+      <li><a href="/card/ven-063">Nasus - Guardian of Knowledge<span class="n">VEN-063/166</span></a></li>
+      <li><a href="/card/ven-066">Temporal Breach<span class="n">VEN-066/166</span></a></li>
+      <li><a href="/card/ven-067">Bottled Constellation<span class="n">VEN-067/166</span></a></li>
+      <li><a href="/card/ven-068">Jayce - Brilliant Inventor<span class="n">VEN-068/166</span></a></li>
+      <li><a href="/card/ven-069">Mel - Newly Awakened<span class="n">VEN-069/166</span></a></li>
+      <li><a href="/card/ven-073">Jagged Cutlass<span class="n">VEN-073/166</span></a></li>
+      <li><a href="/card/ven-077">Tools of Empire<span class="n">VEN-077/166</span></a></li>
+      <li><a href="/card/ven-079">Dame the Despoiler<span class="n">VEN-079/166</span></a></li>
+      <li><a href="/card/ven-080">Noxian Demolitionist<span class="n">VEN-080/166</span></a></li>
+      <li><a href="/card/ven-083">Rampage<span class="n">VEN-083/166</span></a></li>
+      <li><a href="/card/ven-086">Gangplank - Naval<span class="n">VEN-086/166</span></a></li>
+      <li><a href="/card/ven-087">Hextech Disc<span class="n">VEN-087/166</span></a></li>
+      <li><a href="/card/ven-088">Jayce - Hammer in Hand<span class="n">VEN-088/166</span></a></li>
+      <li><a href="/card/ven-089">Wild Claw<span class="n">VEN-089/166</span></a></li>
+      <li><a href="/card/ven-091">Corrupted Dragon<span class="n">VEN-091/166</span></a></li>
+      <li><a href="/card/ven-093">Kinkou Lifeblade<span class="n">VEN-093/166</span></a></li>
+      <li><a href="/card/ven-095">Shadow Order Disciple<span class="n">VEN-095/166</span></a></li>
+      <li><a href="/card/ven-101">Gust Monk<span class="n">VEN-101/166</span></a></li>
+      <li><a href="/card/ven-102">Ravenbloom Prefect<span class="n">VEN-102/166</span></a></li>
+      <li><a href="/card/ven-103">Shadows of the Past<span class="n">VEN-103/166</span></a></li>
+      <li><a href="/card/ven-106">Wind and Ghosts<span class="n">VEN-106/166</span></a></li>
+      <li><a href="/card/ven-107">Decree of Discord<span class="n">VEN-107/166</span></a></li>
+      <li><a href="/card/ven-109">Illaoi - Prophet of the Great Kraken<span class="n">VEN-109/166</span></a></li>
+      <li><a href="/card/ven-110">Mel - Defiant Soul<span class="n">VEN-110/166</span></a></li>
+      <li><a href="/card/ven-112">Zed - Without a Sound<span class="n">VEN-112/166</span></a></li>
+      <li><a href="/card/ven-113">Kennen - Storm of Shuriken<span class="n">VEN-113/166</span></a></li>
+      <li><a href="/card/ven-115">Ocean Drake<span class="n">VEN-115/166</span></a></li>
+      <li><a href="/card/ven-118">Horns of the Dragon<span class="n">VEN-118/166</span></a></li>
+      <li><a href="/card/ven-119">Keeper of Law<span class="n">VEN-119/166</span></a></li>
+      <li><a href="/card/ven-121">Reluctant Leader<span class="n">VEN-121/166</span></a></li>
+      <li><a href="/card/ven-126">Ki Barrier<span class="n">VEN-126/166</span></a></li>
+      <li><a href="/card/ven-127">Lacerate<span class="n">VEN-127/166</span></a></li>
+      <li><a href="/card/ven-129">Sacred Protector<span class="n">VEN-129/166</span></a></li>
+      <li><a href="/card/ven-133">Glowstone<span class="n">VEN-133/166</span></a></li>
+      <li><a href="/card/ven-135">Kennen - Keeper of Balance<span class="n">VEN-135/166</span></a></li>
+      <li><a href="/card/ven-136">Ambessa - Respected and Feared<span class="n">VEN-136/166</span></a></li>
+      <li><a href="/card/ven-137">Shady Spectacles<span class="n">VEN-137/166</span></a></li>
+      <li><a href="/card/ven-138">Shen - Leader of the Kinkou Order<span class="n">VEN-138/166</span></a></li>
+      <li><a href="/card/ven-139">Akali - Rogue Assassin<span class="n">VEN-139/166</span></a></li>
+      <li><a href="/card/ven-140">Shuriken Flip<span class="n">VEN-140/166</span></a></li>
+      <li><a href="/card/ven-141">Renekton - Butcher of the Sands<span class="n">VEN-141/166</span></a></li>
+      <li><a href="/card/ven-142">Dominus<span class="n">VEN-142/166</span></a></li>
+      <li><a href="/card/ven-143">Zed - Master of Shadows<span class="n">VEN-143/166</span></a></li>
+      <li><a href="/card/ven-144">Death Mark<span class="n">VEN-144/166</span></a></li>
+      <li><a href="/card/ven-145">Nasus - Curator of the Sands<span class="n">VEN-145/166</span></a></li>
+      <li><a href="/card/ven-146">Siphoning Strike<span class="n">VEN-146/166</span></a></li>
+      <li><a href="/card/ven-147">Shen - Eye of Twilight<span class="n">VEN-147/166</span></a></li>
+      <li><a href="/card/ven-149">Jayce - Defender of Tomorrow<span class="n">VEN-149/166</span></a></li>
+      <li><a href="/card/ven-151">Mel - Soul’s Reflection<span class="n">VEN-151/166</span></a></li>
+      <li><a href="/card/ven-152">Rebuttal<span class="n">VEN-152/166</span></a></li>
+      <li><a href="/card/ven-153">Ambessa - Matriarch of War<span class="n">VEN-153/166</span></a></li>
+      <li><a href="/card/ven-155">Kennen - Heart of the Tempest<span class="n">VEN-155/166</span></a></li>
+      <li><a href="/card/ven-156">Lightning Rush<span class="n">VEN-156/166</span></a></li>
+      <li><a href="/card/ven-158">Heisho, Shell of the World<span class="n">VEN-158/166</span></a></li>
+      <li><a href="/card/ven-161">Piltovan Forge<span class="n">VEN-161/166</span></a></li>
+      <li><a href="/card/ven-163">Risen Altar<span class="n">VEN-163/166</span></a></li>
+      <li><a href="/card/ven-164">Sandswept Tomb<span class="n">VEN-164/166</span></a></li>
+      <li><a href="/card/ven-167">Vi - Destructive<span class="n">VEN-167/166</span></a></li>
+      <li><a href="/card/ven-168">Jinx - Demolitionist<span class="n">VEN-168/166</span></a></li>
+      <li><a href="/card/ven-175">Jayce - Man of Progress<span class="n">VEN-175/166</span></a></li>
+      <li><a href="/card/ven-176">Viktor - Innovator<span class="n">VEN-176/166</span></a></li>
+      <li><a href="/card/ven-179">Rengar - Trophy Hunter<span class="n">VEN-179/166</span></a></li>
+      <li><a href="/card/ven-180">Kha’Zix - Evolving Hunter<span class="n">VEN-180/166</span></a></li>
+      <li><a href="/card/ven-sp2">Sona - Harmonious<span class="n">VEN-SP2/006</span></a></li>
+      <li><a href="/card/ven-sp3">Ahri - Inquisitive<span class="n">VEN-SP3/006</span></a></li>
+      <li><a href="/card/ven-sp4">Sett - Brawler<span class="n">VEN-SP4/006</span></a></li>
+      <li><a href="/card/ven-sp5">Ezreal - Prodigy<span class="n">VEN-SP5/006</span></a></li>
+      <li><a href="/card/ven-sp6">Lux - Crownguard<span class="n">VEN-SP6/006</span></a></li>
+  </ul>
+
+  <h2>Origins<span class="cnt">284枚</span></h2>
+  <ul class="cards">
+      <li><a href="/card/ogn-001">Blazing Scorcher<span class="n">OGN-001/298</span></a></li>
+      <li><a href="/card/ogn-002">Brazen Buccaneer<span class="n">OGN-002/298</span></a></li>
+      <li><a href="/card/ogn-003">Chemtech Enforcer<span class="n">OGN-003/298</span></a></li>
+      <li><a href="/card/ogn-004">Cleave<span class="n">OGN-004/298</span></a></li>
+      <li><a href="/card/ogn-005">Disintegrate<span class="n">OGN-005/298</span></a></li>
+      <li><a href="/card/ogn-006">Flame Chompers<span class="n">OGN-006/298</span></a></li>
+      <li><a href="/card/ogn-008">Get Excited!<span class="n">OGN-008/298</span></a></li>
+      <li><a href="/card/ogn-009">Hextech Ray<span class="n">OGN-009/298</span></a></li>
+      <li><a href="/card/ogn-010">Legion Rearguard<span class="n">OGN-010/298</span></a></li>
+      <li><a href="/card/ogn-011">Magma Wurm<span class="n">OGN-011/298</span></a></li>
+      <li><a href="/card/ogn-012">Noxus Hopeful<span class="n">OGN-012/298</span></a></li>
+      <li><a href="/card/ogn-013">Pouty Poro<span class="n">OGN-013/298</span></a></li>
+      <li><a href="/card/ogn-014">Sky Splitter<span class="n">OGN-014/298</span></a></li>
+      <li><a href="/card/ogn-015">Captain Farron<span class="n">OGN-015/298</span></a></li>
+      <li><a href="/card/ogn-016">Dangerous Duo<span class="n">OGN-016/298</span></a></li>
+      <li><a href="/card/ogn-017">Iron Ballista<span class="n">OGN-017/298</span></a></li>
+      <li><a href="/card/ogn-018">Noxus Saboteur<span class="n">OGN-018/298</span></a></li>
+      <li><a href="/card/ogn-019">Raging Soul<span class="n">OGN-019/298</span></a></li>
+      <li><a href="/card/ogn-020">Scrapyard Champion<span class="n">OGN-020/298</span></a></li>
+      <li><a href="/card/ogn-021">Sun Disc<span class="n">OGN-021/298</span></a></li>
+      <li><a href="/card/ogn-022">Thermo Beam<span class="n">OGN-022/298</span></a></li>
+      <li><a href="/card/ogn-023">Unlicensed Armory<span class="n">OGN-023/298</span></a></li>
+      <li><a href="/card/ogn-024">Void Seeker<span class="n">OGN-024/298</span></a></li>
+      <li><a href="/card/ogn-025">Blind Fury<span class="n">OGN-025/298</span></a></li>
+      <li><a href="/card/ogn-026">Brynhir Thundersong<span class="n">OGN-026/298</span></a></li>
+      <li><a href="/card/ogn-027">Darius - Trifarian<span class="n">OGN-027/298</span></a></li>
+      <li><a href="/card/ogn-028">Draven - Showboat<span class="n">OGN-028/298</span></a></li>
+      <li><a href="/card/ogn-029">Falling Star<span class="n">OGN-029/298</span></a></li>
+      <li><a href="/card/ogn-030">Jinx - Demolitionist<span class="n">OGN-030/298</span></a></li>
+      <li><a href="/card/ogn-031">Raging Firebrand<span class="n">OGN-031/298</span></a></li>
+      <li><a href="/card/ogn-032">Ravenborn Tome<span class="n">OGN-032/298</span></a></li>
+      <li><a href="/card/ogn-033">Shakedown<span class="n">OGN-033/298</span></a></li>
+      <li><a href="/card/ogn-034">Tryndamere - Barbarian<span class="n">OGN-034/298</span></a></li>
+      <li><a href="/card/ogn-035">Vayne - Hunter<span class="n">OGN-035/298</span></a></li>
+      <li><a href="/card/ogn-036">Vi - Destructive<span class="n">OGN-036/298</span></a></li>
+      <li><a href="/card/ogn-037">Immortal Phoenix<span class="n">OGN-037/298</span></a></li>
+      <li><a href="/card/ogn-038">Kadregrin the Infernal<span class="n">OGN-038/298</span></a></li>
+      <li><a href="/card/ogn-039">Kai&#39;Sa - Survivor<span class="n">OGN-039/298</span></a></li>
+      <li><a href="/card/ogn-040">Seal of Rage<span class="n">OGN-040/298</span></a></li>
+      <li><a href="/card/ogn-041">Volibear - Furious<span class="n">OGN-041/298</span></a></li>
+      <li><a href="/card/ogn-043">Charm<span class="n">OGN-043/298</span></a></li>
+      <li><a href="/card/ogn-044">Clockwork Keeper<span class="n">OGN-044/298</span></a></li>
+      <li><a href="/card/ogn-045">Defy<span class="n">OGN-045/298</span></a></li>
+      <li><a href="/card/ogn-046">En Garde<span class="n">OGN-046/298</span></a></li>
+      <li><a href="/card/ogn-047">Find Your Center<span class="n">OGN-047/298</span></a></li>
+      <li><a href="/card/ogn-048">Meditation<span class="n">OGN-048/298</span></a></li>
+      <li><a href="/card/ogn-050">Rune Prison<span class="n">OGN-050/298</span></a></li>
+      <li><a href="/card/ogn-051">Solari Shieldbearer<span class="n">OGN-051/298</span></a></li>
+      <li><a href="/card/ogn-052">Stalwart Poro<span class="n">OGN-052/298</span></a></li>
+      <li><a href="/card/ogn-053">Stand United<span class="n">OGN-053/298</span></a></li>
+      <li><a href="/card/ogn-054">Sunlit Guardian<span class="n">OGN-054/298</span></a></li>
+      <li><a href="/card/ogn-055">Wielder of Water<span class="n">OGN-055/298</span></a></li>
+      <li><a href="/card/ogn-056">Adaptatron<span class="n">OGN-056/298</span></a></li>
+      <li><a href="/card/ogn-057">Block<span class="n">OGN-057/298</span></a></li>
+      <li><a href="/card/ogn-058">Discipline<span class="n">OGN-058/298</span></a></li>
+      <li><a href="/card/ogn-059">Eclipse Herald<span class="n">OGN-059/298</span></a></li>
+      <li><a href="/card/ogn-060">Mask of Foresight<span class="n">OGN-060/298</span></a></li>
+      <li><a href="/card/ogn-061">Poro Herder<span class="n">OGN-061/298</span></a></li>
+      <li><a href="/card/ogn-062">Reinforce<span class="n">OGN-062/298</span></a></li>
+      <li><a href="/card/ogn-063">Spirit&#39;s Refuge<span class="n">OGN-063/298</span></a></li>
+      <li><a href="/card/ogn-064">Wind Wall<span class="n">OGN-064/298</span></a></li>
+      <li><a href="/card/ogn-065">Wizened Elder<span class="n">OGN-065/298</span></a></li>
+      <li><a href="/card/ogn-066">Ahri - Alluring<span class="n">OGN-066/298</span></a></li>
+      <li><a href="/card/ogn-067">Blitzcrank - Impassive<span class="n">OGN-067/298</span></a></li>
+      <li><a href="/card/ogn-068">Caitlyn - Patrolling<span class="n">OGN-068/298</span></a></li>
+      <li><a href="/card/ogn-069">Last Stand<span class="n">OGN-069/298</span></a></li>
+      <li><a href="/card/ogn-070">Mageseeker Warden<span class="n">OGN-070/298</span></a></li>
+      <li><a href="/card/ogn-071">Party Favors<span class="n">OGN-071/298</span></a></li>
+      <li><a href="/card/ogn-072">Solari Shrine<span class="n">OGN-072/298</span></a></li>
+      <li><a href="/card/ogn-073">Sona - Harmonious<span class="n">OGN-073/298</span></a></li>
+      <li><a href="/card/ogn-074">Taric - Protector<span class="n">OGN-074/298</span></a></li>
+      <li><a href="/card/ogn-075">Tasty Faefolk<span class="n">OGN-075/298</span></a></li>
+      <li><a href="/card/ogn-076">Yasuo - Remorseful<span class="n">OGN-076/298</span></a></li>
+      <li><a href="/card/ogn-077">Zhonya&#39;s Hourglass<span class="n">OGN-077/298</span></a></li>
+      <li><a href="/card/ogn-078">Lee Sin - Ascetic<span class="n">OGN-078/298</span></a></li>
+      <li><a href="/card/ogn-079">Leona - Zealot<span class="n">OGN-079/298</span></a></li>
+      <li><a href="/card/ogn-080">Mystic Reversal<span class="n">OGN-080/298</span></a></li>
+      <li><a href="/card/ogn-081">Seal of Focus<span class="n">OGN-081/298</span></a></li>
+      <li><a href="/card/ogn-082">Whiteflame Protector<span class="n">OGN-082/298</span></a></li>
+      <li><a href="/card/ogn-083">Consult the Past<span class="n">OGN-083/298</span></a></li>
+      <li><a href="/card/ogn-084">Eager Apprentice<span class="n">OGN-084/298</span></a></li>
+      <li><a href="/card/ogn-085">Falling Comet<span class="n">OGN-085/298</span></a></li>
+      <li><a href="/card/ogn-086">Jeweled Colossus<span class="n">OGN-086/298</span></a></li>
+      <li><a href="/card/ogn-087">Lecturing Yordle<span class="n">OGN-087/298</span></a></li>
+      <li><a href="/card/ogn-090">Orb of Regret<span class="n">OGN-090/298</span></a></li>
+      <li><a href="/card/ogn-091">Pit Crew<span class="n">OGN-091/298</span></a></li>
+      <li><a href="/card/ogn-092">Riptide Rex<span class="n">OGN-092/298</span></a></li>
+      <li><a href="/card/ogn-093">Smoke Screen<span class="n">OGN-093/298</span></a></li>
+      <li><a href="/card/ogn-094">Sprite Call<span class="n">OGN-094/298</span></a></li>
+      <li><a href="/card/ogn-095">Stupefy<span class="n">OGN-095/298</span></a></li>
+      <li><a href="/card/ogn-096">Watchful Sentry<span class="n">OGN-096/298</span></a></li>
+      <li><a href="/card/ogn-097">Blastcone Fae<span class="n">OGN-097/298</span></a></li>
+      <li><a href="/card/ogn-098">Energy Conduit<span class="n">OGN-098/298</span></a></li>
+      <li><a href="/card/ogn-099">Garbage Grabber<span class="n">OGN-099/298</span></a></li>
+      <li><a href="/card/ogn-100">Gemcraft Seer<span class="n">OGN-100/298</span></a></li>
+      <li><a href="/card/ogn-101">Mushroom Pouch<span class="n">OGN-101/298</span></a></li>
+      <li><a href="/card/ogn-102">Portal Rescue<span class="n">OGN-102/298</span></a></li>
+      <li><a href="/card/ogn-103">Ravenbloom Student<span class="n">OGN-103/298</span></a></li>
+      <li><a href="/card/ogn-104">Retreat<span class="n">OGN-104/298</span></a></li>
+      <li><a href="/card/ogn-105">Singularity<span class="n">OGN-105/298</span></a></li>
+      <li><a href="/card/ogn-106">Sprite Mother<span class="n">OGN-106/298</span></a></li>
+      <li><a href="/card/ogn-107">Ava Achiever<span class="n">OGN-107/298</span></a></li>
+      <li><a href="/card/ogn-108">Convergent Mutation<span class="n">OGN-108/298</span></a></li>
+      <li><a href="/card/ogn-109">Dr. Mundo - Expert<span class="n">OGN-109/298</span></a></li>
+      <li><a href="/card/ogn-110">Ekko - Recurrent<span class="n">OGN-110/298</span></a></li>
+      <li><a href="/card/ogn-111">Heimerdinger - Inventor<span class="n">OGN-111/298</span></a></li>
+      <li><a href="/card/ogn-112">Kai&#39;Sa - Evolutionary<span class="n">OGN-112/298</span></a></li>
+      <li><a href="/card/ogn-113">Malzahar - Fanatic<span class="n">OGN-113/298</span></a></li>
+      <li><a href="/card/ogn-114">Progress Day<span class="n">OGN-114/298</span></a></li>
+      <li><a href="/card/ogn-115">Promising Future<span class="n">OGN-115/298</span></a></li>
+      <li><a href="/card/ogn-116">Thousand-Tailed Watcher<span class="n">OGN-116/298</span></a></li>
+      <li><a href="/card/ogn-117">Viktor - Innovator<span class="n">OGN-117/298</span></a></li>
+      <li><a href="/card/ogn-118">Wraith of Echoes<span class="n">OGN-118/298</span></a></li>
+      <li><a href="/card/ogn-119">Ahri - Inquisitive<span class="n">OGN-119/298</span></a></li>
+      <li><a href="/card/ogn-120">Seal of Insight<span class="n">OGN-120/298</span></a></li>
+      <li><a href="/card/ogn-121">Teemo - Strategist<span class="n">OGN-121/298</span></a></li>
+      <li><a href="/card/ogn-122">Time Warp<span class="n">OGN-122/298</span></a></li>
+      <li><a href="/card/ogn-123">Unchecked Power<span class="n">OGN-123/298</span></a></li>
+      <li><a href="/card/ogn-124">Arena Bar<span class="n">OGN-124/298</span></a></li>
+      <li><a href="/card/ogn-125">Bilgewater Bully<span class="n">OGN-125/298</span></a></li>
+      <li><a href="/card/ogn-127">Cannon Barrage<span class="n">OGN-127/298</span></a></li>
+      <li><a href="/card/ogn-128">Challenge<span class="n">OGN-128/298</span></a></li>
+      <li><a href="/card/ogn-129">Confront<span class="n">OGN-129/298</span></a></li>
+      <li><a href="/card/ogn-130">Crackshot Corsair<span class="n">OGN-130/298</span></a></li>
+      <li><a href="/card/ogn-131">Dune Drake<span class="n">OGN-131/298</span></a></li>
+      <li><a href="/card/ogn-132">First Mate<span class="n">OGN-132/298</span></a></li>
+      <li><a href="/card/ogn-133">Flurry of Blades<span class="n">OGN-133/298</span></a></li>
+      <li><a href="/card/ogn-134">Mobilize<span class="n">OGN-134/298</span></a></li>
+      <li><a href="/card/ogn-135">Pakaa Cub<span class="n">OGN-135/298</span></a></li>
+      <li><a href="/card/ogn-136">Pit Rookie<span class="n">OGN-136/298</span></a></li>
+      <li><a href="/card/ogn-137">Stormclaw Ursine<span class="n">OGN-137/298</span></a></li>
+      <li><a href="/card/ogn-138">Catalyst of Aeons<span class="n">OGN-138/298</span></a></li>
+      <li><a href="/card/ogn-139">Cithria of Cloudfield<span class="n">OGN-139/298</span></a></li>
+      <li><a href="/card/ogn-140">Herald of Scales<span class="n">OGN-140/298</span></a></li>
+      <li><a href="/card/ogn-141">Kinkou Monk<span class="n">OGN-141/298</span></a></li>
+      <li><a href="/card/ogn-143">Pirate&#39;s Haven<span class="n">OGN-143/298</span></a></li>
+      <li><a href="/card/ogn-144">Spoils of War<span class="n">OGN-144/298</span></a></li>
+      <li><a href="/card/ogn-145">Unyielding Spirit<span class="n">OGN-145/298</span></a></li>
+      <li><a href="/card/ogn-146">Wallop<span class="n">OGN-146/298</span></a></li>
+      <li><a href="/card/ogn-147">Wildclaw Shaman<span class="n">OGN-147/298</span></a></li>
+      <li><a href="/card/ogn-148">Anivia - Primal<span class="n">OGN-148/298</span></a></li>
+      <li><a href="/card/ogn-149">Carnivorous Snapvine<span class="n">OGN-149/298</span></a></li>
+      <li><a href="/card/ogn-150">Kraken Hunter<span class="n">OGN-150/298</span></a></li>
+      <li><a href="/card/ogn-151">Lee Sin - Centered<span class="n">OGN-151/298</span></a></li>
+      <li><a href="/card/ogn-152">Mistfall<span class="n">OGN-152/298</span></a></li>
+      <li><a href="/card/ogn-153">Overt Operation<span class="n">OGN-153/298</span></a></li>
+      <li><a href="/card/ogn-154">Primal Strength<span class="n">OGN-154/298</span></a></li>
+      <li><a href="/card/ogn-155">Qiyana - Victorious<span class="n">OGN-155/298</span></a></li>
+      <li><a href="/card/ogn-156">Sabotage<span class="n">OGN-156/298</span></a></li>
+      <li><a href="/card/ogn-157">Udyr - Wildman<span class="n">OGN-157/298</span></a></li>
+      <li><a href="/card/ogn-158">Volibear - Imposing<span class="n">OGN-158/298</span></a></li>
+      <li><a href="/card/ogn-159">Warwick - Hunter<span class="n">OGN-159/298</span></a></li>
+      <li><a href="/card/ogn-160">Dazzling Aurora<span class="n">OGN-160/298</span></a></li>
+      <li><a href="/card/ogn-161">Deadbloom Predator<span class="n">OGN-161/298</span></a></li>
+      <li><a href="/card/ogn-162">Miss Fortune - Captain<span class="n">OGN-162/298</span></a></li>
+      <li><a href="/card/ogn-163">Seal of Strength<span class="n">OGN-163/298</span></a></li>
+      <li><a href="/card/ogn-164">Sett - Brawler<span class="n">OGN-164/298</span></a></li>
+      <li><a href="/card/ogn-165">Cemetery Attendant<span class="n">OGN-165/298</span></a></li>
+      <li><a href="/card/ogn-167">Ember Monk<span class="n">OGN-167/298</span></a></li>
+      <li><a href="/card/ogn-168">Fight or Flight<span class="n">OGN-168/298</span></a></li>
+      <li><a href="/card/ogn-169">Gust<span class="n">OGN-169/298</span></a></li>
+      <li><a href="/card/ogn-170">Morbid Return<span class="n">OGN-170/298</span></a></li>
+      <li><a href="/card/ogn-171">Mystic Poro<span class="n">OGN-171/298</span></a></li>
+      <li><a href="/card/ogn-172">Rebuke<span class="n">OGN-172/298</span></a></li>
+      <li><a href="/card/ogn-173">Ride the Wind<span class="n">OGN-173/298</span></a></li>
+      <li><a href="/card/ogn-174">Sai Scout<span class="n">OGN-174/298</span></a></li>
+      <li><a href="/card/ogn-176">Sneaky Deckhand<span class="n">OGN-176/298</span></a></li>
+      <li><a href="/card/ogn-177">Stealthy Pursuer<span class="n">OGN-177/298</span></a></li>
+      <li><a href="/card/ogn-178">Undercover Agent<span class="n">OGN-178/298</span></a></li>
+      <li><a href="/card/ogn-179">Acceptable Losses<span class="n">OGN-179/298</span></a></li>
+      <li><a href="/card/ogn-180">Fading Memories<span class="n">OGN-180/298</span></a></li>
+      <li><a href="/card/ogn-181">Pack of Wonders<span class="n">OGN-181/298</span></a></li>
+      <li><a href="/card/ogn-182">Scrapheap<span class="n">OGN-182/298</span></a></li>
+      <li><a href="/card/ogn-183">Stacked Deck<span class="n">OGN-183/298</span></a></li>
+      <li><a href="/card/ogn-184">The Syren<span class="n">OGN-184/298</span></a></li>
+      <li><a href="/card/ogn-185">Traveling Merchant<span class="n">OGN-185/298</span></a></li>
+      <li><a href="/card/ogn-186">Treasure Trove<span class="n">OGN-186/298</span></a></li>
+      <li><a href="/card/ogn-187">Whirlwind<span class="n">OGN-187/298</span></a></li>
+      <li><a href="/card/ogn-188">Zaunite Bouncer<span class="n">OGN-188/298</span></a></li>
+      <li><a href="/card/ogn-189">Kayn - Unleashed<span class="n">OGN-189/298</span></a></li>
+      <li><a href="/card/ogn-190">Kog&#39;Maw - Caustic<span class="n">OGN-190/298</span></a></li>
+      <li><a href="/card/ogn-191">Maddened Marauder<span class="n">OGN-191/298</span></a></li>
+      <li><a href="/card/ogn-192">Mindsplitter<span class="n">OGN-192/298</span></a></li>
+      <li><a href="/card/ogn-193">Miss Fortune - Buccaneer<span class="n">OGN-193/298</span></a></li>
+      <li><a href="/card/ogn-194">Nocturne - Horrifying<span class="n">OGN-194/298</span></a></li>
+      <li><a href="/card/ogn-195">Rhasa the Sunderer<span class="n">OGN-195/298</span></a></li>
+      <li><a href="/card/ogn-196">Soulgorger<span class="n">OGN-196/298</span></a></li>
+      <li><a href="/card/ogn-197">Teemo - Scout<span class="n">OGN-197/298</span></a></li>
+      <li><a href="/card/ogn-198">The Harrowing<span class="n">OGN-198/298</span></a></li>
+      <li><a href="/card/ogn-199">Tideturner<span class="n">OGN-199/298</span></a></li>
+      <li><a href="/card/ogn-200">Twisted Fate - Gambler<span class="n">OGN-200/298</span></a></li>
+      <li><a href="/card/ogn-201">Invert Timelines<span class="n">OGN-201/298</span></a></li>
+      <li><a href="/card/ogn-202">Jinx - Rebel<span class="n">OGN-202/298</span></a></li>
+      <li><a href="/card/ogn-203">Possession<span class="n">OGN-203/298</span></a></li>
+      <li><a href="/card/ogn-204">Seal of Discord<span class="n">OGN-204/298</span></a></li>
+      <li><a href="/card/ogn-205">Yasuo - Windrider<span class="n">OGN-205/298</span></a></li>
+      <li><a href="/card/ogn-206">Back to Back<span class="n">OGN-206/298</span></a></li>
+      <li><a href="/card/ogn-207">Call to Glory<span class="n">OGN-207/298</span></a></li>
+      <li><a href="/card/ogn-208">Cruel Patron<span class="n">OGN-208/298</span></a></li>
+      <li><a href="/card/ogn-209">Cull the Weak<span class="n">OGN-209/298</span></a></li>
+      <li><a href="/card/ogn-210">Daring Poro<span class="n">OGN-210/298</span></a></li>
+      <li><a href="/card/ogn-211">Faithful Manufactor<span class="n">OGN-211/298</span></a></li>
+      <li><a href="/card/ogn-212">Forge of the Future<span class="n">OGN-212/298</span></a></li>
+      <li><a href="/card/ogn-213">Hidden Blade<span class="n">OGN-213/298</span></a></li>
+      <li><a href="/card/ogn-215">Petty Officer<span class="n">OGN-215/298</span></a></li>
+      <li><a href="/card/ogn-216">Soaring Scout<span class="n">OGN-216/298</span></a></li>
+      <li><a href="/card/ogn-217">Trifarian Gloryseeker<span class="n">OGN-217/298</span></a></li>
+      <li><a href="/card/ogn-218">Vanguard Captain<span class="n">OGN-218/298</span></a></li>
+      <li><a href="/card/ogn-220">Facebreaker<span class="n">OGN-220/298</span></a></li>
+      <li><a href="/card/ogn-221">Imperial Decree<span class="n">OGN-221/298</span></a></li>
+      <li><a href="/card/ogn-222">Noxian Drummer<span class="n">OGN-222/298</span></a></li>
+      <li><a href="/card/ogn-223">Peak Guardian<span class="n">OGN-223/298</span></a></li>
+      <li><a href="/card/ogn-224">Salvage<span class="n">OGN-224/298</span></a></li>
+      <li><a href="/card/ogn-225">Solari Chief<span class="n">OGN-225/298</span></a></li>
+      <li><a href="/card/ogn-226">Spectral Matron<span class="n">OGN-226/298</span></a></li>
+      <li><a href="/card/ogn-227">Symbol of the Solari<span class="n">OGN-227/298</span></a></li>
+      <li><a href="/card/ogn-228">Vanguard Helm<span class="n">OGN-228/298</span></a></li>
+      <li><a href="/card/ogn-229">Vengeance<span class="n">OGN-229/298</span></a></li>
+      <li><a href="/card/ogn-230">Albus Ferros<span class="n">OGN-230/298</span></a></li>
+      <li><a href="/card/ogn-231">Commander Ledros<span class="n">OGN-231/298</span></a></li>
+      <li><a href="/card/ogn-232">Fiora - Victorious<span class="n">OGN-232/298</span></a></li>
+      <li><a href="/card/ogn-233">Grand Strategem<span class="n">OGN-233/298</span></a></li>
+      <li><a href="/card/ogn-234">Harnessed Dragon<span class="n">OGN-234/298</span></a></li>
+      <li><a href="/card/ogn-235">Karma - Channeler<span class="n">OGN-235/298</span></a></li>
+      <li><a href="/card/ogn-236">Karthus - Eternal<span class="n">OGN-236/298</span></a></li>
+      <li><a href="/card/ogn-237">King&#39;s Edict<span class="n">OGN-237/298</span></a></li>
+      <li><a href="/card/ogn-238">Leona - Determined<span class="n">OGN-238/298</span></a></li>
+      <li><a href="/card/ogn-239">Machine Evangel<span class="n">OGN-239/298</span></a></li>
+      <li><a href="/card/ogn-240">Sett - Kingpin<span class="n">OGN-240/298</span></a></li>
+      <li><a href="/card/ogn-241">Shen - Kinkou<span class="n">OGN-241/298</span></a></li>
+      <li><a href="/card/ogn-242">Baited Hook<span class="n">OGN-242/298</span></a></li>
+      <li><a href="/card/ogn-243">Darius - Executioner<span class="n">OGN-243/298</span></a></li>
+      <li><a href="/card/ogn-244">Divine Judgment<span class="n">OGN-244/298</span></a></li>
+      <li><a href="/card/ogn-245">Seal of Unity<span class="n">OGN-245/298</span></a></li>
+      <li><a href="/card/ogn-246">Viktor - Leader<span class="n">OGN-246/298</span></a></li>
+      <li><a href="/card/ogn-247">Kai&#39;Sa - Daughter of the Void<span class="n">OGN-247/298</span></a></li>
+      <li><a href="/card/ogn-248">Icathian Rain<span class="n">OGN-248/298</span></a></li>
+      <li><a href="/card/ogn-249">Volibear - Relentless Storm<span class="n">OGN-249/298</span></a></li>
+      <li><a href="/card/ogn-250">Stormbringer<span class="n">OGN-250/298</span></a></li>
+      <li><a href="/card/ogn-251">Jinx - Loose Cannon<span class="n">OGN-251/298</span></a></li>
+      <li><a href="/card/ogn-252">Super Mega Death Rocket!<span class="n">OGN-252/298</span></a></li>
+      <li><a href="/card/ogn-253">Darius - Hand of Noxus<span class="n">OGN-253/298</span></a></li>
+      <li><a href="/card/ogn-254">Noxian Guillotine<span class="n">OGN-254/298</span></a></li>
+      <li><a href="/card/ogn-255">Ahri - Nine-Tailed Fox<span class="n">OGN-255/298</span></a></li>
+      <li><a href="/card/ogn-256">Fox-Fire<span class="n">OGN-256/298</span></a></li>
+      <li><a href="/card/ogn-257">Lee Sin - Blind Monk<span class="n">OGN-257/298</span></a></li>
+      <li><a href="/card/ogn-258">Dragon&#39;s Rage<span class="n">OGN-258/298</span></a></li>
+      <li><a href="/card/ogn-259">Yasuo - Unforgiven<span class="n">OGN-259/298</span></a></li>
+      <li><a href="/card/ogn-260">Last Breath<span class="n">OGN-260/298</span></a></li>
+      <li><a href="/card/ogn-261">Leona - Radiant Dawn<span class="n">OGN-261/298</span></a></li>
+      <li><a href="/card/ogn-262">Zenith Blade<span class="n">OGN-262/298</span></a></li>
+      <li><a href="/card/ogn-263">Teemo - Swift Scout<span class="n">OGN-263/298</span></a></li>
+      <li><a href="/card/ogn-264">Guerilla Warfare<span class="n">OGN-264/298</span></a></li>
+      <li><a href="/card/ogn-265">Viktor - Herald of the Arcane<span class="n">OGN-265/298</span></a></li>
+      <li><a href="/card/ogn-266">Siphon Power<span class="n">OGN-266/298</span></a></li>
+      <li><a href="/card/ogn-267">Miss Fortune - Bounty Hunter<span class="n">OGN-267/298</span></a></li>
+      <li><a href="/card/ogn-268">Bullet Time<span class="n">OGN-268/298</span></a></li>
+      <li><a href="/card/ogn-269">Sett - The Boss<span class="n">OGN-269/298</span></a></li>
+      <li><a href="/card/ogn-270">Showstopper<span class="n">OGN-270/298</span></a></li>
+      <li><a href="/card/ogn-274">Sprite<span class="n">OGN-274/298</span></a></li>
+      <li><a href="/card/ogn-275">Altar to Unity<span class="n">OGN-275/298</span></a></li>
+      <li><a href="/card/ogn-276">Aspirant&#39;s Climb<span class="n">OGN-276/298</span></a></li>
+      <li><a href="/card/ogn-277">Back-Alley Bar<span class="n">OGN-277/298</span></a></li>
+      <li><a href="/card/ogn-278">Bandle Tree<span class="n">OGN-278/298</span></a></li>
+      <li><a href="/card/ogn-279">Fortified Position<span class="n">OGN-279/298</span></a></li>
+      <li><a href="/card/ogn-280">Grove of the God-Willow<span class="n">OGN-280/298</span></a></li>
+      <li><a href="/card/ogn-281">Hallowed Tomb<span class="n">OGN-281/298</span></a></li>
+      <li><a href="/card/ogn-282">Monastery of Hirana<span class="n">OGN-282/298</span></a></li>
+      <li><a href="/card/ogn-283">Navori Fighting Pit<span class="n">OGN-283/298</span></a></li>
+      <li><a href="/card/ogn-284">Obelisk of Power<span class="n">OGN-284/298</span></a></li>
+      <li><a href="/card/ogn-285">Reaver&#39;s Row<span class="n">OGN-285/298</span></a></li>
+      <li><a href="/card/ogn-286">Reckoner&#39;s Arena<span class="n">OGN-286/298</span></a></li>
+      <li><a href="/card/ogn-287">Sigil of the Storm<span class="n">OGN-287/298</span></a></li>
+      <li><a href="/card/ogn-288">Startipped Peak<span class="n">OGN-288/298</span></a></li>
+      <li><a href="/card/ogn-289">Targon&#39;s Peak<span class="n">OGN-289/298</span></a></li>
+      <li><a href="/card/ogn-290">The Arena&#39;s Greatest<span class="n">OGN-290/298</span></a></li>
+      <li><a href="/card/ogn-291">The Candlelit Sanctum<span class="n">OGN-291/298</span></a></li>
+      <li><a href="/card/ogn-292">The Dreaming Tree<span class="n">OGN-292/298</span></a></li>
+      <li><a href="/card/ogn-293">The Grand Plaza<span class="n">OGN-293/298</span></a></li>
+      <li><a href="/card/ogn-294">Trifarian War Camp<span class="n">OGN-294/298</span></a></li>
+      <li><a href="/card/ogn-295">Vilemaw&#39;s Lair<span class="n">OGN-295/298</span></a></li>
+      <li><a href="/card/ogn-296">Void Gate<span class="n">OGN-296/298</span></a></li>
+      <li><a href="/card/ogn-297">Windswept Hillock<span class="n">OGN-297/298</span></a></li>
+      <li><a href="/card/ogn-298">Zaun Warrens<span class="n">OGN-298/298</span></a></li>
+  </ul>
+
+  <h2>Spiritforged<span class="cnt">222枚</span></h2>
+  <ul class="cards">
+      <li><a href="/card/sfd-001">Against the Odds<span class="n">SFD-001/221</span></a></li>
+      <li><a href="/card/sfd-002">Armed Assailant<span class="n">SFD-002/221</span></a></li>
+      <li><a href="/card/sfd-003">Blood Rush<span class="n">SFD-003/221</span></a></li>
+      <li><a href="/card/sfd-004">Bushwhack<span class="n">SFD-004/221</span></a></li>
+      <li><a href="/card/sfd-005">Detonate<span class="n">SFD-005/221</span></a></li>
+      <li><a href="/card/sfd-006">Eager Drakehound<span class="n">SFD-006/221</span></a></li>
+      <li><a href="/card/sfd-007">Gem Jammer<span class="n">SFD-007/221</span></a></li>
+      <li><a href="/card/sfd-008">Sentinel Adept<span class="n">SFD-008/221</span></a></li>
+      <li><a href="/card/sfd-009">Serrated Dirk<span class="n">SFD-009/221</span></a></li>
+      <li><a href="/card/sfd-010">Void Drone<span class="n">SFD-010/221</span></a></li>
+      <li><a href="/card/sfd-011">Angle Shot<span class="n">SFD-011/221</span></a></li>
+      <li><a href="/card/sfd-012">Battering Ram<span class="n">SFD-012/221</span></a></li>
+      <li><a href="/card/sfd-013">Blast Corps Cadet<span class="n">SFD-013/221</span></a></li>
+      <li><a href="/card/sfd-014">Minotaur Reckoner<span class="n">SFD-014/221</span></a></li>
+      <li><a href="/card/sfd-015">Perched Grimwyrm<span class="n">SFD-015/221</span></a></li>
+      <li><a href="/card/sfd-016">Recurve Bow<span class="n">SFD-016/221</span></a></li>
+      <li><a href="/card/sfd-017">Sudden Storm<span class="n">SFD-017/221</span></a></li>
+      <li><a href="/card/sfd-018">Void Hatchling<span class="n">SFD-018/221</span></a></li>
+      <li><a href="/card/sfd-019">Assembly Rig<span class="n">SFD-019/221</span></a></li>
+      <li><a href="/card/sfd-020">Draven - Vanquisher<span class="n">SFD-020/221</span></a></li>
+      <li><a href="/card/sfd-021">Ferrous Forerunner<span class="n">SFD-021/221</span></a></li>
+      <li><a href="/card/sfd-022">Long Sword<span class="n">SFD-022/221</span></a></li>
+      <li><a href="/card/sfd-023">Piercing Light<span class="n">SFD-023/221</span></a></li>
+      <li><a href="/card/sfd-024">Rell - Magnetic<span class="n">SFD-024/221</span></a></li>
+      <li><a href="/card/sfd-025">Rengar - Pouncing<span class="n">SFD-025/221</span></a></li>
+      <li><a href="/card/sfd-026">Rumble - Hotheaded<span class="n">SFD-026/221</span></a></li>
+      <li><a href="/card/sfd-027">Dunebreaker<span class="n">SFD-027/221</span></a></li>
+      <li><a href="/card/sfd-028">Lucian - Gunslinger<span class="n">SFD-028/221</span></a></li>
+      <li><a href="/card/sfd-029">Rek&#39;Sai - Breacher<span class="n">SFD-029/221</span></a></li>
+      <li><a href="/card/sfd-030">Skyfall of Areion<span class="n">SFD-030/221</span></a></li>
+      <li><a href="/card/sfd-031">Desert&#39;s Call<span class="n">SFD-031/221</span></a></li>
+      <li><a href="/card/sfd-032">Disarming Rake<span class="n">SFD-032/221</span></a></li>
+      <li><a href="/card/sfd-033">Doran&#39;s Shield<span class="n">SFD-033/221</span></a></li>
+      <li><a href="/card/sfd-034">Feral Strength<span class="n">SFD-034/221</span></a></li>
+      <li><a href="/card/sfd-035">Guardian of the Passage<span class="n">SFD-035/221</span></a></li>
+      <li><a href="/card/sfd-036">Lonely Poro<span class="n">SFD-036/221</span></a></li>
+      <li><a href="/card/sfd-037">Navori Scout<span class="n">SFD-037/221</span></a></li>
+      <li><a href="/card/sfd-038">Ribbon Dancer<span class="n">SFD-038/221</span></a></li>
+      <li><a href="/card/sfd-039">Royal Entourage<span class="n">SFD-039/221</span></a></li>
+      <li><a href="/card/sfd-040">Thwonk!<span class="n">SFD-040/221</span></a></li>
+      <li><a href="/card/sfd-041">Apprentice Smith<span class="n">SFD-041/221</span></a></li>
+      <li><a href="/card/sfd-042">Brutalizer<span class="n">SFD-042/221</span></a></li>
+      <li><a href="/card/sfd-043">Emperor&#39;s Divide<span class="n">SFD-043/221</span></a></li>
+      <li><a href="/card/sfd-044">Legion Quartermaster<span class="n">SFD-044/221</span></a></li>
+      <li><a href="/card/sfd-045">Not So Fast<span class="n">SFD-045/221</span></a></li>
+      <li><a href="/card/sfd-046">Poro Snax<span class="n">SFD-046/221</span></a></li>
+      <li><a href="/card/sfd-047">Simian Ancestor<span class="n">SFD-047/221</span></a></li>
+      <li><a href="/card/sfd-048">Stellacorn Herder<span class="n">SFD-048/221</span></a></li>
+      <li><a href="/card/sfd-049">Aphelios - Exalted<span class="n">SFD-049/221</span></a></li>
+      <li><a href="/card/sfd-050">Azir - Ascendant<span class="n">SFD-050/221</span></a></li>
+      <li><a href="/card/sfd-051">Guardian Angel<span class="n">SFD-051/221</span></a></li>
+      <li><a href="/card/sfd-052">Heart of Dark Ice<span class="n">SFD-052/221</span></a></li>
+      <li><a href="/card/sfd-053">Janna - Savior<span class="n">SFD-053/221</span></a></li>
+      <li><a href="/card/sfd-054">Jax - Unmatched<span class="n">SFD-054/221</span></a></li>
+      <li><a href="/card/sfd-055">Needlessly Large Yordle<span class="n">SFD-055/221</span></a></li>
+      <li><a href="/card/sfd-056">Sterak&#39;s Gage<span class="n">SFD-056/221</span></a></li>
+      <li><a href="/card/sfd-057">Irelia - Fervent<span class="n">SFD-057/221</span></a></li>
+      <li><a href="/card/sfd-058">Ornn - Blacksmith<span class="n">SFD-058/221</span></a></li>
+      <li><a href="/card/sfd-059">Svellsongur<span class="n">SFD-059/221</span></a></li>
+      <li><a href="/card/sfd-060">Tianna Crownguard<span class="n">SFD-060/221</span></a></li>
+      <li><a href="/card/sfd-061">Aspiring Engineer<span class="n">SFD-061/221</span></a></li>
+      <li><a href="/card/sfd-062">Bubble Bot<span class="n">SFD-062/221</span></a></li>
+      <li><a href="/card/sfd-063">Chemtech Cask<span class="n">SFD-063/221</span></a></li>
+      <li><a href="/card/sfd-064">Cloth Armor<span class="n">SFD-064/221</span></a></li>
+      <li><a href="/card/sfd-065">Forecaster<span class="n">SFD-065/221</span></a></li>
+      <li><a href="/card/sfd-066">Frigid Touch<span class="n">SFD-066/221</span></a></li>
+      <li><a href="/card/sfd-067">Frostcoat Cub<span class="n">SFD-067/221</span></a></li>
+      <li><a href="/card/sfd-068">Gearhead<span class="n">SFD-068/221</span></a></li>
+      <li><a href="/card/sfd-069">Plundering Poro<span class="n">SFD-069/221</span></a></li>
+      <li><a href="/card/sfd-070">Wages of Pain<span class="n">SFD-070/221</span></a></li>
+      <li><a href="/card/sfd-071">Breakneck Mech<span class="n">SFD-071/221</span></a></li>
+      <li><a href="/card/sfd-072">Dropboarder<span class="n">SFD-072/221</span></a></li>
+      <li><a href="/card/sfd-073">Experimental Hexplate<span class="n">SFD-073/221</span></a></li>
+      <li><a href="/card/sfd-074">Pickpocket<span class="n">SFD-074/221</span></a></li>
+      <li><a href="/card/sfd-075">Prize of Progress<span class="n">SFD-075/221</span></a></li>
+      <li><a href="/card/sfd-076">Production Surge<span class="n">SFD-076/221</span></a></li>
+      <li><a href="/card/sfd-077">Rocket Barrage<span class="n">SFD-077/221</span></a></li>
+      <li><a href="/card/sfd-078">Temporal Portal<span class="n">SFD-078/221</span></a></li>
+      <li><a href="/card/sfd-079">Bard - Mercurial<span class="n">SFD-079/221</span></a></li>
+      <li><a href="/card/sfd-080">Bellows Breath<span class="n">SFD-080/221</span></a></li>
+      <li><a href="/card/sfd-081">Card Sharp<span class="n">SFD-081/221</span></a></li>
+      <li><a href="/card/sfd-082">Ezreal - Dashing<span class="n">SFD-082/221</span></a></li>
+      <li><a href="/card/sfd-083">Hextech Anomaly<span class="n">SFD-083/221</span></a></li>
+      <li><a href="/card/sfd-084">Jayce - Man of Progress<span class="n">SFD-084/221</span></a></li>
+      <li><a href="/card/sfd-085">Ornn - Forge God<span class="n">SFD-085/221</span></a></li>
+      <li><a href="/card/sfd-086">World Atlas<span class="n">SFD-086/221</span></a></li>
+      <li><a href="/card/sfd-087">Premonition<span class="n">SFD-087/221</span></a></li>
+      <li><a href="/card/sfd-088">Renata Glasc - Mastermind<span class="n">SFD-088/221</span></a></li>
+      <li><a href="/card/sfd-089">Rumble - Scrapper<span class="n">SFD-089/221</span></a></li>
+      <li><a href="/card/sfd-090">The Zero Drive<span class="n">SFD-090/221</span></a></li>
+      <li><a href="/card/sfd-091">Buhru Captain<span class="n">SFD-091/221</span></a></li>
+      <li><a href="/card/sfd-092">Combat Chef<span class="n">SFD-092/221</span></a></li>
+      <li><a href="/card/sfd-093">Dauntless Vanguard<span class="n">SFD-093/221</span></a></li>
+      <li><a href="/card/sfd-094">Direwing<span class="n">SFD-094/221</span></a></li>
+      <li><a href="/card/sfd-095">Doran&#39;s Blade<span class="n">SFD-095/221</span></a></li>
+      <li><a href="/card/sfd-096">Laurent Bladekeeper<span class="n">SFD-096/221</span></a></li>
+      <li><a href="/card/sfd-097">Punch First<span class="n">SFD-097/221</span></a></li>
+      <li><a href="/card/sfd-098">Sea Monkey<span class="n">SFD-098/221</span></a></li>
+      <li><a href="/card/sfd-099">Veteran Poro<span class="n">SFD-099/221</span></a></li>
+      <li><a href="/card/sfd-100">Yordle Explorer<span class="n">SFD-100/221</span></a></li>
+      <li><a href="/card/sfd-101">Fae Dragon<span class="n">SFD-101/221</span></a></li>
+      <li><a href="/card/sfd-102">Hexdrinker<span class="n">SFD-102/221</span></a></li>
+      <li><a href="/card/sfd-103">Jaull-Fish<span class="n">SFD-103/221</span></a></li>
+      <li><a href="/card/sfd-104">Petricite Monument<span class="n">SFD-104/221</span></a></li>
+      <li><a href="/card/sfd-105">Ruin Runner<span class="n">SFD-105/221</span></a></li>
+      <li><a href="/card/sfd-106">Show of Strength<span class="n">SFD-106/221</span></a></li>
+      <li><a href="/card/sfd-107">Strike Down<span class="n">SFD-107/221</span></a></li>
+      <li><a href="/card/sfd-108">Warmog&#39;s Armor<span class="n">SFD-108/221</span></a></li>
+      <li><a href="/card/sfd-109">Akshan - Mischievous<span class="n">SFD-109/221</span></a></li>
+      <li><a href="/card/sfd-110">Fiora - Peerless<span class="n">SFD-110/221</span></a></li>
+      <li><a href="/card/sfd-111">Here to Help<span class="n">SFD-111/221</span></a></li>
+      <li><a href="/card/sfd-112">Kato the Arm<span class="n">SFD-112/221</span></a></li>
+      <li><a href="/card/sfd-113">Lucian - Merciless<span class="n">SFD-113/221</span></a></li>
+      <li><a href="/card/sfd-114">Marching Orders<span class="n">SFD-114/221</span></a></li>
+      <li><a href="/card/sfd-115">Trinity Force<span class="n">SFD-115/221</span></a></li>
+      <li><a href="/card/sfd-116">Yone - Blademaster<span class="n">SFD-116/221</span></a></li>
+      <li><a href="/card/sfd-117">Ancient Henge<span class="n">SFD-117/221</span></a></li>
+      <li><a href="/card/sfd-118">Boneshiver<span class="n">SFD-118/221</span></a></li>
+      <li><a href="/card/sfd-119">Jax - Unrelenting<span class="n">SFD-119/221</span></a></li>
+      <li><a href="/card/sfd-120">Sivir - Ambitious<span class="n">SFD-120/221</span></a></li>
+      <li><a href="/card/sfd-121">Black Market Broker<span class="n">SFD-121/221</span></a></li>
+      <li><a href="/card/sfd-122">Called Shot<span class="n">SFD-122/221</span></a></li>
+      <li><a href="/card/sfd-123">Corrupt Enforcer<span class="n">SFD-123/221</span></a></li>
+      <li><a href="/card/sfd-124">Doran&#39;s Ring<span class="n">SFD-124/221</span></a></li>
+      <li><a href="/card/sfd-125">Fae Porter<span class="n">SFD-125/221</span></a></li>
+      <li><a href="/card/sfd-126">Loyal Pup<span class="n">SFD-126/221</span></a></li>
+      <li><a href="/card/sfd-127">Master Bingwen<span class="n">SFD-127/221</span></a></li>
+      <li><a href="/card/sfd-128">Overzealous Fan<span class="n">SFD-128/221</span></a></li>
+      <li><a href="/card/sfd-129">Temptation<span class="n">SFD-129/221</span></a></li>
+      <li><a href="/card/sfd-130">Treasure Hunter<span class="n">SFD-130/221</span></a></li>
+      <li><a href="/card/sfd-131">Ancient Warmonger<span class="n">SFD-131/221</span></a></li>
+      <li><a href="/card/sfd-132">Beast Below<span class="n">SFD-132/221</span></a></li>
+      <li><a href="/card/sfd-133">Boots of Swiftness<span class="n">SFD-133/221</span></a></li>
+      <li><a href="/card/sfd-134">Cull<span class="n">SFD-134/221</span></a></li>
+      <li><a href="/card/sfd-135">Factory Recall<span class="n">SFD-135/221</span></a></li>
+      <li><a href="/card/sfd-136">Hard Bargain<span class="n">SFD-136/221</span></a></li>
+      <li><a href="/card/sfd-137">Harpoon Squad<span class="n">SFD-137/221</span></a></li>
+      <li><a href="/card/sfd-138">Windsinger<span class="n">SFD-138/221</span></a></li>
+      <li><a href="/card/sfd-139">Edge of Night<span class="n">SFD-139/221</span></a></li>
+      <li><a href="/card/sfd-140">Fizz - Trickster<span class="n">SFD-140/221</span></a></li>
+      <li><a href="/card/sfd-141">Irelia - Graceful<span class="n">SFD-141/221</span></a></li>
+      <li><a href="/card/sfd-142">Jae Medarda<span class="n">SFD-142/221</span></a></li>
+      <li><a href="/card/sfd-143">Sivir - Mercenary<span class="n">SFD-143/221</span></a></li>
+      <li><a href="/card/sfd-144">Spirit Wheel<span class="n">SFD-144/221</span></a></li>
+      <li><a href="/card/sfd-145">Switcheroo<span class="n">SFD-145/221</span></a></li>
+      <li><a href="/card/sfd-146">Vex - Cheerless<span class="n">SFD-146/221</span></a></li>
+      <li><a href="/card/sfd-147">Downwell<span class="n">SFD-147/221</span></a></li>
+      <li><a href="/card/sfd-148">Draven - Audacious<span class="n">SFD-148/221</span></a></li>
+      <li><a href="/card/sfd-149">Ezreal - Prodigy<span class="n">SFD-149/221</span></a></li>
+      <li><a href="/card/sfd-150">Last Rites<span class="n">SFD-150/221</span></a></li>
+      <li><a href="/card/sfd-151">Bonds of Strength<span class="n">SFD-151/221</span></a></li>
+      <li><a href="/card/sfd-152">Eminent Benefactor<span class="n">SFD-152/221</span></a></li>
+      <li><a href="/card/sfd-153">Eye of the Herald<span class="n">SFD-153/221</span></a></li>
+      <li><a href="/card/sfd-154">Guards!<span class="n">SFD-154/221</span></a></li>
+      <li><a href="/card/sfd-155">Honest Broker<span class="n">SFD-155/221</span></a></li>
+      <li><a href="/card/sfd-156">Laurent Duelist<span class="n">SFD-156/221</span></a></li>
+      <li><a href="/card/sfd-157">Royal Guard<span class="n">SFD-157/221</span></a></li>
+      <li><a href="/card/sfd-158">Sandshifter<span class="n">SFD-158/221</span></a></li>
+      <li><a href="/card/sfd-159">Trusty Ramhound<span class="n">SFD-159/221</span></a></li>
+      <li><a href="/card/sfd-160">Zaun Punk<span class="n">SFD-160/221</span></a></li>
+      <li><a href="/card/sfd-161">B.F. Sword<span class="n">SFD-161/221</span></a></li>
+      <li><a href="/card/sfd-162">Blood Money<span class="n">SFD-162/221</span></a></li>
+      <li><a href="/card/sfd-163">Deathgrip<span class="n">SFD-163/221</span></a></li>
+      <li><a href="/card/sfd-164">Drag Under<span class="n">SFD-164/221</span></a></li>
+      <li><a href="/card/sfd-165">Glasc Mixologist<span class="n">SFD-165/221</span></a></li>
+      <li><a href="/card/sfd-166">Rally the Troops<span class="n">SFD-166/221</span></a></li>
+      <li><a href="/card/sfd-167">Unsung Hero<span class="n">SFD-167/221</span></a></li>
+      <li><a href="/card/sfd-168">Vanguard Armory<span class="n">SFD-168/221</span></a></li>
+      <li><a href="/card/sfd-169">Altar of Memories<span class="n">SFD-169/221</span></a></li>
+      <li><a href="/card/sfd-170">Rek&#39;Sai - Swarm Queen<span class="n">SFD-170/221</span></a></li>
+      <li><a href="/card/sfd-171">Renata Glasc - Industrialist<span class="n">SFD-171/221</span></a></li>
+      <li><a href="/card/sfd-172">Sacred Shears<span class="n">SFD-172/221</span></a></li>
+      <li><a href="/card/sfd-173">Soraka - Wanderer<span class="n">SFD-173/221</span></a></li>
+      <li><a href="/card/sfd-174">Trove Golem<span class="n">SFD-174/221</span></a></li>
+      <li><a href="/card/sfd-175">Undertitan<span class="n">SFD-175/221</span></a></li>
+      <li><a href="/card/sfd-176">Xin Zhao - Vigilant<span class="n">SFD-176/221</span></a></li>
+      <li><a href="/card/sfd-177">Azir - Sovereign<span class="n">SFD-177/221</span></a></li>
+      <li><a href="/card/sfd-178">Blade of the Ruined King<span class="n">SFD-178/221</span></a></li>
+      <li><a href="/card/sfd-179">Corina Veraza<span class="n">SFD-179/221</span></a></li>
+      <li><a href="/card/sfd-180">Fiora - Worthy<span class="n">SFD-180/221</span></a></li>
+      <li><a href="/card/sfd-181">Rumble - Mechanized Menace<span class="n">SFD-181/221</span></a></li>
+      <li><a href="/card/sfd-182">Danger Zone<span class="n">SFD-182/221</span></a></li>
+      <li><a href="/card/sfd-183">Lucian - Purifier<span class="n">SFD-183/221</span></a></li>
+      <li><a href="/card/sfd-184">Relentless Pursuit<span class="n">SFD-184/221</span></a></li>
+      <li><a href="/card/sfd-185">Draven - Glorious Executioner<span class="n">SFD-185/221</span></a></li>
+      <li><a href="/card/sfd-186">Spinning Axe<span class="n">SFD-186/221</span></a></li>
+      <li><a href="/card/sfd-187">Rek&#39;Sai - Void Burrower<span class="n">SFD-187/221</span></a></li>
+      <li><a href="/card/sfd-188">Void Rush<span class="n">SFD-188/221</span></a></li>
+      <li><a href="/card/sfd-189">Ornn - Fire Below the Mountain<span class="n">SFD-189/221</span></a></li>
+      <li><a href="/card/sfd-190">Forgefire Cape<span class="n">SFD-190/221</span></a></li>
+      <li><a href="/card/sfd-191">Rabadon&#39;s Deathcrown<span class="n">SFD-191/221</span></a></li>
+      <li><a href="/card/sfd-192">Shurelya&#39;s Requiem<span class="n">SFD-192/221</span></a></li>
+      <li><a href="/card/sfd-193">Jax - Grandmaster at Arms<span class="n">SFD-193/221</span></a></li>
+      <li><a href="/card/sfd-194">Counter Strike<span class="n">SFD-194/221</span></a></li>
+      <li><a href="/card/sfd-195">Irelia - Blade Dancer<span class="n">SFD-195/221</span></a></li>
+      <li><a href="/card/sfd-196">Defiant Dance<span class="n">SFD-196/221</span></a></li>
+      <li><a href="/card/sfd-197">Azir - Emperor of the Sands<span class="n">SFD-197/221</span></a></li>
+      <li><a href="/card/sfd-198">Arise!<span class="n">SFD-198/221</span></a></li>
+      <li><a href="/card/sfd-199">Ezreal - Prodigal Explorer<span class="n">SFD-199/221</span></a></li>
+      <li><a href="/card/sfd-200">Arcane Shift<span class="n">SFD-200/221</span></a></li>
+      <li><a href="/card/sfd-201">Renata Glasc - Chem-Baroness<span class="n">SFD-201/221</span></a></li>
+      <li><a href="/card/sfd-202">Hostile Takeover<span class="n">SFD-202/221</span></a></li>
+      <li><a href="/card/sfd-203">Sivir - Battle Mistress<span class="n">SFD-203/221</span></a></li>
+      <li><a href="/card/sfd-204">On the Hunt<span class="n">SFD-204/221</span></a></li>
+      <li><a href="/card/sfd-205">Fiora - Grand Duelist<span class="n">SFD-205/221</span></a></li>
+      <li><a href="/card/sfd-206">Riposte<span class="n">SFD-206/221</span></a></li>
+      <li><a href="/card/sfd-207">Emperor&#39;s Dais<span class="n">SFD-207/221</span></a></li>
+      <li><a href="/card/sfd-208">Forge of the Fluft<span class="n">SFD-208/221</span></a></li>
+      <li><a href="/card/sfd-209">Forgotten Monument<span class="n">SFD-209/221</span></a></li>
+      <li><a href="/card/sfd-210">Hall of Legends<span class="n">SFD-210/221</span></a></li>
+      <li><a href="/card/sfd-211">Marai Spire<span class="n">SFD-211/221</span></a></li>
+      <li><a href="/card/sfd-212">Minefield<span class="n">SFD-212/221</span></a></li>
+      <li><a href="/card/sfd-213">Ornn&#39;s Forge<span class="n">SFD-213/221</span></a></li>
+      <li><a href="/card/sfd-214">Power Nexus<span class="n">SFD-214/221</span></a></li>
+      <li><a href="/card/sfd-215">Ravenbloom Conservatory<span class="n">SFD-215/221</span></a></li>
+      <li><a href="/card/sfd-216">Rockfall Path<span class="n">SFD-216/221</span></a></li>
+      <li><a href="/card/sfd-217">Seat of Power<span class="n">SFD-217/221</span></a></li>
+      <li><a href="/card/sfd-218">Sunken Temple<span class="n">SFD-218/221</span></a></li>
+      <li><a href="/card/sfd-219">The Papertree<span class="n">SFD-219/221</span></a></li>
+      <li><a href="/card/sfd-220">Treasure Hoard<span class="n">SFD-220/221</span></a></li>
+      <li><a href="/card/sfd-221">Veiled Temple<span class="n">SFD-221/221</span></a></li>
+      <li><a href="/card/sfd-t03">Gold<span class="n">SFD-T03</span></a></li>
+  </ul>
+
+  <h2>Unleashed<span class="cnt">225枚</span></h2>
+  <ul class="cards">
+      <li><a href="/card/unl-001">Arena Kingpin<span class="n">UNL-001/219</span></a></li>
+      <li><a href="/card/unl-002">Inferna<span class="n">UNL-002/219</span></a></li>
+      <li><a href="/card/unl-003">Mischievous Marai<span class="n">UNL-003/219</span></a></li>
+      <li><a href="/card/unl-004">Prepared Neophyte<span class="n">UNL-004/219</span></a></li>
+      <li><a href="/card/unl-005">Revna the Lorekeeper<span class="n">UNL-005/219</span></a></li>
+      <li><a href="/card/unl-006">Sharkling<span class="n">UNL-006/219</span></a></li>
+      <li><a href="/card/unl-007">Smite<span class="n">UNL-007/219</span></a></li>
+      <li><a href="/card/unl-008">Towering Pairofant<span class="n">UNL-008/219</span></a></li>
+      <li><a href="/card/unl-009">Upstage Comedy<span class="n">UNL-009/219</span></a></li>
+      <li><a href="/card/unl-010">Vault Breaker<span class="n">UNL-010/219</span></a></li>
+      <li><a href="/card/unl-011">Fresh Beans<span class="n">UNL-011/219</span></a></li>
+      <li><a href="/card/unl-012">Lord Broadmane<span class="n">UNL-012/219</span></a></li>
+      <li><a href="/card/unl-013">Lotus Trap<span class="n">UNL-013/219</span></a></li>
+      <li><a href="/card/unl-014">Monster Harpoon<span class="n">UNL-014/219</span></a></li>
+      <li><a href="/card/unl-015">Right of Conquest<span class="n">UNL-015/219</span></a></li>
+      <li><a href="/card/unl-016">Scorchclaw<span class="n">UNL-016/219</span></a></li>
+      <li><a href="/card/unl-017">Square Up<span class="n">UNL-017/219</span></a></li>
+      <li><a href="/card/unl-018">Yeti Brawler<span class="n">UNL-018/219</span></a></li>
+      <li><a href="/card/unl-019">Blighted Battleaxe<span class="n">UNL-019/219</span></a></li>
+      <li><a href="/card/unl-020">Dancing Grenade<span class="n">UNL-020/219</span></a></li>
+      <li><a href="/card/unl-021">Grim Apothecary<span class="n">UNL-021/219</span></a></li>
+      <li><a href="/card/unl-022">Jhin - Murderous Artist<span class="n">UNL-022/219</span></a></li>
+      <li><a href="/card/unl-023">Katarina - Reckless<span class="n">UNL-023/219</span></a></li>
+      <li><a href="/card/unl-024">Rengar - Unseen<span class="n">UNL-024/219</span></a></li>
+      <li><a href="/card/unl-025">Undying Legion<span class="n">UNL-025/219</span></a></li>
+      <li><a href="/card/unl-026">Xerath - Freed<span class="n">UNL-026/219</span></a></li>
+      <li><a href="/card/unl-027">Inviolus Vox<span class="n">UNL-027/219</span></a></li>
+      <li><a href="/card/unl-028">Pyke - Dockside Butcher<span class="n">UNL-028/219</span></a></li>
+      <li><a href="/card/unl-029">Red Brambleback<span class="n">UNL-029/219</span></a></li>
+      <li><a href="/card/unl-030">Vi - Hotheaded<span class="n">UNL-030/219</span></a></li>
+      <li><a href="/card/unl-031">Combat Experience<span class="n">UNL-031/219</span></a></li>
+      <li><a href="/card/unl-032">Double Trouble<span class="n">UNL-032/219</span></a></li>
+      <li><a href="/card/unl-033">Frisky Hunter<span class="n">UNL-033/219</span></a></li>
+      <li><a href="/card/unl-034">Herald of Spring<span class="n">UNL-034/219</span></a></li>
+      <li><a href="/card/unl-035">Monch<span class="n">UNL-035/219</span></a></li>
+      <li><a href="/card/unl-036">Mutated Mouser<span class="n">UNL-036/219</span></a></li>
+      <li><a href="/card/unl-037">Shadow Watcher<span class="n">UNL-037/219</span></a></li>
+      <li><a href="/card/unl-038">Skyward Strike<span class="n">UNL-038/219</span></a></li>
+      <li><a href="/card/unl-039">Soul Sword<span class="n">UNL-039/219</span></a></li>
+      <li><a href="/card/unl-040">Wuju Apprentice<span class="n">UNL-040/219</span></a></li>
+      <li><a href="/card/unl-041">Allay, Eager Admirer<span class="n">UNL-041/219</span></a></li>
+      <li><a href="/card/unl-042">Back Off<span class="n">UNL-042/219</span></a></li>
+      <li><a href="/card/unl-043">Enthusiastic Promoter<span class="n">UNL-043/219</span></a></li>
+      <li><a href="/card/unl-044">Flurry of Feathers<span class="n">UNL-044/219</span></a></li>
+      <li><a href="/card/unl-045">Forgotten Signpost<span class="n">UNL-045/219</span></a></li>
+      <li><a href="/card/unl-046">Friendship<span class="n">UNL-046/219</span></a></li>
+      <li><a href="/card/unl-047">Mosstomper<span class="n">UNL-047/219</span></a></li>
+      <li><a href="/card/unl-048">Trevor Snoozebottom<span class="n">UNL-048/219</span></a></li>
+      <li><a href="/card/unl-049">Honeyfruit<span class="n">UNL-049/219</span></a></li>
+      <li><a href="/card/unl-050">Iascylla<span class="n">UNL-050/219</span></a></li>
+      <li><a href="/card/unl-051">Ivern - Nurturer<span class="n">UNL-051/219</span></a></li>
+      <li><a href="/card/unl-052">Nami - Headstrong<span class="n">UNL-052/219</span></a></li>
+      <li><a href="/card/unl-053">Scuttle Crab<span class="n">UNL-053/219</span></a></li>
+      <li><a href="/card/unl-054">Tricksy Tentacles<span class="n">UNL-054/219</span></a></li>
+      <li><a href="/card/unl-055">Vex - Mocking<span class="n">UNL-055/219</span></a></li>
+      <li><a href="/card/unl-056">Yuumi - Magical Cat<span class="n">UNL-056/219</span></a></li>
+      <li><a href="/card/unl-057">Alpha Wildclaw<span class="n">UNL-057/219</span></a></li>
+      <li><a href="/card/unl-058">Lillia - Protector of Dreams<span class="n">UNL-058/219</span></a></li>
+      <li><a href="/card/unl-059">Master Yi - Unstoppable<span class="n">UNL-059/219</span></a></li>
+      <li><a href="/card/unl-060">Vilemaw<span class="n">UNL-060/219</span></a></li>
+      <li><a href="/card/unl-061">Downstage Dramatics<span class="n">UNL-061/219</span></a></li>
+      <li><a href="/card/unl-062">Dramatic Visionary<span class="n">UNL-062/219</span></a></li>
+      <li><a href="/card/unl-063">Eclipse<span class="n">UNL-063/219</span></a></li>
+      <li><a href="/card/unl-064">Fate Weaver<span class="n">UNL-064/219</span></a></li>
+      <li><a href="/card/unl-065">Icevale Archer<span class="n">UNL-065/219</span></a></li>
+      <li><a href="/card/unl-066">Moonlight Affliction<span class="n">UNL-066/219</span></a></li>
+      <li><a href="/card/unl-067">Ruined Rex<span class="n">UNL-067/219</span></a></li>
+      <li><a href="/card/unl-068">Spectral Centaur<span class="n">UNL-068/219</span></a></li>
+      <li><a href="/card/unl-069">Sprite Burst<span class="n">UNL-069/219</span></a></li>
+      <li><a href="/card/unl-070">Turn to Dust<span class="n">UNL-070/219</span></a></li>
+      <li><a href="/card/unl-071">Chakram Dancer<span class="n">UNL-071/219</span></a></li>
+      <li><a href="/card/unl-072">Crescent Strike<span class="n">UNL-072/219</span></a></li>
+      <li><a href="/card/unl-073">Deadly Flourish<span class="n">UNL-073/219</span></a></li>
+      <li><a href="/card/unl-074">Frigid Jewel<span class="n">UNL-074/219</span></a></li>
+      <li><a href="/card/unl-075">Gustwalker<span class="n">UNL-075/219</span></a></li>
+      <li><a href="/card/unl-076">Petal Pixie<span class="n">UNL-076/219</span></a></li>
+      <li><a href="/card/unl-077">Soul Shepherd<span class="n">UNL-077/219</span></a></li>
+      <li><a href="/card/unl-078">Sprite Fountain<span class="n">UNL-078/219</span></a></li>
+      <li><a href="/card/unl-079">Diana - Lunari<span class="n">UNL-079/219</span></a></li>
+      <li><a href="/card/unl-080">Hwei - Brooding Painter<span class="n">UNL-080/219</span></a></li>
+      <li><a href="/card/unl-081">Keeper of Masks<span class="n">UNL-081/219</span></a></li>
+      <li><a href="/card/unl-082">Lillia - Fae Fawn<span class="n">UNL-082/219</span></a></li>
+      <li><a href="/card/unl-083">Smoke and Mirrors<span class="n">UNL-083/219</span></a></li>
+      <li><a href="/card/unl-084">Sprite Queen<span class="n">UNL-084/219</span></a></li>
+      <li><a href="/card/unl-085">Sumpworks Map<span class="n">UNL-085/219</span></a></li>
+      <li><a href="/card/unl-086">Zilean - Time Mage<span class="n">UNL-086/219</span></a></li>
+      <li><a href="/card/unl-087">Blue Sentinel<span class="n">UNL-087/219</span></a></li>
+      <li><a href="/card/unl-088">Gutter Palace<span class="n">UNL-088/219</span></a></li>
+      <li><a href="/card/unl-089">Jhin - Meticulous Killer<span class="n">UNL-089/219</span></a></li>
+      <li><a href="/card/unl-090">LeBlanc - Everywhere at Once<span class="n">UNL-090/219</span></a></li>
+      <li><a href="/card/unl-091">Concentrate<span class="n">UNL-091/219</span></a></li>
+      <li><a href="/card/unl-092">Demacian Diplomat<span class="n">UNL-092/219</span></a></li>
+      <li><a href="/card/unl-093">Dragonsoul Sage<span class="n">UNL-093/219</span></a></li>
+      <li><a href="/card/unl-094">Gemhand Hunter<span class="n">UNL-094/219</span></a></li>
+      <li><a href="/card/unl-095">Grim Resolve<span class="n">UNL-095/219</span></a></li>
+      <li><a href="/card/unl-096">Hunter&#39;s Machete<span class="n">UNL-096/219</span></a></li>
+      <li><a href="/card/unl-097">Kinkou Initiate<span class="n">UNL-097/219</span></a></li>
+      <li><a href="/card/unl-098">Targonian Visionary<span class="n">UNL-098/219</span></a></li>
+      <li><a href="/card/unl-099">Towering Combatant<span class="n">UNL-099/219</span></a></li>
+      <li><a href="/card/unl-100">Voracious Gromp<span class="n">UNL-100/219</span></a></li>
+      <li><a href="/card/unl-101">Call to Battle<span class="n">UNL-101/219</span></a></li>
+      <li><a href="/card/unl-102">Crowd Favorite<span class="n">UNL-102/219</span></a></li>
+      <li><a href="/card/unl-103">Disposal Order<span class="n">UNL-103/219</span></a></li>
+      <li><a href="/card/unl-104">Gentle Gemdragon<span class="n">UNL-104/219</span></a></li>
+      <li><a href="/card/unl-105">Imposing Challenger<span class="n">UNL-105/219</span></a></li>
+      <li><a href="/card/unl-106">Repulse<span class="n">UNL-106/219</span></a></li>
+      <li><a href="/card/unl-107">Stare Down<span class="n">UNL-107/219</span></a></li>
+      <li><a href="/card/unl-108">Wily Newtfish<span class="n">UNL-108/219</span></a></li>
+      <li><a href="/card/unl-109">Blood Rose<span class="n">UNL-109/219</span></a></li>
+      <li><a href="/card/unl-110">Clash of Giants<span class="n">UNL-110/219</span></a></li>
+      <li><a href="/card/unl-111">Determined Sentry<span class="n">UNL-111/219</span></a></li>
+      <li><a href="/card/unl-112">Irresistible Faefolk<span class="n">UNL-112/219</span></a></li>
+      <li><a href="/card/unl-113">Master Yi - Tempered<span class="n">UNL-113/219</span></a></li>
+      <li><a href="/card/unl-114">Nidalee - Cat Form<span class="n">UNL-114/219</span></a></li>
+      <li><a href="/card/unl-115">Nilah - Joyful Ascetic<span class="n">UNL-115/219</span></a></li>
+      <li><a href="/card/unl-116">Poppy - Paragon<span class="n">UNL-116/219</span></a></li>
+      <li><a href="/card/unl-117">Arachnoid Horror<span class="n">UNL-117/219</span></a></li>
+      <li><a href="/card/unl-118">Elder Dragon<span class="n">UNL-118/219</span></a></li>
+      <li><a href="/card/unl-119">Kha&#39;Zix - Evolving Hunter<span class="n">UNL-119/219</span></a></li>
+      <li><a href="/card/unl-120">Rengar - Trophy Hunter<span class="n">UNL-120/219</span></a></li>
+      <li><a href="/card/unl-121">Bewitching Spirit<span class="n">UNL-121/219</span></a></li>
+      <li><a href="/card/unl-122">Crescent Guardian<span class="n">UNL-122/219</span></a></li>
+      <li><a href="/card/unl-123">Evershade Stalker<span class="n">UNL-123/219</span></a></li>
+      <li><a href="/card/unl-124">Isolate<span class="n">UNL-124/219</span></a></li>
+      <li><a href="/card/unl-125">Lunar Boon<span class="n">UNL-125/219</span></a></li>
+      <li><a href="/card/unl-126">Megatusk<span class="n">UNL-126/219</span></a></li>
+      <li><a href="/card/unl-127">Mister Root<span class="n">UNL-127/219</span></a></li>
+      <li><a href="/card/unl-128">Star-Crossed<span class="n">UNL-128/219</span></a></li>
+      <li><a href="/card/unl-129">Vicious Snapjaws<span class="n">UNL-129/219</span></a></li>
+      <li><a href="/card/unl-130">Walking Roost<span class="n">UNL-130/219</span></a></li>
+      <li><a href="/card/unl-131">Abandon<span class="n">UNL-131/219</span></a></li>
+      <li><a href="/card/unl-132">Angler Beast<span class="n">UNL-132/219</span></a></li>
+      <li><a href="/card/unl-133">Blast Cone<span class="n">UNL-133/219</span></a></li>
+      <li><a href="/card/unl-134">Existential Dread<span class="n">UNL-134/219</span></a></li>
+      <li><a href="/card/unl-135">Insightful Investigator<span class="n">UNL-135/219</span></a></li>
+      <li><a href="/card/unl-136">Scryer&#39;s Bloom<span class="n">UNL-136/219</span></a></li>
+      <li><a href="/card/unl-137">Sinister Poro<span class="n">UNL-137/219</span></a></li>
+      <li><a href="/card/unl-138">The List<span class="n">UNL-138/219</span></a></li>
+      <li><a href="/card/unl-139">Bone Skewer<span class="n">UNL-139/219</span></a></li>
+      <li><a href="/card/unl-140">Conscription<span class="n">UNL-140/219</span></a></li>
+      <li><a href="/card/unl-141">Evelynn - Entrancing<span class="n">UNL-141/219</span></a></li>
+      <li><a href="/card/unl-142">Heedless Resurrection<span class="n">UNL-142/219</span></a></li>
+      <li><a href="/card/unl-143">Kha&#39;Zix - Mutating Horror<span class="n">UNL-143/219</span></a></li>
+      <li><a href="/card/unl-144">Maduli the Gatekeeper<span class="n">UNL-144/219</span></a></li>
+      <li><a href="/card/unl-145">Pyke - Returned<span class="n">UNL-145/219</span></a></li>
+      <li><a href="/card/unl-146">Syndra - Transcendent<span class="n">UNL-146/219</span></a></li>
+      <li><a href="/card/unl-147">Baron Nashor<span class="n">UNL-147/219</span></a></li>
+      <li><a href="/card/unl-148">Cursed Sarcophagus<span class="n">UNL-148/219</span></a></li>
+      <li><a href="/card/unl-149">Diana - No Longer Human<span class="n">UNL-149/219</span></a></li>
+      <li><a href="/card/unl-150">Vex - Apathetic<span class="n">UNL-150/219</span></a></li>
+      <li><a href="/card/unl-151">Bandle Soldier<span class="n">UNL-151/219</span></a></li>
+      <li><a href="/card/unl-152">Black Rose Dignitary<span class="n">UNL-152/219</span></a></li>
+      <li><a href="/card/unl-153">Carrion Dredger<span class="n">UNL-153/219</span></a></li>
+      <li><a href="/card/unl-154">Crimson Pigeons<span class="n">UNL-154/219</span></a></li>
+      <li><a href="/card/unl-155">Heroic Charge<span class="n">UNL-155/219</span></a></li>
+      <li><a href="/card/unl-156">Loyal Poro<span class="n">UNL-156/219</span></a></li>
+      <li><a href="/card/unl-157">Scrutinizing Sergeant<span class="n">UNL-157/219</span></a></li>
+      <li><a href="/card/unl-158">Shepherd&#39;s Heirloom<span class="n">UNL-158/219</span></a></li>
+      <li><a href="/card/unl-159">Soul Harvest<span class="n">UNL-159/219</span></a></li>
+      <li><a href="/card/unl-160">Ultrasoft Poro<span class="n">UNL-160/219</span></a></li>
+      <li><a href="/card/unl-161">Divining Shells<span class="n">UNL-161/219</span></a></li>
+      <li><a href="/card/unl-162">Enthralling Protector<span class="n">UNL-162/219</span></a></li>
+      <li><a href="/card/unl-163">Mageseeker Investigator<span class="n">UNL-163/219</span></a></li>
+      <li><a href="/card/unl-164">Safety Inspector<span class="n">UNL-164/219</span></a></li>
+      <li><a href="/card/unl-165">Shadow&#39;s Call<span class="n">UNL-165/219</span></a></li>
+      <li><a href="/card/unl-166">Stalking Wolf<span class="n">UNL-166/219</span></a></li>
+      <li><a href="/card/unl-167">Starhound<span class="n">UNL-167/219</span></a></li>
+      <li><a href="/card/unl-168">Undying Loyalty<span class="n">UNL-168/219</span></a></li>
+      <li><a href="/card/unl-169">Ashe - Focused<span class="n">UNL-169/219</span></a></li>
+      <li><a href="/card/unl-170">Atakhan<span class="n">UNL-170/219</span></a></li>
+      <li><a href="/card/unl-171">Galio - Indefatigable<span class="n">UNL-171/219</span></a></li>
+      <li><a href="/card/unl-172">LeBlanc - Fragmented<span class="n">UNL-172/219</span></a></li>
+      <li><a href="/card/unl-173">Sacrifice<span class="n">UNL-173/219</span></a></li>
+      <li><a href="/card/unl-174">Shard of Undoing<span class="n">UNL-174/219</span></a></li>
+      <li><a href="/card/unl-175">Tactical Retreat<span class="n">UNL-175/219</span></a></li>
+      <li><a href="/card/unl-176">Vi - Peacekeeper<span class="n">UNL-176/219</span></a></li>
+      <li><a href="/card/unl-177">Ivern - Friend to All<span class="n">UNL-177/219</span></a></li>
+      <li><a href="/card/unl-178">Poppy - Defender of the Meek<span class="n">UNL-178/219</span></a></li>
+      <li><a href="/card/unl-179">Rift Herald<span class="n">UNL-179/219</span></a></li>
+      <li><a href="/card/unl-180">The Ruination<span class="n">UNL-180/219</span></a></li>
+      <li><a href="/card/unl-181">Jhin - Virtuoso<span class="n">UNL-181/219</span></a></li>
+      <li><a href="/card/unl-182">Curtain Call<span class="n">UNL-182/219</span></a></li>
+      <li><a href="/card/unl-183">Rengar - Pridestalker<span class="n">UNL-183/219</span></a></li>
+      <li><a href="/card/unl-184">Thrill of the Hunt<span class="n">UNL-184/219</span></a></li>
+      <li><a href="/card/unl-185">Pyke - Bloodharbor Ripper<span class="n">UNL-185/219</span></a></li>
+      <li><a href="/card/unl-186">Death from Below<span class="n">UNL-186/219</span></a></li>
+      <li><a href="/card/unl-187">Vi - Piltover Enforcer<span class="n">UNL-187/219</span></a></li>
+      <li><a href="/card/unl-188">Hextech Gauntlets<span class="n">UNL-188/219</span></a></li>
+      <li><a href="/card/unl-189">Lillia - Bashful Bloom<span class="n">UNL-189/219</span></a></li>
+      <li><a href="/card/unl-190">Lilting Lullaby<span class="n">UNL-190/219</span></a></li>
+      <li><a href="/card/unl-191">Master Yi - Wuju Master<span class="n">UNL-191/219</span></a></li>
+      <li><a href="/card/unl-192">Alpha Strike<span class="n">UNL-192/219</span></a></li>
+      <li><a href="/card/unl-193">Vex - Gloomist<span class="n">UNL-193/219</span></a></li>
+      <li><a href="/card/unl-194">Shadow<span class="n">UNL-194/219</span></a></li>
+      <li><a href="/card/unl-195">Ivern - Green Father<span class="n">UNL-195/219</span></a></li>
+      <li><a href="/card/unl-196">Daisy!<span class="n">UNL-196/219</span></a></li>
+      <li><a href="/card/unl-197">Diana - Scorn of the Moon<span class="n">UNL-197/219</span></a></li>
+      <li><a href="/card/unl-198">Moonfall<span class="n">UNL-198/219</span></a></li>
+      <li><a href="/card/unl-199">LeBlanc - Deceiver<span class="n">UNL-199/219</span></a></li>
+      <li><a href="/card/unl-200">Mirror Image<span class="n">UNL-200/219</span></a></li>
+      <li><a href="/card/unl-201">Kha&#39;Zix - Voidreaver<span class="n">UNL-201/219</span></a></li>
+      <li><a href="/card/unl-202">Void Assault<span class="n">UNL-202/219</span></a></li>
+      <li><a href="/card/unl-203">Poppy - Keeper of the Hammer<span class="n">UNL-203/219</span></a></li>
+      <li><a href="/card/unl-204">Keeper&#39;s Verdict<span class="n">UNL-204/219</span></a></li>
+      <li><a href="/card/unl-205">Abandoned Hall<span class="n">UNL-205/219</span></a></li>
+      <li><a href="/card/unl-206">Altar of Blood<span class="n">UNL-206/219</span></a></li>
+      <li><a href="/card/unl-207">Amateur Recital<span class="n">UNL-207/219</span></a></li>
+      <li><a href="/card/unl-208">Black Flame Altar<span class="n">UNL-208/219</span></a></li>
+      <li><a href="/card/unl-209">Dusk Rose Lab<span class="n">UNL-209/219</span></a></li>
+      <li><a href="/card/unl-210">Forbidding Waste<span class="n">UNL-210/219</span></a></li>
+      <li><a href="/card/unl-211">Forgotten Library<span class="n">UNL-211/219</span></a></li>
+      <li><a href="/card/unl-212">Frozen Fortress<span class="n">UNL-212/219</span></a></li>
+      <li><a href="/card/unl-213">Gardens of Becoming<span class="n">UNL-213/219</span></a></li>
+      <li><a href="/card/unl-214">Ripper&#39;s Bay<span class="n">UNL-214/219</span></a></li>
+      <li><a href="/card/unl-215">Star Spring<span class="n">UNL-215/219</span></a></li>
+      <li><a href="/card/unl-216">The Academy<span class="n">UNL-216/219</span></a></li>
+      <li><a href="/card/unl-217">Trapping Grounds<span class="n">UNL-217/219</span></a></li>
+      <li><a href="/card/unl-218">Valley of Idols<span class="n">UNL-218/219</span></a></li>
+      <li><a href="/card/unl-219">Vaults of Helia<span class="n">UNL-219/219</span></a></li>
+      <li><a href="/card/unl-t01">Baron Pit<span class="n">UNL-T01</span></a></li>
+      <li><a href="/card/unl-t02">Bird<span class="n">UNL-T02</span></a></li>
+      <li><a href="/card/unl-t03">Brush<span class="n">UNL-T03</span></a></li>
+      <li><a href="/card/unl-t04">Buff<span class="n">UNL-T04</span></a></li>
+      <li><a href="/card/unl-t06">Reflection<span class="n">UNL-T06</span></a></li>
+      <li><a href="/card/unl-t08">XP Tracker<span class="n">UNL-T08</span></a></li>
+  </ul>
+
+  <h2>Origins: Proving Grounds<span class="cnt">24枚</span></h2>
+  <ul class="cards">
+      <li><a href="/card/ogs-001">Annie - Fiery<span class="n">OGS-001/024</span></a></li>
+      <li><a href="/card/ogs-002">Firestorm<span class="n">OGS-002/024</span></a></li>
+      <li><a href="/card/ogs-003">Incinerate<span class="n">OGS-003/024</span></a></li>
+      <li><a href="/card/ogs-004">Master Yi - Meditative<span class="n">OGS-004/024</span></a></li>
+      <li><a href="/card/ogs-005">Zephyr Sage<span class="n">OGS-005/024</span></a></li>
+      <li><a href="/card/ogs-006">Lux - Illuminated<span class="n">OGS-006/024</span></a></li>
+      <li><a href="/card/ogs-007">Garen - Rugged<span class="n">OGS-007/024</span></a></li>
+      <li><a href="/card/ogs-008">Gentlemen&#39;s Duel<span class="n">OGS-008/024</span></a></li>
+      <li><a href="/card/ogs-009">Master Yi - Honed<span class="n">OGS-009/024</span></a></li>
+      <li><a href="/card/ogs-010">Annie - Stubborn<span class="n">OGS-010/024</span></a></li>
+      <li><a href="/card/ogs-011">Flash<span class="n">OGS-011/024</span></a></li>
+      <li><a href="/card/ogs-012">Blast of Power<span class="n">OGS-012/024</span></a></li>
+      <li><a href="/card/ogs-013">Garen - Commander<span class="n">OGS-013/024</span></a></li>
+      <li><a href="/card/ogs-014">Lux - Crownguard<span class="n">OGS-014/024</span></a></li>
+      <li><a href="/card/ogs-015">Recruit the Vanguard<span class="n">OGS-015/024</span></a></li>
+      <li><a href="/card/ogs-016">Vanguard Attendant<span class="n">OGS-016/024</span></a></li>
+      <li><a href="/card/ogs-017">Annie - Dark Child<span class="n">OGS-017/024</span></a></li>
+      <li><a href="/card/ogs-018">Tibbers<span class="n">OGS-018/024</span></a></li>
+      <li><a href="/card/ogs-019">Master Yi - Wuju Bladesman<span class="n">OGS-019/024</span></a></li>
+      <li><a href="/card/ogs-020">Highlander<span class="n">OGS-020/024</span></a></li>
+      <li><a href="/card/ogs-021">Lux - Lady of Luminosity<span class="n">OGS-021/024</span></a></li>
+      <li><a href="/card/ogs-022">Final Spark<span class="n">OGS-022/024</span></a></li>
+      <li><a href="/card/ogs-023">Garen - Might of Demacia<span class="n">OGS-023/024</span></a></li>
+      <li><a href="/card/ogs-024">Decisive Strike<span class="n">OGS-024/024</span></a></li>
+  </ul>
+
+  <p class="lead" style="margin-top:38px">効果テキストを持たないカード（ルーンなど）はこの索引には含まれません。<a href="/#list">サイトのカード一覧</a>では見られます。</p>
+</main>
+<footer class="foot">
+  <div>
+    RiftBound 日本語翻訳 Wiki ・ 本サイトはファンによる非公式サイトです。
+    RIFTBOUND および League of Legends は Riot Games, Inc. の商標であり、権利はすべて同社に帰属します。
+    当サイトは Riot Games とは一切関係ありません。
+  </div>
+</footer>
+</body>
+</html>

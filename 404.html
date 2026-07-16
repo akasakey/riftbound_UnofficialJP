@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ページが見つかりません | Riftbound 日本語カードデータベース</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="256x256" href="/images/icon/favicon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+// index.html と同じ判定。保存済みのテーマがあれば従い、無ければ OS 設定に合わせる。
+(function(){
+  try{
+    var saved = localStorage.getItem('rb-theme');
+    var theme = (saved === 'light' || saved === 'dark') ? saved
+      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  }catch(e){ document.documentElement.setAttribute('data-theme','dark'); }
+})();
+</script>
+<style>
+:root{
+  --bg:#12100e; --surface:#191612; --surface2:#211d18;
+  --line:#332d26; --ink:#f4efe6; --ink-dim:#b3a998; --ink-faint:#7c7364;
+  --gold:#d9b978; --gold-dim:#8a744a;
+  --header-a:#1c1813; --header-b:#161310;
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#e8dbbf; --surface:#fbf6ec; --surface2:#f1e8d6;
+  --line:#cdb890; --ink:#2c2216; --ink-dim:#524328; --ink-faint:#6a5836;
+  --gold:#7d5b14; --gold-dim:#8f6d28;
+  --header-a:#fbf6ec; --header-b:#efe4cf;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:'Zen Kaku Gothic New',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold)}
+.rb-header{display:flex;align-items:center;padding:0 26px;height:60px;
+ background:linear-gradient(180deg,var(--header-a),var(--header-b));border-bottom:1px solid var(--line)}
+.brand{font-family:'Zen Old Mincho',serif;font-weight:700;font-size:17px;color:var(--ink);
+ text-decoration:none;letter-spacing:.02em}
+.brand b{color:var(--gold)}
+main{max-width:640px;margin:0 auto;padding:90px 24px 60px;text-align:center}
+.code{font:700 13px 'JetBrains Mono',monospace;letter-spacing:.22em;color:var(--gold-dim)}
+h1{font-family:'Zen Old Mincho',serif;font-size:27px;margin:16px 0 14px}
+p{color:var(--ink-dim);font-size:14px;line-height:2;margin:0 0 30px}
+.links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.links a{display:inline-block;background:var(--surface2);border:1px solid var(--gold-dim);
+ border-radius:8px;padding:11px 20px;color:var(--gold);text-decoration:none;font-weight:700;font-size:13px}
+</style>
+</head>
+<body>
+<header class="rb-header">
+  <a class="brand" href="/"><b>RIFTBOUND</b> 日本語翻訳</a>
+</header>
+<main>
+  <div class="code">404 NOT FOUND</div>
+  <h1>ページが見つかりません</h1>
+  <p>
+    お探しのページは存在しないか、移動または削除された可能性があります。<br>
+    カードを探している場合は、カード一覧から検索できます。
+  </p>
+  <div class="links">
+    <a href="/#list">カード一覧へ</a>
+    <a href="/">トップページへ</a>
+  </div>
+</main>
+</body>
+</html>
