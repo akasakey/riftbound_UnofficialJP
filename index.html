@@ -1021,7 +1021,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                 <div style="padding:11px 14px;font:700 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-faint)">タイプ</div>
                 <div onClick="{{ sortName }}" role="button" tabindex="0" data-kbd style="padding:11px 14px;font:700 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-dim);cursor:pointer;display:flex;align-items:center;gap:6px">カード名 <span style="font:600 10px 'JetBrains Mono',monospace;color:{{ inkName }}">{{ arrowName }}</span></div>
                 <div onClick="{{ sortCost }}" role="button" tabindex="0" data-kbd style="padding:11px 14px;font:700 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-dim);cursor:pointer;display:flex;align-items:center;gap:6px">エネルギー <span style="font:600 10px 'JetBrains Mono',monospace;color:{{ inkCost }}">{{ arrowCost }}</span></div>
-                <div onClick="{{ sortRarity }}" role="button" tabindex="0" data-kbd style="padding:11px 14px;font:700 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-dim);cursor:pointer;display:flex;align-items:center;gap:6px">レアリティ <span style="font:600 10px 'JetBrains Mono',monospace;color:{{ inkRarity }}">{{ arrowRarity }}</span></div>
+                <div style="padding:11px 14px;font:700 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-dim);display:flex;align-items:center;gap:6px">レアリティ</div>
                 <div onClick="{{ sortSet }}" role="button" tabindex="0" data-kbd style="padding:11px 14px;font:700 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-dim);cursor:pointer;display:flex;align-items:center;gap:6px">収録 <span style="font:600 10px 'JetBrains Mono',monospace;color:{{ inkSet }}">{{ arrowSet }}</span></div>
               </div>
 
@@ -1056,6 +1056,13 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
 
             <!-- gallery grid -->
             <div class="rb-gridview" style="display:{{ gridDisplay }}">
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:4px 2px 10px">
+                <span style="font:600 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-faint)">並べ替え</span>
+                <span onClick="{{ sortName }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 11px 'JetBrains Mono',monospace;color:{{ inkName }};padding:4px 9px;border:1px solid var(--line);border-radius:7px">名前 {{ arrowName }}</span>
+                <span onClick="{{ sortCost }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 11px 'JetBrains Mono',monospace;color:{{ inkCost }};padding:4px 9px;border:1px solid var(--line);border-radius:7px">エネルギー {{ arrowCost }}</span>
+                <span onClick="{{ sortPower }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 11px 'JetBrains Mono',monospace;color:{{ inkPower }};padding:4px 9px;border:1px solid var(--line);border-radius:7px">パワー {{ arrowPower }}</span>
+                <span onClick="{{ sortSet }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 11px 'JetBrains Mono',monospace;color:{{ inkSet }};padding:4px 9px;border:1px solid var(--line);border-radius:7px">セット {{ arrowSet }}</span>
+              </div>
               <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
                 <div>
                   <div style="display:flex;align-items:center;gap:10px;padding:14px 2px 12px;margin-top:8px">
@@ -1371,7 +1378,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                     </div>
                   </sc-if>
                   <sc-if value="{{ noChampion }}" hint-placeholder-val="{{ true }}">
-                    <div style="padding:14px 11px;font-size:11.5px;color:var(--ink-faint);line-height:1.5">カード詳細で指定（後日対応）</div>
+                    <div style="padding:14px 11px;font-size:11.5px;color:var(--ink-faint);line-height:1.5">上の「チャンピオン」タブから選択</div>
                   </sc-if>
                 </div>
               </div>
@@ -1383,7 +1390,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-bottom:16px">
                 <div style="padding:11px 15px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line-soft)">
                   <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:14px">メインデッキ</span>
-                  <span style="margin-left:auto;font:700 13px 'JetBrains Mono',monospace;color:{{ mainCountCol }}">{{ mainTotal }}<span style="color:var(--ink-faint);font-weight:500"> / {{ mainMin }}+</span></span>
+                  <span style="margin-left:auto;font:700 13px 'JetBrains Mono',monospace;color:{{ mainCountCol }}">{{ mainTotal }}<span style="color:var(--ink-faint);font-weight:500"> / {{ mainMin }}</span></span>
                 </div>
                 <sc-if value="{{ mainEmpty }}" hint-placeholder-val="{{ true }}">
                   <div style="padding:26px 15px;text-align:center;font-size:12px;color:var(--ink-faint);line-height:1.6">左からカードを追加してください</div>
@@ -2363,7 +2370,7 @@ class Component extends DCLogic {
       const mainTotal=Object.values(d.main||{}).reduce((a,b)=>a+b,0)+(d.championId?1:0);
       const runeTotal=Object.values(d.runes||{}).reduce((a,b)=>a+b,0);
       const bfCount=(d.battlefields||[]).length;
-      const ready=mainTotal>=this.MAIN_MIN && runeTotal===this.RUNE_TOTAL && bfCount===this.BF_TOTAL;
+      const ready=!!d.legendId && !!champ && mainTotal===this.MAIN_MIN && runeTotal===this.RUNE_TOTAL && bfCount===this.BF_TOTAL;
       let dateStr=''; try{ dateStr=new Date(d.updated||Date.now()).toLocaleDateString('ja-JP',{year:'numeric',month:'2-digit',day:'2-digit'}); }catch(e){}
       return {
         id:d.id, name:d.name||'(無題)',
@@ -3093,7 +3100,9 @@ class Component extends DCLogic {
         bg: active ? c : 'transparent',
         color: active ? txt : 'var(--ink-dim)' };
     });
-    const setChips = this.state.sets.slice().sort((a,b)=> (a.code==='OGS'?-1:0) - (b.code==='OGS'?-1:0)).map(st=>
+    const SET_CHIP_ORDER = ['OGS','OGN','SFD','UNL','VEN'];
+    const setRank = (code)=>{ const i=SET_CHIP_ORDER.indexOf(code); return i<0?99:i; };
+    const setChips = this.state.sets.slice().sort((a,b)=> setRank(a.code)-setRank(b.code)).map(st=>
       solidChip(st.code, s.fSet.includes(st.code), ()=>this.toggleFilter('set',st.code)));
     let domScope = this.state.cards.slice();
     if (s.set) domScope = domScope.filter(c=>c.setCode===s.set);
@@ -3145,15 +3154,16 @@ class Component extends DCLogic {
       return rows.slice().sort((a,b)=>{
         let av, bv;
         if (k==='cost'){ av=parseInt(a.cost)||0; bv=parseInt(b.cost)||0; }
+        else if (k==='power'){ av=(String(a.power||'').trim()===''?-1:(parseInt(a.power)||0)); bv=(String(b.power||'').trim()===''?-1:(parseInt(b.power)||0)); }
         else if (k==='rarity'){ av=this.RARITY_ORDER[a.rarity]??99; bv=this.RARITY_ORDER[b.rarity]??99; }
-        else if (k==='set'){ av=a.setCode; bv=b.setCode; }
+        else if (k==='set'){ av=setRank(a.set); bv=setRank(b.set); }
         else { av=a.name.toLowerCase(); bv=b.name.toLowerCase(); }
         return av<bv ? -dir : av>bv ? dir : 0;
       });
     };
 
     const rowVals = (c)=>({
-      type:c.type, name:c.name, nameJa:c.nameJa, cost:c.cost, rarity:c.rarity,
+      type:c.type, name:c.name, nameJa:c.nameJa, cost:c.cost, power:c.power, rarity:c.rarity,
       set:c.setCode, domain:c.domain, color:this.domColor(c.domain), icon:this.domIcon(c.domain), image:c.image||'',
       onClick: c._artLegendId ? (()=>this.openCardVariant(c._artLegendId, c._artVariantIdx)) : (()=>this.select(c.id)),
       onHoverIn: (e)=>{ if(this._isTouch) return; this.clearHoverTimer(); const el=e&&e.currentTarget; const r=el&&el.getBoundingClientRect(); this._hoverRect=r?{left:r.left,right:r.right,top:r.top,bottom:r.bottom}:null; const hid=c._artLegendId||c.id; this._hoverTimer=setTimeout(()=>{ this.setState({ hoverPreview:hid }); }, 500); },
@@ -3542,6 +3552,7 @@ class Component extends DCLogic {
       groups,
       sortName:()=>this.toggleSort('name'), arrowName:sortArrow('name'), inkName:sortInk('name'),
       sortCost:()=>this.toggleSort('cost'), arrowCost:sortArrow('cost'), inkCost:sortInk('cost'),
+      sortPower:()=>this.toggleSort('power'), arrowPower:sortArrow('power'), inkPower:sortInk('power'),
       sortRarity:()=>this.toggleSort('rarity'), arrowRarity:sortArrow('rarity'), inkRarity:sortInk('rarity'),
       sortSet:()=>this.toggleSort('set'), arrowSet:sortArrow('set'), inkSet:sortInk('set'),
       hasResults: list.length>0,
