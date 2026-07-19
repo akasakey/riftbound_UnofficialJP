@@ -1894,6 +1894,8 @@ class Component extends DCLogic {
       this._lastHash = curHash;
       this._navDepth = Math.max(0, (this._navDepth||0) - 1);
       this.clearHoverTimer();
+      this.setState({ deckSheetOpen:false });
+      try{ document.body.style.overflow=''; document.documentElement.style.overflow=''; }catch(e){}
       const clearF = ['home','legends','keywords','rules'].includes(patch.view) ? this.FILTER_RESET : {};
       this.setState({ view:'home', domain:null, set:null, selectedId:null, legendId:null, lightbox:null, variantIdx:0, legendVariantIdx:0, hoverPreview:null, ...clearF, ...patch });
       this.ensureCardsFor(patch);
@@ -2027,6 +2029,8 @@ class Component extends DCLogic {
     const st = { view:'home', domain:null, set:null, selectedId:null, legendId:null, menuOpen:false, altView:false, variantIdx:0, legendVariantIdx:0, lightbox:null, hoverPreview:null, ...patch };
     this.clearHoverTimer();
     this.setState(st);
+    try{ document.body.style.overflow=''; document.documentElement.style.overflow=''; }catch(e){}
+    if(this.state.deckSheetOpen) this.setState({ deckSheetOpen:false });
     this.ensureCardsFor(st);
     this._navDepth = (this._navDepth||0) + 1;
     if(st.view==='rules' && st.ruleSec){ this.jumpToRule(st.ruleSec); }
@@ -2326,7 +2330,7 @@ class Component extends DCLogic {
   mutateDeck(fn){
     const decks=(this.state.decks||[]).map(d=>{
       if(d.id!==this.state.activeDeckId) return d;
-      const nd={ ...d, main:{...d.main}, runes:{...d.runes}, battlefields:[...d.battlefields] };
+      const nd={ ...d, main:{...d.main}, side:{...(d.side||{})}, runes:{...d.runes}, battlefields:[...d.battlefields] };
       fn(nd); nd.updated=Date.now(); return nd;
     });
     this.persistDecks(decks, this.state.activeDeckId);
@@ -2658,6 +2662,10 @@ class Component extends DCLogic {
       ...(c.effects||[]).flatMap(e=>[e.kw, e.en, e.ja])
     ].filter(Boolean).join(' ').toLowerCase();
   }
+  hayMatch(c, q){
+    const hay = this.cardHay(c);
+    return q.split(/[\s\u3000]+/).filter(Boolean).every(t => hay.includes(t));
+  }
   mainTotal(){ const d=this.activeDeck(); if(!d) return 0; return Object.values(d.main).reduce((a,b)=>a+b,0) + (d.championId?1:0); }
   // 同名の総枚数（メイン＋サイド＋チョーズン）。上限判定はこの合計に対して行う。
   copiesOf(d, id){ return (d.main[id]||0) + ((d.side&&d.side[id])||0) + (d.championId===id?1:0); }
@@ -2679,7 +2687,7 @@ class Component extends DCLogic {
   setDeckTab(t){ this.setState({ deckTab:t }); }
   setPanelTab(t){ this.setState({ deckPanelTab:t }); }
   onDeckQ(e){ this.setState({ deckQ:e.target.value }); }
-  toggleDeckSheet(v){ this.setState({ deckSheetOpen: v===undefined ? !this.state.deckSheetOpen : v }); }
+  toggleDeckSheet(v){ const open = v===undefined ? !this.state.deckSheetOpen : v; try{ document.body.style.overflow = open ? 'hidden' : ''; document.documentElement.style.overflow = open ? 'hidden' : ''; }catch(e){} this.setState({ deckSheetOpen: open }); }
 
   // デッキ画面のビューモデル
   deckVM(){
@@ -2710,7 +2718,7 @@ class Component extends DCLogic {
       pool=pickable.filter(c=>this.typeOf(c)===tab && this.typeOf(c)!=='Token');
       if(tab!=='Legend' && tab!=='Battlefield' && doms.length) pool=pool.filter(c=>this.cardLegalForDeck(c));
     }
-    if(q) pool=pool.filter(c=> this.cardHay(c).includes(q));
+    if(q) pool=pool.filter(c=> this.hayMatch(c,q));
     // デッキピッカー絞り込み（ENERGY / RARITY / KEYWORD）。チップ候補は絞り込み前のプールから作る。
     const dfCost=(this.state.dfCost||[]), dfPower=(this.state.dfPower||[]), dfKw=(this.state.dfKw||[]);
     const filterScope=pool.slice();
@@ -3053,7 +3061,7 @@ class Component extends DCLogic {
     if (s.fType.length) list = list.filter(c=> s.fType.includes(this.typeOf(c)));
     if (s.fTag.length) list = list.filter(c=>{ const t=cardTags(c); return s.fTag.some(x=>t.includes(x)); });
     if (s.fKw.length) list = list.filter(c=>{ const k=cardKws(c); return s.fKw.some(x=>k.includes(x)); });
-    if (q) list = list.filter(c=> this.cardHay(c).includes(q));
+    if (q) list = list.filter(c=> this.hayMatch(c,q));
 
     // available filter chips (from all cards, respecting domain/set scope)
     let scope = this.state.cards.slice();
