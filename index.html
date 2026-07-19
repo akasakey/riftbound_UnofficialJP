@@ -217,12 +217,12 @@ a:hover{color:var(--ink)}
     .rb-deck-left{padding-bottom:70px}
     .rb-deck-fab{display:flex !important}
     .rb-deck-panel{position:fixed !important;left:0;right:0;bottom:0;top:auto;z-index:70;
-      max-height:86vh !important;overflow-y:auto;margin:0 !important;padding:0 15px 22px;
+      max-height:86vh !important;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin:0 !important;padding:0 15px 22px;
       background:var(--bg);border-top:1px solid var(--gold-dim);border-radius:18px 18px 0 0;
       box-shadow:0 -12px 40px rgba(0,0,0,.4);transform:translateY(100%);
       transition:transform .28s cubic-bezier(.32,.72,0,1);will-change:transform;visibility:hidden}
     .rb-deck-panel.open{transform:translateY(0);visibility:visible}
-    .rb-deck-sheet-scrim.show{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:65}
+    .rb-deck-sheet-scrim.show{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:65;touch-action:none;overscroll-behavior:contain}
     .rb-sheet-handle{display:flex !important}
   }
   @media (max-width:820px){
@@ -1133,12 +1133,12 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                     </div>
                     <div style="display:flex;flex-direction:column;gap:6px">
                       <div style="display:flex;align-items:center;gap:8px">
-                        <span style="flex:none;width:34px;font:800 8px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">LEGEND</span>
+                        <span style="flex:none;width:56px;font:800 8px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">LEGEND</span>
                         <span style="width:22px;height:31px;border-radius:3px;overflow:hidden;flex:none;background:var(--surface3)"><img src="{{ dk.legendImage }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:center 20%" /></span>
                         <span style="flex:1;min-width:0;font:700 12px 'Zen Kaku Gothic New',sans-serif;color:var(--ink);line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ dk.legendName }}</span>
                       </div>
                       <div style="display:flex;align-items:center;gap:8px">
-                        <span style="flex:none;width:34px;font:800 8px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">CHOSEN</span>
+                        <span style="flex:none;width:56px;font:800 8px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">CHAMPION</span>
                         <span style="width:22px;height:31px;border-radius:3px;overflow:hidden;flex:none;background:var(--surface3)"><img src="{{ dk.champImage }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:center 20%" /></span>
                         <span style="flex:1;min-width:0;font:700 12px 'Zen Kaku Gothic New',sans-serif;color:{{ dk.champInk }};line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ dk.champName }}</span>
                       </div>
@@ -1276,7 +1276,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                 <sc-for list="{{ pickRows }}" as="c" hint-placeholder-count="8">
                   <div style="border:1.5px solid {{ c.selBorder }};border-radius:11px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column;box-shadow:{{ c.selShadow }}">
                     <div onClick="{{ c.onAdd }}" onContextMenu="{{ c.onCtx }}" onMouseEnter="{{ c.onHoverIn }}" onMouseLeave="{{ c.onHoverOut }}" onTouchStart="{{ c.onTouchStart }}" onTouchMove="{{ c.onTouchMove }}" onTouchEnd="{{ c.onTouchEnd }}" role="button" tabindex="0" data-kbd style="position:relative;cursor:pointer;background:var(--surface3);aspect-ratio:63/88;overflow:hidden">
-                      <img src="{{ c.image }}" alt="{{ c.name }}" onError="{{ hideImg }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"/>
+                      <img src="{{ c.image }}" alt="{{ c.name }}" onError="{{ hideImg }}" loading="lazy" decoding="async" class="{{ c.imgClass }}"/>
                       <sc-if value="{{ c.count }}" hint-placeholder-val="{{ 0 }}">
                         <span style="position:absolute;inset:0;background:{{ c.selTint }};pointer-events:none"></span>
                         <span style="position:absolute;left:0;right:0;bottom:0;padding:6px 8px;display:flex;align-items:center;justify-content:center;gap:5px;background:linear-gradient(0deg,rgba(18,16,14,.82),transparent);pointer-events:none">
@@ -1748,31 +1748,32 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
 
 <sc-if value="{{ shareOpen }}" hint-placeholder-val="{{ false }}">
   <div onClick="{{ closeShare }}" role="button" tabindex="0" data-kbd aria-label="閉じる" class="rb-lb" style="position:fixed;inset:0;z-index:130;background:radial-gradient(120% 120% at 50% 30%,rgba(30,24,16,.82),rgba(8,7,5,.94));backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;cursor:pointer">
-    <div onClick="{{ stopEvt }}" role="dialog" aria-modal="true" class="rb-lb-fig" style="cursor:default;width:min(94vw,540px);max-height:88vh;overflow:auto;background:var(--surface);border:1px solid var(--gold-dim);border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.4);padding:24px 22px">
+    <div onClick="{{ stopEvt }}" role="dialog" aria-modal="true" class="rb-lb-fig" style="cursor:default;width:min(94vw,540px);max-height:90vh;overflow:auto;background:var(--surface);border:1px solid var(--gold-dim);border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.4);padding:18px 18px">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
         <div style="font:700 16px 'Zen Kaku Gothic New',sans-serif;color:var(--ink)">{{ shareTitle }}</div>
         <span onClick="{{ closeShare }}" role="button" tabindex="0" data-kbd aria-label="閉じる" style="margin-left:auto;flex:none;cursor:pointer;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:15px" style-hover="background:var(--surface2)">✕</span>
       </div>
 
       <sc-if value="{{ shareShowExport }}" hint-placeholder-val="{{ true }}">
-      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--ink-faint);margin:14px 0 7px">このデッキのコード</div>
-      <textarea readonly value="{{ shareCode }}" aria-label="デッキコード" style="width:100%;box-sizing:border-box;height:96px;resize:none;font:500 11.5px 'JetBrains Mono',monospace;line-height:1.5;word-break:break-all;padding:11px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)"></textarea>
+      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--ink-faint);margin:10px 0 6px">このデッキのコード</div>
+      <textarea readonly value="{{ shareCode }}" aria-label="デッキコード" style="width:100%;box-sizing:border-box;height:60px;resize:none;font:500 11.5px 'JetBrains Mono',monospace;line-height:1.5;word-break:break-all;padding:9px 11px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)"></textarea>
       <div onClick="{{ copyDeckCode }}" role="button" tabindex="0" data-kbd style="margin-top:9px;cursor:pointer;text-align:center;font:700 12.5px 'Zen Kaku Gothic New',sans-serif;padding:10px;border-radius:9px;background:var(--gold);color:var(--sel-ink)" style-hover="filter:brightness(1.06)">{{ copyBtnLabel }}</div>
 
-      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--ink-faint);margin:18px 0 7px">デッキリスト（テキスト）</div>
-      <textarea readonly value="{{ shareText }}" aria-label="デッキリスト" style="width:100%;box-sizing:border-box;height:150px;resize:none;font:500 11.5px 'JetBrains Mono',monospace;line-height:1.55;white-space:pre;padding:11px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)"></textarea>
+      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--ink-faint);margin:13px 0 6px">デッキリスト（テキスト）</div>
+      <textarea readonly value="{{ shareText }}" aria-label="デッキリスト" style="width:100%;box-sizing:border-box;height:94px;resize:none;font:500 11.5px 'JetBrains Mono',monospace;line-height:1.55;white-space:pre;padding:9px 11px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)"></textarea>
       <div onClick="{{ copyDeckText }}" role="button" tabindex="0" data-kbd style="margin-top:9px;cursor:pointer;text-align:center;font:700 12.5px 'Zen Kaku Gothic New',sans-serif;padding:10px;border-radius:9px;border:1px solid var(--gold-dim);color:var(--gold);background:var(--surface2)" style-hover="background:var(--surface3)">{{ copyTextBtnLabel }}</div>
+      <div onClick="{{ exportDeckImage }}" role="button" tabindex="0" data-kbd style="margin-top:9px;cursor:pointer;text-align:center;font:700 12.5px 'Zen Kaku Gothic New',sans-serif;padding:10px;border-radius:9px;border:1px solid var(--gold-dim);color:var(--gold);background:var(--surface2);display:flex;align-items:center;justify-content:center;gap:7px" style-hover="background:var(--surface3)"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="3" width="12" height="10" rx="1.5"/><circle cx="5.5" cy="6.5" r="1.2"/><path d="M3 12l3.5-3.5 2.5 2.5 2-2L14 12"/></svg>{{ imgBtnLabel }}</div>
 
-      <div style="height:1px;background:var(--line-soft);margin:20px 0"></div>
+      <div style="height:1px;background:var(--line-soft);margin:14px 0"></div>
       </sc-if>
 
       <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--ink-faint);margin:0 0 7px">コード または デッキリストから読み込む</div>
-      <textarea value="{{ importCode }}" onInput="{{ onImportCode }}" placeholder="デッキコード、またはデッキリスト（Legend/Champion/MainDeck/…）を貼り付け" aria-label="デッキコードまたはデッキリストを貼り付け" style="width:100%;box-sizing:border-box;height:80px;resize:none;font:500 11.5px 'JetBrains Mono',monospace;line-height:1.5;word-break:break-all;padding:11px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)"></textarea>
+      <textarea value="{{ importCode }}" onInput="{{ onImportCode }}" placeholder="デッキコード、またはデッキリスト（Legend/Champion/MainDeck/…）を貼り付け" aria-label="デッキコードまたはデッキリストを貼り付け" style="width:100%;box-sizing:border-box;height:62px;resize:none;font:500 11.5px 'JetBrains Mono',monospace;line-height:1.5;word-break:break-all;padding:9px 11px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)"></textarea>
       <sc-if value="{{ importError }}" hint-placeholder-val="{{ false }}">
         <div style="margin-top:8px;font:600 12px 'Zen Kaku Gothic New',sans-serif;color:#d92d2a">{{ importError }}</div>
       </sc-if>
       <div onClick="{{ importDeck }}" role="button" tabindex="0" data-kbd style="margin-top:9px;cursor:pointer;text-align:center;font:700 12.5px 'Zen Kaku Gothic New',sans-serif;padding:10px;border-radius:9px;border:1px solid var(--gold-dim);color:var(--gold);background:var(--surface2)" style-hover="background:var(--surface3)">新しいデッキとして読み込む</div>
-      <div style="margin-top:12px;font:500 11.5px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-faint);line-height:1.6">読み込むと新しいデッキとして追加されます。現在のデッキは上書きされません。</div>
+      <div style="margin-top:10px;font:500 11px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-faint);line-height:1.55">読み込むと新しいデッキとして追加されます。現在のデッキは上書きされません。</div>
     </div>
   </div>
 </sc-if>
@@ -1864,7 +1865,7 @@ class Component extends DCLogic {
   componentDidMount(){
     try{ this._isTouch = window.matchMedia && window.matchMedia('(hover:none),(pointer:coarse)').matches; }catch(e){ this._isTouch=false; }
     const dd=this.loadDecks();
-    this.setState({ decks:dd.decks, activeDeckId:dd.activeId });
+    this.persistDecks(dd.decks, dd.activeId);
     fetch('./data/meta.json', { cache: 'no-cache' })
       .then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
       .then(d => {
@@ -2316,6 +2317,8 @@ class Component extends DCLogic {
     try{ data=JSON.parse(localStorage.getItem(this.DECK_KEY)||'null'); }catch(e){}
     if(!data || !Array.isArray(data.decks) || !data.decks.length){ const d=this.newDeckObj(); data={ decks:[d], activeId:d.id }; }
     if(!data.decks.some(d=>d.id===data.activeId)) data.activeId=data.decks[0].id;
+    // 破損した battlefield id（制御文字混入等）を除去
+    data.decks.forEach(d=>{ if(Array.isArray(d.battlefields)) d.battlefields=this._cleanBf(d.battlefields); });
     return data;
   }
   persistDecks(decks, activeId){ try{ localStorage.setItem(this.DECK_KEY, JSON.stringify({ decks, activeId })); }catch(e){} this.setState({ decks, activeDeckId:activeId }); }
@@ -2477,7 +2480,9 @@ class Component extends DCLogic {
     const bf=grp(bfMap);
     if(bf.length){ lines.push('Battlefields:'); bf.forEach(x=>lines.push(x.n+' '+x.name)); lines.push(''); }
     const runes=grp(d.runes);
-    if(runes.length){ lines.push('Runes:'); runes.forEach(x=>lines.push(x.n+' '+x.name)); }
+    if(runes.length){ lines.push('Runes:'); runes.forEach(x=>lines.push(x.n+' '+x.name)); lines.push(''); }
+    const side=grp(d.side);
+    if(side.length){ lines.push('Sideboard:'); side.forEach(x=>lines.push(x.n+' '+x.name)); }
     return lines.join('\n').trim();
   }
   copyDeckText(){
@@ -2486,6 +2491,86 @@ class Component extends DCLogic {
     try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, ()=>this.fallbackCopy(txt,done)); } else this.fallbackCopy(txt,done); }
     catch(e){ this.fallbackCopy(txt,done); }
   }
+  _loadImg(src){ return new Promise(res=>{ if(!src){ res(null); return; } const im=new Image(); im.onload=()=>res(im); im.onerror=()=>res(null); im.src=src; }); }
+  async exportDeckImage(){
+    const d=this.activeDeck(); if(!d){ return; }
+    const cards=this.state.cards||[];
+    const find=(id)=>cards.find(c=>c.id===id)||null;
+    const grpCost=(map)=>Object.keys(map||{}).filter(id=>(map[id]|0)>0).map(id=>{ const c=find(id); return c?{ card:c, n:map[id]|0 }:null; }).filter(Boolean).sort((a,b)=>{ const ca=parseInt(a.card.cost)||0, cb=parseInt(b.card.cost)||0; return ca-cb || (a.card.name||'').localeCompare(b.card.name||''); });
+    const legend=d.legendId?find(d.legendId):null;
+    const champ=d.championId?find(d.championId):null;
+    const bfItems=grpCost((d.battlefields||[]).reduce((o,id)=>(o[id]=(o[id]||0)+1,o),{}));
+    const runeItems=Object.keys(d.runes||{}).filter(k=>(d.runes[k]|0)>0).sort().map(k=>({ domain:k, n:d.runes[k]|0 }));
+    const mainCards=grpCost(d.main);
+    const gridItems=[...(champ?[{card:champ,n:1}]:[]), ...mainCards];
+    const sideItems=grpCost(d.side);
+    this.setState({ imgBtnLabel:'生成中…' });
+
+    // 画像を一括プリロード（同一オリジンなのでタイントしない）
+    const need=[legend, champ, ...mainCards.map(x=>x.card), ...bfItems.map(x=>x.card), ...sideItems.map(x=>x.card)].filter(Boolean);
+    const imgMap=new Map();
+    await Promise.all(need.map(async c=>{ if(c.image && !imgMap.has(c.id)) imgMap.set(c.id, await this._loadImg(c.image)); }));
+    const domImg=new Map();
+    const doms=(legend&&legend.domains)||(champ&&champ.domains)||[];
+    await Promise.all([...new Set(runeItems.map(x=>x.domain))].map(async k=>{ domImg.set(k, await this._loadImg(this.domIcon(k))); }));
+
+    const C={ bg:'#1e1e24', bg2:'#141418', ink:'#f4efe6', dim:'#c7c1b0', gold:'#c9a24a', foot:'#6f6a5c' };
+    const scale=2, W=1600, H=900, PAD=30, HEAD=72, LX=PAD, LW=430, TOP=HEAD;
+    const cv=document.createElement('canvas'); cv.width=W*scale; cv.height=H*scale;
+    const g=cv.getContext('2d'); g.scale(scale,scale);
+    const bgGrad=g.createLinearGradient(0,0,0,H); bgGrad.addColorStop(0,C.bg); bgGrad.addColorStop(1,C.bg2);
+    g.fillStyle=bgGrad; g.fillRect(0,0,W,H);
+    const rr=(x,y,w,h,r)=>{ g.beginPath(); g.moveTo(x+r,y); g.arcTo(x+w,y,x+w,y+h,r); g.arcTo(x+w,y+h,x,y+h,r); g.arcTo(x,y+h,x,y,r); g.arcTo(x,y,x+w,y,r); g.closePath(); };
+    const cover=(im,x,y,w,h,r)=>{ g.save(); rr(x,y,w,h,r||8); g.clip(); if(im){ const iw=im.width,ih=im.height, s=Math.max(w/iw,h/ih), dw=iw*s, dh=ih*s; g.drawImage(im, x-(dw-w)/2, y-(dh-h)/2, dw, dh); } else { g.fillStyle='#333'; g.fillRect(x,y,w,h); } g.restore(); g.save(); rr(x,y,w,h,r||8); g.lineWidth=1.3; g.strokeStyle='rgba(0,0,0,.6)'; g.stroke(); g.restore(); };
+    const badge=(x,y,w,h,txt)=>{ const bw=Math.min(38,w*0.34),bh=bw*0.72,bx=x+w-bw-5,by=y+h-bh-5; g.fillStyle='rgba(10,10,12,.9)'; rr(bx,by,bw,bh,7); g.fill(); g.fillStyle='#fff'; g.font='800 '+Math.round(bh*0.54)+"px 'JetBrains Mono', monospace"; g.textAlign='center'; g.textBaseline='middle'; g.fillText(txt, bx+bw/2, by+bh/2+1); g.textAlign='left'; g.textBaseline='alphabetic'; };
+    const card=(it,x,y,w,h)=>{ cover(imgMap.get(it.card.id),x,y,w,h,8); badge(x,y,w,h,'x'+it.n); };
+    // タイトル（パネル外・左上）
+    g.textBaseline='alphabetic'; g.fillStyle=C.ink; g.font="800 40px 'Zen Old Mincho', serif";
+    g.fillText(this._trunc(g, d.name||'共有デッキ', W-2*PAD), PAD, HEAD-18);
+    // 左パネル
+    g.save(); rr(LX,TOP,LW,H-TOP-PAD,16); g.fillStyle='rgba(255,255,255,.03)'; g.fill(); g.lineWidth=1; g.strokeStyle='rgba(255,255,255,.08)'; g.stroke(); g.restore();
+    const cx=LX+LW/2; let ly=TOP+22;
+    if(legend){ const Lw=236,Lh=Math.round(Lw*88/63); cover(imgMap.get(legend.id), LX+(LW-Lw)/2, ly, Lw, Lh, 10); ly+=Lh+20; }
+    // ルーン（素アイコン＋枚数・中央）
+    if(runeItems.length){ const sz=48, fpx=19, gp=46; const units=runeItems.map(it=>{ g.font="800 "+fpx+"px 'JetBrains Mono', monospace"; return { it, w:sz+9+g.measureText('×'+it.n).width }; }); const totalW=units.reduce((a,u)=>a+u.w,0)+gp*(units.length-1); let rx=cx-totalW/2; units.forEach(u=>{ const ic=domImg.get(u.it.domain); if(ic){ g.drawImage(ic, rx, ly, sz, sz); } else { g.fillStyle=this.domColor(u.it.domain); g.beginPath(); g.arc(rx+sz/2,ly+sz/2,sz/2,0,7); g.fill(); } g.fillStyle=C.ink; g.font="800 "+fpx+"px 'JetBrains Mono', monospace"; g.textBaseline='middle'; g.fillText('×'+u.it.n, rx+sz+9, ly+sz/2+1); g.textBaseline='alphabetic'; rx+=u.w+gp; }); ly+=sz+20; }
+    // バトルフィールド（最大2列・全体表示）
+    if(bfItems.length){ const innerW=LW-52, gap=12; const bcols=bfItems.length>1?2:1; const cw=Math.floor((innerW-(bcols-1)*gap)/bcols); const bfRows=Math.ceil(bfItems.length/bcols); const im0=imgMap.get(bfItems[0].card.id); const ar0=im0?im0.height/im0.width:0.55; let rowH=Math.round(cw*ar0); const avail=(H-PAD)-ly; const maxRowH=Math.floor((avail-(bfRows-1)*gap)/Math.max(1,bfRows)); if(rowH>maxRowH) rowH=maxRowH; const startX=LX+26; bfItems.forEach((it,i)=>{ const col=i%bcols, row=Math.floor(i/bcols); const im=imgMap.get(it.card.id); const ar=im?im.height/im.width:0.55; let dh=Math.min(rowH, Math.round(cw*ar)); let dw=Math.round(dh/ar); if(dw>cw){ dw=cw; dh=Math.round(cw*ar); } const cellX=startX+col*(cw+gap); const dx=cellX+(cw-dw)/2; const y0=ly+row*(rowH+gap)+(rowH-dh)/2; g.save(); rr(dx,y0,dw,dh,8); g.clip(); if(im) g.drawImage(im,dx,y0,dw,dh); g.restore(); g.save(); rr(dx,y0,dw,dh,8); g.lineWidth=1.3; g.strokeStyle='rgba(0,0,0,.6)'; g.stroke(); g.restore(); badge(dx,y0,dw,dh,'x'+it.n); }); }
+    // 右グリッド
+    const RX=LX+LW+34, RW=W-RX-PAD, GAP=12, labelH=30;
+    const lab=(txt,y)=>{ g.font="800 16px 'JetBrains Mono', monospace"; g.fillStyle=C.gold; g.textAlign='left'; g.textBaseline='alphabetic'; g.fillText(txt, RX, y+14); g.strokeStyle='rgba(201,162,74,.55)'; g.lineWidth=1.5; g.beginPath(); g.moveTo(RX,y+22); g.lineTo(RX+RW,y+22); g.stroke(); };
+    const MAINH=labelH+6;
+    let best=null; for(let cols=5;cols<=10;cols++){ const w=(RW-(cols-1)*GAP)/cols, h=w*88/63; const mr=Math.ceil(gridItems.length/cols), sr=sideItems.length?Math.ceil(sideItems.length/cols):0; const tH=MAINH+mr*h+(mr-1)*GAP+(sideItems.length?(MAINH+sr*h+(sr-1)*GAP):0); if(tH<=(H-TOP-PAD)&&(!best||w>best.cw)) best={cols,cw:Math.floor(w),ch:Math.round(h),mr}; }
+    if(!best){ const cols=10, w=(RW-9*GAP)/10; best={cols,cw:Math.floor(w),ch:Math.round(w*88/63),mr:Math.ceil(gridItems.length/10)}; }
+    const f=best;
+    let gy=TOP; lab('MAIN', gy); gy+=MAINH; gridItems.forEach((it,i)=>{ const col=i%f.cols, row=Math.floor(i/f.cols); card(it, RX+col*(f.cw+GAP), gy+row*(f.ch+GAP), f.cw, f.ch); }); gy+=f.mr*(f.ch+GAP)+6;
+    if(sideItems.length){ lab('SIDEBOARD', gy); gy+=MAINH; sideItems.forEach((it,i)=>{ const col=i%f.cols, row=Math.floor(i/f.cols); card(it, RX+col*(f.cw+GAP), gy+row*(f.ch+GAP), f.cw, f.ch); }); }
+    g.fillStyle=C.foot; g.font="600 12px sans-serif"; g.textAlign='right'; g.fillText('Riftbound 日本語カードデータベース（非公式）', W-PAD, H-14); g.textAlign='left';
+    // 外周ヘアライン枠（Xダークモードでの溶け防止）
+    g.strokeStyle='rgba(255,255,255,.1)'; g.lineWidth=2; g.strokeRect(1,1,W-2,H-2);
+
+    cv.toBlob((blob)=>{
+      if(!blob){ this.setState({ imgBtnLabel:'保存に失敗しました' }); clearTimeout(this._imgT); this._imgT=setTimeout(()=>this.setState({ imgBtnLabel:'' }),2200); return; }
+      const fname=(d.name||'deck').replace(/[\\/:*?"<>|]/g,'_')+'.png';
+      const done=(msg)=>{ this.setState({ imgBtnLabel:msg||'保存しました ✓' }); clearTimeout(this._imgT); this._imgT=setTimeout(()=>this.setState({ imgBtnLabel:'' }),1800); };
+      // モバイル/タブレット: Web Share API で共有シート（画像添付）を優先
+      try{
+        const file=new File([blob],fname,{type:'image/png'});
+        if(this._isTouch && navigator.canShare && navigator.canShare({files:[file]})){
+          navigator.share({ files:[file], title:(d.name||'デッキ') }).then(()=>done('共有しました ✓')).catch(()=>{ this._dlBlob(blob,fname,done); });
+          return;
+        }
+      }catch(e){}
+      this._dlBlob(blob,fname,done);
+    }, 'image/png');
+  }
+  _dlBlob(blob,fname,done){
+    const url=URL.createObjectURL(blob); const a=document.createElement('a');
+    a.href=url; a.download=fname; a.target='_blank'; a.rel='noopener';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url),4000);
+    done&&done();
+  }
+  _trunc(g,text,maxW){ if(g.measureText(text).width<=maxW) return text; let t=text; while(t.length>1 && g.measureText(t+'…').width>maxW) t=t.slice(0,-1); return t+'…'; }
   closeShare(){ this.setState({ shareOpen:false }); }
   copyDeckCode(){
     const code=this.encodeDeck(this.activeDeck()||{});
@@ -2589,7 +2674,8 @@ class Component extends DCLogic {
   addRune(dom){ this.mutateDeck(d=>{ const t=Object.values(d.runes).reduce((a,b)=>a+b,0); if(t<this.RUNE_TOTAL) d.runes[dom]=(d.runes[dom]||0)+1; }); }
   subRune(dom){ this.mutateDeck(d=>{ const n=(d.runes[dom]||0); if(n<=1) delete d.runes[dom]; else d.runes[dom]=n-1; }); }
   bfIn(id){ const d=this.activeDeck(); return d ? d.battlefields.includes(id) : false; }
-  toggleBattlefield(id){ this.mutateDeck(d=>{ const i=d.battlefields.indexOf(id); if(i>=0) d.battlefields.splice(i,1); else if(d.battlefields.length<this.BF_TOTAL) d.battlefields.push(id); }); }
+  _cleanBf(arr){ return (arr||[]).filter(x=> typeof x==='string' && /^[a-z0-9]+-[0-9a-z]+$/i.test(x)); }
+  toggleBattlefield(id){ this.mutateDeck(d=>{ d.battlefields=this._cleanBf(d.battlefields); const i=d.battlefields.indexOf(id); if(i>=0) d.battlefields.splice(i,1); else if(d.battlefields.length<this.BF_TOTAL) d.battlefields.push(id); }); }
   setDeckTab(t){ this.setState({ deckTab:t }); }
   setPanelTab(t){ this.setState({ deckPanelTab:t }); }
   onDeckQ(e){ this.setState({ deckQ:e.target.value }); }
@@ -2666,6 +2752,7 @@ class Component extends DCLogic {
       const cnt = isChamp||isLegend||isBf ? (inDeck?1:0) : useSide ? this.sideCount(c.id) : this.mainCount(c.id);
       return {
         id:c.id, name:c.name, nameJa:c.nameJa||'', image:c.image||'', cost:c.cost||'',
+        imgClass: isBf ? 'rb-cimg contain' : 'rb-cimg',
         color:this.domColor(c.domain), icon:this.domIcon(c.domain),
         count:cnt, inDeck, isStepper: isMainPool, isToggle: (isChamp||isLegend||isBf),
         selBorder: inDeck ? (useSide?'#7c6cc4':'var(--gold)') : 'var(--line)',
@@ -3311,6 +3398,8 @@ class Component extends DCLogic {
       shareText: s.shareOpen ? this.encodeDeckText(this.activeDeck()||{}) : '',
       copyTextBtnLabel: s.copyTextLabel || 'デッキリストをコピー',
       copyDeckText: ()=>this.copyDeckText(),
+      exportDeckImage: ()=>this.exportDeckImage(),
+      imgBtnLabel: s.imgBtnLabel || '画像として保存',
       openShare: ()=>this.openShare(),
       closeShare: ()=>this.closeShare(),
       copyDeckCode: ()=>this.copyDeckCode(),
