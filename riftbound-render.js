@@ -15,9 +15,10 @@
     const a = i < 0 ? h : h.slice(0, i);
     const b = i < 0 ? '' : decodeURIComponent(h.slice(i + 1));
     if (a === 'list') return { view: 'list' };
+    if (a === 'deck') return { view: 'deck' };
+    if (a === 'decks') return { view: 'decks' };
     if (a === 'legends') return { view: 'legends' };
     if (a === 'keywords') return { view: 'keywords' };
-    if (a === 'deck') return { view: 'deck' };
     if (a === 'rules') return { view: 'rules', ruleSec: b || '' };
     if (a === 'domain' && b) return { view: 'list', domain: b };
     if (a === 'set' && b) return { view: 'list', set: b };

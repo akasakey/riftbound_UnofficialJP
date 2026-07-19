@@ -304,6 +304,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
       <div style="padding:18px 20px 8px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint)">ツール</div>
       <nav style="display:flex;flex-direction:column;gap:2px;padding:0 14px 4px">
         <div onClick="{{ goDeck }}" role="button" tabindex="0" data-kbd style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;background:{{ deckBg }};color:{{ deckInk }}"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linejoin="round" style="flex:none"><rect x="2.2" y="3.2" width="7" height="9.6" rx="1.3"/><path d="M10.4 4.3l3 1a1.3 1.3 0 0 1 .8 1.6l-2 6"/></svg>デッキビルダー<span style="margin-left:auto;font:800 8px 'JetBrains Mono',monospace;letter-spacing:.06em;background:var(--gold);color:var(--sel-ink);padding:2px 6px;border-radius:100px">BETA</span></div>
+        <div onClick="{{ goMyDecks }}" role="button" tabindex="0" data-kbd style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;background:{{ myDecksBg }};color:{{ myDecksInk }}"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linejoin="round" style="flex:none"><rect x="2" y="2.5" width="12" height="3" rx="1"/><rect x="2" y="6.5" width="12" height="3" rx="1"/><rect x="2" y="10.5" width="12" height="3" rx="1"/></svg>デッキ一覧</div>
       </nav>
 
       <div style="padding:18px 20px 8px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--ink-faint)">資料</div>
@@ -1097,6 +1098,68 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
         </div>
       </sc-if>
 
+      <!-- ===== MY DECKS (一覧) VIEW ===== -->
+      <sc-if value="{{ showMyDecks }}" hint-placeholder-val="{{ false }}">
+        <div class="rb-view" data-screen-label="デッキ一覧">
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:6px">
+            <h1 style="margin:0;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:28px;letter-spacing:.01em">デッキ一覧</h1>
+            <div onClick="{{ openNewDeckChoice }}" role="button" tabindex="0" data-kbd style="cursor:pointer;white-space:nowrap;font:700 12px 'Zen Kaku Gothic New',sans-serif;padding:9px 15px;border-radius:8px;background:var(--gold);color:var(--sel-ink)" style-hover="filter:brightness(1.06)">＋ 新規デッキを作成</div>
+          </div>
+          <p style="margin:0 0 22px;font-size:12.5px;color:var(--ink-dim);line-height:1.7">このブラウザに保存されているデッキ（{{ myDecksCount }}件）。カードを選ぶとデッキビルダーで開きます。</p>
+
+          <sc-if value="{{ myDecksCount }}" hint-placeholder-val="{{ 1 }}">
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px">
+              <sc-for list="{{ myDeckRows }}" as="dk" hint-placeholder-count="3">
+                <div onClick="{{ dk.onOpen }}" role="button" tabindex="0" data-kbd class="rb-hovedge" style="cursor:pointer;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column">
+                  <div style="position:relative;height:132px;background:var(--surface2);overflow:hidden">
+                    <img src="{{ dk.legendImage }}" alt="{{ dk.legendName }}" onError="{{ hideImg }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%" />
+                    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(18,16,14,.9),rgba(18,16,14,.05) 70%)"></div>
+                    <span style="position:absolute;top:10px;right:10px;font:800 8px 'JetBrains Mono',monospace;letter-spacing:.08em;color:{{ dk.statusFg }};background:{{ dk.statusBg }};padding:3px 8px;border-radius:100px;box-shadow:0 1px 4px rgba(0,0,0,.35)">{{ dk.statusTag }}</span>
+                    <div style="position:absolute;left:14px;right:14px;bottom:11px">
+                      <div style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:17px;line-height:1.2;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.7);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ dk.name }}</div>
+                    </div>
+                  </div>
+                  <div style="padding:12px 14px;display:flex;flex-direction:column;gap:10px">
+                    <sc-if value="{{ dk.isEditing }}" hint-placeholder-val="{{ false }}">
+                      <div onClick="{{ dk.stopClick }}" style="display:flex;align-items:center;gap:6px">
+                        <input value="{{ dk.editValue }}" onInput="{{ dk.onEditChange }}" onKeyDown="{{ dk.onEditKey }}" onClick="{{ dk.stopClick }}" aria-label="デッキ名を編集" autofocus style="flex:1;min-width:0;font:600 13px 'Zen Kaku Gothic New',sans-serif;padding:6px 10px;border-radius:7px;border:1px solid var(--gold);background:var(--surface2);color:var(--ink)" />
+                        <span onClick="{{ dk.onEditCommit }}" role="button" tabindex="0" data-kbd style="cursor:pointer;font:700 11px 'Zen Kaku Gothic New',sans-serif;padding:6px 11px;border-radius:7px;background:var(--gold);color:var(--sel-ink)">保存</span>
+                      </div>
+                    </sc-if>
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                      <sc-for list="{{ dk.domChips }}" as="dc" hint-placeholder-count="2">
+                        <span style="display:inline-flex;align-items:center;gap:5px;font:700 10px 'Zen Kaku Gothic New',sans-serif;padding:3px 8px 3px 4px;border-radius:100px;background:{{ dc.color }};color:{{ dc.ink }}"><span style="width:15px;height:15px;border-radius:100px;background:rgba(255,255,255,.92);display:inline-flex;align-items:center;justify-content:center;flex:none"><img src="{{ dc.icon }}" onError="{{ hideImg }}" style="width:10px;height:10px;object-fit:contain" /></span>{{ dc.name }}</span>
+                      </sc-for>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:6px">
+                      <div style="display:flex;align-items:center;gap:8px">
+                        <span style="flex:none;width:34px;font:800 8px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">LEGEND</span>
+                        <span style="width:22px;height:31px;border-radius:3px;overflow:hidden;flex:none;background:var(--surface3)"><img src="{{ dk.legendImage }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:center 20%" /></span>
+                        <span style="flex:1;min-width:0;font:700 12px 'Zen Kaku Gothic New',sans-serif;color:var(--ink);line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ dk.legendName }}</span>
+                      </div>
+                      <div style="display:flex;align-items:center;gap:8px">
+                        <span style="flex:none;width:34px;font:800 8px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--ink-faint)">CHOSEN</span>
+                        <span style="width:22px;height:31px;border-radius:3px;overflow:hidden;flex:none;background:var(--surface3)"><img src="{{ dk.champImage }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:center 20%" /></span>
+                        <span style="flex:1;min-width:0;font:700 12px 'Zen Kaku Gothic New',sans-serif;color:{{ dk.champInk }};line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ dk.champName }}</span>
+                      </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;margin-top:2px">
+                      <span style="font:500 10.5px 'JetBrains Mono',monospace;color:var(--ink-faint)">更新 {{ dk.dateStr }}</span>
+                      <span onClick="{{ dk.onEditStart }}" role="button" tabindex="0" data-kbd aria-label="名前を編集" style="margin-left:auto;cursor:pointer;font:600 11px 'Zen Kaku Gothic New',sans-serif;padding:5px 10px;border-radius:7px;border:1px solid var(--line);color:var(--ink-dim)" style-hover="background:var(--surface2)">名前</span>
+                      <span onClick="{{ dk.onDup }}" role="button" tabindex="0" data-kbd aria-label="複製" style="cursor:pointer;font:600 11px 'Zen Kaku Gothic New',sans-serif;padding:5px 10px;border-radius:7px;border:1px solid var(--line);color:var(--ink-dim)" style-hover="background:var(--surface2)">複製</span>
+                      <span onClick="{{ dk.onDelete }}" role="button" tabindex="0" data-kbd aria-label="削除" style="cursor:pointer;font:600 11px 'Zen Kaku Gothic New',sans-serif;padding:5px 10px;border-radius:7px;border:1px solid var(--line);color:var(--ink-dim)" style-hover="border-color:#d92d2a;color:#d92d2a">削除</span>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+          <sc-if value="{{ myDecksEmpty }}" hint-placeholder-val="{{ false }}">
+            <div style="border:1px dashed var(--line);border-radius:14px;padding:44px 20px;text-align:center;color:var(--ink-faint);font-size:13px">保存されたデッキがありません。「＋ 新規デッキを作成」から始めましょう。</div>
+          </sc-if>
+        </div>
+      </sc-if>
+
       <!-- ===== DECKBUILDER VIEW ===== -->
       <sc-if value="{{ showDeck }}" hint-placeholder-val="{{ false }}">
         <div class="rb-view noxform" data-screen-label="デッキビルダー">
@@ -1115,6 +1178,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
             </select>
             <input value="{{ deckName }}" onInput="{{ renameDeck }}" aria-label="デッキ名" placeholder="デッキ名" style="flex:1;min-width:140px;font:600 13.5px 'Zen Kaku Gothic New',sans-serif;padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)" />
             <div onClick="{{ createDeck }}" role="button" tabindex="0" data-kbd style="cursor:pointer;white-space:nowrap;font:700 12px 'Zen Kaku Gothic New',sans-serif;padding:8px 14px;border-radius:8px;background:var(--gold);color:var(--sel-ink)">＋ 新規</div>
+            <div onClick="{{ openShare }}" role="button" tabindex="0" data-kbd aria-label="デッキを共有" style="cursor:pointer;white-space:nowrap;font:700 12px 'Zen Kaku Gothic New',sans-serif;padding:8px 12px;border-radius:8px;border:1px solid var(--gold-dim);color:var(--gold);display:inline-flex;align-items:center;gap:6px" style-hover="background:var(--surface2)">⇄ 共有</div>
             <div onClick="{{ deleteActiveDeck }}" role="button" tabindex="0" data-kbd aria-label="デッキを削除" style="cursor:pointer;white-space:nowrap;font:600 12px 'Zen Kaku Gothic New',sans-serif;padding:8px 12px;border-radius:8px;border:1px solid var(--line);color:var(--ink-dim)" style-hover="border-color:#d92d2a;color:#d92d2a">削除</div>
           </div>
 
@@ -1211,7 +1275,7 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
               <div class="rb-pickgrid">
                 <sc-for list="{{ pickRows }}" as="c" hint-placeholder-count="8">
                   <div style="border:1.5px solid {{ c.selBorder }};border-radius:11px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column;box-shadow:{{ c.selShadow }}">
-                    <div onClick="{{ c.onAdd }}" onContextMenu="{{ c.onCtx }}" onMouseEnter="{{ c.onHoverIn }}" onMouseLeave="{{ c.onHoverOut }}" role="button" tabindex="0" data-kbd style="position:relative;cursor:pointer;background:var(--surface3);aspect-ratio:63/88;overflow:hidden">
+                    <div onClick="{{ c.onAdd }}" onContextMenu="{{ c.onCtx }}" onMouseEnter="{{ c.onHoverIn }}" onMouseLeave="{{ c.onHoverOut }}" onTouchStart="{{ c.onTouchStart }}" onTouchMove="{{ c.onTouchMove }}" onTouchEnd="{{ c.onTouchEnd }}" role="button" tabindex="0" data-kbd style="position:relative;cursor:pointer;background:var(--surface3);aspect-ratio:63/88;overflow:hidden">
                       <img src="{{ c.image }}" alt="{{ c.name }}" onError="{{ hideImg }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"/>
                       <sc-if value="{{ c.count }}" hint-placeholder-val="{{ 0 }}">
                         <span style="position:absolute;inset:0;background:{{ c.selTint }};pointer-events:none"></span>
@@ -1500,6 +1564,28 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                 </div>
               </div>
               </sc-if>
+
+              <!-- stats: domain power ratio -->
+              <sc-if value="{{ hasDomPower }}" hint-placeholder-val="{{ false }}">
+              <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-top:16px">
+                <div style="padding:11px 15px;border-bottom:1px solid var(--line-soft);display:flex;align-items:center;justify-content:space-between">
+                  <span style="font-family:'Zen Old Mincho',serif;font-weight:700;font-size:14px">ドメイン別パワー割合</span>
+                  <span style="font:600 10.5px 'JetBrains Mono',monospace;color:var(--ink-faint)">合計 <span style="color:var(--gold);font-weight:800;font-size:12px">{{ domPowTotal }}</span></span>
+                </div>
+                <div style="padding:12px 15px;display:flex;flex-direction:column;gap:9px">
+                  <sc-for list="{{ domPowerRows }}" as="p" hint-placeholder-count="2">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <span style="flex:none;width:20px;height:20px;border-radius:4px;overflow:hidden;display:inline-flex"><img src="{{ p.icon }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:contain"/></span>
+                      <span style="flex:none;width:44px;font:700 12px 'Zen Kaku Gothic New',sans-serif;color:{{ p.labelColor }}">{{ p.name }}</span>
+                      <div style="flex:1;height:16px;border-radius:5px;background:var(--surface3);overflow:hidden;position:relative">
+                        <div style="position:absolute;left:0;top:0;bottom:0;width:{{ p.barPct }};border-radius:5px;background:{{ p.color }};transition:width .25s ease"></div>
+                      </div>
+                      <span style="flex:none;min-width:52px;text-align:right;font:800 12.5px 'JetBrains Mono',monospace;color:var(--ink)">{{ p.pct }}%<span style="color:var(--ink-faint);font-weight:500;font-size:11px"> ({{ p.val }})</span></span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+              </sc-if>
               </sc-if>
             </div>
           </div>
@@ -1648,6 +1734,59 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
   </div>
 </sc-if>
 
+<sc-if value="{{ shareOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeShare }}" role="button" tabindex="0" data-kbd aria-label="閉じる" class="rb-lb" style="position:fixed;inset:0;z-index:130;background:radial-gradient(120% 120% at 50% 30%,rgba(30,24,16,.82),rgba(8,7,5,.94));backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;cursor:pointer">
+    <div onClick="{{ stopEvt }}" role="dialog" aria-modal="true" class="rb-lb-fig" style="cursor:default;width:min(94vw,540px);max-height:88vh;overflow:auto;background:var(--surface);border:1px solid var(--gold-dim);border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.4);padding:24px 22px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+        <div style="font:700 16px 'Zen Kaku Gothic New',sans-serif;color:var(--ink)">{{ shareTitle }}</div>
+        <span onClick="{{ closeShare }}" role="button" tabindex="0" data-kbd aria-label="閉じる" style="margin-left:auto;flex:none;cursor:pointer;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:15px" style-hover="background:var(--surface2)">✕</span>
+      </div>
+
+      <sc-if value="{{ shareShowExport }}" hint-placeholder-val="{{ true }}">
+      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--ink-faint);margin:14px 0 7px">このデッキのコード</div>
+      <textarea readonly value="{{ shareCode }}" aria-label="デッキコード" style="width:100%;box-sizing:border-box;height:96px;resize:none;font:500 11.5px 'JetBrains Mono',monospace;line-height:1.5;word-break:break-all;padding:11px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)"></textarea>
+      <div onClick="{{ copyDeckCode }}" role="button" tabindex="0" data-kbd style="margin-top:9px;cursor:pointer;text-align:center;font:700 12.5px 'Zen Kaku Gothic New',sans-serif;padding:10px;border-radius:9px;background:var(--gold);color:var(--sel-ink)" style-hover="filter:brightness(1.06)">{{ copyBtnLabel }}</div>
+
+      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--ink-faint);margin:18px 0 7px">デッキリスト（テキスト）</div>
+      <textarea readonly value="{{ shareText }}" aria-label="デッキリスト" style="width:100%;box-sizing:border-box;height:150px;resize:none;font:500 11.5px 'JetBrains Mono',monospace;line-height:1.55;white-space:pre;padding:11px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)"></textarea>
+      <div onClick="{{ copyDeckText }}" role="button" tabindex="0" data-kbd style="margin-top:9px;cursor:pointer;text-align:center;font:700 12.5px 'Zen Kaku Gothic New',sans-serif;padding:10px;border-radius:9px;border:1px solid var(--gold-dim);color:var(--gold);background:var(--surface2)" style-hover="background:var(--surface3)">{{ copyTextBtnLabel }}</div>
+
+      <div style="height:1px;background:var(--line-soft);margin:20px 0"></div>
+      </sc-if>
+
+      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--ink-faint);margin:0 0 7px">コード または デッキリストから読み込む</div>
+      <textarea value="{{ importCode }}" onInput="{{ onImportCode }}" placeholder="デッキコード、またはデッキリスト（Legend/Champion/MainDeck/…）を貼り付け" aria-label="デッキコードまたはデッキリストを貼り付け" style="width:100%;box-sizing:border-box;height:80px;resize:none;font:500 11.5px 'JetBrains Mono',monospace;line-height:1.5;word-break:break-all;padding:11px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);color:var(--ink)"></textarea>
+      <sc-if value="{{ importError }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top:8px;font:600 12px 'Zen Kaku Gothic New',sans-serif;color:#d92d2a">{{ importError }}</div>
+      </sc-if>
+      <div onClick="{{ importDeck }}" role="button" tabindex="0" data-kbd style="margin-top:9px;cursor:pointer;text-align:center;font:700 12.5px 'Zen Kaku Gothic New',sans-serif;padding:10px;border-radius:9px;border:1px solid var(--gold-dim);color:var(--gold);background:var(--surface2)" style-hover="background:var(--surface3)">新しいデッキとして読み込む</div>
+      <div style="margin-top:12px;font:500 11.5px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-faint);line-height:1.6">読み込むと新しいデッキとして追加されます。現在のデッキは上書きされません。</div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ newDeckChoiceOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeNewDeckChoice }}" role="button" tabindex="0" data-kbd aria-label="閉じる" class="rb-lb" style="position:fixed;inset:0;z-index:130;background:radial-gradient(120% 120% at 50% 30%,rgba(30,24,16,.82),rgba(8,7,5,.94));backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;cursor:pointer">
+    <div onClick="{{ stopEvt }}" role="dialog" aria-modal="true" class="rb-lb-fig" style="cursor:default;width:min(92vw,420px);background:var(--surface);border:1px solid var(--gold-dim);border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.4);padding:24px 22px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="font:700 16px 'Zen Kaku Gothic New',sans-serif;color:var(--ink)">新しいデッキを作成</div>
+        <span onClick="{{ closeNewDeckChoice }}" role="button" tabindex="0" data-kbd aria-label="閉じる" style="margin-left:auto;flex:none;cursor:pointer;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:15px" style-hover="background:var(--surface2)">✕</span>
+      </div>
+      <div style="font:500 12.5px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-dim);line-height:1.7;margin-bottom:18px">組み方を選んでください。</div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <div onClick="{{ choiceScratch }}" role="button" tabindex="0" data-kbd style="cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:15px 16px;background:var(--surface2)" style-hover="border-color:var(--gold-dim);background:var(--surface3)">
+          <div style="font:700 14px 'Zen Kaku Gothic New',sans-serif;color:var(--ink)">新規作成</div>
+          <div style="font:500 11.5px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-faint);margin-top:3px;line-height:1.6">空のデッキを作成してデッキビルダーを開きます。</div>
+        </div>
+        <div onClick="{{ choiceImport }}" role="button" tabindex="0" data-kbd style="cursor:pointer;border:1px solid var(--gold-dim);border-radius:12px;padding:15px 16px;background:var(--surface2)" style-hover="background:var(--surface3)">
+          <div style="font:700 14px 'Zen Kaku Gothic New',sans-serif;color:var(--gold)">コード／デッキリストから読み込む</div>
+          <div style="font:500 11.5px 'Zen Kaku Gothic New',sans-serif;color:var(--ink-faint);margin-top:3px;line-height:1.6">デッキコードやテキストのデッキリストを貼り付けて作成します。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
@@ -1704,11 +1843,14 @@ class Component extends DCLogic {
       else { this.loadAllCards(); }
     } else if(v==='deck'){
       this.loadAllCards();
+    } else if(v==='decks'){
+      this.loadAllCards();
     }
     // home / legends / keywords / rules はメタのみで描画（カード不要）
   }
 
   componentDidMount(){
+    try{ this._isTouch = window.matchMedia && window.matchMedia('(hover:none),(pointer:coarse)').matches; }catch(e){ this._isTouch=false; }
     const dd=this.loadDecks();
     this.setState({ decks:dd.decks, activeDeckId:dd.activeId });
     fetch('./data/meta.json', { cache: 'no-cache' })
@@ -1765,6 +1907,8 @@ class Component extends DCLogic {
         }
       } else if(e.key==='Escape'){
         if(this.state.confirmDelete) this.setState({ confirmDelete:null });
+        else if(this.state.newDeckChoiceOpen) this.setState({ newDeckChoiceOpen:false });
+        else if(this.state.shareOpen) this.setState({ shareOpen:false });
         else if(this.state.lightbox) this.setState({ lightbox:null });
         else if(this.state.menuOpen || this.state.tocSheet) this.setState({ menuOpen:false, tocSheet:false });
       }
@@ -2173,6 +2317,62 @@ class Component extends DCLogic {
     this.persistDecks(decks, this.state.activeDeckId);
   }
   goDeck(){ this.go({ view:'deck' }, '#deck'); }
+  goMyDecks(){ this.go({ view:'decks' }, '#decks'); }
+  openDeck(id){ this.persistDecks(this.state.decks, id); this.go({ view:'deck' }, '#deck'); }
+  duplicateDeck(id){
+    const src=(this.state.decks||[]).find(d=>d.id===id); if(!src) return;
+    const nd={ ...src, id:'d'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),
+      name:(src.name||'デッキ')+' のコピー', main:{...src.main}, side:{...(src.side||{})}, runes:{...src.runes},
+      battlefields:[...(src.battlefields||[])], updated:Date.now() };
+    this.persistDecks([...(this.state.decks||[]), nd], this.state.activeDeckId);
+  }
+  deleteDeckById(id){ const d=(this.state.decks||[]).find(x=>x.id===id); this.setState({ confirmDelete:id, confirmDeleteName:(d&&d.name)||'デッキ' }); }
+  renameDeckById(id, name){
+    const decks=(this.state.decks||[]).map(d=> d.id===id ? { ...d, name, updated:Date.now() } : d);
+    this.persistDecks(decks, this.state.activeDeckId);
+  }
+  startEditDeck(id, cur){ this.setState({ editDeckId:id, editDeckName:cur||'' }); }
+  commitEditDeck(){ const id=this.state.editDeckId; if(id) this.renameDeckById(id, (this.state.editDeckName||'').trim()||'(無題)'); this.setState({ editDeckId:null, editDeckName:'' }); }
+  // デッキ一覧ビューのビューモデル（カード不要・メタのみで描画）
+  myDecksVM(){
+    const legends=this.state.legends||[];
+    const cards=this.state.cards||[];
+    const rows=(this.state.decks||[]).slice().sort((a,b)=>(b.updated||0)-(a.updated||0)).map(d=>{
+      const le=legends.find(l=>l.id===d.legendId)||null;
+      const doms=le?(le.domains||[]):[];
+      const champ=d.championId ? (cards.find(c=>c.id===d.championId)||null) : null;
+      const mainTotal=Object.values(d.main||{}).reduce((a,b)=>a+b,0)+(d.championId?1:0);
+      const runeTotal=Object.values(d.runes||{}).reduce((a,b)=>a+b,0);
+      const bfCount=(d.battlefields||[]).length;
+      const ready=mainTotal>=this.MAIN_MIN && runeTotal===this.RUNE_TOTAL && bfCount===this.BF_TOTAL;
+      let dateStr=''; try{ dateStr=new Date(d.updated||Date.now()).toLocaleDateString('ja-JP',{year:'numeric',month:'2-digit',day:'2-digit'}); }catch(e){}
+      return {
+        id:d.id, name:d.name||'(無題)',
+        legendName: le?le.name:'レジェンド未設定', hasLegend:!!le,
+        legendImage: le?(le.image||''):'',
+        champName: champ?champ.name:(d.championId?'…':'未設定'), hasChamp:!!champ, champImage: champ?(champ.image||''):'',
+        champInk: champ ? 'var(--gold)' : 'var(--ink-faint)',
+        domChips: doms.map(k=>({ key:k, name:k, color:this.domColor(k), icon:this.domIcon(k), ink:this.domInk(k) })),
+        mainTotal, runeTotal, bfCount, dateStr,
+        ready, statusTag: ready?'READY':'INCOMPLETE', statusInk: ready?'#4f9c3b':'var(--gold)',
+        statusBg: ready?'#3f8f3a':'#c88a1e', statusFg:'#fff',
+        isEditing: this.state.editDeckId===d.id,
+        editValue: this.state.editDeckName||'',
+        onEditStart: (e)=>{ if(e){ e.stopPropagation(); e.preventDefault(); } this.startEditDeck(d.id, d.name||''); },
+        onEditChange: (e)=>this.setState({ editDeckName:e.target.value }),
+        onEditCommit: (e)=>{ if(e) e.stopPropagation(); this.commitEditDeck(); },
+        onEditKey: (e)=>{ if(e.key==='Enter'){ e.preventDefault(); this.commitEditDeck(); } else if(e.key==='Escape'){ e.preventDefault(); this.setState({ editDeckId:null, editDeckName:'' }); } },
+        stopClick: (e)=>{ if(e) e.stopPropagation(); },
+        isActive: d.id===this.state.activeDeckId,
+        activeBorder: d.id===this.state.activeDeckId ? 'var(--gold)' : 'var(--line)',
+        onOpen: ()=>this.openDeck(d.id),
+        onDup: (e)=>{ if(e) e.stopPropagation(); this.duplicateDeck(d.id); },
+        onDelete: (e)=>{ if(e) e.stopPropagation(); this.deleteDeckById(d.id); },
+      };
+    });
+    return { showMyDecks:true, myDeckRows:rows, myDecksCount:rows.length, myDecksEmpty: rows.length===0,
+      createDeckHere:()=>{ const nd=this.newDeckObj(); this.persistDecks([...(this.state.decks||[]), nd], nd.id); this.go({ view:'deck' }, '#deck'); } };
+  }
   createDeck(){ const d=this.newDeckObj(); this.persistDecks([...(this.state.decks||[]), d], d.id); }
   selectDeck(e){ const id=e.target.value; this.persistDecks(this.state.decks, id); }
   deleteActiveDeck(){
@@ -2184,9 +2384,159 @@ class Component extends DCLogic {
     let decks=(this.state.decks||[]).filter(d=>d.id!==id);
     this.setState({ confirmDelete:null });
     if(!decks.length){ const d=this.newDeckObj(); this.persistDecks([d], d.id); return; }
-    this.persistDecks(decks, decks[0].id);
+    const keepActive = decks.some(d=>d.id===this.state.activeDeckId) ? this.state.activeDeckId : decks[0].id;
+    this.persistDecks(decks, keepActive);
   }
   cancelDeleteDeck(){ this.setState({ confirmDelete:null }); }
+  // ---- デッキコード共有 ----
+  // カードマップ {id:count} を "set:rest[*c],rest[*c];set2:..." に圧縮
+  _grpCards(map){
+    const bySet={};
+    Object.keys(map||{}).forEach(id=>{
+      const c=map[id]|0; if(c<=0) return;
+      const k=id.indexOf('-'), set=k>=0?id.slice(0,k):''; let rest=k>=0?id.slice(k+1):id;
+      const m=rest.match(/^(\d+)(.*)$/); if(m) rest=String(parseInt(m[1],10))+m[2];
+      (bySet[set]=bySet[set]||[]).push(c>1?rest+'*'+c:rest);
+    });
+    return Object.keys(bySet).map(s=>s+':'+bySet[s].join(',')).join(';');
+  }
+  _ungrpCards(str){
+    const out={};
+    (str||'').split(';').forEach(seg=>{
+      const ci=seg.indexOf(':'); if(ci<0) return;
+      const set=seg.slice(0,ci);
+      seg.slice(ci+1).split(',').forEach(it=>{
+        if(!it) return;
+        let rest=it, c=1; const st=it.indexOf('*'); if(st>=0){ rest=it.slice(0,st); c=parseInt(it.slice(st+1),10)||1; }
+        const m=rest.match(/^(\d+)(.*)$/); if(m) rest=m[1].padStart(3,'0')+m[2];
+        out[set?set+'-'+rest:rest]=c;
+      });
+    });
+    return out;
+  }
+  encodeDeck(d){
+    try{
+      const SEP='\x1f';
+      const raw=[ d.legendId||'', d.championId||'',
+        this._grpCards(d.main), this._grpCards(d.side), this._grpCards(d.runes),
+        this._grpCards((d.battlefields||[]).reduce((o,id)=>(o[id]=(o[id]||0)+1,o),{})) ].join(SEP);
+      return btoa(unescape(encodeURIComponent(raw))).replace(/=+$/,'').replace(/\+/g,'-').replace(/\//g,'_');
+    }catch(e){ return ''; }
+  }
+  decodeDeck(code){
+    try{
+      let s=(code||'').trim().replace(/\s+/g,'');
+      const nid='d'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+      const i1=s.indexOf('RB1-');
+      if(i1>=0){
+        s=s.slice(i1+4); while(s.length%4) s+='=';
+        const p=JSON.parse(decodeURIComponent(escape(atob(s))));
+        if(!p || typeof p!=='object') return null;
+        return { id:nid, name:'共有デッキ', legendId:p.l||null, championId:p.c||null,
+          main:(p.m&&typeof p.m==='object')?p.m:{}, side:(p.s&&typeof p.s==='object')?p.s:{},
+          runes:(p.r&&typeof p.r==='object')?p.r:{}, battlefields:Array.isArray(p.b)?p.b:[], updated:Date.now() };
+      }
+      { // prefixなし（またはRB2-付き）= RB2形式
+        const i2=s.indexOf('RB2-'); if(i2>=0) s=s.slice(i2+4);
+        s=s.replace(/-/g,'+').replace(/_/g,'/'); while(s.length%4) s+='=';
+        const p=decodeURIComponent(escape(atob(s))).split('\x1f');
+        return { id:nid, name:'共有デッキ', legendId:p[0]||null, championId:p[1]||null,
+          main:this._ungrpCards(p[2]), side:this._ungrpCards(p[3]), runes:this._ungrpCards(p[4]),
+          battlefields:(function(m){const a=[];Object.keys(m).forEach(id=>{for(let n=m[id]|0;n>0;n--)a.push(id);});return a;})(this._ungrpCards(p[5])), updated:Date.now() };
+      }
+    }catch(e){ return null; }
+  }
+  openShare(){ this.setState({ shareOpen:true, shareImportOnly:false, importCode:'', importError:'', copyLabel:'', copyTextLabel:'' }); }
+  openNewDeckChoice(){ this.setState({ newDeckChoiceOpen:true }); }
+  closeNewDeckChoice(){ this.setState({ newDeckChoiceOpen:false }); }
+  choiceScratch(){ this.setState({ newDeckChoiceOpen:false }); const nd=this.newDeckObj(); this.persistDecks([...(this.state.decks||[]), nd], nd.id); this.go({ view:'deck' }, '#deck'); }
+  choiceImport(){ this.setState({ newDeckChoiceOpen:false, shareOpen:true, shareImportOnly:true, importCode:'', importError:'', copyLabel:'', copyTextLabel:'' }); }
+  _cardName(id){ const c=(this.state.cards||[]).find(x=>x.id===id); return c?c.name:id; }
+  encodeDeckText(d){
+    if(!d) return '';
+    const lines=[];
+    const nm=(id)=> (this._cardName(id)||'').replace(' - ', ', ');
+    if(d.legendId){ lines.push('Legend:', '1 '+nm(d.legendId), ''); }
+    if(d.championId){ lines.push('Champion:', '1 '+nm(d.championId), ''); }
+    const grp=(map)=>Object.keys(map||{}).filter(id=>(map[id]|0)>0).map(id=>({name:this._cardName(id), n:map[id]|0})).sort((a,b)=> b.n-a.n || a.name.localeCompare(b.name));
+    const main=grp(d.main);
+    if(main.length){ lines.push('MainDeck:'); main.forEach(x=>lines.push(x.n+' '+x.name)); lines.push(''); }
+    const bfMap=(d.battlefields||[]).reduce((o,id)=>(o[id]=(o[id]||0)+1,o),{});
+    const bf=grp(bfMap);
+    if(bf.length){ lines.push('Battlefields:'); bf.forEach(x=>lines.push(x.n+' '+x.name)); lines.push(''); }
+    const runes=grp(d.runes);
+    if(runes.length){ lines.push('Runes:'); runes.forEach(x=>lines.push(x.n+' '+x.name)); }
+    return lines.join('\n').trim();
+  }
+  copyDeckText(){
+    const txt=this.encodeDeckText(this.activeDeck()||{});
+    const done=()=>{ this.setState({ copyTextLabel:'コピーしました ✓' }); clearTimeout(this._copyT2); this._copyT2=setTimeout(()=>this.setState({ copyTextLabel:'' }),1800); };
+    try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, ()=>this.fallbackCopy(txt,done)); } else this.fallbackCopy(txt,done); }
+    catch(e){ this.fallbackCopy(txt,done); }
+  }
+  closeShare(){ this.setState({ shareOpen:false }); }
+  copyDeckCode(){
+    const code=this.encodeDeck(this.activeDeck()||{});
+    const done=()=>{ this.setState({ copyLabel:'コピーしました ✓' }); clearTimeout(this._copyT); this._copyT=setTimeout(()=>this.setState({ copyLabel:'' }),1800); };
+    try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(code).then(done, ()=>this.fallbackCopy(code,done)); } else this.fallbackCopy(code,done); }
+    catch(e){ this.fallbackCopy(code,done); }
+  }
+  fallbackCopy(text,done){
+    try{ const ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.focus(); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done&&done(); }catch(e){}
+  }
+  onImportCode(e){ this.setState({ importCode:e.target.value, importError:'' }); }
+  _looksLikeText(s){ return /(^|\n)\s*(legend|champion|maindeck|main|battlefields?|runes?)\s*:/i.test(s) || /\n\s*\d+\s+\S/.test('\n'+s); }
+  parseDeckText(text){
+    const cards=this.state.cards||[];
+    if(!cards.length) return null;
+    const norm=(n)=> (n||'').toLowerCase().replace(/\s*[-,]\s*/g,' ').replace(/[’']/g,"'").replace(/\s+/g,' ').trim();
+    const idx={};
+    cards.forEach(c=>{ const k=norm(c.name); if(k && !(k in idx)) idx[k]=c; });
+    const nd={ id:'d'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), name:'共有デッキ',
+      legendId:null, championId:null, main:{}, side:{}, runes:{}, battlefields:[], updated:Date.now() };
+    let sec='main'; const miss=[]; let matched=0;
+    (text||'').split(/\r?\n/).forEach(raw=>{
+      const line=raw.trim(); if(!line) return;
+      const h=line.replace(/:$/,'').toLowerCase();
+      if(/^legend$/.test(h)){ sec='legend'; return; }
+      if(/^champion$/.test(h)){ sec='champion'; return; }
+      if(/^(maindeck|main|deck)$/.test(h)){ sec='main'; return; }
+      if(/^(sideboard|side)$/.test(h)){ sec='side'; return; }
+      if(/^battlefields?$/.test(h)){ sec='bf'; return; }
+      if(/^runes?$/.test(h)){ sec='rune'; return; }
+      const m=line.match(/^(\d+)\s*[xX]?\s+(.+)$/);
+      if(!m) return;
+      const n=parseInt(m[1],10)||1; const name=m[2].trim();
+      const c=idx[norm(name)];
+      if(!c){ miss.push(name); return; }
+      matched++;
+      if(sec==='legend') nd.legendId=c.id;
+      else if(sec==='champion') nd.championId=c.id;
+      else if(sec==='bf'){ for(let i=0;i<n;i++) nd.battlefields.push(c.id); }
+      else if(sec==='rune') nd.runes[c.id]=(nd.runes[c.id]||0)+n;
+      else if(sec==='side') nd.side[c.id]=(nd.side[c.id]||0)+n;
+      else nd.main[c.id]=(nd.main[c.id]||0)+n;
+    });
+    const any = nd.legendId||nd.championId||Object.keys(nd.main).length||Object.keys(nd.runes).length||nd.battlefields.length;
+    if(!any) return null;
+    return { deck:nd, miss, matched };
+  }
+  importDeck(){
+    const raw=this.state.importCode||'';
+    if(this._looksLikeText(raw)){
+      if(!(this.state.cards||[]).length){ this.setState({ importError:'カードデータの読み込み中です。少し待ってからもう一度お試しください。' }); return; }
+      const res=this.parseDeckText(raw);
+      if(!res || !res.matched){ this.setState({ importError:'デッキリストを読み込めませんでした。カード名がデータベースと一致しません。' }); return; }
+      this.persistDecks([...(this.state.decks||[]), res.deck], res.deck.id);
+      if(res.miss && res.miss.length){ this.setState({ importCode:'', deckPanelTab:'概要', importError:'デッキを作成しました。ただし一致しなかったカード: '+res.miss.slice(0,6).join(' / ')+(res.miss.length>6?' 他':'') }); }
+      else this.setState({ shareOpen:false, importCode:'', importError:'', deckPanelTab:'概要' });
+      return;
+    }
+    const nd=this.decodeDeck(raw);
+    if(!nd){ this.setState({ importError:'デッキコードを読み取れませんでした。' }); return; }
+    this.persistDecks([...(this.state.decks||[]), nd], nd.id);
+    this.setState({ shareOpen:false, importCode:'', importError:'', deckPanelTab:'概要' });
+  }
   renameDeck(e){ const v=e.target.value; this.mutateDeck(d=>{ d.name=v; }); }
   deckLegendCard(){ const d=this.activeDeck(); return d && d.legendId ? this.state.cards.find(c=>c.id===d.legendId) : null; }
   deckDomains(){
@@ -2289,7 +2639,7 @@ class Component extends DCLogic {
     const deckFilterCount=dfCost.length+dfPower.length+dfKw.length;
     const deckHasFilterChips=deckCostChips.length>0||deckPowerChips.length>0||deckKwChips.length>0;
     pool=pool.slice().sort((a,b)=>{ const ca=parseInt(a.cost)||0, cb=parseInt(b.cost)||0; if(ca!==cb) return ca-cb; return (a.name||'').localeCompare(b.name||''); });
-    const PICK_CAP=120;
+    const PICK_CAP=800;
     const pickTotal=pool.length;
     // 追加先（メイン/サイド）。サイドはメインプール（Unit/Spell/Gear）のみ対象。
     const addTarget = (this.state.addTarget==='side') ? 'side' : 'main';
@@ -2313,13 +2663,16 @@ class Component extends DCLogic {
         toggleLabel: inDeck ? '✓ 選択中' : (isChamp?'チャンピオンに設定':isLegend?'レジェンドに設定':'BFに追加'),
         toggleBg: inDeck ? 'var(--gold)' : 'transparent',
         toggleInk: inDeck ? 'var(--sel-ink)' : 'var(--gold)',
-        onAdd: isChamp ? (()=>this.setDeckChampion(c.id)) : isLegend ? (()=>this.setDeckLegend(c.id)) : isBf ? (()=>this.toggleBattlefield(c.id)) : useSide ? (()=>this.addSide(c.id)) : (()=>this.addMain(c.id)),
+        onAdd: (e)=>{ if(this._suppressTap){ this._suppressTap=false; if(e&&e.preventDefault) e.preventDefault(); return; } return isChamp ? this.setDeckChampion(c.id) : isLegend ? this.setDeckLegend(c.id) : isBf ? this.toggleBattlefield(c.id) : useSide ? this.addSide(c.id) : this.addMain(c.id); },
         onSub: useSide ? (()=>this.subSide(c.id)) : (()=>this.subMain(c.id)),
         onCtx: (e)=>{ e.preventDefault(); if(isChamp){ if(d.championId===c.id) this.setDeckChampion(c.id); } else if(isLegend){ if(d.legendId===c.id) this.setDeckLegend(c.id); } else if(isBf){ if(d.battlefields.includes(c.id)) this.toggleBattlefield(c.id); } else if(useSide){ this.subSide(c.id); } else { this.subMain(c.id); } },
         onOpen: ()=>this.select(c.id),
         onInfo: (e)=>{ if(e){ e.preventDefault(); e.stopPropagation(); } this.clearHoverTimer(); this.setState({ deckPreview:c.id }); },
-        onHoverIn: (e)=>{ this.clearHoverTimer(); const el=e&&e.currentTarget; const r=el&&el.getBoundingClientRect(); this._hoverRect=r?{left:r.left,right:r.right,top:r.top,bottom:r.bottom}:null; this._hoverTimer=setTimeout(()=>{ this.setState({ hoverPreview:c.id }); }, 500); },
+        onHoverIn: (e)=>{ if(this._isTouch) return; this.clearHoverTimer(); const el=e&&e.currentTarget; const r=el&&el.getBoundingClientRect(); this._hoverRect=r?{left:r.left,right:r.right,top:r.top,bottom:r.bottom}:null; this._hoverTimer=setTimeout(()=>{ this.setState({ hoverPreview:c.id }); }, 500); },
         onHoverOut: ()=>{ this.clearHoverTimer(); if(this.state.hoverPreview) this.setState({ hoverPreview:null }); },
+        onTouchStart: (e)=>{ if(!this._isTouch) return; this.clearHoverTimer(); this._suppressTap=false; const t=e&&e.touches&&e.touches[0]; this._lpStartXY=t?{x:t.clientX,y:t.clientY}:null; const el=e&&e.currentTarget; const r=el&&el.getBoundingClientRect(); this._hoverRect=r?{left:r.left,right:r.right,top:r.top,bottom:r.bottom}:null; this._hoverTimer=setTimeout(()=>{ this._suppressTap=true; this.setState({ hoverPreview:c.id }); }, 420); },
+        onTouchMove: (e)=>{ if(!this._isTouch) return; const t=e&&e.touches&&e.touches[0]; if(t&&this._lpStartXY){ const dx=Math.abs(t.clientX-this._lpStartXY.x), dy=Math.abs(t.clientY-this._lpStartXY.y); if(dx>10||dy>10){ this.clearHoverTimer(); } } },
+        onTouchEnd: ()=>{ if(!this._isTouch) return; this.clearHoverTimer(); },
       };
     });
     // 追加先トグル（メインプールのタブでのみ有効）
@@ -2413,17 +2766,37 @@ class Component extends DCLogic {
     let powerYes=0, powerNo=0, powerSum=0;
     Object.keys(d.main).forEach(id=>{ const c=cards.find(x=>x.id===id); if(!c) return; const n=d.main[id];
       const raw=(c.power==null?'':String(c.power)).trim();
-      const pv=parseInt(raw);
-      if(raw==='' || isNaN(pv)){ powerNo+=n; }
-      else { powerMap[pv]=(powerMap[pv]||0)+n; powerYes+=n; powerSum+=pv*n; }
+      let pv=parseInt(raw);
+      if(raw==='' || isNaN(pv)){ pv=0; powerNo+=n; }        // 空欄=0扱い
+      else { powerYes+=n; powerSum+=pv*n; }
+      powerMap[pv]=(powerMap[pv]||0)+n;
     });
-    const powerKeys=Object.keys(powerMap).map(Number).sort((a,b)=>a-b);
-    const powerBarMax=Math.max(1,...powerKeys.map(k=>powerMap[k]));
+    const powerMaxKey=Math.max(0,...Object.keys(powerMap).map(Number));
+    const powerKeys=[]; for(let k=0;k<=powerMaxKey;k++) powerKeys.push(k);   // 0 から連続表示
+    const powerBarMax=Math.max(1,...powerKeys.map(k=>powerMap[k]||0));
     const powerRows=powerKeys.map(k=>({
-      label:String(k), n:powerMap[k], pct:(powerMap[k]/powerBarMax*100)+'%',
+      label:String(k), n:(powerMap[k]||0), pct:((powerMap[k]||0)/powerBarMax*100)+'%',
     }));
     const avgPower = powerYes ? (powerSum/powerYes).toFixed(1) : '–';
     const hasPowerData = powerYes>0 || powerNo>0;
+
+    // ---- 統計: ドメイン毎のパワーコスト合計と割合 ----
+    const domPowMap={};
+    Object.keys(d.main).forEach(id=>{ const c=cards.find(x=>x.id===id); if(!c) return; const n=d.main[id];
+      const pv=parseInt((c.power==null?'':String(c.power)).trim());
+      if(isNaN(pv) || pv<=0) return;
+      const dk=c.domain || (c.domains&&c.domains[0]);
+      if(!dk) return;
+      domPowMap[dk]=(domPowMap[dk]||0)+pv*n;
+    });
+    const domPowTotal=Object.values(domPowMap).reduce((a,b)=>a+b,0);
+    const domPowMax=Math.max(1,...Object.values(domPowMap));
+    const domPowerRows=this.DOMAINS.filter(x=>domPowMap[x.key]).map(x=>({
+      key:x.key, name:x.name, color:this.domColor(x.key), labelColor:this.domLabelColor(x.key), icon:this.domIcon(x.key),
+      val:domPowMap[x.key], pct: domPowTotal?Math.round(domPowMap[x.key]/domPowTotal*100):0,
+      barPct:(domPowMap[x.key]/domPowMax*100)+'%',
+    }));
+    const hasDomPower = domPowTotal>0;
 
     // ---- in-place card preview (Japanese effects) ----
     let deckPreview=null;
@@ -2484,6 +2857,7 @@ class Component extends DCLogic {
       deckValidIcon: deckValid ? '✓' : '⚠',
       curve, typeCounts, avgEnergy,
       powerRows, hasPowerData, avgPower, powerYes, powerNo,
+      domPowerRows, hasDomPower, domPowTotal,
     };
   }
 
@@ -2671,7 +3045,7 @@ class Component extends DCLogic {
       type:c.type, name:c.name, nameJa:c.nameJa, cost:c.cost, rarity:c.rarity,
       set:c.setCode, domain:c.domain, color:this.domColor(c.domain), icon:this.domIcon(c.domain), image:c.image||'',
       onClick: c._artLegendId ? (()=>this.openCardVariant(c._artLegendId, c._artVariantIdx)) : (()=>this.select(c.id)),
-      onHoverIn: (e)=>{ this.clearHoverTimer(); const el=e&&e.currentTarget; const r=el&&el.getBoundingClientRect(); this._hoverRect=r?{left:r.left,right:r.right,top:r.top,bottom:r.bottom}:null; const hid=c._artLegendId||c.id; this._hoverTimer=setTimeout(()=>{ this.setState({ hoverPreview:hid }); }, 500); },
+      onHoverIn: (e)=>{ if(this._isTouch) return; this.clearHoverTimer(); const el=e&&e.currentTarget; const r=el&&el.getBoundingClientRect(); this._hoverRect=r?{left:r.left,right:r.right,top:r.top,bottom:r.bottom}:null; const hid=c._artLegendId||c.id; this._hoverTimer=setTimeout(()=>{ this.setState({ hoverPreview:hid }); }, 500); },
       onHoverOut: ()=>{ this.clearHoverTimer(); if(this.state.hoverPreview) this.setState({ hoverPreview:null }); },
       numShort: (c.number||'').split('/')[0],
       imgFit: (/Battlefield/i.test(c.type||'')||/Battlefield/i.test(c.tag||'')) ? 'rb-cimg contain' : 'rb-cimg',
@@ -2906,6 +3280,26 @@ class Component extends DCLogic {
       lightboxCap: s.lightbox ? s.lightbox.cap : '',
       closeLightbox: ()=>this.setState({ lightbox:null }),
       confirmDeleteOpen: !!s.confirmDelete,
+      shareOpen: !!s.shareOpen,
+      shareCode: s.shareOpen ? this.encodeDeck(this.activeDeck()||{}) : '',
+      importCode: s.importCode||'',
+      importError: s.importError||'',
+      copyBtnLabel: s.copyLabel || 'コードをコピー',
+      newDeckChoiceOpen: !!s.newDeckChoiceOpen,
+      shareShowExport: !s.shareImportOnly,
+      shareTitle: s.shareImportOnly ? 'デッキを読み込む' : 'デッキを共有',
+      openNewDeckChoice: ()=>this.openNewDeckChoice(),
+      closeNewDeckChoice: ()=>this.closeNewDeckChoice(),
+      choiceScratch: ()=>this.choiceScratch(),
+      choiceImport: ()=>this.choiceImport(),
+      shareText: s.shareOpen ? this.encodeDeckText(this.activeDeck()||{}) : '',
+      copyTextBtnLabel: s.copyTextLabel || 'デッキリストをコピー',
+      copyDeckText: ()=>this.copyDeckText(),
+      openShare: ()=>this.openShare(),
+      closeShare: ()=>this.closeShare(),
+      copyDeckCode: ()=>this.copyDeckCode(),
+      onImportCode: (e)=>this.onImportCode(e),
+      importDeck: ()=>this.importDeck(),
       confirmDeleteName: s.confirmDeleteName||'',
       confirmDeleteDeck: ()=>this.confirmDeleteDeck(),
       cancelDeleteDeck: ()=>this.cancelDeleteDeck(),
@@ -2951,6 +3345,10 @@ class Component extends DCLogic {
       onDeckQ:(e)=>this.onDeckQ(e),
       clearDeckQ:()=>this.setState({ deckQ:'' }),
       ...(s.view==='deck' ? this.deckVM() : { showDeck:false }),
+      goMyDecks:()=>this.goMyDecks(),
+      myDecksBg: activeTab==='decks' ? highlight : 'transparent',
+      myDecksInk: activeTab==='decks' ? 'var(--ink)' : 'var(--ink-dim)',
+      ...(s.view==='decks' ? this.myDecksVM() : { showMyDecks:false }),
       goRulesGlossary:()=>this.goRulesGlossary(),
       rulesBg: activeTab==='rules' ? highlight : 'transparent',
       rulesInk: activeTab==='rules' ? 'var(--ink)' : 'var(--ink-dim)',
