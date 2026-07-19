@@ -1546,11 +1546,20 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                     <div style="display:flex;align-items:center;gap:10px">
                       <span style="flex:none;width:34px;display:inline-flex;align-items:center;gap:4px;font:800 12.5px 'JetBrains Mono',monospace;color:var(--gold)"><span style="color:var(--gold-dim);font-size:11px">◆</span>{{ p.label }}</span>
                       <div style="flex:1;height:16px;border-radius:5px;background:var(--surface3);overflow:hidden;position:relative">
-                        <div style="position:absolute;left:0;top:0;bottom:0;width:{{ p.pct }};border-radius:5px;background:linear-gradient(90deg,var(--gold),var(--gold-dim));transition:width .25s ease"></div>
+                        <div style="position:absolute;left:0;top:0;bottom:0;width:100%;display:flex;border-radius:5px;overflow:hidden">
+                          <sc-for list="{{ p.segments }}" as="sg" hint-placeholder-count="1">
+                            <div style="height:16px;width:{{ sg.widthPct }};background:{{ sg.color }};transition:width .25s ease;display:flex;align-items:center;justify-content:center;overflow:hidden">
+                              <sc-if value="{{ sg.showN }}" hint-placeholder-val="{{ false }}">
+                                <span style="font:800 10px 'JetBrains Mono',monospace;color:{{ sg.ink }};line-height:1">{{ sg.n }}</span>
+                              </sc-if>
+                            </div>
+                          </sc-for>
+                        </div>
                       </div>
                       <span style="flex:none;min-width:20px;text-align:right;font:800 12.5px 'JetBrains Mono',monospace;color:var(--ink)">{{ p.n }}</span>
                     </div>
                   </sc-for>
+                  <div style="font-size:10px;color:var(--ink-faint);padding:2px 0 4px">0 はパワー表記のないカード（パワーなし）を含む</div>
                 </div>
                 <div style="display:flex;gap:0;border-top:1px solid var(--line-soft);margin-top:6px">
                   <div style="flex:1;text-align:center;padding:10px 4px;border-right:1px solid var(--line-soft)">
@@ -1573,13 +1582,16 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
                   <span style="font:600 10.5px 'JetBrains Mono',monospace;color:var(--ink-faint)">合計 <span style="color:var(--gold);font-weight:800;font-size:12px">{{ domPowTotal }}</span></span>
                 </div>
                 <div style="padding:12px 15px;display:flex;flex-direction:column;gap:9px">
+                  <div style="display:flex;height:20px;border-radius:6px;overflow:hidden;background:var(--surface3)">
+                    <sc-for list="{{ domPowerRows }}" as="p" hint-placeholder-count="2">
+                      <div style="width:{{ p.share }};background:{{ p.color }};transition:width .25s ease"></div>
+                    </sc-for>
+                  </div>
                   <sc-for list="{{ domPowerRows }}" as="p" hint-placeholder-count="2">
                     <div style="display:flex;align-items:center;gap:10px">
                       <span style="flex:none;width:20px;height:20px;border-radius:4px;overflow:hidden;display:inline-flex"><img src="{{ p.icon }}" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:contain"/></span>
                       <span style="flex:none;width:44px;font:700 12px 'Zen Kaku Gothic New',sans-serif;color:{{ p.labelColor }}">{{ p.name }}</span>
-                      <div style="flex:1;height:16px;border-radius:5px;background:var(--surface3);overflow:hidden;position:relative">
-                        <div style="position:absolute;left:0;top:0;bottom:0;width:{{ p.barPct }};border-radius:5px;background:{{ p.color }};transition:width .25s ease"></div>
-                      </div>
+                      <div style="flex:1"></div>
                       <span style="flex:none;min-width:52px;text-align:right;font:800 12.5px 'JetBrains Mono',monospace;color:var(--ink)">{{ p.pct }}%<span style="color:var(--ink-faint);font-weight:500;font-size:11px"> ({{ p.val }})</span></span>
                     </div>
                   </sc-for>
@@ -2762,7 +2774,7 @@ class Component extends DCLogic {
     const typeCounts=ORDER.map(t=>({ label:OLABEL[t], n:(byType[t]||[]).reduce((a,x)=>a+x.n,0) }));
 
     // ---- 統計: パワー分布（メインデッキのパワー値ごとの採用枚数） ----
-    const powerMap={};
+    const powerMap={}; const powerDomMap={};
     let powerYes=0, powerNo=0, powerSum=0;
     Object.keys(d.main).forEach(id=>{ const c=cards.find(x=>x.id===id); if(!c) return; const n=d.main[id];
       const raw=(c.power==null?'':String(c.power)).trim();
@@ -2770,30 +2782,34 @@ class Component extends DCLogic {
       if(raw==='' || isNaN(pv)){ pv=0; powerNo+=n; }        // 空欄=0扱い
       else { powerYes+=n; powerSum+=pv*n; }
       powerMap[pv]=(powerMap[pv]||0)+n;
+      const dk=c.domain||(c.domains&&c.domains[0])||'_';
+      (powerDomMap[pv]=powerDomMap[pv]||{})[dk]=(powerDomMap[pv][dk]||0)+n;
     });
     const powerMaxKey=Math.max(0,...Object.keys(powerMap).map(Number));
     const powerKeys=[]; for(let k=0;k<=powerMaxKey;k++) powerKeys.push(k);   // 0 から連続表示
     const powerBarMax=Math.max(1,...powerKeys.map(k=>powerMap[k]||0));
     const powerRows=powerKeys.map(k=>({
       label:String(k), n:(powerMap[k]||0), pct:((powerMap[k]||0)/powerBarMax*100)+'%',
+      segments: this.DOMAINS.filter(x=>(powerDomMap[k]||{})[x.key]).map(x=>({
+        key:x.key, color:this.domColor(x.key), ink:this.domInk(x.key),
+        n:powerDomMap[k][x.key], showN: (powerDomMap[k][x.key]/powerBarMax)>=0.12,
+        widthPct:((powerDomMap[k][x.key])/powerBarMax*100)+'%',
+      })),
     }));
     const avgPower = powerYes ? (powerSum/powerYes).toFixed(1) : '–';
     const hasPowerData = powerYes>0 || powerNo>0;
 
     // ---- 統計: ドメイン毎のパワーコスト合計と割合 ----
     const domPowMap={};
-    Object.keys(d.main).forEach(id=>{ const c=cards.find(x=>x.id===id); if(!c) return; const n=d.main[id];
-      const pv=parseInt((c.power==null?'':String(c.power)).trim());
-      if(isNaN(pv) || pv<=0) return;
-      const dk=c.domain || (c.domains&&c.domains[0]);
-      if(!dk) return;
-      domPowMap[dk]=(domPowMap[dk]||0)+pv*n;
-    });
+    const addPow=(c,n)=>{ if(!c) return; const pv=parseInt((c.power==null?'':String(c.power)).trim()); if(isNaN(pv)||pv<=0) return; const dk=c.domain||(c.domains&&c.domains[0]); if(!dk) return; domPowMap[dk]=(domPowMap[dk]||0)+pv*n; };
+    Object.keys(d.main).forEach(id=>{ addPow(cards.find(x=>x.id===id), d.main[id]); });
+    if(d.championId) addPow(cards.find(x=>x.id===d.championId), 1);
     const domPowTotal=Object.values(domPowMap).reduce((a,b)=>a+b,0);
     const domPowMax=Math.max(1,...Object.values(domPowMap));
     const domPowerRows=this.DOMAINS.filter(x=>domPowMap[x.key]).map(x=>({
       key:x.key, name:x.name, color:this.domColor(x.key), labelColor:this.domLabelColor(x.key), icon:this.domIcon(x.key),
       val:domPowMap[x.key], pct: domPowTotal?Math.round(domPowMap[x.key]/domPowTotal*100):0,
+      share: (domPowTotal?domPowMap[x.key]/domPowTotal*100:0)+'%',
       barPct:(domPowMap[x.key]/domPowMax*100)+'%',
     }));
     const hasDomPower = domPowTotal>0;

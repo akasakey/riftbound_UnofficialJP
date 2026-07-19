@@ -1,5 +1,5 @@
 {
- "_readme": "メタデータ（sets/keywords/legends/counts）。カード本体は data/cards/<CODE>.json に分割。",
+ "_readme": "メタデータ（sets/keywords/legends/counts）。カード本体は data/cards/<CODE>.json に分割。編集は data/cards.json を直し scripts/split-cards.js を流す。",
  "sets": [
   {
    "code": "VEN",
@@ -127,7 +127,7 @@
   {
    "kw": "LEGION",
    "cat": "timing",
-   "desc": "このカードを捨て札から規定コストで使用できる。このターンに他のカードをプレイしていれば効果を得る。"
+   "desc": "このターンに他のカードをプレイしていれば、LEGION以降の効果を得る。"
   },
   {
    "kw": "ACTION",
@@ -1118,6 +1118,14 @@
   }
  ],
  "changelog": [
+  {
+   "date": "2026-07-20",
+   "text": "デッキ共有機能を追加しました（デッキコード・デッキリストの出力／読み込み）。"
+  },
+  {
+   "date": "2026-07-20",
+   "text": "デッキ一覧ページを追加しました（保存デッキの切替・名前変更・複製・削除）。"
+  },
   {
    "date": "2026-07-15",
    "text": "スペル・ギアのパワーコスト表記を全カード見直し・修正しました。"
