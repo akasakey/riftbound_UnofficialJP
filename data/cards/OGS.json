@@ -420,7 +420,22 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGS/OGS-014.avif",
+     "number": "OGS-014/024",
+     "rarity": "エピック"
+    },
+    {
+     "label": "VEN ALT ART",
+     "image": "images/VEN/VEN-SP6.avif",
+     "set": "Vendetta",
+     "number": "VEN-SP6/006",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogs-015",

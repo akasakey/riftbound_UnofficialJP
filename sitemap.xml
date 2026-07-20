@@ -9,7 +9,7 @@
     <loc>https://riftbound-unofficialjp.pages.dev/cards</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ogn-001</loc>
@@ -4542,10 +4542,34 @@
     <lastmod>2026-07-11</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-001</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-002</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-003</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-004</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-005</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-006</loc>
@@ -4560,10 +4584,28 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-008</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-009</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-010</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-011</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-012</loc>
@@ -4576,6 +4618,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-014</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-015</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-016</loc>
@@ -4602,16 +4656,34 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-020</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-021</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-022</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-023</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-024</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-025</loc>
@@ -4626,6 +4698,12 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-027</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-028</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4638,10 +4716,46 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-030</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-031</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-032</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-033</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-034</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-035</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-036</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-037</loc>
@@ -4654,6 +4768,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-039</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-040</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-041</loc>
@@ -4674,6 +4800,18 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-044</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-045</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-046</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4692,10 +4830,34 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-049</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-050</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-051</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-052</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-053</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-054</loc>
@@ -4704,10 +4866,34 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-055</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-056</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-057</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-058</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-059</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-060</loc>
@@ -4734,6 +4920,18 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-064</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-065</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-066</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4758,16 +4956,58 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-070</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-071</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-072</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-073</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-074</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-075</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-076</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-077</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-078</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-079</loc>
@@ -4782,10 +5022,34 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-081</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-082</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-083</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-084</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-085</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-086</loc>
@@ -4812,10 +5076,22 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-090</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-091</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-092</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-093</loc>
@@ -4824,10 +5100,46 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-094</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-095</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-096</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-097</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-098</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-099</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-100</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-101</loc>
@@ -4848,6 +5160,18 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-104</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-105</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-106</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4858,6 +5182,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-108</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-109</loc>
@@ -4872,6 +5202,12 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-111</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-112</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4884,10 +5220,28 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-114</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-115</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-116</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-117</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-118</loc>
@@ -4902,10 +5256,40 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-120</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-121</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-122</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-123</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-124</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-125</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-126</loc>
@@ -4920,16 +5304,46 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-128</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-129</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-130</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-131</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-132</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-133</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-134</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-135</loc>
@@ -4962,55 +5376,13 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-141</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-143</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-145</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-147</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-149</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-151</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-153</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-155</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-140</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-141</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
@@ -5022,7 +5394,19 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-143</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-144</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-145</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
@@ -5034,7 +5418,55 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-147</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-148</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-149</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-150</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-151</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-152</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-153</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-154</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-155</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
@@ -5046,16 +5478,40 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-157</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-158</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-159</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-160</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-161</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-162</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://riftbound-unofficialjp.pages.dev/card/ven-163</loc>
@@ -5070,69 +5526,15 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-167</loc>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-165</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-168</loc>
+    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-166</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-175</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-176</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-179</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-180</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-sp2</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-sp3</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-sp4</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-sp5</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://riftbound-unofficialjp.pages.dev/card/ven-sp6</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-20</lastmod>
   </url>
 </urlset>

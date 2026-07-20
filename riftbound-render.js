@@ -111,12 +111,13 @@
     return R().createElement('span', null, ...lines.map((ln, i) => {
       const bullet = /^[・•]/.test(ln.trim());
       const body = bullet ? ln.trim().replace(/^[・•]\s*/, '') : ln;
+      if (!bullet) return R().createElement('span', { key: 'ln' + i, style: { display: 'block' } }, ...richLine(body, sz));
       return R().createElement('span', {
         key: 'ln' + i,
-        style: bullet
-          ? { display: 'block', paddingLeft: '1.15em', textIndent: '-1.15em' }
-          : { display: 'block' }
-      }, bullet ? R().createElement('span', { style: { color: 'var(--accent,#c9a24a)' } }, '・') : null, ...richLine(body, sz));
+        style: { display: 'flex', alignItems: 'baseline', gap: '0.3em' }
+      },
+        R().createElement('span', { style: { flex: '0 0 auto', color: 'var(--accent,#c9a24a)' } }, '・'),
+        R().createElement('span', { style: { flex: '1 1 auto', minWidth: 0 } }, ...richLine(body, sz)));
     }));
   }
 

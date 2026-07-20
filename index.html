@@ -704,9 +704,9 @@ window.hideImg = function(e){ var el=(e&&e.target)||e; if(!el||!el.style)return;
           <div class="rb-hero" style="position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,var(--panel-a),var(--panel-b));padding:52px 44px;margin-bottom:34px">
             <div style="position:absolute;inset:0;background:radial-gradient(90% 120% at 90% 0%,rgba(217,185,120,.14),transparent 55%);pointer-events:none"></div>
             <div style="position:relative;max-width:640px">
-              <div onClick="{{ goVen }}" role="button" tabindex="0" data-kbd class="rb-anim rb-anim-1 rb-hovedge" style="cursor:pointer;display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--gold);border-radius:100px;padding:5px 7px 5px 14px;margin-bottom:16px">
+              <div onClick="{{ goVen }}" role="button" tabindex="0" data-kbd class="rb-anim rb-anim-1 rb-hovedge" style="cursor:pointer;display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--gold);border-radius:100px;padding:5px 7px 5px 14px;margin-bottom:16px;max-width:100%">
                 <span style="flex:none;font-size:9.5px;font-weight:800;letter-spacing:.06em;background:var(--gold);color:var(--sel-ink);padding:3px 8px;border-radius:100px">NEW</span>
-                <span style="font-size:12.5px;line-height:1.4;color:var(--ink);white-space:nowrap">新セット「<strong>Vendetta</strong>」先行公開分を追加中</span>
+                <span style="font-size:12.5px;line-height:1.4;color:var(--ink);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">新セット「<strong>Vendetta</strong>」先行公開分を追加中</span>
                 <span style="flex:none;color:var(--gold);font-weight:700;font-size:14px">→</span>
               </div>
               <h1 class="rb-hero-h1 rb-anim rb-anim-2" style="margin:0;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:38px;line-height:1.25;letter-spacing:.01em">RIFTBOUND<br/>日本語翻訳 Wiki</h1>
@@ -3052,7 +3052,7 @@ class Component extends DCLogic {
         c.variants.forEach((v,i)=>{
           if(!v || !v.image) return;
           if(v.label==='OVERNUMBERED サイン入り') return;          // 署名は同番号スロットなので出さない
-          if(v.label==='OVERNUMBERED'){ pushSyn(c, v.image, v.number, v.rarity, i); return; }
+          if(v.label==='OVERNUMBERED'){ if(showAllShowcase) pushSyn(c, v.image, v.number, 'ショーケース', i); return; }
           if(showAllShowcase && v.rarity==='ショーケース'){ pushSyn(c, v.image, v.number, v.rarity, i); }
         });
       } else if(showAllShowcase && c.altImage){
@@ -3073,6 +3073,8 @@ class Component extends DCLogic {
     if (s.fTag.length) list = list.filter(c=>{ const t=cardTags(c); return s.fTag.some(x=>t.includes(x)); });
     if (s.fKw.length) list = list.filter(c=>{ const k=cardKws(c); return s.fKw.some(x=>k.includes(x)); });
     if (q) list = list.filter(c=> this.hayMatch(c,q));
+    // ショーケース（オーバーナンバー含む）は通常一覧に出さない。ショーケース絞り込み時・検索時のみ表示。
+    if (!showAllShowcase && !q) list = list.filter(c=> c.rarity !== 'ショーケース');
 
     // available filter chips (from all cards, respecting domain/set scope)
     let scope = this.state.cards.slice();
@@ -3131,7 +3133,8 @@ class Component extends DCLogic {
         border: active ? 'var(--gold)' : 'var(--line)', bg: active ? 'var(--gold)' : 'transparent', color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
     const RAR_CHIP_ORDER = ['コモン','アンコモン','レア','エピック','ショーケース'];
     const RAR_GLYPH = { 'コモン':'●', 'アンコモン':'▲', 'レア':'◆', 'エピック':'⬟', 'ショーケース':'⬢' };
-    const rarChips = RAR_CHIP_ORDER.filter(r=>scope.some(c=>c.rarity===r) || (r==='ショーケース' && synCards.length>0)).map(r=>{ const stl=this.RARITY_STYLE[r]||{}; const col=stl.color||'#d9b978'; const active=s.fRar.includes(r);
+    const hasShowcaseArt = this.state.cards.some(c=> c.rarity==='ショーケース' || c.altImage || (Array.isArray(c.variants)&&c.variants.some(v=>v&&(v.rarity==='ショーケース'||v.label==='OVERNUMBERED'))));
+    const rarChips = RAR_CHIP_ORDER.filter(r=>scope.some(c=>c.rarity===r) || (r==='ショーケース' && (synCards.length>0 || hasShowcaseArt))).map(r=>{ const stl=this.RARITY_STYLE[r]||{}; const col=stl.color||'#d9b978'; const active=s.fRar.includes(r);
       return { label:(RAR_GLYPH[r]||'')+' '+r, onClick:()=>this.toggleFilter('rar',r),
         border: active ? col : 'var(--line)', bg: active ? col : 'transparent', color: active ? 'var(--sel-ink)' : 'var(--ink-dim)' }; });
     const filterCount = s.fSet.length + s.fDom.length + s.fCost.length + (s.fPower||[]).length + s.fRar.length + s.fType.length + s.fTag.length + s.fKw.length;
@@ -3151,18 +3154,26 @@ class Component extends DCLogic {
     if (q) activeChips.push({ label:`検索: "${s.query.trim()}"`, onClick:()=>this.setState({ query:'', queryRaw:'' }) });
 
     // sort within groups
+    const numOf = (r)=>{ const ns=r.numShort||''; const m=ns.match(/(\d+)/); let n=m?parseInt(m[1]):9999; if(/[a-z]$/i.test(ns)) n+=0.5; return n; };
+    // セット判定は表示番号の接頭辞から（合成行は基本カードの setCode が別セットのことがあるため）
+    const setOf = (r)=>{ const m=(r.numShort||'').match(/^([A-Z]+)/); return m?m[1]:(r.set||''); };
+    // 既定順＝新しいセットを先頭（SET_CHIP_ORDER の逆＝VEN,UNL,SFD,OGN,OGS）＋番号順。合成ショーケース行も自分の番号どおりに並ぶ。
+    const listSetRank = (code)=>{ const i=SET_CHIP_ORDER.indexOf(code); return i<0?99:(SET_CHIP_ORDER.length-1-i); };
+    const baseCmp = (a,b)=>{ const ra=listSetRank(setOf(a)), rb=listSetRank(setOf(b)); if(ra!==rb) return ra-rb; return numOf(a)-numOf(b); };
     const sortRows = (rows)=>{
       const k = s.sortKey;
-      if (!k) return rows;
       const dir = s.sortDir;
       return rows.slice().sort((a,b)=>{
-        let av, bv;
-        if (k==='cost'){ av=parseInt(a.cost)||0; bv=parseInt(b.cost)||0; }
-        else if (k==='power'){ av=(String(a.power||'').trim()===''?-1:(parseInt(a.power)||0)); bv=(String(b.power||'').trim()===''?-1:(parseInt(b.power)||0)); }
-        else if (k==='rarity'){ av=this.RARITY_ORDER[a.rarity]??99; bv=this.RARITY_ORDER[b.rarity]??99; }
-        else if (k==='set'){ av=setRank(a.set); bv=setRank(b.set); }
-        else { av=a.name.toLowerCase(); bv=b.name.toLowerCase(); }
-        return av<bv ? -dir : av>bv ? dir : 0;
+        if (k){
+          let av, bv;
+          if (k==='cost'){ av=parseInt(a.cost)||0; bv=parseInt(b.cost)||0; }
+          else if (k==='power'){ av=(String(a.power||'').trim()===''?-1:(parseInt(a.power)||0)); bv=(String(b.power||'').trim()===''?-1:(parseInt(b.power)||0)); }
+          else if (k==='rarity'){ av=this.RARITY_ORDER[a.rarity]??99; bv=this.RARITY_ORDER[b.rarity]??99; }
+          else if (k==='set'){ av=setRank(a.set); bv=setRank(b.set); }
+          else { av=a.name.toLowerCase(); bv=b.name.toLowerCase(); }
+          if (av<bv) return -dir; if (av>bv) return dir;
+        }
+        return baseCmp(a,b);
       });
     };
 
@@ -3178,10 +3189,17 @@ class Component extends DCLogic {
     });
 
     // grouped by type
-    const groups = this.TYPE_ORDER.map(t=>{
+    let groups = this.TYPE_ORDER.map(t=>{
       const rows = sortRows(list.filter(c=>this.typeOf(c)===t).map(rowVals));
       return { type:t, label:this.TYPE_LABEL[t], count:rows.length, rows };
     }).filter(g=>g.count>0);
+    // ショーケースのみで絞ったときは、タイプ別に分けず番号順の1グループにまとめる
+    // （OVERNUMBERED/ALT ART が種類ごとに散って番号順が崩れるのを防ぐ）
+    const showcaseOnly = (list.length>0 && list.every(c=>c.rarity==='ショーケース')) || (s.fRar.length===1 && s.fRar[0]==='ショーケース' && !s.fType.length);
+    if (showcaseOnly && groups.length){
+      const allRows = list.map(rowVals).sort(baseCmp);
+      groups = [{ type:'showcase', label:'ショーケース', count:allRows.length, rows:allRows }];
+    }
 
     const sortArrow = (key)=> s.sortKey===key ? (s.sortDir>0?'▲':'▼') : '↕';
     const sortInk = (key)=> s.sortKey===key ? 'var(--gold)' : 'var(--ink-faint)';

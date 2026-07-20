@@ -201,17 +201,17 @@
   }
  ],
  "counts": {
-  "total": 870,
+  "total": 937,
   "byDomain": {
-   "Fury": 149,
-   "Body": 146,
-   "Calm": 148,
-   "Order": 147,
-   "Mind": 152,
-   "Chaos": 145
+   "Fury": 159,
+   "Body": 156,
+   "Calm": 160,
+   "Order": 158,
+   "Mind": 160,
+   "Chaos": 155
   },
   "bySet": {
-   "VEN": 99,
+   "VEN": 166,
    "UNL": 225,
    "SFD": 224,
    "OGN": 298,
@@ -1044,7 +1044,9 @@
    "abilityKw": "",
    "abilityEn": "ACTION ⟨イグゾースト⟩: Give a friendly unit TANK this turn. (It must be assigned combat damage first.)",
    "abilityJa": "ACTION ⟨イグゾースト⟩：味方ユニット1体にこのターンTANKを与える。(戦闘ダメージは、そのユニットから割り当てなければならない。)",
-   "signatures": [],
+   "signatures": [
+    "ven-148"
+   ],
    "strategy": "",
    "image": "images/VEN/VEN-147.avif"
   },
@@ -1060,7 +1062,9 @@
    "abilityKw": "",
    "abilityEn": "EMPOWER ②⟨rune⟩⟨rune⟩ (②⟨rune⟩⟨rune⟩: Empower me. Use only if not Empowered.) ①, ⟨イグゾースト⟩: Ready a gear. EMPOWERED ①, ⟨イグゾースト⟩: Ready 2 gear.",
    "abilityJa": "EMPOWER ②⟨rune⟩⟨rune⟩ (②⟨rune⟩⟨rune⟩:自身をエンパワーする。EMPOWEREDでないときのみ使える。) ①、⟨イグゾースト⟩：ギア1つをレディ状態にする。 EMPOWERED ①、⟨イグゾースト⟩：ギア2つをレディ状態にする。",
-   "signatures": [],
+   "signatures": [
+    "ven-150"
+   ],
    "strategy": "",
    "image": "images/VEN/VEN-149.avif"
   },
@@ -1094,7 +1098,9 @@
    "abilityKw": "",
    "abilityEn": "When you empower something else, empower me. (I become Empowered if I'm not already.) Disempower me, ⟨rune⟩, ⟨イグゾースト⟩: Ready a unit.",
    "abilityJa": "自分が他の何かをエンパワーしたとき、自身をエンパワーする。(まだEMPOWEREDでないなら、EMPOWEREDになる。) 自身をディスエンパワーする、⟨rune⟩、⟨イグゾースト⟩：ユニット1体をレディ状態にする。",
-   "signatures": [],
+   "signatures": [
+    "ven-154"
+   ],
    "strategy": "",
    "image": "images/VEN/VEN-153.avif"
   },
@@ -1118,6 +1124,10 @@
   }
  ],
  "changelog": [
+  {
+   "date": "2026-07-20",
+   "text": "VENDETTA のカードを追加（残り41枚を登録し全197番を網羅：通常18枚・ショーケース/レジェンド絵違いの変種・バトルフィールド6種・シグネチャー3種）。"
+  },
   {
    "date": "2026-07-20",
    "text": "デッキをカード画像として保存する機能を追加しました（Xなどでの共有用）。"

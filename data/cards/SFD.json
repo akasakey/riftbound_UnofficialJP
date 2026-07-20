@@ -1957,6 +1957,13 @@
      "set": "Spiritforged",
      "number": "SFD-225*/221",
      "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-174.avif",
+     "set": "Vendetta",
+     "number": "VEN-174/166",
+     "rarity": "ショーケース"
     }
    ]
   },
@@ -2876,7 +2883,22 @@
     }
    ],
    "equip": [],
-   "power": ""
+   "power": "",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-084.avif",
+     "number": "SFD-084/221",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-175.avif",
+     "set": "Vendetta",
+     "number": "VEN-175/166",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "sfd-085",
@@ -5062,7 +5084,6 @@
    "modified": "2026-07-08",
    "number": "SFD-149/221",
    "image": "images/SFD/SFD-149.avif",
-   "altImage": "images/SFD/SFD-149a.avif",
    "effects": [
     {
      "kw": "",
@@ -5071,7 +5092,28 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/SFD/SFD-149.avif",
+     "number": "SFD-149/221",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/SFD/SFD-149a.avif",
+     "rarity": "ショーケース",
+     "number": "SFD-149a/221"
+    },
+    {
+     "label": "VEN ALT ART",
+     "image": "images/VEN/VEN-SP5.avif",
+     "set": "Vendetta",
+     "number": "VEN-SP5/006",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "sfd-150",

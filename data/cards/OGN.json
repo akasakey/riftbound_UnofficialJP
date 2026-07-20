@@ -888,7 +888,22 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-028.avif",
+     "number": "OGN-028/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-172.avif",
+     "set": "Vendetta",
+     "number": "VEN-172/166",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-029",
@@ -960,7 +975,26 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/OGN/OGN-030a.avif"
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-030.avif",
+     "number": "OGN-030/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/OGN/OGN-030a.avif",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-168.avif",
+     "set": "Vendetta",
+     "number": "VEN-168/166",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-031",
@@ -1177,7 +1211,22 @@
     }
    ],
    "equip": [],
-   "power": "1"
+   "power": "1",
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-036.avif",
+     "number": "OGN-036/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-167.avif",
+     "set": "Vendetta",
+     "number": "VEN-167/166",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-037",
@@ -2382,7 +2431,22 @@
     "date": "2025-10-28",
     "oldJa": "自分がバトルフィールドにいるかぎり、あなたのターンの終了時に自分がコントロールするルーンを4つレディにする。",
     "oldEn": "While I'm at a battlefield, ready 4 friendly runes at the end of your turn."
-   }
+   },
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-073.avif",
+     "number": "OGN-073/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "VEN ALT ART",
+     "image": "images/VEN/VEN-SP2.avif",
+     "set": "Vendetta",
+     "number": "VEN-SP2/006",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-074",
@@ -3817,9 +3881,28 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/OGN/OGN-117a.avif",
    "tokens": [
     "ogn-271"
+   ],
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-117.avif",
+     "number": "OGN-117/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/OGN/OGN-117a.avif",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-176.avif",
+     "set": "Vendetta",
+     "number": "VEN-176/166",
+     "rarity": "ショーケース"
+    }
    ]
   },
   {
@@ -3905,6 +3988,13 @@
      "image": "images/SFD/SFD-227a.avif",
      "set": "Spiritforged",
      "number": "SFD-227*/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "VEN ALT ART",
+     "image": "images/VEN/VEN-SP3.avif",
+     "set": "Vendetta",
+     "number": "VEN-SP3/006",
      "rarity": "ショーケース"
     }
    ]
@@ -5431,6 +5521,13 @@
      "image": "images/SFD/SFD-232a.avif",
      "set": "Spiritforged",
      "number": "SFD-232*/221",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "VEN ALT ART",
+     "image": "images/VEN/VEN-SP4.avif",
+     "set": "Vendetta",
+     "number": "VEN-SP4/006",
      "rarity": "ショーケース"
     }
    ],
@@ -7861,7 +7958,26 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/OGN/OGN-238a.avif"
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/OGN/OGN-238.avif",
+     "number": "OGN-238/298",
+     "rarity": "レア"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/OGN/OGN-238a.avif",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-184.avif",
+     "set": "Vendetta",
+     "number": "VEN-184/166",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "ogn-239",

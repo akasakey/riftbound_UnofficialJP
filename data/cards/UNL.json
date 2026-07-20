@@ -3575,7 +3575,26 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/UNL/UNL-119a.avif"
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-119.avif",
+     "number": "UNL-119/219",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/UNL/UNL-119a.avif",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-180.avif",
+     "set": "Vendetta",
+     "number": "VEN-180/166",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "unl-120",
@@ -3606,12 +3625,31 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/UNL/UNL-120a.avif",
    "errata": {
     "date": "2026-04-03",
     "oldJa": "敵ユニットがいるバトルフィールドにも自身をプレイできる(そこに自分のユニットがいなくてもよい)。",
     "oldEn": "I can be played to a battlefield where there are enemy units (even if you don't have units there)."
-   }
+   },
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-120.avif",
+     "number": "UNL-120/219",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/UNL/UNL-120a.avif",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-179.avif",
+     "set": "Vendetta",
+     "number": "VEN-179/166",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "unl-121",
@@ -4492,7 +4530,26 @@
    ],
    "equip": [],
    "power": "1",
-   "altImage": "images/UNL/UNL-149a.avif"
+   "variants": [
+    {
+     "label": "STANDARD",
+     "image": "images/UNL/UNL-149.avif",
+     "number": "UNL-149/219",
+     "rarity": "エピック"
+    },
+    {
+     "label": "ALT ART",
+     "image": "images/UNL/UNL-149a.avif",
+     "rarity": "ショーケース"
+    },
+    {
+     "label": "OVERNUMBERED",
+     "image": "images/VEN/VEN-183.avif",
+     "set": "Vendetta",
+     "number": "VEN-183/166",
+     "rarity": "ショーケース"
+    }
+   ]
   },
   {
    "id": "unl-150",
